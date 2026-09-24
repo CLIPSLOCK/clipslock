@@ -1,17 +1,17 @@
 [
   {
-    "id": "clip-001",
-    "name": "Кліпса кріплення бампера",
-    "oem": "90467-07201",
+    "id": "001",
+    "name": "Кліпса кріплення Підкрилки",
+    "oem": "11359",
     "brand": "Toyota",
-    "category": "Кріплення бампера",
-    "compatibility": ["Toyota Camry", "Toyota Corolla", "Lexus RX"],
+    "category": "Кріплення підкрилки",
+    "compatibility": ["Toyota Yaris", "Toyota Corolla", "Lexus багато моделей"],
     "price": 15,
     "description": "Пластикова кліпса натискного типу для кріплення переднього та заднього бампера, підкрилків.",
-    "img": "https://via.placeholder.com/400x400/e6f0fa/0056b3?text=Кліпса+Toyota"
+    "img": "clipsa001.jpg"
   },
   {
-    "id": "clip-002",
+    "id": "002",
     "name": "Пістон обшивки дверей",
     "oem": "7L6868243",
     "brand": "VAG",
