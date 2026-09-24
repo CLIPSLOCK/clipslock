@@ -41,7 +41,7 @@ async function fetchProducts() {
     }
 }
 
-// Рендер каталогу (ОНОВЛЕНА HTML СТРУКТУРА КАРТКИ)
+// Рендер каталогу (з блоком вибору кількості як у кошику)
 function renderProducts(list) {
     productsGrid.innerHTML = '';
     if (list.length === 0) {
@@ -53,8 +53,10 @@ function renderProducts(list) {
         const card = document.createElement('div');
         card.className = 'product-card';
         card.onclick = (e) => {
-            // Відкриваємо модалку, якщо клік не по кнопці кошика
-            if(!e.target.closest('.btn-icon')) openProductModal(product.id);
+            // Відкриваємо модалку, якщо клік не по елементах керування кількістю чи кнопці
+            if (!e.target.closest('.card-qty-control') && !e.target.closest('.card-add-btn')) {
+                openProductModal(product.id);
+            }
         };
         
         card.innerHTML = `
@@ -66,12 +68,23 @@ function renderProducts(list) {
                 <span class="pc-brand">${product.brand}</span>
             </div>
             <div class="pc-title">${product.name}</div>
-            <div class="pc-footer">
-                <div class="pc-price">${product.price} <span>грн/шт</span></div>
-                <button class="btn-icon" onclick="addToCart(event, '${product.id}', 1)" title="Додати в кошик">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                </button>
+            
+            <div class="product-card-footer">
+                <div class="product-price-info">
+                    <span class="product-price">${product.price}</span>
+                    <span class="product-unit">грн/шт</span>
+                </div>
+                
+                <div class="card-qty-control" data-id="${product.id}">
+                    <button class="qty-btn minus-btn" type="button">−</button>
+                    <input type="number" class="qty-input" value="1" min="1" max="999" readonly>
+                    <button class="qty-btn plus-btn" type="button">+</button>
+                </div>
             </div>
+
+            <button class="btn btn-primary btn-full card-add-btn" onclick="addCatalogItemToCart(event, '${product.id}')">
+                У кошик
+            </button>
         `;
         productsGrid.appendChild(card);
     });
@@ -100,7 +113,7 @@ function populateFilters() {
 // Логіка фільтрації та пошуку
 function filterProducts() {
     const query = searchInput.value.toLowerCase();
-    const cleanQuery = query.replace(/[\s-]/g, ''); // для ОЕМ
+    const cleanQuery = query.replace(/[\s-]/g, '');
     const selBrand = brandFilter.value;
     const selCat = categoryFilter.value;
 
@@ -121,7 +134,7 @@ function filterProducts() {
     renderProducts(filtered);
 }
 
-// Слухачі подій для фільтрів
+// Слухачі подій
 function setupEventListeners() {
     searchInput.addEventListener('input', filterProducts);
     brandFilter.addEventListener('change', filterProducts);
@@ -140,6 +153,22 @@ function setupEventListeners() {
         if (e.target.classList.contains('modal')) {
             e.target.style.display = 'none';
             document.body.style.overflow = 'auto';
+        }
+    });
+
+    // Кнопки у каталозі для плюс/мінус кількості в картці
+    document.addEventListener('click', (e) => {
+        if (e.target.classList.contains('plus-btn')) {
+            const wrapper = e.target.closest('.card-qty-control');
+            const input = wrapper.querySelector('.qty-input');
+            input.value = parseInt(input.value) + 1;
+        }
+        if (e.target.classList.contains('minus-btn')) {
+            const wrapper = e.target.closest('.card-qty-control');
+            const input = wrapper.querySelector('.qty-input');
+            if (parseInt(input.value) > 1) {
+                input.value = parseInt(input.value) - 1;
+            }
         }
     });
 
@@ -213,9 +242,29 @@ function updateModalTotal() {
     document.getElementById('modalTotalCalc').textContent = qty * currentModalProduct.price;
 }
 
+// Додавання товару з каталогу з урахуванням обраної кількості
+window.addCatalogItemToCart = function(event, id) {
+    event.stopPropagation();
+    const card = event.target.closest('.product-card');
+    const qtyInput = card.querySelector('.qty-input');
+    const qty = parseInt(qtyInput.value) || 1;
+    
+    addToCart(null, id, qty);
+    
+    // Візуальний ефект успішного додавання
+    const btn = event.target;
+    const originalText = btn.textContent;
+    btn.textContent = 'Додано ✓';
+    btn.style.background = '#28a745';
+    setTimeout(() => {
+        btn.textContent = originalText;
+        btn.style.background = '';
+    }, 1000);
+};
+
 // Логіка кошика
 window.addToCart = function(event, id, qty) {
-    if(event) event.stopPropagation(); // Щоб не відкривалась модалка при кліку на + в каталозі
+    if(event) event.stopPropagation();
     
     const existing = cart.find(item => item.id === id);
     if (existing) {
@@ -225,7 +274,6 @@ window.addToCart = function(event, id, qty) {
     }
     saveCart();
     
-    // Анімація бейджа кошика
     const badge = document.getElementById('cartBadge');
     badge.style.transform = 'scale(1.3)';
     setTimeout(() => badge.style.transform = 'scale(1)', 200);
@@ -247,7 +295,6 @@ function openCartModal() {
     document.body.style.overflow = 'hidden';
 }
 
-// ОНОВЛЕНА HTML СТРУКТУРА КОШИКА
 function renderCart() {
     const cartItemsContainer = document.getElementById('cartItems');
     cartItemsContainer.innerHTML = '';
@@ -378,26 +425,11 @@ function handleCheckout(e) {
     sendOrder(order);
 }
 
-// Функція відправки (поки що заглушка)
-function sendOrder(order) {
-    console.log("=== ЗАМОВЛЕННЯ СФОРМОВАНО ===", order);
-
-    document.getElementById('checkoutForm').reset();
-    cart = [];
-    saveCart();
-
-    document.getElementById('checkoutModal').style.display = 'none';
-    
-    document.getElementById('successOrderId').textContent = `№ ${order.orderId}`;
-    document.getElementById('successModal').style.display = 'flex';
-}
 // Функція відправки замовлення в Telegram
 async function sendOrder(order) {
-    // ТУТ ВСТАВ СВОЇ ДАНІ, ЯКІ ОТРИМАВ У TELEGRAM
     const BOT_TOKEN = '8717638807:AAESob1XqKvNJV3TE315QyMeh79Grh9vFCo'; 
     const CHAT_ID = '979529637';
 
-    // Формуємо текст повідомлення для тебе
     let message = `🛒 <b>НОВЕ ЗАМОВЛЕННЯ (${order.orderId})</b>\n\n`;
     message += `👤 <b>Клієнт:</b> ${order.customer.name}\n`;
     message += `📞 <b>Телефон:</b> ${order.customer.phone}\n`;
@@ -418,7 +450,6 @@ async function sendOrder(order) {
     const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
 
     try {
-        // Знаходимо кнопку і змінюємо текст, поки йде відправка
         const submitBtn = document.querySelector('#checkoutForm button[type="submit"]');
         const originalText = submitBtn.textContent;
         submitBtn.textContent = 'Відправка...';
@@ -432,18 +463,16 @@ async function sendOrder(order) {
             body: JSON.stringify({
                 chat_id: CHAT_ID,
                 text: message,
-                parse_mode: 'HTML' // Щоб працював жирний текст і смайли
+                parse_mode: 'HTML'
             })
         });
 
         if (response.ok) {
-            // Успішно! Очищаємо форму і кошик
             document.getElementById('checkoutForm').reset();
             cart = [];
             saveCart();
-            renderCart(); // Оновлюємо вигляд порожнього кошика
+            renderCart();
 
-            // Ховаємо вікно оформлення і показуємо вікно успіху
             document.getElementById('checkoutModal').style.display = 'none';
             document.getElementById('successOrderId').textContent = `№ ${order.orderId}`;
             document.getElementById('successModal').style.display = 'flex';
@@ -452,7 +481,6 @@ async function sendOrder(order) {
             console.error('Помилка Telegram:', await response.text());
         }
 
-        // Повертаємо кнопку в нормальний стан
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
 
