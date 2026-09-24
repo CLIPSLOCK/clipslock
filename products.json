@@ -1,7 +1,7 @@
 [
   {
     "id": "001",
-    "name": "Кліпса кріплення Підкрилки 11359",
+    "name": "Кліпса кріплення Підкрилки",
     "oem": "11359",
     "brand": "Toyota",
     "category": "Кріплення підкрилки",
@@ -12,7 +12,7 @@
   },
   {
     "id": "002",
-    "name": "Пістон кріплення бампера 11370",
+    "name": "Пістон кріплення бампера",
     "oem": "11370",
     "brand": "Lexus",
     "category": "Кріплення бампера",
@@ -22,15 +22,15 @@
     "img": "clipsa002.jpg"
   },
   {
-    "id": "clip-003",
-    "name": "Заклепка пластикова універсальна 8мм",
-    "oem": "01553-09321",
-    "brand": "Nissan",
-    "category": "Універсальні",
-    "compatibility": ["Nissan Qashqai", "Nissan Rogue", "Universal 8mm"],
-    "price": 12,
-    "description": "Універсальна заклепка для отвору 8 мм. Використовується для підкрилків та захисту двигуна.",
-    "img": "https://via.placeholder.com/400x400/e6f0fa/0056b3?text=Заклепка+8мм"
+    "id": "003",
+    "name": "Кліпса кріплення Підкрилки",
+    "oem": "11430",
+    "brand": "Toyota",
+    "category": "Кріплення підкрилки",
+    "compatibility": ["Lexus RX", "Toyota C-HR", "Toyota Highlander"],
+    "price": 20,
+    "description": "Кріплення розпірної дії",
+    "img": "clipsa003.jpg"
   },
   {
     "id": "clip-004",
