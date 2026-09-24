@@ -483,3 +483,52 @@ body {
 @media (max-width: 400px) {
     .products-grid { grid-template-columns: 1fr; }
 }
+/* Покращення видимості Hero */
+.hero-tag {
+    display: inline-block;
+    background: rgba(197, 128, 19, 0.2);
+    color: var(--accent-mustard);
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    border: 1px solid rgba(197, 128, 19, 0.4);
+}
+
+.hero-info h1 {
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 18px;
+    line-height: 1.25;
+}
+
+.hero-features li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.hero-features li:last-child {
+    margin-bottom: 0;
+}
+
+.feature-badge {
+    background: var(--accent-mustard);
+    color: #000;
+    font-weight: 800;
+    font-size: 11px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.feature-badge.badge-green {
+    background: #16A34A;
+    color: #fff;
+}
