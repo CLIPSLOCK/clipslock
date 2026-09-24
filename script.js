@@ -391,3 +391,73 @@ function sendOrder(order) {
     document.getElementById('successOrderId').textContent = `№ ${order.orderId}`;
     document.getElementById('successModal').style.display = 'flex';
 }
+// Функція відправки замовлення в Telegram
+async function sendOrder(order) {
+    // ТУТ ВСТАВ СВОЇ ДАНІ, ЯКІ ОТРИМАВ У TELEGRAM
+    const BOT_TOKEN = 'ТВІЙ_ТОКЕН_ВІД_BOTFATHER'; 
+    const CHAT_ID = 'ТВІЙ_ID';
+
+    // Формуємо текст повідомлення для тебе
+    let message = `🛒 <b>НОВЕ ЗАМОВЛЕННЯ (${order.orderId})</b>\n\n`;
+    message += `👤 <b>Клієнт:</b> ${order.customer.name}\n`;
+    message += `📞 <b>Телефон:</b> ${order.customer.phone}\n`;
+    message += `🏙 <b>Місто:</b> ${order.customer.city}\n`;
+    message += `📦 <b>Відділення НП:</b> ${order.customer.branch}\n`;
+    if (order.customer.comment) {
+        message += `💬 <b>Коментар:</b> ${order.customer.comment}\n`;
+    }
+    
+    message += `\n🛍 <b>Товари:</b>\n`;
+    order.items.forEach((item, index) => {
+        message += `${index + 1}. ${item.name} (OEM: ${item.oem})\n   ${item.qty} шт x ${item.price} грн = ${item.sum} грн\n`;
+    });
+
+    message += `\n💰 <b>Всього до оплати: ${order.totalSum} грн</b>`;
+    message += order.freeShipping ? `\n✅ <i>Безкоштовна доставка</i>` : `\n🚚 <i>Доставка за рахунок клієнта</i>`;
+
+    const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+
+    try {
+        // Знаходимо кнопку і змінюємо текст, поки йде відправка
+        const submitBtn = document.querySelector('#checkoutForm button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Відправка...';
+        submitBtn.disabled = true;
+
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                chat_id: CHAT_ID,
+                text: message,
+                parse_mode: 'HTML' // Щоб працював жирний текст і смайли
+            })
+        });
+
+        if (response.ok) {
+            // Успішно! Очищаємо форму і кошик
+            document.getElementById('checkoutForm').reset();
+            cart = [];
+            saveCart();
+            renderCart(); // Оновлюємо вигляд порожнього кошика
+
+            // Ховаємо вікно оформлення і показуємо вікно успіху
+            document.getElementById('checkoutModal').style.display = 'none';
+            document.getElementById('successOrderId').textContent = `№ ${order.orderId}`;
+            document.getElementById('successModal').style.display = 'flex';
+        } else {
+            alert('Помилка при відправці замовлення. Перевір токен та ID.');
+            console.error('Помилка Telegram:', await response.text());
+        }
+
+        // Повертаємо кнопку в нормальний стан
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+
+    } catch (error) {
+        console.error('Помилка з\'єднання:', error);
+        alert('Помилка з\'єднання. Перевірте інтернет.');
+    }
+}
