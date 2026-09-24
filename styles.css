@@ -544,3 +544,87 @@ body {
     height: 28px;
     object-fit: contain;
 }
+/* Нижня частина картки товару */
+.product-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+.product-price-info {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+}
+
+.product-price {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111;
+}
+
+.product-unit {
+    font-size: 13px;
+    color: #777;
+}
+
+/* Контролер кількості (як у кошику) */
+.card-qty-control {
+    display: flex;
+    align-items: center;
+    background: #f4f4f4;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+.card-qty-control .qty-btn {
+    background: #f4f4f4;
+    border: none;
+    width: 28px;
+    height: 32px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.card-qty-control .qty-btn:hover {
+    background: #e2e2e2;
+}
+
+.card-qty-control .qty-input {
+    width: 36px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    outline: none;
+    -moz-appearance: textfield;
+}
+
+/* Прибираємо стрілочки в інпуті кількості */
+.card-qty-control .qty-input::-webkit-outer-spin-button,
+.card-qty-control .qty-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Кнопка купити в картці */
+.card-add-btn {
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+}
