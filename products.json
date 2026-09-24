@@ -33,14 +33,14 @@
     "img": "clipsa003.jpg"
   },
   {
-    "id": "clip-004",
-    "name": "Кліпса молдинга лобового скла",
-    "oem": "51318159784",
-    "brand": "BMW",
+    "id": "004",
+    "name": "Кріплення обшивки, одна шляпка",
+    "oem": "10140",
+    "brand": "VW",
     "category": "Зовнішні кріплення",
-    "compatibility": ["BMW E39", "BMW E46", "BMW E60"],
+    "compatibility": ["Audi багато моделей", "Seat багато моделей", "Skoda багато моделей", "VW Bora", "VW Passat B5", "VW Polo", "VW Transporter T4", "VW Vento"],
     "price": 25,
     "description": "Спеціальна кліпса для надійного кріплення ущільнювача та молдинга лобового скла.",
-    "img": "https://via.placeholder.com/400x400/e6f0fa/0056b3?text=Кліпса+BMW"
+    "img": "clipsa004.jpg"
   }
 ]
