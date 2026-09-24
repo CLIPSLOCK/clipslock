@@ -37,29 +37,40 @@ async function fetchProducts() {
         populateFilters();
     } catch (error) {
         console.error('Помилка завантаження товарів:', error);
-        productsGrid.innerHTML = '<p style="grid-column: 1/-1; text-align: center;">Не вдалося завантажити товари.</p>';
+        productsGrid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: var(--text-muted);">Не вдалося завантажити товари. Перевірте з\'єднання.</p>';
     }
 }
 
-// Рендер каталогу
+// Рендер каталогу (ОНОВЛЕНА HTML СТРУКТУРА КАРТКИ)
 function renderProducts(list) {
     productsGrid.innerHTML = '';
     if (list.length === 0) {
-        productsGrid.innerHTML = '<p style="grid-column: 1/-1; text-align: center;">Товарів не знайдено.</p>';
+        productsGrid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; padding: 40px 0; color: var(--text-muted);">Товарів не знайдено за вашим запитом.</p>';
         return;
     }
 
     list.forEach(product => {
         const card = document.createElement('div');
-        card.className = 'card';
+        card.className = 'product-card';
+        card.onclick = (e) => {
+            // Відкриваємо модалку, якщо клік не по кнопці кошика
+            if(!e.target.closest('.btn-icon')) openProductModal(product.id);
+        };
+        
         card.innerHTML = `
-            <img src="${product.img}" alt="${product.name}" class="card-img" loading="lazy">
-            <div class="card-title">${product.name}</div>
-            <div class="card-oem">OEM: ${product.oem}</div>
-            <div class="card-price">${product.price} грн / шт</div>
-            <div class="card-actions">
-                <button class="btn btn-outline" onclick="openProductModal('${product.id}')">Деталі</button>
-                <button class="btn btn-primary" onclick="addToCart('${product.id}', 1)">В кошик</button>
+            <div class="pc-image-wrap">
+                <img src="${product.img}" alt="${product.name}" loading="lazy">
+            </div>
+            <div class="pc-meta">
+                <span class="pc-oem">${product.oem}</span>
+                <span class="pc-brand">${product.brand}</span>
+            </div>
+            <div class="pc-title">${product.name}</div>
+            <div class="pc-footer">
+                <div class="pc-price">${product.price} <span>грн/шт</span></div>
+                <button class="btn-icon" onclick="addToCart(event, '${product.id}', 1)" title="Додати в кошик">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                </button>
             </div>
         `;
         productsGrid.appendChild(card);
@@ -165,10 +176,10 @@ function setupEventListeners() {
     document.getElementById('modalAddToCart').addEventListener('click', () => {
         const qty = parseInt(document.getElementById('modalQtyInput').value);
         if (qty > 0 && currentModalProduct) {
-            addToCart(currentModalProduct.id, qty);
+            addToCart(null, currentModalProduct.id, qty);
             document.getElementById('productModal').style.display = 'none';
             document.body.style.overflow = 'auto';
-            openCartModal(); // Одразу показуємо кошик
+            openCartModal();
         }
     });
 }
@@ -203,7 +214,9 @@ function updateModalTotal() {
 }
 
 // Логіка кошика
-function addToCart(id, qty) {
+window.addToCart = function(event, id, qty) {
+    if(event) event.stopPropagation(); // Щоб не відкривалась модалка при кліку на + в каталозі
+    
     const existing = cart.find(item => item.id === id);
     if (existing) {
         existing.qty += qty;
@@ -211,7 +224,12 @@ function addToCart(id, qty) {
         cart.push({ id, qty });
     }
     saveCart();
-}
+    
+    // Анімація бейджа кошика
+    const badge = document.getElementById('cartBadge');
+    badge.style.transform = 'scale(1.3)';
+    setTimeout(() => badge.style.transform = 'scale(1)', 200);
+};
 
 function saveCart() {
     localStorage.setItem('clipslock_cart', JSON.stringify(cart));
@@ -229,12 +247,13 @@ function openCartModal() {
     document.body.style.overflow = 'hidden';
 }
 
+// ОНОВЛЕНА HTML СТРУКТУРА КОШИКА
 function renderCart() {
     const cartItemsContainer = document.getElementById('cartItems');
     cartItemsContainer.innerHTML = '';
     
     if (cart.length === 0) {
-        cartItemsContainer.innerHTML = '<p style="text-align:center; padding: 20px;">Ваш кошик порожній</p>';
+        cartItemsContainer.innerHTML = '<p style="text-align:center; padding: 40px 0; color: var(--text-muted);">Кошик порожній</p>';
         document.getElementById('cartTotalSum').textContent = '0 грн';
         updateDeliveryProgress(0);
         document.getElementById('checkoutBtn').disabled = true;
@@ -246,7 +265,7 @@ function renderCart() {
 
     cart.forEach((cartItem, index) => {
         const product = products.find(p => p.id === cartItem.id);
-        if (!product) return; // Якщо товар видалено з бази
+        if (!product) return; 
 
         const itemTotal = product.price * cartItem.qty;
         totalSum += itemTotal;
@@ -254,18 +273,22 @@ function renderCart() {
         const div = document.createElement('div');
         div.className = 'cart-item';
         div.innerHTML = `
-            <img src="${product.img}" alt="${product.name}" class="cart-item-img">
-            <div class="cart-item-info">
-                <div class="cart-item-title">${product.name}</div>
-                <div class="cart-item-price">OEM: ${product.oem} | ${product.price} грн/шт</div>
-                <div class="qty-selector" style="margin-top: 5px; margin-bottom: 0;">
-                    <button onclick="changeCartQty(${index}, -1)">-</button>
-                    <input type="number" value="${cartItem.qty}" readonly style="width: 40px; text-align:center;">
-                    <button onclick="changeCartQty(${index}, 1)">+</button>
+            <img src="${product.img}" alt="${product.name}" class="ci-img">
+            <div class="ci-info">
+                <div class="ci-title">${product.name}</div>
+                <div class="ci-oem">${product.oem}</div>
+                <div class="ci-price-block">
+                    <div class="qty-control">
+                        <button onclick="changeCartQty(${index}, -1)">−</button>
+                        <input type="number" value="${cartItem.qty}" readonly>
+                        <button onclick="changeCartQty(${index}, 1)">+</button>
+                    </div>
+                    <div class="ci-price">${itemTotal} грн</div>
                 </div>
             </div>
-            <div style="font-weight:bold; white-space:nowrap;">${itemTotal} грн</div>
-            <button class="cart-item-remove" onclick="removeFromCart(${index})">×</button>
+            <button class="btn-remove" onclick="removeFromCart(${index})" title="Видалити">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+            </button>
         `;
         cartItemsContainer.appendChild(div);
     });
@@ -293,21 +316,25 @@ window.removeFromCart = function(index) {
 function updateDeliveryProgress(sum) {
     const textEl = document.getElementById('deliveryText');
     const barEl = document.getElementById('deliveryProgressBar');
+    const statusBox = document.querySelector('.delivery-status-box');
     
     if (sum === 0) {
-        textEl.textContent = `До безкоштовної доставки: ${FREE_SHIPPING_THRESHOLD} грн`;
+        textEl.textContent = `Безкоштовна доставка від ${FREE_SHIPPING_THRESHOLD} грн`;
         barEl.style.width = '0%';
         barEl.classList.remove('success');
+        statusBox.classList.remove('success');
     } else if (sum >= FREE_SHIPPING_THRESHOLD) {
-        textEl.textContent = '✓ Безкоштовна доставка Новою Поштою';
+        textEl.textContent = 'Безкоштовна доставка НП';
         barEl.style.width = '100%';
         barEl.classList.add('success');
+        statusBox.classList.add('success');
     } else {
         const left = FREE_SHIPPING_THRESHOLD - sum;
         const percent = (sum / FREE_SHIPPING_THRESHOLD) * 100;
-        textEl.textContent = `До безкоштовної доставки залишилось ${left} грн`;
+        textEl.textContent = `До безкоштовної доставки ще ${left} грн`;
         barEl.style.width = `${percent}%`;
         barEl.classList.remove('success');
+        statusBox.classList.remove('success');
     }
 }
 
@@ -315,7 +342,6 @@ function updateDeliveryProgress(sum) {
 function handleCheckout(e) {
     e.preventDefault();
 
-    // Формуємо детальну інформацію по товарах для замовлення
     let totalOrderSum = 0;
     const orderItems = cart.map(cartItem => {
         const product = products.find(p => p.id === cartItem.id);
@@ -352,20 +378,16 @@ function handleCheckout(e) {
     sendOrder(order);
 }
 
-// Функція-заглушка для відправки
+// Функція відправки (поки що заглушка)
 function sendOrder(order) {
-    // TODO: В майбутньому тут буде fetch() до API або Telegram Bot
-    console.log("=== НОВЕ ЗАМОВЛЕННЯ СФОРМОВАНО ===", order);
+    console.log("=== ЗАМОВЛЕННЯ СФОРМОВАНО ===", order);
 
-    // Очищаємо форму та кошик
     document.getElementById('checkoutForm').reset();
     cart = [];
     saveCart();
 
-    // Ховаємо модалку оформлення
     document.getElementById('checkoutModal').style.display = 'none';
     
-    // Показуємо успіх
-    document.getElementById('successOrderId').textContent = `Замовлення №${order.orderId}`;
+    document.getElementById('successOrderId').textContent = `№ ${order.orderId}`;
     document.getElementById('successModal').style.display = 'flex';
 }
