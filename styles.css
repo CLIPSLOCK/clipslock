@@ -628,3 +628,26 @@ body {
     font-weight: 600;
     border-radius: 6px;
 }
+/* Адаптивність блоку ціни та кількості в картці для мобільних */
+@media (max-width: 480px) {
+    .product-card-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .card-qty-control {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .card-qty-control .qty-input {
+        flex-grow: 1;
+        width: auto;
+    }
+
+    .card-add-btn {
+        width: 100%;
+        margin-top: 4px;
+    }
+}
