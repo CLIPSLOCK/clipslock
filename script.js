@@ -394,8 +394,8 @@ function sendOrder(order) {
 // Функція відправки замовлення в Telegram
 async function sendOrder(order) {
     // ТУТ ВСТАВ СВОЇ ДАНІ, ЯКІ ОТРИМАВ У TELEGRAM
-    const BOT_TOKEN = 'ТВІЙ_ТОКЕН_ВІД_BOTFATHER'; 
-    const CHAT_ID = 'ТВІЙ_ID';
+    const BOT_TOKEN = '8717638807:AAESob1XqKvNJV3TE315QyMeh79Grh9vFCo'; 
+    const CHAT_ID = '979529637';
 
     // Формуємо текст повідомлення для тебе
     let message = `🛒 <b>НОВЕ ЗАМОВЛЕННЯ (${order.orderId})</b>\n\n`;
