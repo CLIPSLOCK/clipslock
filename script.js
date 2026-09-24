@@ -1,7 +1,7 @@
 // Глобальні налаштування контактів
 const CONTACTS = {
-    telegram: "https://t.me/clipslock_manager",
-    viber: "viber://chat?number=%2B380999999999"
+    telegram: "https://t.me/KEFFIR123",
+    viber: "viber://chat?number=380679993271"
 };
 
 // Стан додатку
