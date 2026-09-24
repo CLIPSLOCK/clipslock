@@ -1,0 +1,46 @@
+[
+  {
+    "id": "clip-001",
+    "name": "Кліпса кріплення бампера",
+    "oem": "90467-07201",
+    "brand": "Toyota",
+    "category": "Кріплення бампера",
+    "compatibility": ["Toyota Camry", "Toyota Corolla", "Lexus RX"],
+    "price": 15,
+    "description": "Пластикова кліпса натискного типу для кріплення переднього та заднього бампера, підкрилків.",
+    "img": "https://via.placeholder.com/400x400/e6f0fa/0056b3?text=Кліпса+Toyota"
+  },
+  {
+    "id": "clip-002",
+    "name": "Пістон обшивки дверей",
+    "oem": "7L6868243",
+    "brand": "VAG",
+    "category": "Кріплення салону",
+    "compatibility": ["VW Golf", "VW Passat", "Audi A4", "Skoda Octavia"],
+    "price": 18,
+    "description": "Кліпса кріплення дверної карти з гумовим ущільнювачем для запобігання скрипам.",
+    "img": "https://via.placeholder.com/400x400/e6f0fa/0056b3?text=Пістон+VAG"
+  },
+  {
+    "id": "clip-003",
+    "name": "Заклепка пластикова універсальна 8мм",
+    "oem": "01553-09321",
+    "brand": "Nissan",
+    "category": "Універсальні",
+    "compatibility": ["Nissan Qashqai", "Nissan Rogue", "Universal 8mm"],
+    "price": 12,
+    "description": "Універсальна заклепка для отвору 8 мм. Використовується для підкрилків та захисту двигуна.",
+    "img": "https://via.placeholder.com/400x400/e6f0fa/0056b3?text=Заклепка+8мм"
+  },
+  {
+    "id": "clip-004",
+    "name": "Кліпса молдинга лобового скла",
+    "oem": "51318159784",
+    "brand": "BMW",
+    "category": "Зовнішні кріплення",
+    "compatibility": ["BMW E39", "BMW E46", "BMW E60"],
+    "price": 25,
+    "description": "Спеціальна кліпса для надійного кріплення ущільнювача та молдинга лобового скла.",
+    "img": "https://via.placeholder.com/400x400/e6f0fa/0056b3?text=Кліпса+BMW"
+  }
+]
