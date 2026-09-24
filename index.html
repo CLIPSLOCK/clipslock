@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLIPSLOCK | Автомобільні кліпси, пістони та кріплення</title>
+    <meta name="description" content="Роздрібний інтернет-магазин автомобільних кліпс та кріплень. Пошук за OEM, маркою авто. Доставка Новою Поштою по Україні. Безкоштовна доставка від 600 грн.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Навігація -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">CLIPS<span>LOCK</span></a>
+            <div class="header-actions">
+                <button id="cartBtn" class="cart-btn">
+                    🛒 Кошик <span id="cartBadge" class="badge">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Головний екран (Hero) -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Автомобільні кліпси та кріплення</h1>
+            <p>Знайдіть потрібну деталь за OEM-номером, назвою або маркою автомобіля.</p>
+            <div class="delivery-badge">🚚 Безкоштовна доставка від 600 грн</div>
+            <a href="#catalog" class="btn btn-primary">Переглянути каталог</a>
+        </div>
+    </section>
+
+    <!-- Інформація про доставку -->
+    <section class="info-bar">
+        <div class="container info-grid">
+            <div class="info-item">
+                <span class="info-icon">📦</span>
+                <div>
+                    <strong>Нова Пошта</strong>
+                    <span>Доставка по всій Україні</span>
+                </div>
+            </div>
+            <div class="info-item">
+                <span class="info-icon">🚚</span>
+                <div>
+                    <strong>Безкоштовно від 600 грн</strong>
+                    <span>Менше — за тарифами НП</span>
+                </div>
+            </div>
+            <div class="info-item">
+                <span class="info-icon">🏷️</span>
+                <div>
+                    <strong>Простий вибір</strong>
+                    <span>Ціна вказана за 1 штуку</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Каталог -->
+    <section id="catalog" class="catalog-section container">
+        <aside class="sidebar">
+            <h3>Пошук деталей</h3>
+            <input type="text" id="searchInput" placeholder="OEM, назва, марка...">
+            
+            <h3>Фільтри</h3>
+            <div class="filter-group">
+                <label for="brandFilter">Марка авто:</label>
+                <select id="brandFilter">
+                    <option value="">Усі марки</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label for="categoryFilter">Категорія:</label>
+                <select id="categoryFilter">
+                    <option value="">Усі категорії</option>
+                </select>
+            </div>
+        </aside>
+
+        <main class="products-grid" id="productsGrid">
+            <!-- Товари будуть додані через JS -->
+        </main>
+    </section>
+
+    <!-- Блок "Не знайшли деталь?" -->
+    <section class="help-section container">
+        <div class="help-card">
+            <h2>Не знайшли потрібну кліпсу?</h2>
+            <p>Надішліть нам OEM-номер або фотографію деталі — допоможемо підібрати правильний варіант для вашого авто.</p>
+            <div class="help-buttons">
+                <a href="#" id="tgBtn" class="btn btn-tg" target="_blank">Написати в Telegram</a>
+                <a href="#" id="vbBtn" class="btn btn-vb" target="_blank">Написати у Viber</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> CLIPSLOCK. Всі права захищено.</p>
+        </div>
+    </footer>
+
+    <!-- Модальне вікно ТОВАРУ -->
+    <div id="productModal" class="modal">
+        <div class="modal-content product-modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="product-details-grid">
+                <div class="product-modal-img">
+                    <img id="modalImg" src="" alt="Товар">
+                </div>
+                <div class="product-modal-info">
+                    <h2 id="modalName">Назва</h2>
+                    <p class="modal-meta">OEM: <strong id="modalOem"></strong> | Марка: <strong id="modalBrand"></strong></p>
+                    <p class="modal-category">Категорія: <span id="modalCategory"></span></p>
+                    <p class="modal-compatibility"><strong>Сумісність:</strong> <span id="modalCompat"></span></p>
+                    <p class="modal-desc" id="modalDesc"></p>
+                    
+                    <div class="modal-purchase">
+                        <div class="price-per-piece"><span id="modalPrice"></span> грн / шт</div>
+                        <div class="qty-selector">
+                            <button id="modalQtyMinus">-</button>
+                            <input type="number" id="modalQtyInput" value="1" min="1">
+                            <button id="modalQtyPlus">+</button>
+                        </div>
+                        <div class="total-price-calc">Разом: <strong id="modalTotalCalc"></strong> грн</div>
+                        <button id="modalAddToCart" class="btn btn-primary btn-full">Додати в кошик</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальне вікно КОШИКА -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content cart-modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Ваш кошик</h2>
+            
+            <div id="cartItems" class="cart-items">
+                <!-- Товари кошика -->
+            </div>
+            
+            <div class="cart-footer">
+                <div class="delivery-progress">
+                    <p id="deliveryText">Рахуємо доставку...</p>
+                    <div class="progress-bar-bg">
+                        <div id="deliveryProgressBar" class="progress-bar-fill"></div>
+                    </div>
+                </div>
+                <div class="cart-total-box">
+                    <span>Загальна сума:</span>
+                    <strong id="cartTotalSum">0 грн</strong>
+                </div>
+                <button id="checkoutBtn" class="btn btn-primary btn-full">Оформити замовлення</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальне вікно ОФОРМЛЕННЯ ЗАМОВЛЕННЯ -->
+    <div id="checkoutModal" class="modal">
+        <div class="modal-content checkout-modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Оформлення замовлення</h2>
+            <form id="checkoutForm">
+                <div class="form-group">
+                    <label>Ім'я та Прізвище *</label>
+                    <input type="text" id="orderName" required>
+                </div>
+                <div class="form-group">
+                    <label>Номер телефону *</label>
+                    <input type="tel" id="orderPhone" required placeholder="+380...">
+                </div>
+                <div class="form-group">
+                    <label>Місто *</label>
+                    <input type="text" id="orderCity" required>
+                </div>
+                <div class="form-group">
+                    <label>Відділення / поштомат Нової Пошти *</label>
+                    <input type="text" id="orderBranch" required>
+                </div>
+                <div class="form-group">
+                    <label>Коментар до замовлення</label>
+                    <textarea id="orderComment" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Підтвердити замовлення</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Модальне вікно УСПІХУ -->
+    <div id="successModal" class="modal">
+        <div class="modal-content text-center">
+            <span class="close-modal">&times;</span>
+            <h2 style="color: #28a745; margin-bottom: 15px;">Дякуємо за замовлення!</h2>
+            <p id="successOrderId" style="font-weight: bold; margin-bottom: 10px;"></p>
+            <p>Замовлення сформовано. Ми отримали ваші дані.</p>
+            <p style="font-size: 0.9em; color: #666; margin-top: 15px;">(Після підключення системи відправки тут буде підтвердження фактичного отримання замовлення менеджером).</p>
+            <button class="btn btn-primary" onclick="document.getElementById('successModal').style.display='none'" style="margin-top: 20px;">Повернутися до магазину</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
