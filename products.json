@@ -391,7 +391,7 @@
     "brand": "Ford",
     "category": "Кріплення розпірної дії",
     "compatibility": ["Ford Focus (1998 - 2004) Fiesta (2001 - 2008) Mondeo (2000 - 2007) Transit (2000 - 2006) C-Max (2003 - 2010)"],
-    "price": 15,
+    "price": 20,
     "description": "Кліпса з розпірним гвинтом (штирьок зі шляпкою) для кріплення елементів кузова.",
     "img": "clipsa038.jpg"
   },
@@ -402,7 +402,7 @@
     "brand": "Renault / Nissan",
     "category": "Кріплення обшивки дверей",
     "compatibility": ["Renault Clio II (1998 - 2008) Kangoo I (1997 - 2009) Trafic II (2001 - 2014) Nissan Interstar Opel Vivaro GM"],
-    "price": 15,
+    "price": 50,
     "description": "Кліпса кріплення обшивки салону та багажника (кругла шляпка, дві шляпки, чорна).",
     "img": "clipsa039.jpg"
   },
@@ -413,7 +413,7 @@
     "brand": "Renault",
     "category": "Кріплення обшивки",
     "compatibility": ["Renault Clio II (1998 - 2012) Fluence (2009 - 2015) Megane II (2002 - 2009) Scenic II (2003 - 2009)"],
-    "price": 15,
+    "price": 20,
     "description": "Кліпса кріплення обшивки дверей (фігурна шляпка, дві шляпки, червона).",
     "img": "clipsa040.jpg"
   }
