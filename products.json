@@ -132,17 +132,6 @@
     "img": "clipsa013.jpg"
   },
   {
-    "id": "013",
-    "name": "Кріплення кругла шляпка",
-    "oem": "15549",
-    "brand": "Citroen",
-    "category": "Кріплення обшивки",
-    "compatibility": ["Citroen Багато моделей", "Fiat Tipo", "Peugeot Багато моделей"],
-    "price": 15,
-    "description": "Кілька шляпок",
-    "img": "clipsa013.jpg"
-  },
-  {
     "id": "015",
     "name": "Кріплення обшивки/молдингів, дві і більше шляпок",
     "oem": "15359",
