@@ -39,8 +39,74 @@
     "brand": "VW",
     "category": "Кріплення обшивки",
     "compatibility": ["Audi багато моделей", "Seat багато моделей", "Skoda багато моделей", "VW Bora", "VW Passat B5", "VW Polo", "VW Transporter T4", "VW Vento"],
-    "price": 25,
+    "price": 20,
     "description": "Спеціальна кліпса для надійного кріплення ущільнювача та молдинга лобового скла.",
     "img": "clipsa004.jpg"
+  },
+  {
+    "id": "005",
+    "name": "Кріплення обшивки",
+    "oem": "11399",
+    "brand": "Nissan",
+    "category": "Кріплення обшивки",
+    "compatibility": ["Ford багато моделей", "Infiniti багато моделей", "Mazda багато моделей", "Nissan багато моделей", "Renault багато моделей", "Subaru багато моделей"],
+    "price": 20,
+    "description": "Кріплення розпірної дії",
+    "img": "clipsa005.jpg"
+  },
+  {
+    "id": "006",
+    "name": "Втулка з круглою шляпкою",
+    "oem": "14084",
+    "brand": "Nissan",
+    "category": "Втулки, вставки",
+    "compatibility": ["Audi багато моделей", "Seat багато моделей", "Skoda багато моделей", "VW багато моделей"],
+    "price": 20,
+    "description": "Втулка з круглою шляпкою",
+    "img": "clipsa006.jpg"
+  },
+  {
+    "id": "007",
+    "name": "Втулка з круглою шляпкою",
+    "oem": "14084",
+    "brand": "Nissan",
+    "category": "Втулки, вставки",
+    "compatibility": ["Audi багато моделей", "Seat багато моделей", "Skoda багато моделей", "VW багато моделей"],
+    "price": 50,
+    "description": "Втулка з круглою шляпкою",
+    "img": "clipsa006.jpg"
+  },
+  {
+    "id": "008",
+    "name": "Кріплення обшивки/молдингів, дві і більше шляпок",
+    "oem": "15000",
+    "brand": "Nissan",
+    "category": "Кріплення обшивки",
+    "compatibility": ["Dacia Logan", "Land Rover багато моделей", "Nissan багато моделей", "Opel Arena (1997 - 2001) Movano (1998 - 2018) Vivaro (2000 - 2018)", "Renault багато моделей"],
+    "price": 50,
+    "description": "Кругла шляпка",
+    "img": "clipsa008.jpg"
+  },
+  {
+    "id": "009",
+    "name": "Гвинт під шестигранник, INBUS",
+    "oem": "19240",
+    "brand": "Nissan",
+    "category": "Гвинти, Болти",
+    "compatibility": ["Багато моделей"],
+    "price": 15,
+    "description": "Матеріал Метал",
+    "img": "clipsa009.jpg"
+  },
+  {
+    "id": "010",
+    "name": "Заглушка без отвору",
+    "oem": "13165",
+    "brand": "Nissan",
+    "category": "Заглушки",
+    "compatibility": ["Acura багато моделей", "Honda Accord CR-V Civic HR-V Jazz Legend Odyssey Pilot Багато моделей"],
+    "price": 35,
+    "description": "Кругла шляпка",
+    "img": "clipsa010.jpg"
   }
 ]
