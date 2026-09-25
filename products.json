@@ -1,423 +1,423 @@
 [
-  {
-    "id": "001",
-    "name": "Кліпса кріплення Підкрилки",
-    "oem": "11359",
-    "brand": "Toyota",
-    "category": "Кріплення підкрилки",
-    "compatibility": ["Toyota Yaris", "Toyota Corolla", "Lexus багато моделей"],
-    "price": 20,
-    "description": "Кріплення розпірної дії",
-    "img": "clipsa001.jpg"
-  },
-  {
-    "id": "002",
-    "name": "Пістон кріплення бампера",
-    "oem": "11370",
-    "brand": "Lexus",
-    "category": "Кріплення бампера",
-    "compatibility": ["Lexus CT200h-GX460 ", "Lexus IS200t", "Lexus IS300 ", "Toyota 4Runner", "Toyota C-HR", "Toyota Camry ", "Toyota Corolla", "Toyota Prius"],
-    "price": 20,
-    "description": "Кріплення розпірної дії",
-    "img": "clipsa002.jpg"
-  },
-  {
-    "id": "003",
-    "name": "Кліпса кріплення Підкрилки",
-    "oem": "11430",
-    "brand": "Toyota",
-    "category": "Кріплення підкрилки",
-    "compatibility": ["Lexus RX", "Toyota C-HR", "Toyota Highlander"],
-    "price": 20,
-    "description": "Кріплення розпірної дії",
-    "img": "clipsa003.jpg"
-  },
-  {
-    "id": "004",
-    "name": "Кріплення обшивки, одна шляпка",
-    "oem": "10140",
-    "brand": "VW",
-    "category": "Кріплення обшивки",
-    "compatibility": ["Audi багато моделей", "Seat багато моделей", "Skoda багато моделей", "VW Bora", "VW Passat B5", "VW Polo", "VW Transporter T4", "VW Vento"],
-    "price": 20,
-    "description": "Спеціальна кліпса для надійного кріплення ущільнювача та молдинга лобового скла.",
-    "img": "clipsa004.jpg"
-  },
-  {
-    "id": "005",
-    "name": "Кріплення обшивки",
-    "oem": "11399",
-    "brand": "Nissan",
-    "category": "Кріплення обшивки",
-    "compatibility": ["Ford багато моделей", "Infiniti багато моделей", "Mazda багато моделей", "Nissan багато моделей", "Renault багато моделей", "Subaru багато моделей"],
-    "price": 20,
-    "description": "Кріплення розпірної дії",
-    "img": "clipsa005.jpg"
-  },
-  {
-    "id": "006",
-    "name": "Втулка з круглою шляпкою",
-    "oem": "14084",
-    "brand": "MAC",
-    "category": "Втулки, вставки",
-    "compatibility": ["Багато марок"],
-    "price": 50,
-    "description": "Втулка з круглою шляпкою",
-    "img": "clipsa006.jpg"
-  },
-  {
-    "id": "008",
-    "name": "Кріплення обшивки/молдингів, дві і більше шляпок",
-    "oem": "15000",
-    "brand": "Nissan",
-    "category": "Кріплення обшивки",
-    "compatibility": ["Dacia Logan", "Land Rover багато моделей", "Nissan багато моделей", "Opel Arena (1997 - 2001) Movano (1998 - 2018) Vivaro (2000 - 2018)", "Renault багато моделей"],
-    "price": 50,
-    "description": "Кругла шляпка",
-    "img": "clipsa008.jpg"
-  },
-  {
-    "id": "009",
-    "name": "Гвинт під шестигранник, INBUS",
-    "oem": "19240",
-    "brand": "Nissan",
-    "category": "Гвинти, Болти",
-    "compatibility": ["Багато моделей"],
-    "price": 15,
-    "description": "Матеріал Метал",
-    "img": "clipsa009.jpg"
-  },
-  {
-    "id": "010",
-    "name": "Заглушка без отвору",
-    "oem": "13165",
-    "brand": "Nissan",
-    "category": "Заглушки",
-    "compatibility": ["Acura багато моделей", "Honda Accord CR-V Civic HR-V Jazz Legend Odyssey Pilot Багато моделей"],
-    "price": 35,
-    "description": "Кругла шляпка",
-    "img": "clipsa010.jpg"
-  },
-  {
-    "id": "011",
-    "name": "Фігурне кріплення",
-    "oem": "12243",
-    "brand": "Skoda",
-    "category": "Фігурні",
-    "compatibility": ["Skoda Octavia, Octavia A4 (1996 - 2004)", "VW Golf III (1991 - 1997), Vento (1992 - 1998)"],
-    "price": 15,
-    "description": "Прямокутна форма",
-    "img": "clipsa011.jpg"
-  },
-  {
-    "id": "012",
-    "name": "Гайка витяжна",
-    "oem": "20342",
-    "brand": "MAC",
-    "category": "Гайки, шайби, накрутки",
-    "compatibility": ["Багато марок"],
-    "price": 15,
-    "description": "Матеріал Сталь",
-    "img": "clipsa012.jpg"
-  },
-  {
-    "id": "013",
-    "name": "Кріплення кругла шляпка",
-    "oem": "15549",
-    "brand": "Citroen",
-    "category": "Кріплення обшивки",
-    "compatibility": ["Citroen Багато моделей", "Fiat Tipo", "Peugeot Багато моделей"],
-    "price": 15,
-    "description": "Кілька шляпок",
-    "img": "clipsa013.jpg"
-  },
-  {
-    "id": "015",
-    "name": "Кріплення обшивки/молдингів, дві і більше шляпок",
-    "oem": "15359",
-    "brand": "BMW",
-    "category": "Кріплення обшивки",
-    "compatibility": ["BMW Багато моделей"],
-    "price": 25,
-    "description": "Прямокутна шляпка",
-    "img": "clipsa015.jpg"
-  },
-  {
-    "id": "016",
-    "name": "Кріплення обшивки/молдингів, дві і більше шляпок",
-    "oem": "15838",
-    "brand": "Lexus",
-    "category": "Кріплення обшивки",
-    "compatibility": ["Багато моделей"],
-    "price": 25,
-    "description": "Кругла шляпка",
-    "img": "clipsa016.jpg"
-  },
-  {
-    "id": "017",
-    "name": "Гайка з фланцем",
-    "oem": "20051",
-    "brand": "MAC",
-    "category": "Гайки, шайби, накрутки",
-    "compatibility": ["Багато моделей"],
-    "price": 25,
-    "description": "Матеріал Пластик",
-    "img": "clipsa017.jpg"
-  },
-  {
-    "id": "018",
-    "name": "Гільза термоусадкова (термозбіжна)",
-    "oem": "32020",
-    "brand": "MAC",
-    "category": "Ізоляційні матеріали",
-    "compatibility": ["Багато моделей"],
-    "price": 10,
-    "description": "Матеріал Поліолефін",
-    "img": "clipsa018.jpg"
-  },
-  {
-    "id": "019",
-    "name": "З гвинтовим розпірним штирем",
-    "oem": "11028",
-    "brand": "MAC",
-    "category": "Кріплення обшивки",
-    "compatibility": ["Багато моделей"],
-    "price": 15,
-    "description": "Кріплення розпірної дії",
-    "img": "clipsa019.jpg"
-  },
-  {
-    "id": "020",
-    "name": "Під зіркоподібну викрутку, TORX",
-    "oem": "18644",
-    "brand": "MAC",
-    "category": "Саморізи",
-    "compatibility": ["Багато моделей"],
-    "price": 15,
-    "description": "Матеріал Метал",
-    "img": "clipsa020.jpg"
-  },
-  {
-    "id": "021",
-    "name": "Кріплення обшивки, одна шляпка",
-    "oem": "10785",
-    "brand": "Citroen",
-    "category": "Кріплення обшивки",
-    "compatibility": ["BMW 2-series F46 Gran Tourer, Citroen C3 (2002 - 2018)C3 Picasso (2009 - 2016)C5 (2001 - 2018), Dacia Багато моделей, Mini F55 Hatchback, Nissan NV300 (2016 - 2021) Primastar (2001 - 2023), Opel Vivaro (2001 - 2019), Peugeot 3008 (2009 - 2023)308 (2007 - 2023) 5008 (2009 - 2023)"],
-    "price": 15,
-    "description": "Кліпси типу Якір",
-    "img": "clipsa021.jpg"
-  },
-  {
-    "id": "022",
-    "name": "Під хрестоподібну викрутку",
-    "oem": "18094",
-    "brand": "MAC",
-    "category": "Саморізи",
-    "compatibility": ["Багато марок"],
-    "price": 15,
-    "description": "Матеріал Метал",
-    "img": "clipsa022.jpg"
-  },
-  {
-    "id": "023",
-    "name": "Гайка з фланцем",
-    "oem": "20029",
-    "brand": "Skoda",
-    "category": "Гайки, шайби, накрутки",
-    "compatibility": ["Porsche Cayenne (2003 - 2017), Macan (2015 - 2017), Skoda Fabia I Fabia II Octavia A5 Octavia A7 Octavia Tour Superb Yeti, VW Touareg (2013 - 2017)"],
-    "price": 20,
-    "description": "Матеріал Пластик",
-    "img": "clipsa023.jpg"
-  },
-  {
-    "id": "024",
-    "name": "З натискним розпірним штирем",
-    "oem": "11369",
-    "brand": "Suzuki",
-    "category": "Кріплення обшивки",
-    "compatibility": ["Suzuki Grand Vitara, Swift, SX4"],
-    "price": 15,
-    "description": "Кріплення розпірної дії",
-    "img": "clipsa024.jpg"
-  },
-  {
-    "id": "026",
-    "name": "З натискним розпірним штирем",
-    "oem": "11650",
-    "brand": "BMW",
-    "category": "Кріплення обшивки",
-    "compatibility": ["BMW 3-series E30 5-series E34 7-series E32, 7-series E38, 7-series E65, 5-series E39, 7-series E65, 6-series E63"],
-    "price": 15,
-    "description": "Кріплення розпірної дії",
-    "img": "clipsa026.jpg"
-  },
-  {
-    "id": "025",
-    "name": "З натискним розпірним штирем",
-    "oem": "11388",
-    "brand": "Toyota",
-    "category": "Кріплення бампера",
-    "compatibility": ["Scion iM, Toyota Camry, C-HR, Corolla (2014 - 2017), Highlander (2014 - 2017), Prius (2016 - 2017), RAV4 (2013 - 2015)"],
-    "price": 15,
-    "description": "Кріплення розпірної дії",
-    "img": "clipsa025.jpg"
-  },
-  {
-    "id": "027",
-    "name": "Гайка з фланцем",
-    "oem": "20040",
-    "brand": "MAC",
-    "category": "Гайки, шайби, накрутки",
-    "compatibility": ["3-series E36 (1991 - 1999) 3-series E46 3-series E46 (1998 - 2001) 3-series E46 (2001 - 2005) 3-series E90 (2005 - 2012) 5-series E34 (1988 - 1996) 7-series E32 (1986 - 1994) 7-series E65 (2002 - 2008) X1 X3 Z4, Mercedes-Benz багато моделей, Seat Alhambra (1996 - 2000), Alhambra (2000 - 2010), Cordoba (1993 - 2017), Ibiza (1993 - 2017), Leon (1999 - 2012), Toledo (1998 - 2009), VW Caddy (1995 - 2003), Polo III (1994 - 2001)"],
-    "price": 20,
-    "description": "Кріплення розпірної дії",
-    "img": "clipsa027.jpg"
-  },
-  {
-    "id": "028",
-    "name": "Втулка з круглою шляпкою",
-    "oem": "14087",
-    "brand": "VW",
-    "category": "Втулки, вставки",
-    "compatibility": ["Audi A5 (2009 - 2018) RS5 (2010 - 2018), Seat Alhambra (2010 - 2018), Toledo (2013 - 2018), Skoda Kodiaq (2017 - 2018) Yeti (2010 - 2018), Rapid (2013 - 2018), VW Arteon (2017 - 2018) Beetle (1997 - 2018) CC (2012 - 2017) Crafter (2017 - 2018) Golf Passat (2005 - 2018) Santana (2006 - 2018) Scirocco (2008 - 2018) Sharan (2010 - 2017) Tiguan (2007 - 2011) Touareg (2010 - 2018)"],
-    "price": 20,
-    "description": "Кріплення розпірної дії",
-    "img": "clipsa028.jpg"
-  },
-  {
-    "id": "029",
-    "name": "Кріплення обшивки, одна шляпка",
-    "oem": "10239",
-    "brand": "Alfa Romeo",
-    "category": "Кріплення обшивки",
-    "compatibility": ["Alfa Romeo GTV (1995 - 2005) Giulietta (2010 - 2018) Spider (1995 - 2006), Fiat 500 (2007 - 2018) Ducato (2006 - 2018) Idea (2004 - 2017) Punto (1993 - 2018) Tempra (1990 - 1996), Iveco Багато моделей, Lancia Lybra (1999 - 2005) Musa (2004 - 2012) Y (1995 - 2003)"],
-    "price": 20,
-    "description": "Кріплення розпірної дії",
-    "img": "clipsa029.jpg"
-  },
-  {
-    "id": "030",
-    "name": "Гвинт під зіркоподібну викрутку, TORX",
-    "oem": "19216",
-    "brand": "MAC",
-    "category": "Гвинти, Болти",
-    "compatibility": ["VW Bora (1998 - 2005)Caddy Golf LT Passat Polo Sharan Touareg I (2002 - 2010) Transporter, Peugeot Багато моделей"],
-    "price": 20,
-    "description": "Матеріал Метал",
-    "img": "clipsa030.jpg"
-  },
-  {
-    "id": "031",
-    "name": "Кріплення розпірної дії",
-    "oem": "11844",
-    "brand": "Ford",
-    "category": "Кріплення підкрилки",
-    "compatibility": ["Ford C-Max (2010 - 2017) Fiesta (2008 - 2017) Focus III (2011 - 2017) Galaxy (2006 - 2010) Mondeo (2007 - 2010) Ranger (2012 - 2017) C-Max (2010 - 2017) Fiesta (2008 - 2017) Focus III (2011 - 2017) Galaxy (2006 - 2010) Mondeo (2007 - 2010) Ranger (2012 - 2017) C-Max (2010 - 2017) Fiesta (2008 - 2017) Focus III (2011 - 2017) Galaxy (2006 - 2010) Mondeo (2007 - 2010) Ranger (2012 - 2017), GM Багато моделей, Opel Багато моделей"],
-    "price": 15,
-    "description": "З натискним розпірним штирем",
-    "img": "clipsa031.jpg"
-  },
-  {
-    "id": "032",
-    "name": "Болт із шайбою",
-    "oem": "19836",
-    "brand": "Citroen",
-    "category": "Гвинти, Болти",
-    "compatibility": ["Citroen C2 (2003 - 2012) C3 (2002 - 2009) C3 (2009 - 2017) C3 Picasso (2009 - 2013) C4 C4 Picasso (2013 - 2017) DS3 (2010 - 2017) Jumpy (2012 - 2017), 207 (2006 - 2012) 208 3008 (2010 - 2017) 307 308 (2013 - 2017) Expert III"],
-    "price": 20,
-    "description": "Болт із шайбою",
-    "img": "clipsa032.jpg"
-  },
-  {
-    "id": "033",
-    "name": "Заклепка витяжна",
-    "oem": "25250",
-    "brand": "Ford",
-    "category": "Заклепки",
-    "compatibility": ["BMW Багато моделей, Citroen Багато моделей, Ford Fiesta (2001 - 2008) Fusion (2002 - 2012) Ka (1996 - 2008) Transit (2000 - 2006) Transit (2006 - 2013), Peugeot Багато моделей, Renault Багато моделей"],
-    "price": 20,
-    "description": "Заклепка витяжна",
-    "img": "clipsa033.jpg"
-  },
-  {
-    "id": "034",
-    "name": "Фітинг (з'єднувач трубок)",
-    "oem": "22290",
-    "brand": "MAC",
-    "category": "Фітинги, форсунки омивача",
-    "compatibility": ["Багато марок"],
-    "price": 65,
-    "description": "Фітинг (з'єднувач трубок)",
-    "img": "clipsa034.jpg"
-  },
-  {
-    "id": "035",
-    "name": "Кріплення обшивки, одна шляпка",
-    "oem": "10758",
-    "brand": "Toyota",
-    "category": "Кріплення обшивки",
-    "compatibility": ["Citroen Багато моделей, Daihatsu Багато моделей, Lexus Багато моделей, Toyota Багато моделей"],
-    "price": 15,
-    "description": "Кліпси типу Якір",
-    "img": "clipsa035.jpg"
-  },
-  {
-    "id": "036",
-    "name": "З натискним розпірним штирем",
-    "oem": "11892",
-    "brand": "MAC",
-    "category": "Кріплення кузова",
-    "compatibility": ["Renault Багато моделей"],
-    "price": 15,
-    "description": "Кріплення розпірної дії",
-    "img": "clipsa036.jpg"
-  },
-  {
-    "id": "037",
-    "name": "Кріплення обшивки, одна шляпка",
-    "oem": "10381",
-    "brand": "Citroen",
-    "category": "Кріплення кузова",
-    "compatibility": ["Citroen Berlingo (1996 - 2008) Berlingo (2008 - 2012) C2 (2003 - 2012) C5 (2001 - 2007) C5 (2008 - 2017) Saxo (1996 - 2004) Xantia (1993 - 1998) Xantia (1998 - 2001) Xsara (1997 - 2000) Xsara (2000 - 2004) Xsara Picasso (1999 - 2012)"],
-    "price": 15,
-    "description": "Кліпси типу Ялинка",
-    "img": "clipsa037.jpg"
-  },
-  {
-    "id": "038",
-    "name": "Кліпса з розпірним гвинтом",
-    "oem": "11130",
-    "brand": "Ford",
-    "category": "Кріплення розпірної дії",
-    "compatibility": ["Ford Focus (1998 - 2004) Fiesta (2001 - 2008) Mondeo (2000 - 2007) Transit (2000 - 2006) C-Max (2003 - 2010)"],
-    "price": 20,
-    "description": "Кліпса з розпірним гвинтом (штирьок зі шляпкою) для кріплення елементів кузова.",
-    "img": "clipsa038.jpg"
-  },
-  {
-    "id": "039",
-    "name": "Кліпса кріплення обшивки",
-    "oem": "15410",
-    "brand": "Renault / Nissan",
-    "category": "Кріплення обшивки дверей",
-    "compatibility": ["Renault Clio II (1998 - 2008) Kangoo I (1997 - 2009) Trafic II (2001 - 2014) Nissan Interstar Opel Vivaro GM"],
-    "price": 50,
-    "description": "Кліпса кріплення обшивки салону та багажника (кругла шляпка, дві шляпки, чорна).",
-    "img": "clipsa039.jpg"
-  },
-  {
-    "id": "040",
-    "name": "Кліпса (пістон) кріплення обшивки дверей",
-    "oem": "15572",
-    "brand": "Renault",
-    "category": "Кріплення обшивки",
-    "compatibility": ["Renault Clio II (1998 - 2012) Fluence (2009 - 2015) Megane II (2002 - 2009) Scenic II (2003 - 2009)"],
-    "price": 20,
-    "description": "Кліпса кріплення обшивки дверей (фігурна шляпка, дві шляпки, червона).",
-    "img": "clipsa040.jpg"
-  },
-  {
+{
+"id": "001",
+"name": "Кліпса кріплення Підкрилки",
+"oem": "11359",
+"brand": "Toyota",
+"category": "Кріплення підкрилки",
+"compatibility": ["Toyota Yaris", "Toyota Corolla", "Lexus багато моделей"],
+"price": 20,
+"description": "Кріплення розпірної дії",
+"img": "clipsa001.jpg"
+},
+{
+"id": "002",
+"name": "Пістон кріплення бампера",
+"oem": "11370",
+"brand": "Lexus",
+"category": "Кріплення бампера",
+"compatibility": ["Lexus CT200h-GX460 ", "Lexus IS200t", "Lexus IS300 ", "Toyota 4Runner", "Toyota C-HR", "Toyota Camry ", "Toyota Corolla", "Toyota Prius"],
+"price": 20,
+"description": "Кріплення розпірної дії",
+"img": "clipsa002.jpg"
+},
+{
+"id": "003",
+"name": "Кліпса кріплення Підкрилки",
+"oem": "11430",
+"brand": "Toyota",
+"category": "Кріплення підкрилки",
+"compatibility": ["Lexus RX", "Toyota C-HR", "Toyota Highlander"],
+"price": 20,
+"description": "Кріплення розпірної дії",
+"img": "clipsa003.jpg"
+},
+{
+"id": "004",
+"name": "Кріплення обшивки, одна шляпка",
+"oem": "10140",
+"brand": "VW",
+"category": "Кріплення обшивки",
+"compatibility": ["Audi багато моделей", "Seat багато моделей", "Skoda багато моделей", "VW Bora", "VW Passat B5", "VW Polo", "VW Transporter T4", "VW Vento"],
+"price": 20,
+"description": "Спеціальна кліпса для надійного кріплення ущільнювача та молдинга лобового скла.",
+"img": "clipsa004.jpg"
+},
+{
+"id": "005",
+"name": "Кріплення обшивки",
+"oem": "11399",
+"brand": "Nissan",
+"category": "Кріплення обшивки",
+"compatibility": ["Ford багато моделей", "Infiniti багато моделей", "Mazda багато моделей", "Nissan багато моделей", "Renault багато моделей", "Subaru багато моделей"],
+"price": 20,
+"description": "Кріплення розпірної дії",
+"img": "clipsa005.jpg"
+},
+{
+"id": "006",
+"name": "Втулка з круглою шляпкою",
+"oem": "14084",
+"brand": "MAC",
+"category": "Втулки, вставки",
+"compatibility": ["Багато марок"],
+"price": 50,
+"description": "Втулка з круглою шляпкою",
+"img": "clipsa006.jpg"
+},
+{
+"id": "008",
+"name": "Кріплення обшивки/молдингів, дві і більше шляпок",
+"oem": "15000",
+"brand": "Nissan",
+"category": "Кріплення обшивки",
+"compatibility": ["Dacia Logan", "Land Rover багато моделей", "Nissan багато моделей", "Opel Arena (1997 - 2001) Movano (1998 - 2018) Vivaro (2000 - 2018)", "Renault багато моделей"],
+"price": 50,
+"description": "Кругла шляпка",
+"img": "clipsa008.jpg"
+},
+{
+"id": "009",
+"name": "Гвинт під шестигранник, INBUS",
+"oem": "19240",
+"brand": "Nissan",
+"category": "Гвинти, Болти",
+"compatibility": ["Багато моделей"],
+"price": 15,
+"description": "Матеріал Метал",
+"img": "clipsa009.jpg"
+},
+{
+"id": "010",
+"name": "Заглушка без отвору",
+"oem": "13165",
+"brand": "Nissan",
+"category": "Заглушки",
+"compatibility": ["Acura багато моделей", "Honda Accord CR-V Civic HR-V Jazz Legend Odyssey Pilot Багато моделей"],
+"price": 35,
+"description": "Кругла шляпка",
+"img": "clipsa010.jpg"
+},
+{
+"id": "011",
+"name": "Фігурне кріплення",
+"oem": "12243",
+"brand": "Skoda",
+"category": "Фігурні",
+"compatibility": ["Skoda Octavia, Octavia A4 (1996 - 2004)", "VW Golf III (1991 - 1997), Vento (1992 - 1998)"],
+"price": 15,
+"description": "Прямокутна форма",
+"img": "clipsa011.jpg"
+},
+{
+"id": "012",
+"name": "Гайка витяжна",
+"oem": "20342",
+"brand": "MAC",
+"category": "Гайки, шайби, накрутки",
+"compatibility": ["Багато марок"],
+"price": 15,
+"description": "Матеріал Сталь",
+"img": "clipsa012.jpg"
+},
+{
+"id": "013",
+"name": "Кріплення кругла шляпка",
+"oem": "15549",
+"brand": "Citroen",
+"category": "Кріплення обшивки",
+"compatibility": ["Citroen Багато моделей", "Fiat Tipo", "Peugeot Багато моделей"],
+"price": 15,
+"description": "Кілька шляпок",
+"img": "clipsa013.jpg"
+},
+{
+"id": "015",
+"name": "Кріплення обшивки/молдингів, дві і більше шляпок",
+"oem": "15359",
+"brand": "BMW",
+"category": "Кріплення обшивки",
+"compatibility": ["BMW Багато моделей"],
+"price": 25,
+"description": "Прямокутна шляпка",
+"img": "clipsa015.jpg"
+},
+{
+"id": "016",
+"name": "Кріплення обшивки/молдингів, дві і більше шляпок",
+"oem": "15838",
+"brand": "Lexus",
+"category": "Кріплення обшивки",
+"compatibility": ["Багато моделей"],
+"price": 25,
+"description": "Кругла шляпка",
+"img": "clipsa016.jpg"
+},
+{
+"id": "017",
+"name": "Гайка з фланцем",
+"oem": "20051",
+"brand": "MAC",
+"category": "Гайки, шайби, накрутки",
+"compatibility": ["Багато моделей"],
+"price": 25,
+"description": "Матеріал Пластик",
+"img": "clipsa017.jpg"
+},
+{
+"id": "018",
+"name": "Гільза термоусадкова (термозбіжна)",
+"oem": "32020",
+"brand": "MAC",
+"category": "Ізоляційні матеріали",
+"compatibility": ["Багато моделей"],
+"price": 10,
+"description": "Матеріал Поліолефін",
+"img": "clipsa018.jpg"
+},
+{
+"id": "019",
+"name": "З гвинтовим розпірним штирем",
+"oem": "11028",
+"brand": "MAC",
+"category": "Кріплення обшивки",
+"compatibility": ["Багато моделей"],
+"price": 15,
+"description": "Кріплення розпірної дії",
+"img": "clipsa019.jpg"
+},
+{
+"id": "020",
+"name": "Під зіркоподібну викрутку, TORX",
+"oem": "18644",
+"brand": "MAC",
+"category": "Саморізи",
+"compatibility": ["Багато моделей"],
+"price": 15,
+"description": "Матеріал Метал",
+"img": "clipsa020.jpg"
+},
+{
+"id": "021",
+"name": "Кріплення обшивки, одна шляпка",
+"oem": "10785",
+"brand": "Citroen",
+"category": "Кріплення обшивки",
+"compatibility": ["BMW 2-series F46 Gran Tourer, Citroen C3 (2002 - 2018)C3 Picasso (2009 - 2016)C5 (2001 - 2018), Dacia Багато моделей, Mini F55 Hatchback, Nissan NV300 (2016 - 2021) Primastar (2001 - 2023), Opel Vivaro (2001 - 2019), Peugeot 3008 (2009 - 2023)308 (2007 - 2023) 5008 (2009 - 2023)"],
+"price": 15,
+"description": "Кліпси типу Якір",
+"img": "clipsa021.jpg"
+},
+{
+"id": "022",
+"name": "Під хрестоподібну викрутку",
+"oem": "18094",
+"brand": "MAC",
+"category": "Саморізи",
+"compatibility": ["Багато марок"],
+"price": 15,
+"description": "Матеріал Метал",
+"img": "clipsa022.jpg"
+},
+{
+"id": "023",
+"name": "Гайка з фланцем",
+"oem": "20029",
+"brand": "Skoda",
+"category": "Гайки, шайби, накрутки",
+"compatibility": ["Porsche Cayenne (2003 - 2017), Macan (2015 - 2017), Skoda Fabia I Fabia II Octavia A5 Octavia A7 Octavia Tour Superb Yeti, VW Touareg (2013 - 2017)"],
+"price": 20,
+"description": "Матеріал Пластик",
+"img": "clipsa023.jpg"
+},
+{
+"id": "024",
+"name": "З натискним розпірним штирем",
+"oem": "11369",
+"brand": "Suzuki",
+"category": "Кріплення обшивки",
+"compatibility": ["Suzuki Grand Vitara, Swift, SX4"],
+"price": 15,
+"description": "Кріплення розпірної дії",
+"img": "clipsa024.jpg"
+},
+{
+"id": "025",
+"name": "З натискним розпірним штирем",
+"oem": "11388",
+"brand": "Toyota",
+"category": "Кріплення бампера",
+"compatibility": ["Scion iM, Toyota Camry, C-HR, Corolla (2014 - 2017), Highlander (2014 - 2017), Prius (2016 - 2017), RAV4 (2013 - 2015)"],
+"price": 15,
+"description": "Кріплення розпірної дії",
+"img": "clipsa025.jpg"
+},
+{
+"id": "026",
+"name": "З натискним розпірним штирем",
+"oem": "11650",
+"brand": "BMW",
+"category": "Кріплення обшивки",
+"compatibility": ["BMW 3-series E30 5-series E34 7-series E32, 7-series E38, 7-series E65, 5-series E39, 7-series E65, 6-series E63"],
+"price": 15,
+"description": "Кріплення розпірної дії",
+"img": "clipsa026.jpg"
+},
+{
+"id": "027",
+"name": "Гайка з фланцем",
+"oem": "20040",
+"brand": "MAC",
+"category": "Гайки, шайби, накрутки",
+"compatibility": ["3-series E36 (1991 - 1999) 3-series E46 3-series E46 (1998 - 2001) 3-series E46 (2001 - 2005) 3-series E90 (2005 - 2012) 5-series E34 (1988 - 1996) 7-series E32 (1986 - 1994) 7-series E65 (2002 - 2008) X1 X3 Z4, Mercedes-Benz багато моделей, Seat Alhambra (1996 - 2000), Alhambra (2000 - 2010), Cordoba (1993 - 2017), Ibiza (1993 - 2017), Leon (1999 - 2012), Toledo (1998 - 2009), VW Caddy (1995 - 2003), Polo III (1994 - 2001)"],
+"price": 20,
+"description": "Кріплення розпірної дії",
+"img": "clipsa027.jpg"
+},
+{
+"id": "028",
+"name": "Втулка з круглою шляпкою",
+"oem": "14087",
+"brand": "VW",
+"category": "Втулки, вставки",
+"compatibility": ["Audi A5 (2009 - 2018) RS5 (2010 - 2018), Seat Alhambra (2010 - 2018), Toledo (2013 - 2018), Skoda Kodiaq (2017 - 2018) Yeti (2010 - 2018), Rapid (2013 - 2018), VW Arteon (2017 - 2018) Beetle (1997 - 2018) CC (2012 - 2017) Crafter (2017 - 2018) Golf Passat (2005 - 2018) Santana (2006 - 2018) Scirocco (2008 - 2018) Sharan (2010 - 2017) Tiguan (2007 - 2011) Touareg (2010 - 2018)"],
+"price": 20,
+"description": "Кріплення розпірної дії",
+"img": "clipsa028.jpg"
+},
+{
+"id": "029",
+"name": "Кріплення обшивки, одна шляпка",
+"oem": "10239",
+"brand": "Alfa Romeo",
+"category": "Кріплення обшивки",
+"compatibility": ["Alfa Romeo GTV (1995 - 2005) Giulietta (2010 - 2018) Spider (1995 - 2006), Fiat 500 (2007 - 2018) Ducato (2006 - 2018) Idea (2004 - 2017) Punto (1993 - 2018) Tempra (1990 - 1996), Iveco Багато моделей, Lancia Lybra (1999 - 2005) Musa (2004 - 2012) Y (1995 - 2003)"],
+"price": 20,
+"description": "Кріплення розпірної дії",
+"img": "clipsa029.jpg"
+},
+{
+"id": "030",
+"name": "Гвинт під зіркоподібну викрутку, TORX",
+"oem": "19216",
+"brand": "MAC",
+"category": "Гвинти, Болти",
+"compatibility": ["VW Bora (1998 - 2005)Caddy Golf LT Passat Polo Sharan Touareg I (2002 - 2010) Transporter, Peugeot Багато моделей"],
+"price": 20,
+"description": "Матеріал Метал",
+"img": "clipsa030.jpg"
+},
+{
+"id": "031",
+"name": "Кріплення розпірної дії",
+"oem": "11844",
+"brand": "Ford",
+"category": "Кріплення підкрилки",
+"compatibility": ["Ford C-Max (2010 - 2017) Fiesta (2008 - 2017) Focus III (2011 - 2017) Galaxy (2006 - 2010) Mondeo (2007 - 2010) Ranger (2012 - 2017) C-Max (2010 - 2017) Fiesta (2008 - 2017) Focus III (2011 - 2017) Galaxy (2006 - 2010) Mondeo (2007 - 2010) Ranger (2012 - 2017) C-Max (2010 - 2017) Fiesta (2008 - 2017) Focus III (2011 - 2017) Galaxy (2006 - 2010) Mondeo (2007 - 2017) Ranger (2012 - 2017), GM Багато моделей, Opel Багато моделей"],
+"price": 15,
+"description": "З натискним розпірним штирем",
+"img": "clipsa031.jpg"
+},
+{
+"id": "032",
+"name": "Болт із шайбою",
+"oem": "19836",
+"brand": "Citroen",
+"category": "Гвинти, Болти",
+"compatibility": ["Citroen C2 (2003 - 2012) C3 (2002 - 2009) C3 (2009 - 2017) C3 Picasso (2009 - 2013) C4 C4 Picasso (2013 - 2017) DS3 (2010 - 2017) Jumpy (2012 - 2017), 207 (2006 - 2012) 208 3008 (2010 - 2017) 307 308 (2013 - 2017) Expert III"],
+"price": 20,
+"description": "Болт із шайбою",
+"img": "clipsa032.jpg"
+},
+{
+"id": "033",
+"name": "Заклепка витяжна",
+"oem": "25250",
+"brand": "Ford",
+"category": "Заклепки",
+"compatibility": ["BMW Багато моделей, Citroen Багато моделей, Ford Fiesta (2001 - 2008) Fusion (2002 - 2012) Ka (1996 - 2008) Transit (2000 - 2006) Transit (2006 - 2013), Peugeot Багато моделей, Renault Багато моделей"],
+"price": 20,
+"description": "Заклепка витяжна",
+"img": "clipsa033.jpg"
+},
+{
+"id": "034",
+"name": "Фітинг (з'єднувач трубок)",
+"oem": "22290",
+"brand": "MAC",
+"category": "Фітинги, форсунки омивача",
+"compatibility": ["Багато марок"],
+"price": 65,
+"description": "Фітинг (з'єднувач трубок)",
+"img": "clipsa034.jpg"
+},
+{
+"id": "035",
+"name": "Кріплення обшивки, одна шляпка",
+"oem": "10758",
+"brand": "Toyota",
+"category": "Кріплення обшивки",
+"compatibility": ["Citroen Багато моделей", "Daihatsu Багато моделей", "Lexus Багато моделей", "Toyota Багато моделей"],
+"price": 15,
+"description": "Кліпси типу Якір",
+"img": "clipsa035.jpg"
+},
+{
+"id": "036",
+"name": "З натискним розпірним штирем",
+"oem": "11892",
+"brand": "MAC",
+"category": "Кріплення кузова",
+"compatibility": ["Renault Багато моделей"],
+"price": 15,
+"description": "Кріплення розпірної дії",
+"img": "clipsa036.jpg"
+},
+{
+"id": "037",
+"name": "Кріплення обшивки, одна шляпка",
+"oem": "10381",
+"brand": "Citroen",
+"category": "Кріплення кузова",
+"compatibility": ["Citroen Berlingo (1996 - 2008) Berlingo (2008 - 2012) C2 (2003 - 2012) C5 (2001 - 2007) C5 (2008 - 2017) Saxo (1996 - 2004) Xantia (1993 - 1998) Xantia (1998 - 2001) Xsara (1997 - 2000) Xsara (2000 - 2004) Xsara Picasso (1999 - 2012)"],
+"price": 15,
+"description": "Кліпси типу Ялинка",
+"img": "clipsa037.jpg"
+},
+{
+"id": "038",
+"name": "Кліпса з розпірним гвинтом",
+"oem": "11130",
+"brand": "Ford",
+"category": "Кріплення розпірної дії",
+"compatibility": ["Ford Focus (1998 - 2004) Fiesta (2001 - 2008) Mondeo (2000 - 2007) Transit (2000 - 2006) C-Max (2003 - 2010)"],
+"price": 20,
+"description": "Кліпса з розпірним гвинтом (штирьок зі шляпкою) для кріплення елементів кузова.",
+"img": "clipsa038.jpg"
+},
+{
+"id": "039",
+"name": "Кліпса кріплення обшивки",
+"oem": "15410",
+"brand": "Renault / Nissan",
+"category": "Кріплення обшивки дверей",
+"compatibility": ["Renault Clio II (1998 - 2008) Kangoo I (1997 - 2009) Trafic II (2001 - 2014) Nissan Interstar Opel Vivaro GM"],
+"price": 50,
+"description": "Кліпса кріплення обшивки салону та багажника (кругла шляпка, дві шляпки, чорна).",
+"img": "clipsa039.jpg"
+},
+{
+"id": "040",
+"name": "Кліпса (пістон) кріплення обшивки дверей",
+"oem": "15572",
+"brand": "Renault",
+"category": "Кріплення обшивки",
+"compatibility": ["Renault Clio II (1998 - 2012) Fluence (2009 - 2015) Megane II (2002 - 2009) Scenic II (2003 - 2009)"],
+"price": 20,
+"description": "Кліпса кріплення обшивки дверей (фігурна шляпка, дві шляпки, червона).",
+"img": "clipsa040.jpg"
+},
+{
 "id": "041",
 "name": "Фітинг-з'єднувач трубок омивача I-подібний 18×18 мм",
 "oem": "22080",
@@ -467,17 +467,7 @@
 "oem": "15300",
 "brand": "Opel",
 "category": "Кріплення обшивки та молдингів",
-"compatibility": [
-"Opel — багато моделей",
-"Renault — багато моделей",
-"Chevrolet — багато моделей",
-"Daewoo — багато моделей",
-"Ford — багато моделей",
-"Mercedes-Benz — багато моделей",
-"Dacia — багато моделей",
-"Isuzu — багато моделей",
-"ZAZ — багато моделей"
-],
+"compatibility": ["Opel — багато моделей", "Renault — багато моделей", "Chevrolet — багато моделей", "Daewoo — багато моделей", "Ford — багато моделей", "Mercedes-Benz — багато моделей", "Dacia — багато моделей", "Isuzu — багато моделей", "ZAZ — багато моделей"],
 "price": 10,
 "description": "Пластикове кріплення обшивки та молдингів з двома шляпками, біле. Діаметр 8.5 мм.",
 "img": "clipsa045.jpg"
@@ -499,11 +489,7 @@
 "oem": "11686",
 "brand": "Ford",
 "category": "Кріплення кузова",
-"compatibility": [
-"Ford Transit (2000 - 2006)",
-"Ford Transit (2006 - 2013)",
-"Багато марок — багато моделей"
-],
+"compatibility": ["Ford Transit (2000 - 2006)", "Ford Transit (2006 - 2013)", "Багато марок — багато моделей"],
 "price": 30,
 "description": "Кріплення розпірної дії з натискним розпірним штирем, сіре, пластикове. Тип — штир із шляпкою.",
 "img": "clipsa047.jpg"
@@ -514,9 +500,7 @@
 "oem": "22022",
 "brand": "Універсальний",
 "category": "Фітинг (з'єднувач трубок)",
-"compatibility": [
-"Багато марок — багато моделей"
-],
+"compatibility": ["Багато марок — багато моделей"],
 "price": 30,
 "description": "I-подібний пластиковий фітинг-з'єднувач трубок омивача, чорний. Діаметр підключення — 5 мм.",
 "img": "clipsa048.jpg"
@@ -527,14 +511,7 @@
 "oem": "11009",
 "brand": "Honda",
 "category": "Кріплення кузова",
-"compatibility": [
-"Honda — багато моделей",
-"Isuzu — багато моделей",
-"Kia Avella",
-"Kia Carnival",
-"Kia Rio",
-"Nissan — багато моделей"
-],
+"compatibility": ["Honda — багато моделей", "Isuzu — багато моделей", "Kia Avella", "Kia Carnival", "Kia Rio", "Nissan — багато моделей"],
 "price": 20,
 "description": "Чорне пластикове кріплення розпірної дії з гвинтовим розпірним штирем. Тип — штир із шляпкою.",
 "img": "clipsa049.jpg"
@@ -545,9 +522,7 @@
 "oem": "11346",
 "brand": "Універсальний",
 "category": "Кріплення кузова",
-"compatibility": [
-"Багато марок — багато моделей"
-],
+"compatibility": ["Багато марок — багато моделей"],
 "price": 10,
 "description": "Чорне пластикове кріплення розпірної дії з натискним розпірним штирем. Тип — штир із шляпкою.",
 "img": "clipsa050.jpg"
@@ -558,9 +533,7 @@
 "oem": "26048",
 "brand": "Універсальний",
 "category": "Хомути-кліпси",
-"compatibility": [
-"Багато марок — багато моделей"
-],
+"compatibility": ["Багато марок — багато моделей"],
 "price": 20,
 "description": "Автомобільний хомут-кліпса для кріплення елементів автомобіля.",
 "img": "clipsa051.jpg"
@@ -571,17 +544,7 @@
 "oem": "15680",
 "brand": "Renault",
 "category": "Кріплення обшивки та молдингів",
-"compatibility": [
-"Renault — багато моделей",
-"Citroen — багато моделей",
-"Peugeot — багато моделей",
-"Nissan — багато моделей",
-"Lada — багато моделей",
-"Opel Vivaro (2014 - ...)",
-"Renault Kangoo (2008 - ...)",
-"Renault Master (2010 - ...)",
-"Renault Trafic (2014 - ...)"
-],
+"compatibility": ["Renault — багато моделей", "Citroen — багато моделей", "Peugeot — багато моделей", "Nissan — багато моделей", "Lada — багато моделей", "Opel Vivaro (2014 - ...)", "Renault Kangoo (2008 - ...)", "Renault Master (2010 - ...)", "Renault Trafic (2014 - ...)"],
 "price": 25,
 "description": "Біла пластикова кліпса з круглою шляпкою для кріплення обшивки. Діаметр отвору 11 мм, діаметр головки 18 мм.",
 "img": "clipsa052.jpg"
@@ -592,17 +555,7 @@
 "oem": "15563",
 "brand": "Fiat",
 "category": "Кріплення обшивки та молдингів",
-"compatibility": [
-"Alfa Romeo — багато моделей",
-"Citroen Jumper I (1994 - 2002)",
-"Citroen Jumper II (2002 - 2006)",
-"Citroen Jumper III (2006 - 2014)",
-"Fiat Ducato (2001 - 2018)",
-"Iveco — багато моделей",
-"Lancia — багато моделей",
-"Peugeot Boxer II (2002 - 2006)",
-"Peugeot Boxer III (2006 - 2014)"
-],
+"compatibility": ["Alfa Romeo — багато моделей", "Citroen Jumper I (1994 - 2002)", "Citroen Jumper II (2002 - 2006)", "Citroen Jumper III (2006 - 2014)", "Fiat Ducato (2001 - 2018)", "Iveco — багато моделей", "Lancia — багато моделей", "Peugeot Boxer II (2002 - 2006)", "Peugeot Boxer III (2006 - 2014)"],
 "price": 20,
 "description": "Біле пластикове кріплення обшивки та молдингів з двома шляпками та прямокутною шляпкою. Використовується для кріплення молдингів дверей.",
 "img": "clipsa053.jpg"
@@ -613,12 +566,7 @@
 "oem": "19808",
 "brand": "Volkswagen",
 "category": "Болти та гвинти з шайбою",
-"compatibility": [
-"Volkswagen — багато моделей",
-"Audi — багато моделей",
-"SEAT — багато моделей",
-"Škoda — багато моделей"
-],
+"compatibility": ["Volkswagen — багато моделей", "Audi — багато моделей", "SEAT — багато моделей", "Škoda — багато моделей"],
 "price": 20,
 "description": "Металевий гвинт із шайбою для автомобільного кріплення. Оригінальні номери VAG: N10009110 та N90949102.",
 "img": "clipsa054.jpg"
@@ -629,9 +577,7 @@
 "oem": "26539",
 "brand": "Універсальний",
 "category": "Пружинні хомути",
-"compatibility": [
-"Багато марок — багато моделей"
-],
+"compatibility": ["Багато марок — багато моделей"],
 "price": 20,
 "description": "Сталевий пружинний хомут діаметром 12 мм для фіксації автомобільних шлангів. Клас W1, сріблястий.",
 "img": "clipsa055.jpg"
@@ -642,9 +588,7 @@
 "oem": "15174",
 "brand": "Ford",
 "category": "Кріплення обшивки та молдингів",
-"compatibility": [
-"Ford — багато моделей"
-],
+"compatibility": ["Ford — багато моделей"],
 "price": 20,
 "description": "Біле пластикове кріплення обшивки та молдингів з двома шляпками та фігурною шляпкою. Місце встановлення — поріг.",
 "img": "clipsa056.jpg"
@@ -655,27 +599,7 @@
 "oem": "15519",
 "brand": "BMW",
 "category": "Кріплення обшивки та молдингів",
-"compatibility": [
-"BMW Z3 E36",
-"BMW 3-series E36 (1991 - 1999)",
-"BMW 3-series E46 (1998 - 2005)",
-"BMW 7-series E32 (1986 - 1994)",
-"BMW 7-series E38 (1995 - 2001)",
-"BMW 8-series E31",
-"BMW 7-series E65 (2002 - 2008)",
-"BMW 7-series E66",
-"Mercedes-Benz Smart",
-"Mercedes-Benz C-Class W203",
-"Mercedes-Benz CL-Class C216 (2006 - 2014)",
-"Mercedes-Benz S-Class W221",
-"Mercedes-Benz SL-Class R129",
-"Mercedes-Benz Sprinter W901",
-"Mercedes-Benz Sprinter W902",
-"Mercedes-Benz Sprinter W903",
-"Mercedes-Benz Sprinter W904",
-"Mercedes-Benz Sprinter W905",
-"Mercedes-Benz Sprinter W906"
-],
+"compatibility": ["BMW Z3 E36", "BMW 3-series E36 (1991 - 1999)", "BMW 3-series E46 (1998 - 2005)", "BMW 7-series E32 (1986 - 1994)", "BMW 7-series E38 (1995 - 2001)", "BMW 8-series E31", "BMW 7-series E65 (2002 - 2008)", "BMW 7-series E66", "Mercedes-Benz Smart", "Mercedes-Benz C-Class W203", "Mercedes-Benz CL-Class C216 (2006 - 2014)", "Mercedes-Benz S-Class W221", "Mercedes-Benz SL-Class R129", "Mercedes-Benz Sprinter W901", "Mercedes-Benz Sprinter W902", "Mercedes-Benz Sprinter W903", "Mercedes-Benz Sprinter W904", "Mercedes-Benz Sprinter W905", "Mercedes-Benz Sprinter W906"],
 "price": 15,
 "description": "Світло-зелене пластикове кріплення обшивки та молдингів з кількома шляпками та шляпкою з вирізом. Використовується для обшивки дверей, багажника, салону та бампера.",
 "img": "clipsa057.jpg"
@@ -686,9 +610,7 @@
 "oem": "10379",
 "brand": "Універсальний",
 "category": "Кріплення обшивки",
-"compatibility": [
-"Багато моделей"
-],
+"compatibility": ["Багато моделей"],
 "price": 15,
 "description": "Чорне пластикове кріплення обшивки з однією круглою шляпкою типу «ялинка». Місце встановлення — кузов.",
 "img": "clipsa058.jpg"
@@ -699,9 +621,7 @@
 "oem": "18066",
 "brand": "Універсальний",
 "category": "Саморізи",
-"compatibility": [
-"Багато марок — багато моделей"
-],
+"compatibility": ["Багато марок — багато моделей"],
 "price": 15,
 "description": "Чорний сталевий автомобільний саморіз під хрестоподібну викрутку. Діаметр головки 19,2 мм.",
 "img": "clipsa059.jpg"
@@ -712,9 +632,7 @@
 "oem": "21037",
 "brand": "Ford",
 "category": "Кріплення опори капота, шлангів та дротів",
-"compatibility": [
-"Ford — багато моделей"
-],
+"compatibility": ["Ford — багато моделей"],
 "price": 35,
 "description": "Чорне пластикове кріплення опори капота, шлангів та проводів. Місце встановлення — капот.",
 "img": "clipsa060.jpg"
@@ -725,10 +643,7 @@
 "oem": "11448",
 "brand": "Subaru",
 "category": "Кріплення розпірної дії",
-"compatibility": [
-"Subaru Forester",
-"Subaru Impreza — багато моделей"
-],
+"compatibility": ["Subaru Forester", "Subaru Impreza — багато моделей"],
 "price": 15,
 "description": "Чорне пластикове кріплення розпірної дії з натискним штирьком. Використовується для кузова, крил, бампера та радіатора. OEM Subaru 909130059.",
 "img": "clipsa061.jpg"
@@ -739,9 +654,7 @@
 "oem": "29029",
 "brand": "Toyota",
 "category": "Відбійники та деталі з гуми",
-"compatibility": [
-"Toyota RAV4"
-],
+"compatibility": ["Toyota RAV4"],
 "price": 35,
 "description": "Чорний гумовий відбійник для багажного відсіку. OEM Toyota 90541-09108.",
 "img": "clipsa062.jpg"
@@ -752,20 +665,7 @@
 "oem": "19838",
 "brand": "Renault",
 "category": "Гвинти та болти",
-"compatibility": [
-"Renault Clio III (2005 - 2012)",
-"Renault Espace IV (2002 - 2006)",
-"Renault Kangoo I (1998 - 2009)",
-"Renault Laguna II (2000 - 2007)",
-"Renault Megane II (2002 - 2009)",
-"Renault Scenic II (2003 - 2009)",
-"Renault Trafic II (2001 - 2014)",
-"Renault Vel Satis (2002 - 2009)",
-"Mercedes-Benz C-Class W201 (1982 - 1992)",
-"Mercedes-Benz C-Class W202 (1997 - 2000)",
-"Mercedes-Benz E-Class W124 (1984 - 1996)",
-"Mercedes-Benz E-Class W210 (1995 - 2001)"
-],
+"compatibility": ["Renault Clio III (2005 - 2012)", "Renault Espace IV (2002 - 2006)", "Renault Kangoo I (1998 - 2009)", "Renault Laguna II (2000 - 2007)", "Renault Megane II (2002 - 2009)", "Renault Scenic II (2003 - 2009)", "Renault Trafic II (2001 - 2014)", "Renault Vel Satis (2002 - 2009)", "Mercedes-Benz C-Class W201 (1982 - 1992)", "Mercedes-Benz C-Class W202 (1997 - 2000)", "Mercedes-Benz E-Class W124 (1984 - 1996)", "Mercedes-Benz E-Class W210 (1995 - 2001)"],
 "price": 20,
 "description": "Чорний металевий болт із шайбою M6×20 мм для кузовного кріплення. OEM Renault 7703602059 та Mercedes-Benz A0089906901.",
 "img": "clipsa063.jpg"
@@ -776,12 +676,7 @@
 "oem": "18826",
 "brand": "Toyota",
 "category": "Саморізи",
-"compatibility": [
-"Daihatsu — багато моделей",
-"Lexus — багато моделей",
-"Toyota — багато моделей",
-"Багато марок — багато моделей"
-],
+"compatibility": ["Daihatsu — багато моделей", "Lexus — багато моделей", "Toyota — багато моделей", "Багато марок — багато моделей"],
 "price": 15,
 "description": "Чорний сталевий саморіз із шайбою під ключ та викрутку. OEM Toyota 90159-60477.",
 "img": "clipsa064.jpg"
@@ -792,21 +687,7 @@
 "oem": "11340",
 "brand": "Subaru",
 "category": "Кріплення розпірної дії",
-"compatibility": [
-"Subaru Forester",
-"Subaru Impreza",
-"Subaru Legacy",
-"Subaru XV",
-"Mitsubishi Colt",
-"Mitsubishi Lancer",
-"Mitsubishi Pajero",
-"Mitsubishi Montero",
-"Citroen C4 Aircross",
-"Citroen — багато моделей",
-"Mitsubishi — багато моделей",
-"Subaru — багато моделей",
-"Багато марок — багато моделей"
-],
+"compatibility": ["Subaru Forester", "Subaru Impreza", "Subaru Legacy", "Subaru XV", "Mitsubishi Colt", "Mitsubishi Lancer", "Mitsubishi Pajero", "Mitsubishi Montero", "Citroen C4 Aircross", "Citroen — багато моделей", "Mitsubishi — багато моделей", "Subaru — багато моделей", "Багато марок — багато моделей"],
 "price": 15,
 "description": "Чорне пластикове кріплення розпірної дії з натискним розпірним штирем. Діаметр отвору 6 мм. Використовується для кузова, бампера, радіатора, крила, багажника, салону та моторного відсіку.",
 "img": "clipsa065.jpg"
@@ -817,35 +698,7 @@
 "oem": "15845",
 "brand": "Mitsubishi",
 "category": "Кріплення обшивки та молдингів",
-"compatibility": [
-"Citroen C1 (2005 - 2012)",
-"Daihatsu Sirion (2006 - 2010)",
-"Daihatsu Terios",
-"Ford — багато моделей",
-"Ford Kuga",
-"GM — багато моделей",
-"Honda Accord (2008 - 2012)",
-"Honda Accord Tourer (2008 - 2013)",
-"Honda Odyssey (2005 - 2011)",
-"Honda Legend (2007 - 2011)",
-"Honda City (2002 - 2009)",
-"Honda Civic (2001 - 2009)",
-"Honda FR-V (2005 - 2010)",
-"Honda Insight (2010 - 2012)",
-"Honda Civic (2007 - 2012)",
-"Honda CR-Z (2011 - 2012)",
-"Honda S2000 (2007 - 2010)",
-"Honda Crosstour (2010 - 2012)",
-"Hyundai — багато моделей",
-"Kia — багато моделей",
-"Lexus — багато моделей",
-"Mazda — багато моделей",
-"Mitsubishi — багато моделей",
-"Peugeot 107 (2005 - 2014)",
-"Scion — багато моделей",
-"Subaru — багато моделей",
-"Suzuki — багато моделей"
-],
+"compatibility": ["Citroen C1 (2005 - 2012)", "Daihatsu Sirion (2006 - 2010)", "Daihatsu Terios", "Ford — багато моделей", "Ford Kuga", "GM — багато моделей", "Honda Accord (2008 - 2012)", "Honda Accord Tourer (2008 - 2013)", "Honda Odyssey (2005 - 2011)", "Honda Legend (2007 - 2011)", "Honda City (2002 - 2009)", "Honda Civic (2001 - 2009)", "Honda FR-V (2005 - 2010)", "Honda Insight (2010 - 2012)", "Honda Civic (2007 - 2012)", "Honda CR-Z (2011 - 2012)", "Honda S2000 (2007 - 2010)", "Honda Crosstour (2010 - 2012)", "Hyundai — багато моделей", "Kia — багато моделей", "Lexus — багато моделей", "Mazda — багато моделей", "Mitsubishi — багато моделей", "Peugeot 107 (2005 - 2014)", "Scion — багато моделей", "Subaru — багато моделей", "Suzuki — багато моделей"],
 "price": 15,
 "description": "Помаранчеве пластикове кріплення обшивки та молдингів з кількома шляпками та круглою шляпкою. Діаметр 9,5 мм. Застосовується для дверей, салону, багажника, кузова, порогів, бамперів та інших елементів.",
 "img": "clipsa066.jpg"
@@ -856,9 +709,7 @@
 "oem": "15564",
 "brand": "Volvo",
 "category": "Кріплення обшивки та молдингів",
-"compatibility": [
-"Volvo XC90 (2014-...)"
-],
+"compatibility": ["Volvo XC90 (2014-...)"],
 "price": 15,
 "description": "Пластикова кліпса кріплення обшивки та порогів. Застосовується для Volvo XC90 другого покоління.",
 "img": "clipsa067.jpg"
@@ -869,9 +720,7 @@
 "oem": "22086",
 "brand": "Universal",
 "category": "Фітинги форсунок омивача",
-"compatibility": [
-"Багато моделей"
-],
+"compatibility": ["Багато моделей"],
 "price": 65,
 "description": "I-подібний фітинг для з'єднання трубок омивача, розмір 22×22 мм.",
 "img": "clipsa068.jpg"
@@ -882,42 +731,7 @@
 "oem": "14541",
 "brand": "Renault",
 "category": "Втулки, вставки",
-"compatibility": [
-"Citroen C3 (2002-2009)",
-"Citroen C3 (2009-2017)",
-"Citroen C4 Picasso (2006-2013)",
-"Citroen C5 (2001-2007)",
-"Citroen C5 (2008-2017)",
-"Citroen C8 (2002-2012)",
-"Citroen Evasion",
-"Citroen Jumpy (2012-2017)",
-"Citroen Xantia (1993-1998)",
-"Citroen Xsara (1997-2000)",
-"Citroen Xsara (2000-2004)",
-"Citroen Xsara Picasso (1999-2012)",
-"Fiat — багато моделей",
-"Peugeot 206 (1998-2009)",
-"Peugeot 207 (2006-2012)",
-"Peugeot 607 (1999-2004)",
-"Peugeot 607 (2004-2010)",
-"Peugeot 806",
-"Peugeot 807",
-"Peugeot Expert I",
-"Peugeot Expert II",
-"Renault Clio II (1998-2008)",
-"Renault Espace IV (2002-2006)",
-"Renault Kangoo I (1998-2009)",
-"Renault Laguna II (2000-2007)",
-"Renault Logan",
-"Renault Master I (1980-1997)",
-"Renault Master II (1997-2010)",
-"Renault Megane I (1995-2003)",
-"Renault Megane II (2002-2009)",
-"Renault Megane Scenic (1996-1999)",
-"Renault Sandero (2007-2012)",
-"Renault Scenic II (2003-2009)",
-"Renault Trafic II (2001-2014)"
-],
+"compatibility": ["Citroen C3 (2002-2009)", "Citroen C3 (2009-2017)", "Citroen C4 Picasso (2006-2013)", "Citroen C5 (2001-2007)", "Citroen C5 (2008-2017)", "Citroen C8 (2002-2012)", "Citroen Evasion", "Citroen Jumpy (2012-2017)", "Citroen Xantia (1993-1998)", "Citroen Xsara (1997-2000)", "Citroen Xsara (2000-2004)", "Citroen Xsara Picasso (1999-2012)", "Fiat — багато моделей", "Peugeot 206 (1998-2009)", "Peugeot 207 (2006-2012)", "Peugeot 607 (1999-2004)", "Peugeot 607 (2004-2010)", "Peugeot 806", "Peugeot 807", "Peugeot Expert I", "Peugeot Expert II", "Renault Clio II (1998-2008)", "Renault Espace IV (2002-2006)", "Renault Kangoo I (1998-2009)", "Renault Laguna II (2000-2007)", "Renault Logan", "Renault Master I (1980-1997)", "Renault Master II (1997-2010)", "Renault Megane I (1995-2003)", "Renault Megane II (2002-2009)", "Renault Megane Scenic (1996-1999)", "Renault Sandero (2007-2012)", "Renault Scenic II (2003-2009)", "Renault Trafic II (2001-2014)"],
 "price": 15,
 "description": "Пластикова втулка з овальною шляпкою без ущільнювальної прокладки. Універсальне кузовне кріплення.",
 "img": "clipsa069.jpg"
@@ -928,37 +742,7 @@
 "oem": "19835",
 "brand": "Citroen",
 "category": "Гвинти та болти",
-"compatibility": [
-"AMC — багато моделей",
-"Alfa Romeo — багато моделей",
-"Audi — багато моделей",
-"BMW — багато моделей",
-"Chevrolet — багато моделей",
-"Chrysler — багато моделей",
-"Citroen — багато моделей",
-"Daewoo — багато моделей",
-"Dodge — багато моделей",
-"Fiat — багато моделей",
-"Ford — багато моделей",
-"General Motors — багато моделей",
-"Honda — багато моделей",
-"Hyundai — багато моделей",
-"Jeep — багато моделей",
-"KIA — багато моделей",
-"Lancia — багато моделей",
-"Mazda — багато моделей",
-"Mercedes-Benz — багато моделей",
-"Mitsubishi — багато моделей",
-"Nissan — багато моделей",
-"Opel — багато моделей",
-"Peugeot — багато моделей",
-"Renault — багато моделей",
-"Seat — багато моделей",
-"Skoda — багато моделей",
-"Suzuki — багато моделей",
-"Toyota — багато моделей",
-"Volkswagen — багато моделей"
-],
+"compatibility": ["AMC — багато моделей", "Alfa Romeo — багато моделей", "Audi — багато моделей", "BMW — багато моделей", "Chevrolet — багато моделей", "Chrysler — багато моделей", "Citroen — багато моделей", "Daewoo — багато моделей", "Dodge — багато моделей", "Fiat — багато моделей", "Ford — багато моделей", "General Motors — багато моделей", "Honda — багато моделей", "Hyundai — багато моделей", "Jeep — багато моделей", "KIA — багато моделей", "Lancia — багато моделей", "Mazda — багато моделей", "Mercedes-Benz — багато моделей", "Mitsubishi — багато моделей", "Nissan — багато моделей", "Opel — багато моделей", "Peugeot — багато моделей", "Renault — багато моделей", "Seat — багато моделей", "Skoda — багато моделей", "Suzuki — багато моделей", "Toyota — багато моделей", "Volkswagen — багато моделей"],
 "price": 15,
 "description": "Чорний сталевий гвинт із шайбою. Діаметр головки 19,6 мм. OEM Citroen/Peugeot 6922 H2.",
 "img": "clipsa070.jpg"
@@ -969,9 +753,7 @@
 "oem": "26660",
 "brand": "Universal",
 "category": "Хомути, стяжки кабельні",
-"compatibility": [
-"Багато моделей"
-],
+"compatibility": ["Багато моделей"],
 "price": 95,
 "description": "Чорний черв'ячний хомут шириною 9 мм, діапазон затягування 50–70 мм.",
 "img": "clipsa071.jpg"
@@ -982,14 +764,7 @@
 "oem": "16227",
 "brand": "Mercedes-Benz",
 "category": "Фіксатори, закладні",
-"compatibility": [
-"Mercedes-Benz — багато моделей",
-"Mercedes-Benz E-Class W124",
-"Mercedes-Benz SL-Class R129",
-"Mercedes-Benz S-Class W140",
-"Mercedes-Benz SLK-Class R170",
-"Mercedes-Benz C-Class W202"
-],
+"compatibility": ["Mercedes-Benz — багато моделей", "Mercedes-Benz E-Class W124", "Mercedes-Benz SL-Class R129", "Mercedes-Benz S-Class W140", "Mercedes-Benz SLK-Class R170", "Mercedes-Benz C-Class W202"],
 "price": 25,
 "description": "Чорно-сріблястий фіксатор-закладна під саморіз для кузова та елементів освітлення. OEM A0029942945.",
 "img": "clipsa072.jpg"
@@ -1000,10 +775,7 @@
 "oem": "18063",
 "brand": "Ford",
 "category": "Саморізи",
-"compatibility": [
-"Ford — багато моделей",
-"Багато марок"
-],
+"compatibility": ["Ford — багато моделей", "Багато марок"],
 "price": 15,
 "description": "Чорний автомобільний саморіз із прес-шайбою під хрестоподібну викрутку. OEM 56912.S2 / 56912S.",
 "img": "clipsa073.jpg"
@@ -1014,9 +786,7 @@
 "oem": "16221",
 "brand": "Universal",
 "category": "Кріплення обшивки та молдингів",
-"compatibility": [
-"Багато моделей"
-],
+"compatibility": ["Багато моделей"],
 "price": 15,
 "description": "Автомобільне кріплення обшивки та молдингів.",
 "img": "clipsa074.jpg"
@@ -1027,37 +797,7 @@
 "oem": "15551",
 "brand": "Renault",
 "category": "Кріплення обшивки та молдингів",
-"compatibility": [
-"Audi A4 B6 (2000-2004)",
-"Audi A4 B7 (2004-2007)",
-"Citroen — багато моделей",
-"Dacia Logan — багато моделей",
-"Fiat Scudo (2007-2018)",
-"Fiat Ulysse",
-"Lancia — багато моделей",
-"Mini R60 Countryman",
-"Mini R61 Paceman",
-"Nissan Kubistar (2003-2009)",
-"Nissan NV200 (2011-2018)",
-"Nissan NV300",
-"Nissan NV400 (2011-2018)",
-"Opel Movano (2011-2018)",
-"Opel Vivaro",
-"Peugeot — багато моделей",
-"Renault — багато моделей",
-"Seat Exeo (2008-2013)",
-"Seat — багато моделей",
-"Skoda Octavia A5 (2004-2008)",
-"VAZ-LADA Largus",
-"VAZ-LADA Vesta",
-"Volvo C30 (2006-2013)",
-"Volvo S40 (1995-2011)",
-"Volvo S80 (2007-2016)",
-"Volvo V50 (2004-2012)",
-"Volvo V70 (2008-2016)",
-"Volvo XC70 (2008-2016)",
-"VW — багато моделей"
-],
+"compatibility": ["Audi A4 B6 (2000-2004)", "Audi A4 B7 (2004-2007)", "Citroen — багато моделей", "Dacia Logan — багато моделей", "Fiat Scudo (2007-2018)", "Fiat Ulysse", "Lancia — багато моделей", "Mini R60 Countryman", "Mini R61 Paceman", "Nissan Kubistar (2003-2009)", "Nissan NV200 (2011-2018)", "Nissan NV300", "Nissan NV400 (2011-2018)", "Opel Movano (2011-2018)", "Opel Vivaro", "Peugeot — багато моделей", "Renault — багато моделей", "Seat Exeo (2008-2013)", "Seat — багато моделей", "Skoda Octavia A5 (2004-2008)", "VAZ-LADA Largus", "VAZ-LADA Vesta", "Volvo C30 (2006-2013)", "Volvo S40 (1995-2011)", "Volvo S80 (2007-2016)", "Volvo V50 (2004-2012)", "Volvo V70 (2008-2016)", "Volvo XC70 (2008-2016)", "VW — багато моделей"],
 "price": 15,
 "description": "Біла пластикова кліпса з двома круглими шляпками, діаметр 10,5 мм. Використовується для кріплення обшивки дверей, багажника, салону та молдингів.",
 "img": "clipsa075.jpg"
@@ -1068,14 +808,7 @@
 "oem": "15146",
 "brand": "Chevrolet",
 "category": "Кріплення обшивки та молдингів",
-"compatibility": [
-"Buick — багато моделей",
-"Buick Envision",
-"Chevrolet — багато моделей",
-"Chevrolet Malibu",
-"Opel — багато моделей",
-"Opel Zafira C"
-],
+"compatibility": ["Buick — багато моделей", "Buick Envision", "Chevrolet — багато моделей", "Chevrolet Malibu", "Opel — багато моделей", "Opel Zafira C"],
 "price": 10,
 "description": "Зелене пластикове кріплення обшивки та молдингів із двома шляпками. Встановлюється у дверях. OEM 11611664 / 148410 / 0148410.",
 "img": "clipsa076.jpg"
@@ -1086,9 +819,7 @@
 "oem": "12080",
 "brand": "Universal",
 "category": "Втулки, вставки",
-"compatibility": [
-"Багато моделей"
-],
+"compatibility": ["Багато моделей"],
 "price": 20,
 "description": "Автомобільна втулка / вставка.",
 "img": "clipsa077.jpg"
@@ -1099,38 +830,7 @@
 "oem": "15204",
 "brand": "Hyundai",
 "category": "Кріплення обшивки та молдингів",
-"compatibility": [
-"Hyundai Soul",
-"Hyundai Sportage",
-"Hyundai Sorento",
-"Hyundai Picanto",
-"Hyundai Optima",
-"Hyundai Magentis",
-"Hyundai Cerato",
-"Hyundai Carnival",
-"Hyundai Carens",
-"Hyundai XG30",
-"Hyundai XG25",
-"Hyundai Tucson",
-"Hyundai Tiburon",
-"Hyundai Terracan",
-"Hyundai Santa Fe",
-"Hyundai Matrix",
-"Hyundai i30",
-"Hyundai i10",
-"Hyundai H1",
-"Hyundai Grandeur",
-"Hyundai Excel",
-"KIA Soul",
-"KIA Sportage",
-"KIA Sorento",
-"KIA Picanto",
-"KIA Optima",
-"KIA Magentis",
-"KIA Cerato",
-"KIA Carnival",
-"KIA Carens"
-],
+"compatibility": ["Hyundai Soul", "Hyundai Sportage", "Hyundai Sorento", "Hyundai Picanto", "Hyundai Optima", "Hyundai Magentis", "Hyundai Cerato", "Hyundai Carnival", "Hyundai Carens", "Hyundai XG30", "Hyundai XG25", "Hyundai Tucson", "Hyundai Tiburon", "Hyundai Terracan", "Hyundai Santa Fe", "Hyundai Matrix", "Hyundai i30", "Hyundai i10", "Hyundai H1", "Hyundai Grandeur", "Hyundai Excel", "KIA Soul", "KIA Sportage", "KIA Sorento", "KIA Picanto", "KIA Optima", "KIA Magentis", "KIA Cerato", "KIA Carnival", "KIA Carens"],
 "price": 20,
 "description": "Біла пластикова кліпса з двома прямокутними шляпками. Застосовується для кріплення обшивки та молдингів у дверях і на крилі. OEM 8771902500 / 877593E000 / 877583E000 / 33031016.",
 "img": "clipsa078.jpg"
@@ -1141,14 +841,9 @@
 "oem": "18654",
 "brand": "Universal",
 "category": "Автомобільні кріплення",
-"compatibility": [
-"Багато моделей"
-],
+"compatibility": ["Багато моделей"],
 "price": 15,
 "description": "Автомобільне кріплення MAK.",
 "img": "clipsa079.jpg"
 }
-
-]
-
 ]
