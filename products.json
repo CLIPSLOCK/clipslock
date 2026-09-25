@@ -849,9 +849,306 @@
 "price": 15,
 "description": "Помаранчеве пластикове кріплення обшивки та молдингів з кількома шляпками та круглою шляпкою. Діаметр 9,5 мм. Застосовується для дверей, салону, багажника, кузова, порогів, бамперів та інших елементів.",
 "img": "clipsa066.jpg"
+},
+[
+{
+"id": "067",
+"name": "Кліпса кріплення обшивки",
+"oem": "15564",
+"brand": "Volvo",
+"category": "Кріплення обшивки та молдингів",
+"compatibility": [
+"Volvo XC90 (2014-...)"
+],
+"price": 15,
+"description": "Пластикова кліпса кріплення обшивки та порогів. Застосовується для Volvo XC90 другого покоління.",
+"img": "clipsa067.jpg"
+},
+{
+"id": "068",
+"name": "Фітинг-з'єднувач трубок омивача I-подібний 22×22 мм",
+"oem": "22086",
+"brand": "Universal",
+"category": "Фітинги форсунок омивача",
+"compatibility": [
+"Багато моделей"
+],
+"price": 65,
+"description": "I-подібний фітинг для з'єднання трубок омивача, розмір 22×22 мм.",
+"img": "clipsa068.jpg"
+},
+{
+"id": "069",
+"name": "Втулка з овальною шляпкою",
+"oem": "14541",
+"brand": "Renault",
+"category": "Втулки, вставки",
+"compatibility": [
+"Citroen C3 (2002-2009)",
+"Citroen C3 (2009-2017)",
+"Citroen C4 Picasso (2006-2013)",
+"Citroen C5 (2001-2007)",
+"Citroen C5 (2008-2017)",
+"Citroen C8 (2002-2012)",
+"Citroen Evasion",
+"Citroen Jumpy (2012-2017)",
+"Citroen Xantia (1993-1998)",
+"Citroen Xsara (1997-2000)",
+"Citroen Xsara (2000-2004)",
+"Citroen Xsara Picasso (1999-2012)",
+"Fiat — багато моделей",
+"Peugeot 206 (1998-2009)",
+"Peugeot 207 (2006-2012)",
+"Peugeot 607 (1999-2004)",
+"Peugeot 607 (2004-2010)",
+"Peugeot 806",
+"Peugeot 807",
+"Peugeot Expert I",
+"Peugeot Expert II",
+"Renault Clio II (1998-2008)",
+"Renault Espace IV (2002-2006)",
+"Renault Kangoo I (1998-2009)",
+"Renault Laguna II (2000-2007)",
+"Renault Logan",
+"Renault Master I (1980-1997)",
+"Renault Master II (1997-2010)",
+"Renault Megane I (1995-2003)",
+"Renault Megane II (2002-2009)",
+"Renault Megane Scenic (1996-1999)",
+"Renault Sandero (2007-2012)",
+"Renault Scenic II (2003-2009)",
+"Renault Trafic II (2001-2014)"
+],
+"price": 15,
+"description": "Пластикова втулка з овальною шляпкою без ущільнювальної прокладки. Універсальне кузовне кріплення.",
+"img": "clipsa069.jpg"
+},
+{
+"id": "070",
+"name": "Гвинт із шайбою",
+"oem": "19835",
+"brand": "Citroen",
+"category": "Гвинти та болти",
+"compatibility": [
+"AMC — багато моделей",
+"Alfa Romeo — багато моделей",
+"Audi — багато моделей",
+"BMW — багато моделей",
+"Chevrolet — багато моделей",
+"Chrysler — багато моделей",
+"Citroen — багато моделей",
+"Daewoo — багато моделей",
+"Dodge — багато моделей",
+"Fiat — багато моделей",
+"Ford — багато моделей",
+"General Motors — багато моделей",
+"Honda — багато моделей",
+"Hyundai — багато моделей",
+"Jeep — багато моделей",
+"KIA — багато моделей",
+"Lancia — багато моделей",
+"Mazda — багато моделей",
+"Mercedes-Benz — багато моделей",
+"Mitsubishi — багато моделей",
+"Nissan — багато моделей",
+"Opel — багато моделей",
+"Peugeot — багато моделей",
+"Renault — багато моделей",
+"Seat — багато моделей",
+"Skoda — багато моделей",
+"Suzuki — багато моделей",
+"Toyota — багато моделей",
+"Volkswagen — багато моделей"
+],
+"price": 15,
+"description": "Чорний сталевий гвинт із шайбою. Діаметр головки 19,6 мм. OEM Citroen/Peugeot 6922 H2.",
+"img": "clipsa070.jpg"
+},
+{
+"id": "071",
+"name": "Хомут черв'ячний 9 мм W3",
+"oem": "26660",
+"brand": "Universal",
+"category": "Хомути, стяжки кабельні",
+"compatibility": [
+"Багато моделей"
+],
+"price": 95,
+"description": "Чорний черв'ячний хомут шириною 9 мм, діапазон затягування 50–70 мм.",
+"img": "clipsa071.jpg"
+},
+{
+"id": "072",
+"name": "Фіксатор-закладна кузова",
+"oem": "16227",
+"brand": "Mercedes-Benz",
+"category": "Фіксатори, закладні",
+"compatibility": [
+"Mercedes-Benz — багато моделей",
+"Mercedes-Benz E-Class W124",
+"Mercedes-Benz SL-Class R129",
+"Mercedes-Benz S-Class W140",
+"Mercedes-Benz SLK-Class R170",
+"Mercedes-Benz C-Class W202"
+],
+"price": 25,
+"description": "Чорно-сріблястий фіксатор-закладна під саморіз для кузова та елементів освітлення. OEM A0029942945.",
+"img": "clipsa072.jpg"
+},
+{
+"id": "073",
+"name": "Саморіз із прес-шайбою",
+"oem": "18063",
+"brand": "Ford",
+"category": "Саморізи",
+"compatibility": [
+"Ford — багато моделей",
+"Багато марок"
+],
+"price": 15,
+"description": "Чорний автомобільний саморіз із прес-шайбою під хрестоподібну викрутку. OEM 56912.S2 / 56912S.",
+"img": "clipsa073.jpg"
+},
+{
+"id": "074",
+"name": "Кріплення обшивки та молдингів, дві шляпки",
+"oem": "16221",
+"brand": "Universal",
+"category": "Кріплення обшивки та молдингів",
+"compatibility": [
+"Багато моделей"
+],
+"price": 15,
+"description": "Автомобільне кріплення обшивки та молдингів.",
+"img": "clipsa074.jpg"
+},
+{
+"id": "075",
+"name": "Кріплення обшивки та молдингів, дві шляпки",
+"oem": "15551",
+"brand": "Renault",
+"category": "Кріплення обшивки та молдингів",
+"compatibility": [
+"Audi A4 B6 (2000-2004)",
+"Audi A4 B7 (2004-2007)",
+"Citroen — багато моделей",
+"Dacia Logan — багато моделей",
+"Fiat Scudo (2007-2018)",
+"Fiat Ulysse",
+"Lancia — багато моделей",
+"Mini R60 Countryman",
+"Mini R61 Paceman",
+"Nissan Kubistar (2003-2009)",
+"Nissan NV200 (2011-2018)",
+"Nissan NV300",
+"Nissan NV400 (2011-2018)",
+"Opel Movano (2011-2018)",
+"Opel Vivaro",
+"Peugeot — багато моделей",
+"Renault — багато моделей",
+"Seat Exeo (2008-2013)",
+"Seat — багато моделей",
+"Skoda Octavia A5 (2004-2008)",
+"VAZ-LADA Largus",
+"VAZ-LADA Vesta",
+"Volvo C30 (2006-2013)",
+"Volvo S40 (1995-2011)",
+"Volvo S80 (2007-2016)",
+"Volvo V50 (2004-2012)",
+"Volvo V70 (2008-2016)",
+"Volvo XC70 (2008-2016)",
+"VW — багато моделей"
+],
+"price": 15,
+"description": "Біла пластикова кліпса з двома круглими шляпками, діаметр 10,5 мм. Використовується для кріплення обшивки дверей, багажника, салону та молдингів.",
+"img": "clipsa075.jpg"
+},
+{
+"id": "076",
+"name": "Кріплення обшивки та молдингів, дві шляпки",
+"oem": "15146",
+"brand": "Chevrolet",
+"category": "Кріплення обшивки та молдингів",
+"compatibility": [
+"Buick — багато моделей",
+"Buick Envision",
+"Chevrolet — багато моделей",
+"Chevrolet Malibu",
+"Opel — багато моделей",
+"Opel Zafira C"
+],
+"price": 10,
+"description": "Зелене пластикове кріплення обшивки та молдингів із двома шляпками. Встановлюється у дверях. OEM 11611664 / 148410 / 0148410.",
+"img": "clipsa076.jpg"
+},
+{
+"id": "077",
+"name": "Втулка / вставка",
+"oem": "12080",
+"brand": "Universal",
+"category": "Втулки, вставки",
+"compatibility": [
+"Багато моделей"
+],
+"price": 20,
+"description": "Автомобільна втулка / вставка.",
+"img": "clipsa077.jpg"
+},
+{
+"id": "078",
+"name": "Кріплення обшивки та молдингів, дві шляпки",
+"oem": "15204",
+"brand": "Hyundai",
+"category": "Кріплення обшивки та молдингів",
+"compatibility": [
+"Hyundai Soul",
+"Hyundai Sportage",
+"Hyundai Sorento",
+"Hyundai Picanto",
+"Hyundai Optima",
+"Hyundai Magentis",
+"Hyundai Cerato",
+"Hyundai Carnival",
+"Hyundai Carens",
+"Hyundai XG30",
+"Hyundai XG25",
+"Hyundai Tucson",
+"Hyundai Tiburon",
+"Hyundai Terracan",
+"Hyundai Santa Fe",
+"Hyundai Matrix",
+"Hyundai i30",
+"Hyundai i10",
+"Hyundai H1",
+"Hyundai Grandeur",
+"Hyundai Excel",
+"KIA Soul",
+"KIA Sportage",
+"KIA Sorento",
+"KIA Picanto",
+"KIA Optima",
+"KIA Magentis",
+"KIA Cerato",
+"KIA Carnival",
+"KIA Carens"
+],
+"price": 20,
+"description": "Біла пластикова кліпса з двома прямокутними шляпками. Застосовується для кріплення обшивки та молдингів у дверях і на крилі. OEM 8771902500 / 877593E000 / 877583E000 / 33031016.",
+"img": "clipsa078.jpg"
+},
+{
+"id": "079",
+"name": "Автомобільне кріплення",
+"oem": "18654",
+"brand": "Universal",
+"category": "Автомобільні кріплення",
+"compatibility": [
+"Багато моделей"
+],
+"price": 15,
+"description": "Автомобільне кріплення MAK.",
+"img": "clipsa079.jpg"
 }
-
-
 
 
 ]
