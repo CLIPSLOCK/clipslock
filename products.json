@@ -845,5 +845,128 @@
 "price": 15,
 "description": "Автомобільне кріплення MAK.",
 "img": "clipsa079.jpg"
+},
+{
+"id": "080",
+"name": "Кліпса кріплення",
+"oem": "11364",
+"brand": "Toyota",
+"category": "Кріплення обшивки",
+"compatibility": [
+"Toyota Camry V70 (2017-...)"
+],
+"price": 15,
+"description": "Пластикова кліпса кріплення кузовних та облицювальних елементів.",
+"img": "clipsa080.jpg"
+},
+{
+"id": "081",
+"name": "Кріплення фари",
+"oem": "28030",
+"brand": "Volkswagen",
+"category": "Кріплення фари",
+"compatibility": [
+"Volkswagen Golf 4 (1997-2006)"
+],
+"price": 25,
+"description": "Елемент кріплення автомобільної фари.",
+"img": "clipsa081.jpg"
+},
+{
+"id": "082",
+"name": "Заглушка без отвору",
+"oem": "13152",
+"brand": "MAC",
+"category": "Заглушки",
+"compatibility": [
+"Багато моделей"
+],
+"price": 35,
+"description": "Пластикове автомобільне кріплення.",
+"img": "clipsa082.jpg"
+},
+{
+"id": "083",
+"name": "Заглушка без отвору",
+"oem": "13147",
+"brand": "MAC",
+"category": "Заглушки",
+"compatibility": [
+"Багато моделей"
+],
+"price": 35,
+"description": "Пластикове автомобільне кріплення.",
+"img": "clipsa083.jpg"
+},
+{
+"id": "084",
+"name": "З натискним розпірним штирем",
+"oem": "11619",
+"brand": "Універсальна",
+"category": "Кріплення розпірної дії",
+"compatibility": [
+"Багато моделей"
+],
+"price": 15,
+"description": "Пластикове автомобільне кріплення.",
+"img": "clipsa084.jpg"
+},
+{
+"id": "085",
+"name": "Кріплення обшивки/молдингів",
+"oem": "12538",
+"brand": "Mitsubishi / Mazda",
+"category": "Кріплення обшивки",
+"compatibility": [
+"Mitsubishi Lancer IX (2003-2011)",
+"Mitsubishi Pajero Sport (2015-2018)",
+"Mazda CX-5 (2017-...)"
+],
+"price": 15,
+"description": "Пластикова кліпса для кріплення елементів обшивки та кузова.",
+"img": "clipsa085.jpg"
+},
+{
+"id": "086",
+"name": "Кріплення обшивки/молдингів",
+"oem": "16223",
+"brand": "Volkswagen / Audi / Skoda",
+"category": "Кріплення обшивки",
+"compatibility": [
+"Volkswagen Golf 7 (2012-...)",
+"Audi A5 (2007-...)",
+"Audi A4 B7 (2004-2008)",
+"Skoda Rapid (2012-2017)"
+],
+"price": 20,
+"description": "Пластикова кліпса для кріплення обшивки та кузовних елементів.",
+"img": "clipsa086.jpg"
+},
+{
+"id": "087",
+"name": "Кріплення обшивки/молдингів",
+"oem": "15237",
+"brand": "Kia / Hyundai",
+"category": "Кріплення обшивки",
+"compatibility": [
+"Kia Sorento (2017-...)",
+"Hyundai Santa Fe (2012-2017)"
+],
+"price": 20,
+"description": "Пластикова кліпса для кріплення обшивки та кузовних елементів.",
+"img": "clipsa087.jpg"
+},
+{
+"id": "088",
+"name": "Фітинги, форсунки омивача",
+"oem": "22042",
+"brand": "Універсальна",
+"category": "Фітинг (з'єднувач трубок)",
+"compatibility": [
+"Багато моделей"
+],
+"price": 35,
+"description": "Пластикове автомобільне кріплення.",
+"img": "clipsa088.jpg"
 }
 ]
