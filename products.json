@@ -692,7 +692,165 @@
 "price": 15,
 "description": "Чорне пластикове кріплення обшивки з однією круглою шляпкою типу «ялинка». Місце встановлення — кузов.",
 "img": "clipsa058.jpg"
+},
+{
+"id": "059",
+"name": "Саморіз під хрестоподібну викрутку",
+"oem": "18066",
+"brand": "Універсальний",
+"category": "Саморізи",
+"compatibility": [
+"Багато марок — багато моделей"
+],
+"price": 15,
+"description": "Чорний сталевий автомобільний саморіз під хрестоподібну викрутку. Діаметр головки 19,2 мм.",
+"img": "clipsa059.jpg"
+},
+{
+"id": "060",
+"name": "Кріплення опори капота, шлангів та проводів",
+"oem": "21037",
+"brand": "Ford",
+"category": "Кріплення опори капота, шлангів та дротів",
+"compatibility": [
+"Ford — багато моделей"
+],
+"price": 35,
+"description": "Чорне пластикове кріплення опори капота, шлангів та проводів. Місце встановлення — капот.",
+"img": "clipsa060.jpg"
+},
+{
+"id": "061",
+"name": "Кріплення розпірної дії з натискним штирьком",
+"oem": "11448",
+"brand": "Subaru",
+"category": "Кріплення розпірної дії",
+"compatibility": [
+"Subaru Forester",
+"Subaru Impreza — багато моделей"
+],
+"price": 15,
+"description": "Чорне пластикове кріплення розпірної дії з натискним штирьком. Використовується для кузова, крил, бампера та радіатора. OEM Subaru 909130059.",
+"img": "clipsa061.jpg"
+},
+{
+"id": "062",
+"name": "Гумовий відбійник",
+"oem": "29029",
+"brand": "Toyota",
+"category": "Відбійники та деталі з гуми",
+"compatibility": [
+"Toyota RAV4"
+],
+"price": 35,
+"description": "Чорний гумовий відбійник для багажного відсіку. OEM Toyota 90541-09108.",
+"img": "clipsa062.jpg"
+},
+{
+"id": "063",
+"name": "Болт із шайбою",
+"oem": "19838",
+"brand": "Renault",
+"category": "Гвинти та болти",
+"compatibility": [
+"Renault Clio III (2005 - 2012)",
+"Renault Espace IV (2002 - 2006)",
+"Renault Kangoo I (1998 - 2009)",
+"Renault Laguna II (2000 - 2007)",
+"Renault Megane II (2002 - 2009)",
+"Renault Scenic II (2003 - 2009)",
+"Renault Trafic II (2001 - 2014)",
+"Renault Vel Satis (2002 - 2009)",
+"Mercedes-Benz C-Class W201 (1982 - 1992)",
+"Mercedes-Benz C-Class W202 (1997 - 2000)",
+"Mercedes-Benz E-Class W124 (1984 - 1996)",
+"Mercedes-Benz E-Class W210 (1995 - 2001)"
+],
+"price": 20,
+"description": "Чорний металевий болт із шайбою M6×20 мм для кузовного кріплення. OEM Renault 7703602059 та Mercedes-Benz A0089906901.",
+"img": "clipsa063.jpg"
+},
+{
+"id": "064",
+"name": "Саморіз із шайбою під ключ",
+"oem": "18826",
+"brand": "Toyota",
+"category": "Саморізи",
+"compatibility": [
+"Daihatsu — багато моделей",
+"Lexus — багато моделей",
+"Toyota — багато моделей",
+"Багато марок — багато моделей"
+],
+"price": 15,
+"description": "Чорний сталевий саморіз із шайбою під ключ та викрутку. OEM Toyota 90159-60477.",
+"img": "clipsa064.jpg"
+},
+{
+"id": "065",
+"name": "Кріплення розпірної дії з натискним розпірним штирем",
+"oem": "11340",
+"brand": "Subaru",
+"category": "Кріплення розпірної дії",
+"compatibility": [
+"Subaru Forester",
+"Subaru Impreza",
+"Subaru Legacy",
+"Subaru XV",
+"Mitsubishi Colt",
+"Mitsubishi Lancer",
+"Mitsubishi Pajero",
+"Mitsubishi Montero",
+"Citroen C4 Aircross",
+"Citroen — багато моделей",
+"Mitsubishi — багато моделей",
+"Subaru — багато моделей",
+"Багато марок — багато моделей"
+],
+"price": 15,
+"description": "Чорне пластикове кріплення розпірної дії з натискним розпірним штирем. Діаметр отвору 6 мм. Використовується для кузова, бампера, радіатора, крила, багажника, салону та моторного відсіку.",
+"img": "clipsa065.jpg"
+},
+{
+"id": "066",
+"name": "Кріплення обшивки та молдингів з круглою шляпкою",
+"oem": "15845",
+"brand": "Mitsubishi",
+"category": "Кріплення обшивки та молдингів",
+"compatibility": [
+"Citroen C1 (2005 - 2012)",
+"Daihatsu Sirion (2006 - 2010)",
+"Daihatsu Terios",
+"Ford — багато моделей",
+"Ford Kuga",
+"GM — багато моделей",
+"Honda Accord (2008 - 2012)",
+"Honda Accord Tourer (2008 - 2013)",
+"Honda Odyssey (2005 - 2011)",
+"Honda Legend (2007 - 2011)",
+"Honda City (2002 - 2009)",
+"Honda Civic (2001 - 2009)",
+"Honda FR-V (2005 - 2010)",
+"Honda Insight (2010 - 2012)",
+"Honda Civic (2007 - 2012)",
+"Honda CR-Z (2011 - 2012)",
+"Honda S2000 (2007 - 2010)",
+"Honda Crosstour (2010 - 2012)",
+"Hyundai — багато моделей",
+"Kia — багато моделей",
+"Lexus — багато моделей",
+"Mazda — багато моделей",
+"Mitsubishi — багато моделей",
+"Peugeot 107 (2005 - 2014)",
+"Scion — багато моделей",
+"Subaru — багато моделей",
+"Suzuki — багато моделей"
+],
+"price": 15,
+"description": "Помаранчеве пластикове кріплення обшивки та молдингів з кількома шляпками та круглою шляпкою. Діаметр 9,5 мм. Застосовується для дверей, салону, багажника, кузова, порогів, бамперів та інших елементів.",
+"img": "clipsa066.jpg"
 }
+
 
 
 
