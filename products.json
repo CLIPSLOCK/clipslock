@@ -7,7 +7,7 @@
 "category": "Кріплення підкрилки",
 "compatibility": ["Toyota Yaris", "Toyota Corolla", "Lexus багато моделей"],
 "price": 20,
-"description": "Кріплення розпірної дії",
+"description": "Кріплення обшивки та молдингів",
 "img": "clipsa001.jpg"
 },
 {
@@ -18,7 +18,7 @@
 "category": "Кріплення бампера",
 "compatibility": ["Lexus CT200h-GX460 ", "Lexus IS200t", "Lexus IS300 ", "Toyota 4Runner", "Toyota C-HR", "Toyota Camry ", "Toyota Corolla", "Toyota Prius"],
 "price": 20,
-"description": "Кріплення розпірної дії",
+"description": "Кріплення обшивки та молдингів",
 "img": "clipsa002.jpg"
 },
 {
@@ -29,7 +29,7 @@
 "category": "Кріплення підкрилки",
 "compatibility": ["Lexus RX", "Toyota C-HR", "Toyota Highlander"],
 "price": 20,
-"description": "Кріплення розпірної дії",
+"description": "Кріплення обшивки та молдингів",
 "img": "clipsa003.jpg"
 },
 {
@@ -51,7 +51,7 @@
 "category": "Кріплення обшивки та молдингів",
 "compatibility": ["Ford багато моделей", "Infiniti багато моделей", "Mazda багато моделей", "Nissan багато моделей", "Renault багато моделей", "Subaru багато моделей"],
 "price": 20,
-"description": "Кріплення розпірної дії",
+"description": "Кріплення обшивки та молдингів",
 "img": "clipsa005.jpg"
 },
 {
@@ -238,7 +238,7 @@
 "category": "Кріплення обшивки та молдингів",
 "compatibility": ["Suzuki Grand Vitara, Swift, SX4"],
 "price": 15,
-"description": "Кріплення розпірної дії",
+"description": "Кріплення обшивки та молдингів",
 "img": "clipsa024.jpg"
 },
 {
@@ -686,7 +686,7 @@
 "name": "Кріплення розпірної дії з натискним розпірним штирем",
 "oem": "11340",
 "brand": "Subaru",
-"category": "Кріплення розпірної дії",
+"category": "Кріплення обшивки та молдингів",
 "compatibility": ["Subaru Forester", "Subaru Impreza", "Subaru Legacy", "Subaru XV", "Mitsubishi Colt", "Mitsubishi Lancer", "Mitsubishi Pajero", "Mitsubishi Montero", "Citroen C4 Aircross", "Citroen — багато моделей", "Mitsubishi — багато моделей", "Subaru — багато моделей", "Багато марок — багато моделей"],
 "price": 15,
 "description": "Чорне пластикове кріплення розпірної дії з натискним розпірним штирем. Діаметр отвору 6 мм. Використовується для кузова, бампера, радіатора, крила, багажника, салону та моторного відсіку.",
@@ -903,7 +903,7 @@
 "name": "З натискним розпірним штирем",
 "oem": "11619",
 "brand": "Універсальна",
-"category": "Кріплення розпірної дії",
+"category": "Кріплення обшивки та молдингів",
 "compatibility": [
 "Багато моделей"
 ],
