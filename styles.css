@@ -827,3 +827,23 @@ body {
     opacity: 0.4;
     cursor: not-allowed;
 }
+/* Сітка товарів у 3 колонки */
+#productsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 рівні колонки */
+    gap: 20px; /* Відступ між картками */
+    width: 100%;
+}
+
+/* Адаптивність під планшети та телефони (щоб на малих екранах не тиснулося) */
+@media (max-width: 1024px) {
+    #productsGrid {
+        grid-template-columns: repeat(2, 1fr); /* 2 колонки для планшетів */
+    }
+}
+
+@media (max-width: 600px) {
+    #productsGrid {
+        grid-template-columns: 1fr; /* 1 колонка для мобілок */
+    }
+}
