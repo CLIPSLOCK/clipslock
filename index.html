@@ -89,12 +89,20 @@
                 </div>
             </aside>
 
-            <div class="products-grid" id="productsGrid">
-                <!-- Товари генеруються через JS -->
-            </div>
-            <!-- НОВЕ: Блок для пагінації (сторінок) -->
-<div class="pagination-container" id="pagination">
-    <!-- Кнопки сторінок будуть малюватися через JS -->
+           <div class="catalog-container">
+    <!-- ЛІВА КОЛОНКА: Пошук та фільтри -->
+    <aside class="sidebar">
+        <!-- Блоки пошуку та фільтрів -->
+    </aside>
+
+    <!-- ПРАВА КОЛОНКА: Товари + Пагінація -->
+    <main class="catalog-content">
+        <!-- 1. Сітка товарів -->
+        <div id="productsGrid" class="products-grid"></div>
+
+        <!-- 2. Пагінація (ОБОВ'ЯЗКОВО ПІД СІТКОЮ, А НЕ ВСЕРЕДИНІ НЕЇ) -->
+        <div id="pagination" class="pagination-container"></div>
+    </main>
 </div>
         </section>
     </main>
