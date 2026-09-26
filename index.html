@@ -10,13 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <!-- Навігація -->
     <header class="header">
         <div class="container header-container">
             <a href="#" class="logo">
-                <img src="favicon1.png" alt="Logo" class="site-logo-icon">
-                CLIPS<span class="logo-accent">LOCK</span>
-            </a>
+    <img src="favicon1.png" alt="Logo" class="site-logo-icon">
+    CLIPS<span class="logo-accent">LOCK</span>
+</a>
             <button id="cartBtn" class="cart-btn">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
                 Кошик <span id="cartBadge" class="badge">0</span>
@@ -25,87 +26,89 @@
     </header>
 
     <main class="main-content">
+        <!-- Компактний Hero -->
         <!-- Компактний Hero з яскравими бейджами -->
-        <section class="container hero-section">
-            <div class="hero-card">
-                <div class="hero-info">
-                    <span class="hero-tag">Автомобільне кріплення</span>
-                    <h1>Точний підбір кліпс та деталей для вашого авто</h1>
-                    <ul class="hero-features">
-                        <li>
-                            <span class="feature-badge">ВІД 1 ШТ</span>
-                            <span>Без мінімального замовлення — купуйте лише потрібну кількість</span>
-                        </li>
-                        <li>
-                            <span class="feature-badge badge-green">0 ₴ ДОСТАВКА</span>
-                            <span><strong>Безкоштовно Новою Поштою</strong> при замовленні від 600 грн</span>
-                        </li>
-                        <li>
-                            <span class="feature-badge">ПОШУК ЗА OEM</span>
-                            <span>Точний підбір за артикулом, маркою або фото в чаті</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="hero-action">
-                    <p>Не знаєте номер деталі?</p>
-                    <span>Надішліть нам фото — допоможемо підібрати.</span>
-                    <div class="hero-buttons">
-                        <a href="https://t.me/KEFFIR123" id="tgBtn" target="_blank" class="btn btn-outline-light">Telegram</a>
-                        <a href="viber://chat?number=380679993271" id="vbBtn" target="_blank" class="btn btn-outline-light">Viber</a>
-                        <a href="https://wa.me/380677265745" id="waBtn" target="_blank" class="btn btn-outline-light">WhatsApp</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+<section class="container hero-section">
+    <div class="hero-card">
+        <div class="hero-info">
+            <span class="hero-tag">Автомобільне кріплення</span>
+            <h1>Точний підбір кліпс та деталей для вашого авто</h1>
+            <ul class="hero-features">
+                <li>
+                    <span class="feature-badge">ВІД 1 ШТ</span>
+                    <span>Без мінімального замовлення — купуйте лише потрібну кількість</span>
+                </li>
+                <li>
+                    <span class="feature-badge badge-green">0 ₴ ДОСТАВКА</span>
+                    <span><strong>Безкоштовно Новою Поштою</strong> при замовленні від 600 грн</span>
+                </li>
+                <li>
+                    <span class="feature-badge">ПОШУК ЗА OEM</span>
+                    <span>Точний підбір за артикулом, маркою або фото в чаті</span>
+                </li>
+            </ul>
+        </div>
+        <div class="hero-action">
+    <p>Не знаєте номер деталі?</p>
+    <span>Надішліть нам фото — допоможемо підібрати.</span>
+    <div class="hero-buttons">
+        <a href="https://t.me/KEFFIR123" id="tgBtn" target="_blank" class="btn btn-outline-light">Telegram</a>
+        <a href="viber://chat?number=380679993271" id="vbBtn" target="_blank" class="btn btn-outline-light">Viber</a>
+        <a href="https://wa.me/380677265745" id="waBtn" target="_blank" class="btn btn-outline-light">WhatsApp</a>
+    </div>
+</div>
+    </div>
+</section>
 
         <!-- Каталог -->
         <section id="catalog" class="container catalog-section">
-            <div class="catalog-container">
-                <!-- ЛІВА КОЛОНКА: Пошук та фільтри -->
-                <aside class="sidebar">
-                    <div class="sidebar-block">
-                        <h3>Пошук</h3>
-                        <div class="search-wrapper">
-                            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                            <input type="text" id="searchInput" placeholder="OEM, назва, авто...">
-                        </div>
+            <aside class="sidebar">
+                <div class="sidebar-block">
+                    <h3>Пошук</h3>
+                    <div class="search-wrapper">
+                        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        <input type="text" id="searchInput" placeholder="OEM, назва, авто...">
                     </div>
-                    <div class="sidebar-block">
-                        <h3>Фільтри</h3>
-                        <div class="filter-group">
-                            <label for="brandFilter">Марка автомобіля</label>
-                            <select id="brandFilter">
-                                <option value="">Усі марки</option>
-                            </select>
-                        </div>
-                        <div class="filter-group">
-                            <label for="categoryFilter">Категорія</label>
-                            <select id="categoryFilter">
-                                <option value="">Усі категорії</option>
-                            </select>
-                        </div>
+                </div>
+                
+                <div class="sidebar-block">
+                    <h3>Фільтри</h3>
+                    <div class="filter-group">
+                        <label for="brandFilter">Марка автомобіля</label>
+                        <select id="brandFilter">
+                            <option value="">Усі марки</option>
+                        </select>
                     </div>
-                </aside>
+                    
+                    <div class="filter-group">
+                        <label for="categoryFilter">Категорія</label>
+                        <select id="categoryFilter">
+                            <option value="">Усі категорії</option>
+                        </select>
+                    </div>
+                </div>
+            </aside>
 
-                <!-- ПРАВА КОЛОНКА: Товари + Пагінація -->
-                <main class="catalog-content">
-                    <div id="productsGrid" class="products-grid"></div>
-                    <div id="pagination" class="pagination-container"></div>
-                </main>
+            <div class="products-grid" id="productsGrid">
+                <!-- Товари генеруються через JS -->
             </div>
+            <!-- НОВЕ: Блок для пагінації (сторінок) -->
+<div class="pagination-container" id="pagination">
+    <!-- Кнопки сторінок будуть малюватися через JS -->
+</div>
         </section>
     </main>
 
     <footer class="footer">
         <div class="container footer-content">
-            <p>© <span id="currentYear"></span> CLIPSLOCK. Автомобільні кріплення.</p>
+            <p>&copy; <span id="currentYear"></span> CLIPSLOCK. Автомобільні кріплення.</p>
         </div>
     </footer>
 
     <!-- Модальне вікно ТОВАРУ -->
     <div id="productModal" class="modal">
         <div class="modal-content product-modal-content">
-            <button class="close-modal">×</button>
+            <button class="close-modal">&times;</button>
             <div class="product-details-grid">
                 <div class="product-modal-img-wrap">
                     <img id="modalImg" src="" alt="Товар">
@@ -116,6 +119,7 @@
                         <span class="modal-oem-badge">OEM: <span id="modalOem"></span></span>
                     </div>
                     <h2 id="modalName" class="modal-title"></h2>
+                    
                     <div class="modal-specs">
                         <div class="spec-row">
                             <span class="spec-label">Категорія:</span>
@@ -126,7 +130,9 @@
                             <span class="spec-value" id="modalCompat"></span>
                         </div>
                     </div>
+                    
                     <p class="modal-desc" id="modalDesc"></p>
+                    
                     <div class="modal-purchase-box">
                         <div class="modal-price-row">
                             <div class="price-block">
@@ -153,9 +159,13 @@
     <!-- Модальне вікно КОШИКА -->
     <div id="cartModal" class="modal">
         <div class="modal-content cart-modal-content">
-            <button class="close-modal">×</button>
+            <button class="close-modal">&times;</button>
             <h2 class="modal-main-title">Кошик</h2>
-            <div id="cartItems" class="cart-items-list"></div>
+            
+            <div id="cartItems" class="cart-items-list">
+                <!-- Товари кошика -->
+            </div>
+            
             <div class="cart-footer">
                 <div class="delivery-status-box">
                     <div class="delivery-text-row">
@@ -178,7 +188,7 @@
     <!-- Модальне вікно ОФОРМЛЕННЯ ЗАМОВЛЕННЯ -->
     <div id="checkoutModal" class="modal">
         <div class="modal-content checkout-modal-content">
-            <button class="close-modal">×</button>
+            <button class="close-modal">&times;</button>
             <h2 class="modal-main-title">Оформлення замовлення</h2>
             <form id="checkoutForm" class="checkout-form">
                 <div class="form-row">
@@ -213,7 +223,7 @@
     <!-- Модальне вікно УСПІХУ -->
     <div id="successModal" class="modal">
         <div class="modal-content success-modal-content">
-            <button class="close-modal">×</button>
+            <button class="close-modal">&times;</button>
             <div class="success-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
             </div>
