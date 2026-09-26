@@ -10,6 +10,10 @@ let cart = JSON.parse(localStorage.getItem('clipslock_cart')) || [];
 const FREE_SHIPPING_THRESHOLD = 600;
 let currentModalProduct = null;
 
+// Налаштування пагінації (сторінок)
+const itemsPerPage = 12; // Кількість товарів на одній сторінці
+let currentPage = 1;
+
 // DOM елементи
 const productsGrid = document.getElementById('productsGrid');
 const searchInput = document.getElementById('searchInput');
@@ -33,7 +37,7 @@ async function fetchProducts() {
     try {
         const response = await fetch('products.json');
         products = await response.json();
-        renderProducts(products);
+        renderProducts(products, 1);
         populateFilters();
     } catch (error) {
         console.error('Помилка завантаження товарів:', error);
@@ -41,19 +45,27 @@ async function fetchProducts() {
     }
 }
 
-// Рендер каталогу (з блоком вибору кількості як у кошику)
-function renderProducts(list) {
+// Рендер каталогу з підтримкою пагінації
+function renderProducts(productsArray, page = 1) {
+    currentPage = page;
     productsGrid.innerHTML = '';
-    if (list.length === 0) {
+
+    if (productsArray.length === 0) {
         productsGrid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; padding: 40px 0; color: var(--text-muted);">Товарів не знайдено за вашим запитом.</p>';
+        renderPagination(0, page, productsArray);
         return;
     }
 
-    list.forEach(product => {
+    // Вираховуємо межі показу товарів
+    const startIndex = (page - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const paginatedItems = productsArray.slice(startIndex, endIndex);
+
+    // Малюємо картки товарів для поточної сторінки
+    paginatedItems.forEach(product => {
         const card = document.createElement('div');
         card.className = 'product-card';
         card.onclick = (e) => {
-            // Відкриваємо модалку, якщо клік не по елементах керування кількістю чи кнопці
             if (!e.target.closest('.card-qty-control') && !e.target.closest('.card-add-btn')) {
                 openProductModal(product.id);
             }
@@ -88,6 +100,57 @@ function renderProducts(list) {
         `;
         productsGrid.appendChild(card);
     });
+
+    // Малюємо кнопки пагінації
+    renderPagination(productsArray.length, page, productsArray);
+}
+
+// Функція генерації кнопок пагінації
+function renderPagination(totalItems, current, productsArray) {
+    const paginationContainer = document.getElementById('pagination');
+    if (!paginationContainer) return;
+
+    paginationContainer.innerHTML = '';
+    const totalPages = Math.ceil(totalItems / itemsPerPage);
+
+    if (totalPages <= 1) return; // Якщо товарів менше або дорівнює itemsPerPage, пагінацію не виводимо
+
+    // Кнопка "Назад"
+    const prevBtn = document.createElement('button');
+    prevBtn.className = 'page-btn';
+    prevBtn.innerHTML = '‹';
+    prevBtn.disabled = current === 1;
+    prevBtn.onclick = () => {
+        currentPage--;
+        renderProducts(productsArray, currentPage);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+    paginationContainer.appendChild(prevBtn);
+
+    // Номери сторінок
+    for (let i = 1; i <= totalPages; i++) {
+        const pageBtn = document.createElement('button');
+        pageBtn.className = `page-btn ${i === current ? 'active' : ''}`;
+        pageBtn.innerText = i;
+        pageBtn.onclick = () => {
+            currentPage = i;
+            renderProducts(productsArray, currentPage);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+        paginationContainer.appendChild(pageBtn);
+    }
+
+    // Кнопка "Вперед"
+    const nextBtn = document.createElement('button');
+    nextBtn.className = 'page-btn';
+    nextBtn.innerHTML = '›';
+    nextBtn.disabled = current === totalPages;
+    nextBtn.onclick = () => {
+        currentPage++;
+        renderProducts(productsArray, currentPage);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+    paginationContainer.appendChild(nextBtn);
 }
 
 // Заповнення фільтрів
@@ -131,7 +194,9 @@ function filterProducts() {
         return searchMatch && brandMatch && catMatch;
     });
 
-    renderProducts(filtered);
+    // При кожному пошуку/фільтрації скидаємо на 1 сторінку
+    currentPage = 1;
+    renderProducts(filtered, 1);
 }
 
 // Слухачі подій
