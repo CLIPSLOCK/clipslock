@@ -70,7 +70,7 @@ function renderProducts(productsArray, page = 1) {
                 openProductModal(product.id);
             }
         };
-        
+
         card.innerHTML = `
             <div class="pc-image-wrap">
                 <img src="${product.img}" alt="${product.name}" loading="lazy">
@@ -80,13 +80,13 @@ function renderProducts(productsArray, page = 1) {
                 <span class="pc-brand">${product.brand}</span>
             </div>
             <div class="pc-title">${product.name}</div>
-            
+
             <div class="product-card-footer">
                 <div class="product-price-info">
                     <span class="product-price">${product.price}</span>
                     <span class="product-unit">грн/шт</span>
                 </div>
-                
+
                 <div class="card-qty-control" data-id="${product.id}">
                     <button class="qty-btn minus-btn" type="button">−</button>
                     <input type="number" class="qty-input" value="1" min="1" max="999" readonly>
@@ -216,7 +216,7 @@ function filterProducts() {
 
     const filtered = products.filter(p => {
         const cleanOem = p.oem.replace(/[\s-]/g, '').toLowerCase();
-        const searchMatch = 
+        const searchMatch =
             p.name.toLowerCase().includes(query) ||
             cleanOem.includes(cleanQuery) ||
             p.brand.toLowerCase().includes(query) ||
@@ -273,10 +273,10 @@ function setupEventListeners() {
 
     // Кошик
     document.getElementById('cartBtn').addEventListener('click', openCartModal);
-    
+
     // Форма замовлення
     document.getElementById('checkoutBtn').addEventListener('click', () => {
-        if(cart.length > 0) {
+        if (cart.length > 0) {
             document.getElementById('cartModal').style.display = 'none';
             document.getElementById('checkoutModal').style.display = 'flex';
         }
@@ -292,7 +292,7 @@ function setupEventListeners() {
             updateModalTotal();
         }
     });
-    
+
     document.getElementById('modalQtyPlus').addEventListener('click', () => {
         const input = document.getElementById('modalQtyInput');
         input.value = parseInt(input.value) + 1;
@@ -313,8 +313,9 @@ function setupEventListeners() {
 }
 
 // Модалка товару
-window.openProductModal = function(id) {
-    currentModalProduct = products.find(p => p.id === id);
+window.openProductModal = function (id) {
+    // Порівнюємо id як рядки, щоб не залежати від того, число це чи рядок
+    currentModalProduct = products.find(p => String(p.id) === String(id));
     if (!currentModalProduct) return;
 
     document.getElementById('modalImg').src = currentModalProduct.img;
@@ -326,7 +327,7 @@ window.openProductModal = function(id) {
     document.getElementById('modalDesc').textContent = currentModalProduct.description;
     document.getElementById('modalPrice').textContent = currentModalProduct.price;
     document.getElementById('modalQtyInput').value = 1;
-    
+
     updateModalTotal();
 
     document.getElementById('productModal').style.display = 'flex';
@@ -342,14 +343,14 @@ function updateModalTotal() {
 }
 
 // Додавання товару з каталогу з урахуванням обраної кількості
-window.addCatalogItemToCart = function(event, id) {
+window.addCatalogItemToCart = function (event, id) {
     event.stopPropagation();
     const card = event.target.closest('.product-card');
     const qtyInput = card.querySelector('.qty-input');
     const qty = parseInt(qtyInput.value) || 1;
-    
+
     addToCart(null, id, qty);
-    
+
     // Візуальний ефект успішного додавання
     const btn = event.target;
     const originalText = btn.textContent;
@@ -362,17 +363,22 @@ window.addCatalogItemToCart = function(event, id) {
 };
 
 // Логіка кошика
-window.addToCart = function(event, id, qty) {
-    if(event) event.stopPropagation();
-    
-    const existing = cart.find(item => item.id === id);
+window.addToCart = function (event, id, qty) {
+    if (event) event.stopPropagation();
+
+    // Завжди зберігаємо id як рядок — незалежно від того, звідки прийшов виклик
+    // (кнопка в картці завжди передає рядок, а модалка передає id таким, як він
+    // записаний у products.json — це і викликало неспівпадіння типів)
+    id = String(id);
+
+    const existing = cart.find(item => String(item.id) === id);
     if (existing) {
         existing.qty += qty;
     } else {
         cart.push({ id, qty });
     }
     saveCart();
-    
+
     const badge = document.getElementById('cartBadge');
     badge.style.transform = 'scale(1.3)';
     setTimeout(() => badge.style.transform = 'scale(1)', 200);
@@ -397,7 +403,7 @@ function openCartModal() {
 function renderCart() {
     const cartItemsContainer = document.getElementById('cartItems');
     cartItemsContainer.innerHTML = '';
-    
+
     if (cart.length === 0) {
         cartItemsContainer.innerHTML = '<p style="text-align:center; padding: 40px 0; color: var(--text-muted);">Кошик порожній</p>';
         document.getElementById('cartTotalSum').textContent = '0 грн';
@@ -410,8 +416,8 @@ function renderCart() {
     let totalSum = 0;
 
     cart.forEach((cartItem, index) => {
-        const product = products.find(p => p.id === cartItem.id);
-        if (!product) return; 
+        const product = products.find(p => String(p.id) === String(cartItem.id));
+        if (!product) return;
 
         const itemTotal = product.price * cartItem.qty;
         totalSum += itemTotal;
@@ -443,7 +449,7 @@ function renderCart() {
     updateDeliveryProgress(totalSum);
 }
 
-window.changeCartQty = function(index, delta) {
+window.changeCartQty = function (index, delta) {
     if (cart[index].qty === 1 && delta === -1) {
         removeFromCart(index);
         return;
@@ -453,7 +459,7 @@ window.changeCartQty = function(index, delta) {
     renderCart();
 };
 
-window.removeFromCart = function(index) {
+window.removeFromCart = function (index) {
     cart.splice(index, 1);
     saveCart();
     renderCart();
@@ -463,7 +469,7 @@ function updateDeliveryProgress(sum) {
     const textEl = document.getElementById('deliveryText');
     const barEl = document.getElementById('deliveryProgressBar');
     const statusBox = document.querySelector('.delivery-status-box');
-    
+
     if (sum === 0) {
         textEl.textContent = `Безкоштовна доставка від ${FREE_SHIPPING_THRESHOLD} грн`;
         barEl.style.width = '0%';
@@ -489,8 +495,17 @@ function handleCheckout(e) {
     e.preventDefault();
 
     let totalOrderSum = 0;
+    let hasMissingProduct = false;
+
     const orderItems = cart.map(cartItem => {
-        const product = products.find(p => p.id === cartItem.id);
+        // Порівнюємо id як рядки — і головне, перевіряємо, чи товар взагалі знайшовся,
+        // перш ніж читати з нього .price. Саме відсутність цієї перевірки й спричиняла
+        // краш "Cannot read properties of undefined".
+        const product = products.find(p => String(p.id) === String(cartItem.id));
+        if (!product) {
+            hasMissingProduct = true;
+            return null;
+        }
         const itemSum = product.price * cartItem.qty;
         totalOrderSum += itemSum;
         return {
@@ -501,7 +516,18 @@ function handleCheckout(e) {
             qty: cartItem.qty,
             sum: itemSum
         };
-    });
+    }).filter(Boolean); // прибираємо null-и — товари, яких більше немає в каталозі
+
+    if (hasMissingProduct) {
+        // Синхронізуємо кошик з тим, що реально вдалось знайти в каталозі
+        cart = cart.filter(cartItem => products.some(p => String(p.id) === String(cartItem.id)));
+        saveCart();
+    }
+
+    if (orderItems.length === 0) {
+        alert('У кошику не залишилось товарів, доступних у каталозі. Оновіть сторінку та спробуйте ще раз.');
+        return;
+    }
 
     const isFreeShipping = totalOrderSum >= FREE_SHIPPING_THRESHOLD;
     const orderNumber = 'CL-' + Math.floor(10000 + Math.random() * 90000);
@@ -526,7 +552,8 @@ function handleCheckout(e) {
 
 // Функція відправки замовлення в Telegram
 async function sendOrder(order) {
-    const BOT_TOKEN = '8717638807:AAESob1XqKvNJV3TE315QyMeh79Grh9vFCo'; 
+    // ⚠️ Встав сюди СВІЙ НОВИЙ токен після того, як відкличеш старий у BotFather
+    const BOT_TOKEN = '8717638807:AAESob1XqKvNJV3TE315QyMeh79Grh9vFCo';
     const CHAT_ID = '979529637';
 
     let message = `🛒 <b>НОВЕ ЗАМОВЛЕННЯ (${order.orderId})</b>\n\n`;
@@ -537,7 +564,7 @@ async function sendOrder(order) {
     if (order.customer.comment) {
         message += `💬 <b>Коментар:</b> ${order.customer.comment}\n`;
     }
-    
+
     message += `\n🛍 <b>Товари:</b>\n`;
     order.items.forEach((item, index) => {
         message += `${index + 1}. ${item.name} (OEM: ${item.oem})\n   ${item.qty} шт x ${item.price} грн = ${item.sum} грн\n`;
