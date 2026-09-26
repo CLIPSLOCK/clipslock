@@ -70,7 +70,7 @@
                         <input type="text" id="searchInput" placeholder="OEM, назва, авто...">
                     </div>
                 </div>
-                
+
                 <div class="sidebar-block">
                     <h3>Фільтри</h3>
                     <div class="filter-group">
@@ -79,13 +79,15 @@
                             <option value="">Усі марки</option>
                         </select>
                     </div>
-                    
+
                     <div class="filter-group">
                         <label for="categoryFilter">Категорія</label>
                         <select id="categoryFilter">
                             <option value="">Усі категорії</option>
                         </select>
                     </div>
+
+                    <button id="resetFiltersBtn" class="btn-reset-filters" type="button">Скинути фільтри</button>
                 </div>
             </aside>
 
@@ -127,7 +129,7 @@
                         <span class="modal-oem-badge">OEM: <span id="modalOem"></span></span>
                     </div>
                     <h2 id="modalName" class="modal-title"></h2>
-                    
+
                     <div class="modal-specs">
                         <div class="spec-row">
                             <span class="spec-label">Категорія:</span>
@@ -138,9 +140,9 @@
                             <span class="spec-value" id="modalCompat"></span>
                         </div>
                     </div>
-                    
+
                     <p class="modal-desc" id="modalDesc"></p>
-                    
+
                     <div class="modal-purchase-box">
                         <div class="modal-price-row">
                             <div class="price-block">
@@ -169,11 +171,11 @@
         <div class="modal-content cart-modal-content">
             <button class="close-modal">&times;</button>
             <h2 class="modal-main-title">Кошик</h2>
-            
+
             <div id="cartItems" class="cart-items-list">
                 <!-- Товари кошика -->
             </div>
-            
+
             <div class="cart-footer">
                 <div class="delivery-status-box">
                     <div class="delivery-text-row">
