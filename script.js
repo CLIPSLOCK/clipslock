@@ -11,7 +11,7 @@ const FREE_SHIPPING_THRESHOLD = 600;
 let currentModalProduct = null;
 
 // Налаштування пагінації (сторінок)
-const itemsPerPage = 12;
+const itemsPerPage = 12; // Кількість товарів на одній сторінці
 let currentPage = 1;
 
 // DOM елементи
@@ -19,18 +19,13 @@ const productsGrid = document.getElementById('productsGrid');
 const searchInput = document.getElementById('searchInput');
 const brandFilter = document.getElementById('brandFilter');
 const categoryFilter = document.getElementById('categoryFilter');
-const resetFiltersBtn = document.getElementById('resetFiltersBtn');
 const cartBadge = document.getElementById('cartBadge');
 
 document.addEventListener('DOMContentLoaded', () => {
     // Встановлення контактів
-    const tgBtn = document.getElementById('tgBtn');
-    const vbBtn = document.getElementById('vbBtn');
-    if (tgBtn) tgBtn.href = CONTACTS.telegram;
-    if (vbBtn) vbBtn.href = CONTACTS.viber;
-    
-    const yearEl = document.getElementById('currentYear');
-    if (yearEl) yearEl.textContent = new Date().getFullYear();
+    document.getElementById('tgBtn').href = CONTACTS.telegram;
+    document.getElementById('vbBtn').href = CONTACTS.viber;
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
 
     fetchProducts();
     updateCartBadge();
@@ -46,16 +41,13 @@ async function fetchProducts() {
         populateFilters();
     } catch (error) {
         console.error('Помилка завантаження товарів:', error);
-        if (productsGrid) {
-            productsGrid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: var(--text-muted);">Не вдалося завантажити товари. Перевірте з\'єднання.</p>';
-        }
+        productsGrid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: var(--text-muted);">Не вдалося завантажити товари. Перевірте з\'єднання.</p>';
     }
 }
 
 // Рендер каталогу з підтримкою пагінації
 function renderProducts(productsArray, page = 1) {
     currentPage = page;
-    if (!productsGrid) return;
     productsGrid.innerHTML = '';
 
     if (productsArray.length === 0) {
@@ -64,10 +56,12 @@ function renderProducts(productsArray, page = 1) {
         return;
     }
 
+    // Вираховуємо межі показу товарів
     const startIndex = (page - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
     const paginatedItems = productsArray.slice(startIndex, endIndex);
 
+    // Малюємо картки товарів для поточної сторінки
     paginatedItems.forEach(product => {
         const card = document.createElement('div');
         card.className = 'product-card';
@@ -107,10 +101,11 @@ function renderProducts(productsArray, page = 1) {
         productsGrid.appendChild(card);
     });
 
+    // Малюємо кнопки пагінації
     renderPagination(productsArray.length, page, productsArray);
 }
 
-// Пагінація
+// Оновлена функція пагінації зі скороченням кнопок
 function renderPagination(totalItems, current, productsArray) {
     const paginationContainer = document.getElementById('pagination');
     if (!paginationContainer) return;
@@ -132,12 +127,14 @@ function renderPagination(totalItems, current, productsArray) {
     };
     paginationContainer.appendChild(prevBtn);
 
+    // Визначаємо межі відображення чисел
     let startPage = Math.max(1, current - 1);
     let endPage = Math.min(totalPages, current + 1);
 
     if (current === 1) endPage = Math.min(totalPages, 3);
     if (current === totalPages) startPage = Math.max(1, totalPages - 2);
 
+    // Перша сторінка
     if (startPage > 1) {
         createPageBtn(1, current, productsArray, paginationContainer);
         if (startPage > 2) {
@@ -148,10 +145,12 @@ function renderPagination(totalItems, current, productsArray) {
         }
     }
 
+    // Середні сторінки
     for (let i = startPage; i <= endPage; i++) {
         createPageBtn(i, current, productsArray, paginationContainer);
     }
 
+    // Остання сторінка
     if (endPage < totalPages) {
         if (endPage < totalPages - 1) {
             const dots = document.createElement('span');
@@ -175,6 +174,7 @@ function renderPagination(totalItems, current, productsArray) {
     paginationContainer.appendChild(nextBtn);
 }
 
+// Допоміжна функція створення кнопки
 function createPageBtn(i, current, productsArray, container) {
     const pageBtn = document.createElement('button');
     pageBtn.className = `page-btn ${i === current ? 'active' : ''}`;
@@ -187,14 +187,11 @@ function createPageBtn(i, current, productsArray, container) {
     container.appendChild(pageBtn);
 }
 
-// Заповнення фільтрів унікальними значеннями
+// Заповнення фільтрів
 function populateFilters() {
-    if (!brandFilter || !categoryFilter) return;
+    const brands = [...new Set(products.map(p => p.brand))].sort();
+    const categories = [...new Set(products.map(p => p.category))].sort();
 
-    const brands = [...new Set(products.map(p => p.brand).filter(Boolean))].sort();
-    const categories = [...new Set(products.map(p => p.category).filter(Boolean))].sort();
-
-    brandFilter.innerHTML = '<option value="">Усі марки</option>';
     brands.forEach(b => {
         const opt = document.createElement('option');
         opt.value = b;
@@ -202,7 +199,6 @@ function populateFilters() {
         brandFilter.appendChild(opt);
     });
 
-    categoryFilter.innerHTML = '<option value="">Усі категорії</option>';
     categories.forEach(c => {
         const opt = document.createElement('option');
         opt.value = c;
@@ -211,21 +207,20 @@ function populateFilters() {
     });
 }
 
-// Пошук та фільтрація
+// Логіка фільтрації та пошуку
 function filterProducts() {
-    const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
+    const query = searchInput.value.toLowerCase();
     const cleanQuery = query.replace(/[\s-]/g, '');
-    const selBrand = brandFilter ? brandFilter.value : '';
-    const selCat = categoryFilter ? categoryFilter.value : '';
+    const selBrand = brandFilter.value;
+    const selCat = categoryFilter.value;
 
     const filtered = products.filter(p => {
-        const cleanOem = (p.oem || '').replace(/[\s-]/g, '').toLowerCase();
+        const cleanOem = p.oem.replace(/[\s-]/g, '').toLowerCase();
         const searchMatch = 
-            !query ||
-            (p.name && p.name.toLowerCase().includes(query)) ||
+            p.name.toLowerCase().includes(query) ||
             cleanOem.includes(cleanQuery) ||
-            (p.brand && p.brand.toLowerCase().includes(query)) ||
-            (Array.isArray(p.compatibility) && p.compatibility.some(c => c.toLowerCase().includes(query)));
+            p.brand.toLowerCase().includes(query) ||
+            p.compatibility.some(c => c.toLowerCase().includes(query));
 
         const brandMatch = selBrand === "" || p.brand === selBrand;
         const catMatch = selCat === "" || p.category === selCat;
@@ -233,26 +228,18 @@ function filterProducts() {
         return searchMatch && brandMatch && catMatch;
     });
 
+    // При кожному пошуку/фільтрації скидаємо на 1 сторінку
     currentPage = 1;
     renderProducts(filtered, 1);
 }
 
-// Обробники подій
+// Слухачі подій
 function setupEventListeners() {
-    if (searchInput) searchInput.addEventListener('input', filterProducts);
-    if (brandFilter) brandFilter.addEventListener('change', filterProducts);
-    if (categoryFilter) categoryFilter.addEventListener('change', filterProducts);
+    searchInput.addEventListener('input', filterProducts);
+    brandFilter.addEventListener('change', filterProducts);
+    categoryFilter.addEventListener('change', filterProducts);
 
-    if (resetFiltersBtn) {
-        resetFiltersBtn.addEventListener('click', () => {
-            if (searchInput) searchInput.value = '';
-            if (brandFilter) brandFilter.value = '';
-            if (categoryFilter) categoryFilter.value = '';
-            filterProducts();
-        });
-    }
-
-    // Закриття модалок
+    // Модалки - закриття
     document.querySelectorAll('.close-modal').forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.target.closest('.modal').style.display = 'none';
@@ -260,6 +247,7 @@ function setupEventListeners() {
         });
     });
 
+    // Клік поза модалкою
     window.addEventListener('click', (e) => {
         if (e.target.classList.contains('modal')) {
             e.target.style.display = 'none';
@@ -267,7 +255,7 @@ function setupEventListeners() {
         }
     });
 
-    // Зміна кількості на картці
+    // Кнопки у каталозі для плюс/мінус кількості в картці
     document.addEventListener('click', (e) => {
         if (e.target.classList.contains('plus-btn')) {
             const wrapper = e.target.closest('.card-qty-control');
@@ -283,59 +271,45 @@ function setupEventListeners() {
         }
     });
 
-    // Відкриття кошика
-    const cartBtn = document.getElementById('cartBtn');
-    if (cartBtn) cartBtn.addEventListener('click', openCartModal);
+    // Кошик
+    document.getElementById('cartBtn').addEventListener('click', openCartModal);
     
-    // Кнопка оформлення
-    const checkoutBtn = document.getElementById('checkoutBtn');
-    if (checkoutBtn) {
-        checkoutBtn.addEventListener('click', () => {
-            if (cart.length > 0) {
-                document.getElementById('cartModal').style.display = 'none';
-                document.getElementById('checkoutModal').style.display = 'flex';
-            }
-        });
-    }
+    // Форма замовлення
+    document.getElementById('checkoutBtn').addEventListener('click', () => {
+        if(cart.length > 0) {
+            document.getElementById('cartModal').style.display = 'none';
+            document.getElementById('checkoutModal').style.display = 'flex';
+        }
+    });
 
-    const checkoutForm = document.getElementById('checkoutForm');
-    if (checkoutForm) checkoutForm.addEventListener('submit', handleCheckout);
+    document.getElementById('checkoutForm').addEventListener('submit', handleCheckout);
 
-    // Калькулятор модалки
-    const minusBtn = document.getElementById('modalQtyMinus');
-    const plusBtn = document.getElementById('modalQtyPlus');
-    const qtyInput = document.getElementById('modalQtyInput');
-
-    if (minusBtn && qtyInput) {
-        minusBtn.addEventListener('click', () => {
-            if (parseInt(qtyInput.value) > 1) {
-                qtyInput.value = parseInt(qtyInput.value) - 1;
-                updateModalTotal();
-            }
-        });
-    }
-    
-    if (plusBtn && qtyInput) {
-        plusBtn.addEventListener('click', () => {
-            qtyInput.value = parseInt(qtyInput.value) + 1;
+    // Модалка товару - калькулятор кількості
+    document.getElementById('modalQtyMinus').addEventListener('click', () => {
+        const input = document.getElementById('modalQtyInput');
+        if (input.value > 1) {
+            input.value = parseInt(input.value) - 1;
             updateModalTotal();
-        });
-    }
+        }
+    });
+    
+    document.getElementById('modalQtyPlus').addEventListener('click', () => {
+        const input = document.getElementById('modalQtyInput');
+        input.value = parseInt(input.value) + 1;
+        updateModalTotal();
+    });
 
-    if (qtyInput) qtyInput.addEventListener('input', updateModalTotal);
+    document.getElementById('modalQtyInput').addEventListener('input', updateModalTotal);
 
-    const modalAddBtn = document.getElementById('modalAddToCart');
-    if (modalAddBtn) {
-        modalAddBtn.addEventListener('click', () => {
-            const qty = parseInt(document.getElementById('modalQtyInput').value);
-            if (qty > 0 && currentModalProduct) {
-                addToCart(null, currentModalProduct.id, qty);
-                document.getElementById('productModal').style.display = 'none';
-                document.body.style.overflow = 'auto';
-                openCartModal();
-            }
-        });
-    }
+    document.getElementById('modalAddToCart').addEventListener('click', () => {
+        const qty = parseInt(document.getElementById('modalQtyInput').value);
+        if (qty > 0 && currentModalProduct) {
+            addToCart(null, currentModalProduct.id, qty);
+            document.getElementById('productModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+            openCartModal();
+        }
+    });
 }
 
 // Модалка товару
@@ -348,8 +322,8 @@ window.openProductModal = function(id) {
     document.getElementById('modalOem').textContent = currentModalProduct.oem;
     document.getElementById('modalBrand').textContent = currentModalProduct.brand;
     document.getElementById('modalCategory').textContent = currentModalProduct.category;
-    document.getElementById('modalCompat').textContent = Array.isArray(currentModalProduct.compatibility) ? currentModalProduct.compatibility.join(', ') : '';
-    document.getElementById('modalDesc').textContent = currentModalProduct.description || '';
+    document.getElementById('modalCompat').textContent = currentModalProduct.compatibility.join(', ');
+    document.getElementById('modalDesc').textContent = currentModalProduct.description;
     document.getElementById('modalPrice').textContent = currentModalProduct.price;
     document.getElementById('modalQtyInput').value = 1;
     
@@ -367,7 +341,7 @@ function updateModalTotal() {
     document.getElementById('modalTotalCalc').textContent = qty * currentModalProduct.price;
 }
 
-// Додавання товару з картки
+// Додавання товару з каталогу з урахуванням обраної кількості
 window.addCatalogItemToCart = function(event, id) {
     event.stopPropagation();
     const card = event.target.closest('.product-card');
@@ -376,6 +350,7 @@ window.addCatalogItemToCart = function(event, id) {
     
     addToCart(null, id, qty);
     
+    // Візуальний ефект успішного додавання
     const btn = event.target;
     const originalText = btn.textContent;
     btn.textContent = 'Додано ✓';
@@ -386,9 +361,9 @@ window.addCatalogItemToCart = function(event, id) {
     }, 1000);
 };
 
-// Робота з кошиком
+// Логіка кошика
 window.addToCart = function(event, id, qty) {
-    if (event) event.stopPropagation();
+    if(event) event.stopPropagation();
     
     const existing = cart.find(item => item.id === id);
     if (existing) {
@@ -398,10 +373,9 @@ window.addToCart = function(event, id, qty) {
     }
     saveCart();
     
-    if (cartBadge) {
-        cartBadge.style.transform = 'scale(1.3)';
-        setTimeout(() => cartBadge.style.transform = 'scale(1)', 200);
-    }
+    const badge = document.getElementById('cartBadge');
+    badge.style.transform = 'scale(1.3)';
+    setTimeout(() => badge.style.transform = 'scale(1)', 200);
 };
 
 function saveCart() {
@@ -411,7 +385,7 @@ function saveCart() {
 
 function updateCartBadge() {
     const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
-    if (cartBadge) cartBadge.textContent = totalQty;
+    cartBadge.textContent = totalQty;
 }
 
 function openCartModal() {
@@ -422,8 +396,6 @@ function openCartModal() {
 
 function renderCart() {
     const cartItemsContainer = document.getElementById('cartItems');
-    if (!cartItemsContainer) return;
-
     cartItemsContainer.innerHTML = '';
     
     if (cart.length === 0) {
@@ -491,7 +463,6 @@ function updateDeliveryProgress(sum) {
     const textEl = document.getElementById('deliveryText');
     const barEl = document.getElementById('deliveryProgressBar');
     const statusBox = document.querySelector('.delivery-status-box');
-    if (!textEl || !barEl || !statusBox) return;
     
     if (sum === 0) {
         textEl.textContent = `Безкоштовна доставка від ${FREE_SHIPPING_THRESHOLD} грн`;
@@ -553,7 +524,7 @@ function handleCheckout(e) {
     sendOrder(order);
 }
 
-// Відправка замовлення в Telegram
+// Функція відправки замовлення в Telegram
 async function sendOrder(order) {
     const BOT_TOKEN = '8717638807:AAESob1XqKvNJV3TE315QyMeh79Grh9vFCo'; 
     const CHAT_ID = '979529637';
@@ -577,7 +548,7 @@ async function sendOrder(order) {
 
     const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
     const submitBtn = document.querySelector('#checkoutForm button[type="submit"]');
-    const originalText = submitBtn ? submitBtn.textContent : '';
+    const originalBtnText = submitBtn ? submitBtn.textContent : '';
 
     try {
         if (submitBtn) {
@@ -597,24 +568,24 @@ async function sendOrder(order) {
             })
         });
 
-        if (response.ok) {
+        const result = await response.json();
+
+        if (response.ok && result.ok) {
+            alert(`Дякуємо! Ваше замовлення ${order.orderId} успішно оформлено.`);
             cart = [];
             saveCart();
-            document.getElementById('checkoutModal').style.display = 'none';
             document.getElementById('checkoutForm').reset();
-            
-            document.getElementById('successOrderId').textContent = order.orderId;
-            document.getElementById('successModal').style.display = 'flex';
-            document.body.style.overflow = 'hidden';
+            document.getElementById('checkoutModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
         } else {
-            alert('Помилка відправки замовлення. Спробуйте ще раз або зв’яжіться з нами.');
+            throw new Error(result.description || 'Помилка при відправці');
         }
     } catch (error) {
-        console.error('Помилка відправки:', error);
-        alert('Помилка мережі. Перевірте зʼєднання.');
+        console.error('Помилка відправки замовлення:', error);
+        alert('Не вдалося відправити замовлення. Будь ласка, спробуйте ще раз або зв’яжіться з нами через Telegram/Viber.');
     } finally {
         if (submitBtn) {
-            submitBtn.textContent = originalText;
+            submitBtn.textContent = originalBtnText || 'Підтвердити замовлення';
             submitBtn.disabled = false;
         }
     }
