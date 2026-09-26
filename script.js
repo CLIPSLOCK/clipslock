@@ -239,6 +239,14 @@ function setupEventListeners() {
     brandFilter.addEventListener('change', filterProducts);
     categoryFilter.addEventListener('change', filterProducts);
 
+    // Скидання всіх фільтрів одним натисканням
+    document.getElementById('resetFiltersBtn').addEventListener('click', () => {
+        searchInput.value = '';
+        brandFilter.value = '';
+        categoryFilter.value = '';
+        filterProducts();
+    });
+
     // Модалки - закриття
     document.querySelectorAll('.close-modal').forEach(btn => {
         btn.addEventListener('click', (e) => {
