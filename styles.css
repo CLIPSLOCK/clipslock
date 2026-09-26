@@ -917,3 +917,23 @@ html, body {
         padding: 0 4px;
     }
 }
+/* Кнопка скидання фільтрів */
+.btn-reset-filters {
+    width: 100%;
+    margin-top: 14px;
+    padding: 9px 10px;
+    background: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    color: var(--text-muted);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+ 
+.btn-reset-filters:hover {
+    border-color: var(--accent-mustard);
+    color: var(--accent-mustard);
+    background: var(--accent-mustard-light);
+}
