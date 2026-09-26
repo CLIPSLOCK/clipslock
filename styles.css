@@ -782,3 +782,48 @@ body {
     color: var(--text-muted);
     background: var(--bg-body);
 }
+/* Права колонка каталогу */
+.catalog-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Контейнер пагінації під сіткою */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 32px;
+    width: 100%;
+}
+
+/* Стилі для самих кнопок сторінок */
+.page-btn {
+    min-width: 36px;
+    height: 36px;
+    padding: 0 8px;
+    border: 1px solid var(--border-color, #e0e0e0);
+    background: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.page-btn:hover:not(:disabled) {
+    border-color: #d97706;
+    color: #d97706;
+}
+
+.page-btn.active {
+    background: #d97706; /* Ваш помаранчевий акцентний колір */
+    color: #fff;
+    border-color: #d97706;
+}
+
+.page-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
