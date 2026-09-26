@@ -41,7 +41,7 @@ async function fetchProducts() {
         populateFilters();
     } catch (error) {
         console.error('Помилка завантаження товарів:', error);
-        productsGrid.innerHTML = `<p style="grid-column: 1/-1; text-align: center; color: var(--text-muted);">Не вдалося завантажити товари. Перевірте з'єднання.</p>`;
+        productsGrid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: var(--text-muted);">Не вдалося завантажити товари. Перевірте з\'єднання.</p>';
     }
 }
 
@@ -70,7 +70,7 @@ function renderProducts(productsArray, page = 1) {
                 openProductModal(product.id);
             }
         };
-
+        
         card.innerHTML = `
             <div class="pc-image-wrap">
                 <img src="${product.img}" alt="${product.name}" loading="lazy">
@@ -80,22 +80,24 @@ function renderProducts(productsArray, page = 1) {
                 <span class="pc-brand">${product.brand}</span>
             </div>
             <div class="pc-title">${product.name}</div>
+            
             <div class="product-card-footer">
                 <div class="product-price-info">
                     <span class="product-price">${product.price}</span>
                     <span class="product-unit">грн/шт</span>
                 </div>
+                
                 <div class="card-qty-control" data-id="${product.id}">
                     <button class="qty-btn minus-btn" type="button">−</button>
                     <input type="number" class="qty-input" value="1" min="1" max="999" readonly>
                     <button class="qty-btn plus-btn" type="button">+</button>
                 </div>
             </div>
+
             <button class="btn btn-primary btn-full card-add-btn" onclick="addCatalogItemToCart(event, '${product.id}')">
                 У кошик
             </button>
         `;
-
         productsGrid.appendChild(card);
     });
 
@@ -103,7 +105,7 @@ function renderProducts(productsArray, page = 1) {
     renderPagination(productsArray.length, page, productsArray);
 }
 
-// Оновлена функція пагінації зі скороченням кнопок
+// Функція генерації кнопок пагінації
 function renderPagination(totalItems, current, productsArray) {
     const paginationContainer = document.getElementById('pagination');
     if (!paginationContainer) return;
@@ -111,7 +113,7 @@ function renderPagination(totalItems, current, productsArray) {
     paginationContainer.innerHTML = '';
     const totalPages = Math.ceil(totalItems / itemsPerPage);
 
-    if (totalPages <= 1) return;
+    if (totalPages <= 1) return; // Якщо товарів менше або дорівнює itemsPerPage, пагінацію не виводимо
 
     // Кнопка "Назад"
     const prevBtn = document.createElement('button');
@@ -125,38 +127,17 @@ function renderPagination(totalItems, current, productsArray) {
     };
     paginationContainer.appendChild(prevBtn);
 
-    // Визначаємо межі відображення чисел
-    let startPage = Math.max(1, current - 1);
-    let endPage = Math.min(totalPages, current + 1);
-
-    if (current === 1) endPage = Math.min(totalPages, 3);
-    if (current === totalPages) startPage = Math.max(1, totalPages - 2);
-
-    // Перша сторінка
-    if (startPage > 1) {
-        createPageBtn(1, current, productsArray, paginationContainer);
-        if (startPage > 2) {
-            const dots = document.createElement('span');
-            dots.className = 'page-dots';
-            dots.textContent = '...';
-            paginationContainer.appendChild(dots);
-        }
-    }
-
-    // Середні сторінки
-    for (let i = startPage; i <= endPage; i++) {
-        createPageBtn(i, current, productsArray, paginationContainer);
-    }
-
-    // Остання сторінка
-    if (endPage < totalPages) {
-        if (endPage < totalPages - 1) {
-            const dots = document.createElement('span');
-            dots.className = 'page-dots';
-            dots.textContent = '...';
-            paginationContainer.appendChild(dots);
-        }
-        createPageBtn(totalPages, current, productsArray, paginationContainer);
+    // Номери сторінок
+    for (let i = 1; i <= totalPages; i++) {
+        const pageBtn = document.createElement('button');
+        pageBtn.className = `page-btn ${i === current ? 'active' : ''}`;
+        pageBtn.innerText = i;
+        pageBtn.onclick = () => {
+            currentPage = i;
+            renderProducts(productsArray, currentPage);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+        paginationContainer.appendChild(pageBtn);
     }
 
     // Кнопка "Вперед"
@@ -170,19 +151,6 @@ function renderPagination(totalItems, current, productsArray) {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
     paginationContainer.appendChild(nextBtn);
-}
-
-// Допоміжна функція створення кнопки
-function createPageBtn(i, current, productsArray, container) {
-    const pageBtn = document.createElement('button');
-    pageBtn.className = `page-btn ${i === current ? 'active' : ''}`;
-    pageBtn.innerText = i;
-    pageBtn.onclick = () => {
-        currentPage = i;
-        renderProducts(productsArray, currentPage);
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
-    container.appendChild(pageBtn);
 }
 
 // Заповнення фільтрів
@@ -214,7 +182,7 @@ function filterProducts() {
 
     const filtered = products.filter(p => {
         const cleanOem = p.oem.replace(/[\s-]/g, '').toLowerCase();
-        const searchMatch =
+        const searchMatch = 
             p.name.toLowerCase().includes(query) ||
             cleanOem.includes(cleanQuery) ||
             p.brand.toLowerCase().includes(query) ||
@@ -271,10 +239,10 @@ function setupEventListeners() {
 
     // Кошик
     document.getElementById('cartBtn').addEventListener('click', openCartModal);
-
+    
     // Форма замовлення
     document.getElementById('checkoutBtn').addEventListener('click', () => {
-        if (cart.length > 0) {
+        if(cart.length > 0) {
             document.getElementById('cartModal').style.display = 'none';
             document.getElementById('checkoutModal').style.display = 'flex';
         }
@@ -290,7 +258,7 @@ function setupEventListeners() {
             updateModalTotal();
         }
     });
-
+    
     document.getElementById('modalQtyPlus').addEventListener('click', () => {
         const input = document.getElementById('modalQtyInput');
         input.value = parseInt(input.value) + 1;
@@ -311,7 +279,7 @@ function setupEventListeners() {
 }
 
 // Модалка товару
-window.openProductModal = function (id) {
+window.openProductModal = function(id) {
     currentModalProduct = products.find(p => p.id === id);
     if (!currentModalProduct) return;
 
@@ -324,6 +292,7 @@ window.openProductModal = function (id) {
     document.getElementById('modalDesc').textContent = currentModalProduct.description;
     document.getElementById('modalPrice').textContent = currentModalProduct.price;
     document.getElementById('modalQtyInput').value = 1;
+    
     updateModalTotal();
 
     document.getElementById('productModal').style.display = 'flex';
@@ -339,14 +308,14 @@ function updateModalTotal() {
 }
 
 // Додавання товару з каталогу з урахуванням обраної кількості
-window.addCatalogItemToCart = function (event, id) {
+window.addCatalogItemToCart = function(event, id) {
     event.stopPropagation();
     const card = event.target.closest('.product-card');
     const qtyInput = card.querySelector('.qty-input');
     const qty = parseInt(qtyInput.value) || 1;
-
+    
     addToCart(null, id, qty);
-
+    
     // Візуальний ефект успішного додавання
     const btn = event.target;
     const originalText = btn.textContent;
@@ -359,8 +328,9 @@ window.addCatalogItemToCart = function (event, id) {
 };
 
 // Логіка кошика
-window.addToCart = function (event, id, qty) {
-    if (event) event.stopPropagation();
+window.addToCart = function(event, id, qty) {
+    if(event) event.stopPropagation();
+    
     const existing = cart.find(item => item.id === id);
     if (existing) {
         existing.qty += qty;
@@ -368,7 +338,7 @@ window.addToCart = function (event, id, qty) {
         cart.push({ id, qty });
     }
     saveCart();
-
+    
     const badge = document.getElementById('cartBadge');
     badge.style.transform = 'scale(1.3)';
     setTimeout(() => badge.style.transform = 'scale(1)', 200);
@@ -393,7 +363,7 @@ function openCartModal() {
 function renderCart() {
     const cartItemsContainer = document.getElementById('cartItems');
     cartItemsContainer.innerHTML = '';
-
+    
     if (cart.length === 0) {
         cartItemsContainer.innerHTML = '<p style="text-align:center; padding: 40px 0; color: var(--text-muted);">Кошик порожній</p>';
         document.getElementById('cartTotalSum').textContent = '0 грн';
@@ -407,7 +377,7 @@ function renderCart() {
 
     cart.forEach((cartItem, index) => {
         const product = products.find(p => p.id === cartItem.id);
-        if (!product) return;
+        if (!product) return; 
 
         const itemTotal = product.price * cartItem.qty;
         totalSum += itemTotal;
@@ -439,7 +409,7 @@ function renderCart() {
     updateDeliveryProgress(totalSum);
 }
 
-window.changeCartQty = function (index, delta) {
+window.changeCartQty = function(index, delta) {
     if (cart[index].qty === 1 && delta === -1) {
         removeFromCart(index);
         return;
@@ -449,7 +419,7 @@ window.changeCartQty = function (index, delta) {
     renderCart();
 };
 
-window.removeFromCart = function (index) {
+window.removeFromCart = function(index) {
     cart.splice(index, 1);
     saveCart();
     renderCart();
@@ -459,7 +429,7 @@ function updateDeliveryProgress(sum) {
     const textEl = document.getElementById('deliveryText');
     const barEl = document.getElementById('deliveryProgressBar');
     const statusBox = document.querySelector('.delivery-status-box');
-
+    
     if (sum === 0) {
         textEl.textContent = `Безкоштовна доставка від ${FREE_SHIPPING_THRESHOLD} грн`;
         barEl.style.width = '0%';
@@ -522,7 +492,7 @@ function handleCheckout(e) {
 
 // Функція відправки замовлення в Telegram
 async function sendOrder(order) {
-    const BOT_TOKEN = '8717638807';
+    const BOT_TOKEN = '8717638807:AAESob1XqKvNJV3TE315QyMeh79Grh9vFCo'; 
     const CHAT_ID = '979529637';
 
     let message = `🛒 <b>НОВЕ ЗАМОВЛЕННЯ (${order.orderId})</b>\n\n`;
@@ -533,21 +503,23 @@ async function sendOrder(order) {
     if (order.customer.comment) {
         message += `💬 <b>Коментар:</b> ${order.customer.comment}\n`;
     }
+    
     message += `\n🛍 <b>Товари:</b>\n`;
     order.items.forEach((item, index) => {
         message += `${index + 1}. ${item.name} (OEM: ${item.oem})\n   ${item.qty} шт x ${item.price} грн = ${item.sum} грн\n`;
     });
+
     message += `\n💰 <b>Всього до оплати: ${order.totalSum} грн</b>`;
     message += order.freeShipping ? `\n✅ <i>Безкоштовна доставка</i>` : `\n🚚 <i>Доставка за рахунок клієнта</i>`;
 
     const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
 
-    const submitBtn = document.querySelector('#checkoutForm button[type="submit"]');
-    const originalText = submitBtn.textContent;
-    submitBtn.textContent = 'Відправка...';
-    submitBtn.disabled = true;
-
     try {
+        const submitBtn = document.querySelector('#checkoutForm button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Відправка...';
+        submitBtn.disabled = true;
+
         const response = await fetch(url, {
             method: 'POST',
             headers: {
@@ -560,25 +532,25 @@ async function sendOrder(order) {
             })
         });
 
-        if (!response.ok) {
-            throw new Error('Помилка відправки замовлення');
+        if (response.ok) {
+            document.getElementById('checkoutForm').reset();
+            cart = [];
+            saveCart();
+            renderCart();
+
+            document.getElementById('checkoutModal').style.display = 'none';
+            document.getElementById('successOrderId').textContent = `№ ${order.orderId}`;
+            document.getElementById('successModal').style.display = 'flex';
+        } else {
+            alert('Помилка при відправці замовлення. Перевір токен та ID.');
+            console.error('Помилка Telegram:', await response.text());
         }
 
-        // Показуємо модалку успіху
-        document.getElementById('checkoutModal').style.display = 'none';
-        document.getElementById('successOrderId').textContent = `№ ${order.orderId}`;
-        document.getElementById('successModal').style.display = 'flex';
-
-        // Очищення кошика і форми
-        cart = [];
-        saveCart();
-        document.getElementById('checkoutForm').reset();
-
-    } catch (error) {
-        console.error('Помилка відправки замовлення:', error);
-        alert('Не вдалося відправити замовлення. Спробуйте ще раз або зв\'яжіться з нами напряму.');
-    } finally {
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
+
+    } catch (error) {
+        console.error('Помилка з\'єднання:', error);
+        alert('Помилка з\'єднання. Перевірте інтернет.');
     }
 }
