@@ -105,7 +105,7 @@ function renderProducts(productsArray, page = 1) {
     renderPagination(productsArray.length, page, productsArray);
 }
 
-// Функція генерації кнопок пагінації
+// Оновлена функція пагінації зі скороченням кнопок
 function renderPagination(totalItems, current, productsArray) {
     const paginationContainer = document.getElementById('pagination');
     if (!paginationContainer) return;
@@ -113,7 +113,7 @@ function renderPagination(totalItems, current, productsArray) {
     paginationContainer.innerHTML = '';
     const totalPages = Math.ceil(totalItems / itemsPerPage);
 
-    if (totalPages <= 1) return; // Якщо товарів менше або дорівнює itemsPerPage, пагінацію не виводимо
+    if (totalPages <= 1) return;
 
     // Кнопка "Назад"
     const prevBtn = document.createElement('button');
@@ -127,17 +127,38 @@ function renderPagination(totalItems, current, productsArray) {
     };
     paginationContainer.appendChild(prevBtn);
 
-    // Номери сторінок
-    for (let i = 1; i <= totalPages; i++) {
-        const pageBtn = document.createElement('button');
-        pageBtn.className = `page-btn ${i === current ? 'active' : ''}`;
-        pageBtn.innerText = i;
-        pageBtn.onclick = () => {
-            currentPage = i;
-            renderProducts(productsArray, currentPage);
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        };
-        paginationContainer.appendChild(pageBtn);
+    // Визначаємо межі відображення чисел
+    let startPage = Math.max(1, current - 1);
+    let endPage = Math.min(totalPages, current + 1);
+
+    if (current === 1) endPage = Math.min(totalPages, 3);
+    if (current === totalPages) startPage = Math.max(1, totalPages - 2);
+
+    // Перша сторінка
+    if (startPage > 1) {
+        createPageBtn(1, current, productsArray, paginationContainer);
+        if (startPage > 2) {
+            const dots = document.createElement('span');
+            dots.className = 'page-dots';
+            dots.textContent = '...';
+            paginationContainer.appendChild(dots);
+        }
+    }
+
+    // Середні сторінки
+    for (let i = startPage; i <= endPage; i++) {
+        createPageBtn(i, current, productsArray, paginationContainer);
+    }
+
+    // Остання сторінка
+    if (endPage < totalPages) {
+        if (endPage < totalPages - 1) {
+            const dots = document.createElement('span');
+            dots.className = 'page-dots';
+            dots.textContent = '...';
+            paginationContainer.appendChild(dots);
+        }
+        createPageBtn(totalPages, current, productsArray, paginationContainer);
     }
 
     // Кнопка "Вперед"
@@ -151,6 +172,19 @@ function renderPagination(totalItems, current, productsArray) {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
     paginationContainer.appendChild(nextBtn);
+}
+
+// Допоміжна функція створення кнопки
+function createPageBtn(i, current, productsArray, container) {
+    const pageBtn = document.createElement('button');
+    pageBtn.className = `page-btn ${i === current ? 'active' : ''}`;
+    pageBtn.innerText = i;
+    pageBtn.onclick = () => {
+        currentPage = i;
+        renderProducts(productsArray, currentPage);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+    container.appendChild(pageBtn);
 }
 
 // Заповнення фільтрів
