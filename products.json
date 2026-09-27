@@ -3446,5 +3446,231 @@
 "price": 15,
 "description": "Біле пластикове кріплення для обшивки та молдингів з двома прямокутними шляпками. Розмір шляпки 16×18 мм.",
 "img": "clipsa205.jpg"
+},
+{
+"id": "206",
+"name": "Ковпачок колісного диска",
+"oem": "50170",
+"brand": "Універсальний",
+"category": "Ковпачки колісних дисків",
+"compatibility": [
+"Багато марок — Багато моделей"
+],
+"price": 15,
+"description": "Пластиковий ковпачок для колісного диска. Застосування — кузов, багатоцільове кріплення.",
+"img": "clipsa206.jpg"
+},
+{
+"id": "207",
+"name": "Витяжна гайка",
+"oem": "20343",
+"brand": "Універсальний",
+"category": "Гайки, шайби та накрутки",
+"compatibility": [
+"Багато марок — Багато моделей"
+],
+"price": 15,
+"description": "Срібляста сталева витяжна гайка M6. Розмір T — 13 мм, T1 — 8,9 мм, H — 16 мм.",
+"img": "clipsa207.jpg"
+},
+{
+"id": "208",
+"name": "Кліпса кріплення обшивки типу Ялинка",
+"oem": "10072",
+"brand": "Ford",
+"category": "Кріплення обшивки та молдингів",
+"compatibility": [
+"Ford — Багато моделей",
+"Багато марок — Багато моделей"
+],
+"price": 15,
+"description": "Чорна пластикова кліпса типу «Ялинка» з круглою шляпкою. Довжина 26 мм, діаметр отвору 8,3 мм.",
+"img": "clipsa208.jpg"
+},
+{
+"id": "209",
+"name": "Кріплення обшивки та молдингів з кількома фігурними шляпками",
+"oem": "15162",
+"brand": "Renault",
+"category": "Кріплення обшивки та молдингів",
+"compatibility": [
+"Renault Clio II (1998 - 2008)",
+"Renault Kangoo (1998 - 2008)",
+"Renault Megane II (2002 - 2015)",
+"Renault Scenic (2009 - 2015)",
+"Renault Vel Satis",
+"Volvo V70 (1997 - 2007)",
+"Volvo XC70 (1997 - 2007)"
+],
+"price": 15,
+"description": "Біле пластикове кріплення обшивки та молдингів з кількома фігурними шляпками. Діаметр кріплення 7 мм.",
+"img": "clipsa209.jpg"
+},
+{
+"id": "210",
+"name": "Кріплення обшивки та молдингів з двома круглими шляпками",
+"oem": "15385",
+"brand": "Mercedes-Benz",
+"category": "Кріплення обшивки та молдингів",
+"compatibility": [
+"Mercedes-Benz A-Class W169 (2005 - 2012)",
+"Mercedes-Benz B-Class W245 (2006 - 2012)",
+"Mercedes-Benz E-Class W212 (2009 - 2012)",
+"Mercedes-Benz CLA-Class C117",
+"Renault Kangoo (2011 - 2018)"
+],
+"price": 15,
+"description": "Біле пластикове кріплення обшивки та молдингів з двома круглими шляпками. Діаметр кріплення 11 мм.",
+"img": "clipsa210.jpg"
+},
+{
+"id": "211",
+"name": "Заглушка без отвору",
+"oem": "13183",
+"brand": "Audi",
+"category": "Заглушки",
+"compatibility": [
+"Audi A3",
+"Audi A4",
+"Audi A6",
+"Audi Q3",
+"Audi Q4 e-tron",
+"Audi TT",
+"Audi — Багато моделей",
+"Seat Cordoba",
+"Seat Inca",
+"Seat — Багато моделей",
+"Skoda Fabia",
+"Skoda Octavia",
+"Skoda Superb",
+"Skoda — Багато моделей",
+"Volkswagen Arteon",
+"Volkswagen Bora",
+"Volkswagen Golf",
+"Volkswagen ID.4",
+"Volkswagen Jetta",
+"Volkswagen Passat",
+"Volkswagen Phaeton",
+"Volkswagen Polo",
+"Volkswagen T-Roc",
+"Volkswagen Tiguan",
+"Volkswagen Touareg",
+"Volkswagen Transporter",
+"Volkswagen Vento",
+"Volkswagen — Багато моделей",
+"Багато марок — Багато моделей"
+],
+"price": 15,
+"description": "Чорна пластикова заглушка без отвору. Діаметр 56,8 мм, діаметр посадкового отвору 46,2 мм, висота 12 мм.",
+"img": "clipsa211.jpg"
+},
+{
+"id": "212",
+"name": "Кріплення обшивки та молдингів з двома круглими шляпками",
+"oem": "15302",
+"brand": "Mitsubishi",
+"category": "Кріплення обшивки та молдингів",
+"compatibility": [
+"Mitsubishi Lancer (2000 - 2014)",
+"Mitsubishi Nativa (1997 - 2011)",
+"Mitsubishi Pajero",
+"Mitsubishi Pajero Sport (1998 - 2008)",
+"Mitsubishi Outlander (2001 - 2012)",
+"Mitsubishi Pajero (1996 - 2006)"
+],
+"price": 15,
+"description": "Синє пластикове кріплення обшивки та молдингів з двома круглими шляпками. Діаметр 7,5 мм.",
+"img": "clipsa212.jpg"
+},
+{
+"id": "213",
+"name": "Кліпса кріплення обшивки типу Ялинка",
+"oem": "10096",
+"brand": "Універсальний",
+"category": "Кріплення обшивки та молдингів",
+"compatibility": [
+"Багато марок — Багато моделей"
+],
+"price": 15,
+"description": "Чорна пластикова кліпса типу «Ялинка» з круглою шляпкою. Довжина 21,7 мм, діаметр 6,7 мм.",
+"img": "clipsa213.jpg"
+},
+{
+"id": "214",
+"name": "Пластикова витяжна заклепка",
+"oem": "25035",
+"brand": "BMW",
+"category": "Заклепки",
+"compatibility": [
+"BMW 3-series",
+"BMW X1",
+"BMW X3",
+"BMW X5 E70 (2006 - 2010)",
+"BMW X6",
+"BMW Z4"
+],
+"price": 20,
+"description": "Чорна пластикова витяжна заклепка. Довжина 20 мм, діаметр 6 мм.",
+"img": "clipsa214.jpg"
+},
+{
+"id": "215",
+"name": "Кліпса кріплення обшивки типу Якір",
+"oem": "10700",
+"brand": "Mazda",
+"category": "Кріплення обшивки та молдингів",
+"compatibility": [
+"Ford — Багато моделей",
+"Mazda 2 (2007 - 2015)",
+"Mazda 3 (2003 - 2009)",
+"Mazda 5 (2004 - 2010)",
+"Mazda 6 (2007 - 2013)",
+"Mazda CX-7 (2006 - 2015)",
+"Mazda CX-9",
+"Nissan — Багато моделей",
+"Suzuki — Багато моделей",
+"Багато марок — Багато моделей"
+],
+"price": 15,
+"description": "Чорна пластикова кліпса типу «Якір» з круглою шляпкою. Діаметр 4 мм. Використовується для кріплення ущільнювача дверей.",
+"img": "clipsa215.jpg"
+},
+{
+"id": "216",
+"name": "Кріплення розпірної дії з натискним розпірним штирем",
+"oem": "11474",
+"brand": "Subaru",
+"category": "Кріплення обшивки та молдингів",
+"compatibility": [
+"Subaru Forester (2010 - 2016)",
+"Subaru Impreza (2010 - 2015)",
+"Subaru Legacy (2010 - 2016)",
+"Subaru Outback (2010 - 2016)",
+"Subaru Tribeca (2010 - 2014)",
+"Subaru WRX (2015 - 2016)",
+"Subaru XV (2014 - 2016)"
+],
+"price": 15,
+"description": "Чорна пластикова кліпса розпірної дії з натискним розпірним штирем та шляпкою. Діаметр 7 мм, довжина 20 мм.",
+"img": "clipsa216.jpg"
+},
+{
+"id": "217",
+"name": "Кріплення розпірної дії з натискним розпірним штирем",
+"oem": "11395",
+"brand": "Renault",
+"category": "Кріплення обшивки та молдингів",
+"compatibility": [
+"Honda — Багато моделей",
+"Mitsubishi — Багато моделей",
+"Nissan — Багато моделей",
+"Renault — Багато моделей",
+"Renault Koleos II",
+"Renault Koleos I",
+"Renault Koleos II"
+],
+"price": 15,
+"description": "Чорна пластикова кліпса розпірної дії з натискним розпірним штирем та шляпкою. Діаметр 8 мм, довжина 20 мм.",
+"img": "clipsa217.jpg"
 }
 ]
