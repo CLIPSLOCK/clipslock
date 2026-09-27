@@ -5559,28 +5559,6 @@
   "img": "clipsa344.jpg"
 },
 {
-  "id": "345",
-  "name": "Кріплення обшивки / молдингів 15001 з круглим капелюшком",
-  "oem": "15001",
-  "brand": "Renault",
-  "category": "Кріплення обшивки та молдингів",
-  "compatibility": [
-    "Renault Trafic",
-    "Renault Master",
-    "Renault Megane",
-    "Renault Clio",
-    "Renault Kangoo",
-    "Nissan Primastar",
-    "Nissan NV400",
-    "Opel Vivaro",
-    "Opel Movano",
-    "Land Rover Range Rover"
-  ],
-  "price": 15,
-  "description": "Пластикова кліпса з двома круглими шляпками для дверей, моторного відсіку та салону.",
-  "img": "clipsa345.jpg"
-},
-{
   "id": "346",
   "name": "Кріплення обшивки / молдингів 15125 з вузьким капелюшком",
   "oem": "15125",
