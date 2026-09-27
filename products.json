@@ -4931,5 +4931,1090 @@
     "price": 20,
     "description": "Жовта пластикова закладна під саморіз без різьблення. Використовується для кріплення бамперів, декоративних решіток та захисних панелей.",
     "img": "clipsa279.jpg"
-  }
+  },
+  {
+  "id": "295",
+  "name": "Кріплення обшивки 10063, кліпса типу Ялинка",
+  "oem": "10063",
+  "brand": "Ford",
+  "category": "Кріплення обшивки та молдингів",
+  "compatibility": [
+    "Ford — багато моделей",
+    "Audi — багато моделей",
+    "Chrysler — багато моделей",
+    "Dodge — багато моделей",
+    "Jeep — багато моделей",
+    "Renault — багато моделей",
+    "Seat — багато моделей",
+    "Skoda — багато моделей",
+    "Volkswagen — багато моделей"
+  ],
+  "price": 15,
+  "description": "Чорна пластикова кліпса типу Ялинка з круглою шляпкою для кріплення обшивки.",
+  "img": "clipsa295.jpg"
+},
+{
+  "id": "296",
+  "name": "Кріплення обшивки 10079, кліпса типу Ялинка",
+  "oem": "10079",
+  "brand": "Ford",
+  "category": "Кріплення обшивки та молдингів",
+  "compatibility": [
+    "Ford Escape (2013 - 2018)",
+    "Ford Fusion (2010 - 2012)",
+    "Ford Ka",
+    "Ford Kuga",
+    "Ford Ranger"
+  ],
+  "price": 15,
+  "description": "Чорна пластикова кліпса типу Ялинка з круглою шляпкою для кріплення обшивки.",
+  "img": "clipsa296.jpg"
+},
+{
+  "id": "297",
+  "name": "Кріплення обшивки 10567, кліпса типу Ялинка",
+  "oem": "10567",
+  "brand": "Ford",
+  "category": "Кріплення обшивки та молдингів",
+  "compatibility": [
+    "Ford Kuga",
+    "Ford Edge",
+    "Ford Focus",
+    "Ford Fusion",
+    "Ford Mondeo"
+  ],
+  "price": 20,
+  "description": "Чорна пластикова кліпса типу Ялинка для кріплення підкрилків, обшивки багажника та деталей бампера.",
+  "img": "clipsa297.jpg"
+},
+{
+  "id": "299",
+  "name": "Пластикова фігурна кліпса 12845",
+  "oem": "12845",
+  "brand": "Ford",
+  "category": "Втулки, вставки",
+  "compatibility": [
+    "Ford Focus (2008 - 2011)",
+    "Ford Mondeo (2007 - 2014)",
+    "Ford Kuga",
+    "Ford Edge"
+  ],
+  "price": 20,
+  "description": "Пластикова фігурна кліпса для автомобільного кузовного та салонного кріплення.",
+  "img": "clipsa299.jpg"
+},
+{
+  "id": "300",
+  "name": "Кліпса 12346",
+  "oem": "12346",
+  "brand": "Nissan",
+  "category": "Втулки, вставки",
+  "compatibility": [
+    "Nissan — багато моделей"
+  ],
+  "price": 15,
+  "description": "Автомобільна пластикова кліпса для кузовного кріплення.",
+  "img": "clipsa300.jpg"
+},
+{
+  "id": "301",
+  "name": "Заглушка без отвору 13159",
+  "oem": "13159",
+  "brand": "Volkswagen",
+  "category": "Заглушки",
+  "compatibility": [
+    "Volkswagen Caddy",
+    "Volkswagen Golf III",
+    "Volkswagen Golf IV",
+    "Volkswagen Jetta IV",
+    "Volkswagen Jetta V",
+    "Volkswagen New Beetle",
+    "Volkswagen Passat B4",
+    "Volkswagen Passat B6",
+    "Volkswagen Passat CC",
+    "Volkswagen Polo Classic",
+    "Volkswagen Scirocco",
+    "Volkswagen Sharan",
+    "Volkswagen Tiguan",
+    "Seat Ibiza",
+    "Skoda Octavia"
+  ],
+  "price": 35,
+  "description": "Чорна пластикова заглушка без отвору для кузовних отворів.",
+  "img": "clipsa301.jpg"
+},
+{
+  "id": "302",
+  "name": "Втулка з прямокутною шляпкою 14977",
+  "oem": "14977",
+  "brand": "Ford",
+  "category": "Втулки, вставки",
+  "compatibility": [
+    "Ford — багато моделей"
+  ],
+  "price": 15,
+  "description": "Пластикова втулка з прямокутною шляпкою для кріплення дверних елементів.",
+  "img": "clipsa302.jpg"
+},
+{
+  "id": "303",
+  "name": "Втулка з прямокутною шляпкою 14978",
+  "oem": "14978",
+  "brand": "Ford",
+  "category": "Втулки, вставки",
+  "compatibility": [
+    "Ford — багато моделей"
+  ],
+  "price": 15,
+  "description": "Пластикова втулка з прямокутною шляпкою для кріплення дверних елементів.",
+  "img": "clipsa303.jpg"
+},
+{
+  "id": "304",
+  "name": "Кліпса 14349",
+  "oem": "14349",
+  "brand": "Ford",
+  "category": "Кріплення обшивки та молдингів",
+  "compatibility": [
+    "Ford — багато моделей"
+  ],
+  "price": 15,
+  "description": "Пластикове автомобільне кріплення для кузовних та оздоблювальних елементів.",
+  "img": "clipsa304.jpg"
+},
+{
+  "id": "305",
+  "name": "Втулка з круглою шляпкою 14355",
+  "oem": "14355",
+  "brand": "Land Rover",
+  "category": "Втулки, вставки",
+  "compatibility": [
+    "Land Rover Range Rover Sport",
+    "Land Rover Range Rover Evoque",
+    "Land Rover Range Rover",
+    "Land Rover Discovery 3",
+    "Land Rover Discovery 4",
+    "Land Rover Freelander 2"
+  ],
+  "price": 15,
+  "description": "Пластикова втулка з круглою шляпкою та ущільнювальною прокладкою.",
+  "img": "clipsa305.jpg"
+},
+{
+  "id": "307",
+  "name": "Скоба 16146, закладна під саморіз",
+  "oem": "16146",
+  "brand": "Ford",
+  "category": "Фіксатори, закладні",
+  "compatibility": [
+    "Ford Focus (2008 - 2011)"
+  ],
+  "price": 15,
+  "description": "Пластикове кріплення для кузовних та оздоблювальних елементів автомобіля.",
+  "img": "clipsa307.jpg"
+},
+{
+  "id": "308",
+  "name": "Скоба 16171, закладна під саморіз",
+  "oem": "16171",
+  "brand": "Audi",
+  "category": "Фіксатори, закладні",
+  "compatibility": [
+    "Audi A4 B7 (2004 - 2008)",
+    "Audi A4 B8 (2008 - 2016)"
+  ],
+  "price": 15,
+  "description": "Металева закладна під саморіз для кузовного кріплення.",
+  "img": "clipsa308.jpg"
+},
+{
+  "id": "309",
+  "name": "Закладна під саморіз 16189",
+  "oem": "16189",
+  "brand": "Volkswagen",
+  "category": "Фіксатори, закладні",
+  "compatibility": [
+    "Volkswagen — багато моделей",
+    "Audi — багато моделей",
+    "Ford — багато моделей",
+    "Opel — багато моделей"
+  ],
+  "price": 15,
+  "description": "Металева закладна під саморіз для кузовного кріплення.",
+  "img": "clipsa309.jpg"
+},
+{
+  "id": "310",
+  "name": "Скоба 16212, закладна під саморіз",
+  "oem": "16212",
+  "brand": "Ford",
+  "category": "Фіксатори, закладні",
+  "compatibility": [
+    "Ford — багато моделей"
+  ],
+  "price": 35,
+  "description": "Металева закладна під саморіз для автомобільного кузовного кріплення.",
+  "img": "clipsa310.jpg"
+},
+{
+  "id": "311",
+  "name": "Скоба 16215, закладна під саморіз",
+  "oem": "16215",
+  "brand": "Ford",
+  "category": "Фіксатори, закладні",
+  "compatibility": [
+    "Ford C-Max (2007 - 2018)",
+    "Ford Fiesta (2001 - 2010)",
+    "Ford Focus (2004 - 2018)",
+    "Ford Fusion (2002 - 2012)",
+    "Ford Mondeo (2000 - 2015)",
+    "Ford S-Max (2006 - 2014)",
+    "Ford Transit (2000 - 2006)"
+  ],
+  "price": 20,
+  "description": "Срібляста металева закладна під саморіз для кріплення підкрилків.",
+  "img": "clipsa311.jpg"
+},
+{
+  "id": "312",
+  "name": "Закладна під саморіз 16257",
+  "oem": "16257",
+  "brand": "Ford",
+  "category": "Фіксатори, закладні",
+  "compatibility": [
+    "Ford — багато моделей"
+  ],
+  "price": 15,
+  "description": "Чорна металева закладна під саморіз для кузовного кріплення.",
+  "img": "clipsa312.jpg"
+},
+{
+  "id": "313",
+  "name": "Фіксатор V-подібний 16524",
+  "oem": "16524",
+  "brand": "Ford",
+  "category": "Фіксатори, закладні",
+  "compatibility": [
+    "Ford — багато моделей"
+  ],
+  "price": 15,
+  "description": "Сірий металевий V-подібний фіксатор без різьблення.",
+  "img": "clipsa313.jpg"
+},
+{
+  "id": "314",
+  "name": "Фіксатор V-подібний 16543",
+  "oem": "16543",
+  "brand": "Ford",
+  "category": "Фіксатори, закладні",
+  "compatibility": [
+    "Ford Mondeo",
+    "Ford Focus",
+    "Ford Kuga",
+    "Ford Fiesta",
+    "Ford C-Max"
+  ],
+  "price": 20,
+  "description": "Чорний металевий V-подібний фіксатор без різьблення для багажника та салону.",
+  "img": "clipsa314.jpg"
+},
+{
+  "id": "315",
+  "name": "Саморіз 18079",
+  "oem": "18079",
+  "brand": "Ford",
+  "category": "Саморізи",
+  "compatibility": [
+    "Ford — багато моделей"
+  ],
+  "price": 15,
+  "description": "Автомобільний саморіз для кузовного кріплення.",
+  "img": "clipsa315.jpg"
+},
+{
+  "id": "316",
+  "name": "Саморіз 18082",
+  "oem": "18082",
+  "brand": "Land Rover",
+  "category": "Саморізи",
+  "compatibility": [
+    "Land Rover — багато моделей"
+  ],
+  "price": 15,
+  "description": "Чорний саморіз із прес-шайбою під хрестову викрутку.",
+  "img": "clipsa316.jpg"
+},
+{
+  "id": "317",
+  "name": "Саморіз 18097",
+  "oem": "18097",
+  "brand": "Ford",
+  "category": "Саморізи",
+  "compatibility": [
+    "Ford — багато моделей"
+  ],
+  "price": 15,
+  "description": "Автомобільний саморіз для кузовного кріплення.",
+  "img": "clipsa317.jpg"
+},
+{
+  "id": "318",
+  "name": "Саморізи",
+  "oem": "18796",
+  "brand": "Ford",
+  "category": "Саморізи",
+  "compatibility": [
+    "Ford — багато моделей"
+  ],
+  "price": 15,
+  "description": "Ущільнювальне кільце для автомобільного вузла та герметизації з'єднання.",
+  "img": "clipsa318.jpg"
+},
+{
+  "id": "320",
+  "name": "Гайка-вставка M4 20271",
+  "oem": "20271",
+  "brand": "BMW",
+  "category": "Гайки, шайби, накрутки",
+  "compatibility": [
+    "BMW — багато моделей"
+  ],
+  "price": 15,
+  "description": "Металева гайка-вставка для автомобільного кузовного кріплення.",
+  "img": "clipsa320.jpg"
+},
+{
+  "id": "321",
+  "name": "Шайба 20530",
+  "oem": "20530",
+  "brand": "Ford",
+  "category": "Гайки, шайби, накрутки",
+  "compatibility": [
+    "Ford C-Max (2003 - 2010)",
+    "Ford Fiesta",
+    "Ford Focus",
+    "Ford Fusion",
+    "Ford Kuga",
+    "Ford Transit"
+  ],
+  "price": 15,
+  "description": "Срібляста металева шайба для кузовного кріплення.",
+  "img": "clipsa321.jpg"
+},
+{
+  "id": "323",
+  "name": "Інструмент для роботи з пластиковими деталями 31020",
+  "oem": "31020",
+  "brand": "MAK",
+  "category": "Інструменти",
+  "compatibility": [
+    "Універсальний"
+  ],
+  "price": 175,
+  "description": "Інструмент для роботи з пластиковими деталями автомобіля.",
+  "img": "clipsa323.jpg"
+},
+{
+  "id": "324",
+  "name": "Інструмент для роботи з пластиковими деталями 31021",
+  "oem": "31021",
+  "brand": "MAK",
+  "category": "Інструменти",
+  "compatibility": [
+    "Універсальний"
+  ],
+  "price": 175,
+  "description": "Інструмент для роботи з пластиковими деталями автомобіля.",
+  "img": "clipsa324.jpg"
+},
+{
+  "id": "325",
+  "name": "Роз'єм освітлення 2-контактний 40075",
+  "oem": "40075",
+  "brand": "Toyota",
+  "category": "Електричні роз'єми",
+  "compatibility": [
+    "Toyota — багато моделей",
+    "Lexus — багато моделей"
+  ],
+  "price": 65,
+  "description": "Сірий 2-контактний електричний роз'єм для автомобільного освітлення.",
+  "img": "clipsa325.jpg"
+},
+{
+  "id": "326",
+  "name": "Роз'єм 40190",
+  "oem": "40190",
+  "brand": "Peugeot",
+  "category": "Електричні роз'єми",
+  "compatibility": [
+    "Peugeot — багато моделей",
+    "Citroen — багато моделей",
+    "Skoda — багато моделей"
+  ],
+  "price": 65,
+  "description": "Автомобільний електричний роз'єм для підключення проводки.",
+  "img": "clipsa326.jpg"
+},
+{
+  "id": "327",
+  "name": "Автомобільний електричний роз'єм 40221",
+  "oem": "40221",
+  "brand": "Volkswagen",
+  "category": "Електричні роз'єми",
+  "compatibility": [
+    "Volkswagen — багато моделей",
+    "Audi — багато моделей",
+    "Seat — багато моделей",
+    "Skoda — багато моделей",
+    "Volvo — багато моделей",
+    "Citroen — багато моделей",
+    "Peugeot — багато моделей"
+  ],
+  "price": 105,
+  "description": "Автомобільний електричний роз'єм для підключення проводки.",
+  "img": "clipsa327.jpg"
+},
+{
+  "id": "328",
+  "name": "Кріплення обшивки 10061, кліпса типу Ялинка",
+  "oem": "10061",
+  "brand": "Jeep",
+  "category": "Кріплення розпірної дії",
+  "compatibility": [
+    "Jeep Grand Cherokee",
+    "Buick — багато моделей",
+    "Cadillac — багато моделей",
+    "Chevrolet — багато моделей",
+    "Chrysler — багато моделей",
+    "Dodge — багато моделей",
+    "Oldsmobile — багато моделей",
+    "Pontiac — багато моделей"
+  ],
+  "price": 15,
+  "description": "Чорна пластикова кліпса типу Ялинка з круглою шляпкою для кріплення обшивки.",
+  "img": "clipsa328.jpg"
+},
+{
+  "id": "329",
+  "name": "Кріплення обшивки 10410, кліпса типу Ялинка",
+  "oem": "10410",
+  "brand": "Універсальний",
+  "category": "Кріплення розпірної дії",
+  "compatibility": [
+    "Багато моделей"
+  ],
+  "price": 15,
+  "description": "Чорна пластикова кліпса типу Ялинка з круглою шляпкою для кузовного кріплення.",
+  "img": "clipsa329.jpg"
+},
+{
+  "id": "330",
+  "name": "Кріплення обшивки 10522, кліпса типу Ялинка",
+  "oem": "10522",
+  "brand": "Toyota",
+  "category": "Кріплення розпірної дії",
+  "compatibility": [
+    "Toyota Camry",
+    "Toyota Corolla",
+    "Toyota Land Cruiser",
+    "Toyota Prius",
+    "Toyota RAV4",
+    "Mitsubishi Lancer",
+    "Mitsubishi Outlander",
+    "Nissan — багато моделей",
+    "Lexus — багато моделей"
+  ],
+  "price": 15,
+  "description": "Чорна пластикова кліпса типу Ялинка з круглою шляпкою, діаметр отвору 5 мм.",
+  "img": "clipsa330.jpg"
+},
+{
+  "id": "331",
+  "name": "Кріплення обшивки 10550, кліпса типу Ялинка",
+  "oem": "10550",
+  "brand": "Renault",
+  "category": "Кріплення розпірної дії",
+  "compatibility": [
+    "Renault Laguna",
+    "Renault Megane",
+    "Renault — багато моделей",
+    "Nissan Almera",
+    "Dacia — багато моделей"
+  ],
+  "price": 15,
+  "description": "Чорна пластикова кліпса типу Ялинка для кріплення обшивки, капота, дверей та кузовних деталей.",
+  "img": "clipsa331.jpg"
+},
+{
+  "id": "332",
+  "name": "Кріплення обшивки 10805, кліпса типу Якір",
+  "oem": "10805",
+  "brand": "Peugeot",
+  "category": "Кріплення розпірної дії",
+  "compatibility": [
+    "Peugeot 206",
+    "Peugeot 306",
+    "Peugeot 307",
+    "Peugeot 406",
+    "Peugeot 407",
+    "Peugeot 607",
+    "Citroen C3",
+    "Citroen C4",
+    "Citroen C5",
+    "Ford Fiesta",
+    "Ford Fusion",
+    "Renault Master",
+    "Renault Laguna",
+    "Renault Kangoo"
+  ],
+  "price": 15,
+  "description": "Чорна пластикова кліпса типу Якір з вузькою шляпкою для дверної обшивки.",
+  "img": "clipsa332.jpg"
+},
+{
+  "id": "333",
+  "name": "Кліпса 11083",
+  "oem": "11083",
+  "brand": "Chevrolet",
+  "category": "Кріплення розпірної дії",
+  "compatibility": [
+    "Chevrolet Captiva",
+    "Opel — багато моделей",
+    "GM — багато моделей"
+  ],
+  "price": 15,
+  "description": "Пластикова розпірна кліпса для автомобільного кузовного кріплення.",
+  "img": "clipsa333.jpg"
+},
+{
+  "id": "338",
+  "name": "Кріплення розпірної дії 11820",
+  "oem": "11820",
+  "brand": "Ford",
+  "category": "Кріплення розпірної дії",
+  "compatibility": [
+    "Ford Fusion",
+    "Ford Mondeo",
+    "Ford — багато моделей"
+  ],
+  "price": 15,
+  "description": "Пластикова розпірна кліпса для кузовного кріплення.",
+  "img": "clipsa338.jpg"
+},
+{
+  "id": "340",
+  "name": "Кліпса 12287 для кріплення підкрилка",
+  "oem": "12287",
+  "brand": "Toyota",
+  "category": "Кріплення бампера",
+  "compatibility": [
+    "Toyota Hilux",
+    "Toyota Camry",
+    "Toyota RAV4",
+    "Lexus RX"
+  ],
+  "price": 15,
+  "description": "Пластиковий пістон для кріплення підкрилка та деталей бампера.",
+  "img": "clipsa340.jpg"
+},
+{
+  "id": "341",
+  "name": "Фігурне складене кріплення 12900",
+  "oem": "12900",
+  "brand": "Volkswagen",
+  "category": "Кріплення обшивки та молдингів",
+  "compatibility": [
+    "Volkswagen — багато моделей"
+  ],
+  "price": 25,
+  "description": "Складене фігурне пластикове кріплення для кузовних деталей.",
+  "img": "clipsa341.jpg"
+},
+{
+  "id": "342",
+  "name": "Заглушка колісного диска 13842",
+  "oem": "13842",
+  "brand": "Універсальний",
+  "category": "Заглушки",
+  "compatibility": [
+    "MAK — колісні диски"
+  ],
+  "price": 90,
+  "description": "Заглушка для колісного диска.",
+  "img": "clipsa342.jpg"
+},
+{
+  "id": "344",
+  "name": "Втулка, вставка з квадратним капелюшком 14630",
+  "oem": "14630",
+  "brand": "Toyota",
+  "category": "Втулки, вставки",
+  "compatibility": [
+    "Toyota — багато моделей",
+    "Mitsubishi — багато моделей"
+  ],
+  "price": 15,
+  "description": "Пластикова втулка з квадратним капелюшком для кузовного кріплення.",
+  "img": "clipsa344.jpg"
+},
+{
+  "id": "345",
+  "name": "Кріплення обшивки / молдингів 15001 з круглим капелюшком",
+  "oem": "15001",
+  "brand": "Renault",
+  "category": "Кріплення обшивки та молдингів",
+  "compatibility": [
+    "Renault Trafic",
+    "Renault Master",
+    "Renault Megane",
+    "Renault Clio",
+    "Renault Kangoo",
+    "Nissan Primastar",
+    "Nissan NV400",
+    "Opel Vivaro",
+    "Opel Movano",
+    "Land Rover Range Rover"
+  ],
+  "price": 15,
+  "description": "Пластикова кліпса з двома круглими шляпками для дверей, моторного відсіку та салону.",
+  "img": "clipsa345.jpg"
+},
+{
+  "id": "346",
+  "name": "Кріплення обшивки / молдингів 15125 з вузьким капелюшком",
+  "oem": "15125",
+  "brand": "Toyota",
+  "category": "Кріплення обшивки та молдингів",
+  "compatibility": [
+    "Toyota — багато моделей",
+    "Honda — багато моделей",
+    "Hyundai — багато моделей",
+    "Kia — багато моделей",
+    "Nissan — багато моделей",
+    "Subaru — багато моделей",
+    "Mitsubishi — багато моделей"
+  ],
+  "price": 15,
+  "description": "Пластикове складене кріплення з двома вузькими шляпками.",
+  "img": "clipsa346.jpg"
+},
+{
+  "id": "351",
+  "name": "Складене кріплення 15970",
+  "oem": "15970",
+  "brand": "Fiat",
+  "category": "Кріплення обшивки та молдингів",
+  "compatibility": [
+    "Fiat Barchetta",
+    "Fiat Tempra",
+    "Fiat Tipo",
+    "Fiat Uno",
+    "Alfa Romeo 33",
+    "Alfa Romeo 75",
+    "Alfa Romeo 90",
+    "Alfa Romeo 164",
+    "Peugeot 306",
+    "Peugeot 307",
+    "Citroen — багато моделей",
+    "Lancia Delta"
+  ],
+  "price": 15,
+  "description": "Помаранчева пластикова кліпса з кількома шляпками та вирізом для дверної обшивки.",
+  "img": "clipsa351.jpg"
+},
+{
+  "id": "352",
+  "name": "Закладна під саморіз 16197",
+  "oem": "16197",
+  "brand": "Volkswagen",
+  "category": "Фіксатори, закладні",
+  "compatibility": [
+    "Багато марок та моделей"
+  ],
+  "price": 15,
+  "description": "Жовта металева закладна під саморіз для кузовного кріплення.",
+  "img": "clipsa352.jpg"
+},
+{
+  "id": "353",
+  "name": "Фіксатор 16201, закладна під саморіз",
+  "oem": "16201",
+  "brand": "Універсальний",
+  "category": "Фіксатори, закладні",
+  "compatibility": [
+    "Багато моделей"
+  ],
+  "price": 15,
+  "description": "Жовтий металевий фіксатор без різьблення для кузовного кріплення.",
+  "img": "clipsa353.jpg"
+},
+{
+  "id": "354",
+  "name": "Фіксатор 16216, закладна під саморіз",
+  "oem": "16216",
+  "brand": "Toyota",
+  "category": "Фіксатори, закладні",
+  "compatibility": [
+    "Toyota — багато моделей"
+  ],
+  "price": 15,
+  "description": "Срібляста металева закладна під саморіз для кузовного кріплення.",
+  "img": "clipsa354.jpg"
+},
+{
+  "id": "355",
+  "name": "Закладна під саморіз 16303",
+  "oem": "16303",
+  "brand": "Універсальний",
+  "category": "Фіксатори, закладні",
+  "compatibility": [
+    "Багато моделей"
+  ],
+  "price": 50,
+  "description": "Срібляста металева закладна під саморіз для кузовного кріплення.",
+  "img": "clipsa355.jpg"
+},
+{
+  "id": "356",
+  "name": "Закладна під різьбовий гвинт 16460",
+  "oem": "16460",
+  "brand": "Універсальний",
+  "category": "Фіксатори, закладні",
+  "compatibility": [
+    "Багато моделей"
+  ],
+  "price": 20,
+  "description": "Сталева монтажна пластина із закладною гайкою для автомобільного кріплення.",
+  "img": "clipsa356.jpg"
+},
+{
+  "id": "359",
+  "name": "Фіксатор 16467",
+  "oem": "16467",
+  "brand": "Citroen",
+  "category": "Фіксатори, закладні",
+  "compatibility": [
+    "Citroen C-Elysee",
+    "Citroen — багато моделей",
+    "Peugeot — багато моделей",
+    "Renault — багато моделей"
+  ],
+  "price": 55,
+  "description": "Чорний металевий фіксатор-закладна для кузовного кріплення.",
+  "img": "clipsa359.jpg"
+},
+{
+  "id": "361",
+  "name": "Фіксатор 16602",
+  "oem": "16602",
+  "brand": "Audi",
+  "category": "Фіксатори, закладні",
+  "compatibility": [
+    "Audi A2",
+    "Audi A3",
+    "Audi A4",
+    "Audi A6",
+    "Audi A8",
+    "Audi Q7",
+    "Audi TT",
+    "Seat Ibiza",
+    "Seat Leon",
+    "Skoda Fabia",
+    "Skoda Octavia",
+    "Volkswagen Golf",
+    "Volkswagen Passat",
+    "Volkswagen Caddy",
+    "Volkswagen Transporter"
+  ],
+  "price": 30,
+  "description": "Сріблястий металевий фіксатор без різьблення для кузовного кріплення.",
+  "img": "clipsa361.jpg"
+},
+{
+  "id": "363",
+  "name": "Саморіз 18091 з прес-шайбою",
+  "oem": "18091",
+  "brand": "Hyundai",
+  "category": "Саморізи",
+  "compatibility": [
+    "Hyundai — багато моделей",
+    "Kia — багато моделей"
+  ],
+  "price": 15,
+  "description": "Чорний саморіз з прес-шайбою під хрестову викрутку.",
+  "img": "clipsa363.jpg"
+},
+{
+  "id": "364",
+  "name": "Саморіз 18092 під хрестову викрутку",
+  "oem": "18092",
+  "brand": "Hyundai",
+  "category": "Саморізи",
+  "compatibility": [
+    "Hyundai — багато моделей",
+    "Kia — багато моделей"
+  ],
+  "price": 15,
+  "description": "Чорний сталевий саморіз під хрестову викрутку.",
+  "img": "clipsa364.jpg"
+},
+{
+  "id": "365",
+  "name": "Саморіз 18093 з прес-шайбою",
+  "oem": "18093",
+  "brand": "Renault",
+  "category": "Саморізи",
+  "compatibility": [
+    "Renault — багато моделей",
+    "Nissan — багато моделей"
+  ],
+  "price": 15,
+  "description": "Чорний саморіз з прес-шайбою для кузовного кріплення.",
+  "img": "clipsa365.jpg"
+},
+{
+  "id": "366",
+  "name": "Саморіз 18098 з прес-шайбою",
+  "oem": "18098",
+  "brand": "Hyundai",
+  "category": "Саморізи",
+  "compatibility": [
+    "Hyundai — багато моделей",
+    "Kia — багато моделей"
+  ],
+  "price": 15,
+  "description": "Чорний саморіз з прес-шайбою під хрестову викрутку.",
+  "img": "clipsa366.jpg"
+},
+{
+  "id": "371",
+  "name": "Саморіз з шайбою під ключ 18805",
+  "oem": "18805",
+  "brand": "Mercedes-Benz",
+  "category": "Саморізи",
+  "compatibility": [
+    "Mercedes-Benz — багато моделей"
+  ],
+  "price": 15,
+  "description": "Чорний саморіз із шайбою під ключ.",
+  "img": "clipsa371.jpg"
+},
+{
+  "id": "372",
+  "name": "Саморіз з шайбою під ключ 18817",
+  "oem": "18817",
+  "brand": "BYD",
+  "category": "Саморізи",
+  "compatibility": [
+    "BYD — багато моделей",
+    "Geely — багато моделей"
+  ],
+  "price": 15,
+  "description": "Чорний саморіз із шайбою під ключ та викрутку.",
+  "img": "clipsa372.jpg"
+},
+{
+  "id": "373",
+  "name": "Болт із шайбою 19854",
+  "oem": "19854",
+  "brand": "Mazda",
+  "category": "Гвинти та болти",
+  "compatibility": [
+    "Mazda — багато моделей",
+    "Багато марок"
+  ],
+  "price": 15,
+  "description": "Чорний металевий болт із шайбою для кузовного кріплення.",
+  "img": "clipsa373.jpg"
+},
+{
+  "id": "374",
+  "name": "Болт із шайбою M6, довжина 18.9 мм",
+  "oem": "19868",
+  "brand": "Ford",
+  "category": "Гвинти та болти",
+  "compatibility": [
+    "Ford — багато моделей",
+    "Audi — багато моделей",
+    "BMW — багато моделей",
+    "Chevrolet — багато моделей",
+    "Honda — багато моделей",
+    "Mercedes-Benz — багато моделей",
+    "Toyota — багато моделей",
+    "Volkswagen — багато моделей",
+    "Volvo — багато моделей"
+  ],
+  "price": 15,
+  "description": "Чорний металевий болт M6 із незнімною шайбою, довжина 18.9 мм.",
+  "img": "clipsa374.jpg"
+},
+{
+  "id": "375",
+  "name": "Фітинг-з'єднувач трубок Y-подібний 8×8×8 мм",
+  "oem": "22105",
+  "brand": "Універсальний",
+  "category": "Фітинг (з'єднувач трубок)",
+  "compatibility": [
+    "Багато моделей"
+  ],
+  "price": 65,
+  "description": "Чорний Y-подібний з'єднувач автомобільних трубок діаметром 8 мм.",
+  "img": "clipsa375.jpg"
+},
+{
+  "id": "376",
+  "name": "Пластикова заклепка 25029",
+  "oem": "25029",
+  "brand": "Chevrolet",
+  "category": "Заклепки",
+  "compatibility": [
+    "Chevrolet — багато моделей",
+    "GM — багато моделей"
+  ],
+  "price": 15,
+  "description": "Чорна пластикова витяжна заклепка з головкою діаметром 25 мм.",
+  "img": "clipsa376.jpg"
+},
+{
+  "id": "377",
+  "name": "Пружинний хомут 28 мм",
+  "oem": "26559",
+  "brand": "Універсальний",
+  "category": "Хомути, стяжки кабельні",
+  "compatibility": [
+    "Універсальний"
+  ],
+  "price": 55,
+  "description": "Пружинний хомут із внутрішнім діаметром 28 мм для рівномірного кругового затискання.",
+  "img": "clipsa377.jpg"
+},
+{
+  "id": "378",
+  "name": "Черв'ячний хомут 50–70 мм",
+  "oem": "26676",
+  "brand": "Універсальний",
+  "category": "Хомути, стяжки кабельні",
+  "compatibility": [
+    "Універсальний"
+  ],
+  "price": 60,
+  "description": "Сріблястий черв'ячний хомут із діапазоном обжиму 50–70 мм.",
+  "img": "clipsa378.jpg"
+},
+{
+  "id": "379",
+  "name": "Силовий хомут 26–28 мм",
+  "oem": "26755",
+  "brand": "Універсальний",
+  "category": "Хомути, стяжки кабельні",
+  "compatibility": [
+    "Універсальний"
+  ],
+  "price": 60,
+  "description": "Сріблястий силовий хомут із діапазоном обжиму 26–28 мм, ширина 18 мм.",
+  "img": "clipsa379.jpg"
+},
+{
+  "id": "380",
+  "name": "Гумовий буфер",
+  "oem": "29010",
+  "brand": "Універсальний",
+  "category": "Гумові деталі",
+  "compatibility": [
+    "Багато моделей"
+  ],
+  "price": 65,
+  "description": "Гумовий автомобільний буфер для кріплення та амортизації деталей.",
+  "img": "clipsa380.jpg"
+},
+{
+  "id": "381",
+  "name": "Клеми",
+  "oem": "45279",
+  "brand": "Універсальний",
+  "category": "Клеми",
+  "compatibility": [
+    "Багато моделей"
+  ],
+  "price": 15,
+  "description": "Автомобільний елемент кріплення.",
+  "img": "clipsa381.jpg"
+},
+{
+  "id": "382",
+  "name": "Кліпса розпірна 11390 з натискним розпірним штифтом",
+  "oem": "11390",
+  "brand": "Infiniti",
+  "category": "Кріплення розпірної дії",
+  "compatibility": [
+    "Infiniti QX30 (2016 - 2019)",
+    "Infiniti G20 (1998 - 2001)",
+    "Infiniti G35 (2002 - 2007)",
+    "Infiniti I30 (1999 - 2004)",
+    "Infiniti I35 (1999 - 2004)",
+    "Infiniti Q45",
+    "Infiniti QX56 (Z62) (2010 - 2017)",
+    "Infiniti M (2006 - 2010)",
+    "Infiniti QX50 (2017 - 2024)",
+    "Citroen C1 (2005 - 2014)",
+    "Citroen C1 (2014 - 2022)"
+  ],
+  "price": 15,
+  "description": "Чорна пластикова розпірна кліпса з натискним штифтом. Розмір отвору 8 мм.",
+  "img": "clipsa382.jpg"
+},
+{
+  "id": "383",
+  "name": "Кліпса розпірна 11399 з натискним розпірним штифтом",
+  "oem": "11399",
+  "brand": "Nissan",
+  "category": "Кріплення розпірної дії",
+  "compatibility": [
+    "Nissan 370Z (2008 - 2020)",
+    "Nissan Altima (2007 - 2013)",
+    "Nissan Armada (2017 - 2023)",
+    "Nissan Juke (2010 - 2019)",
+    "Nissan Leaf (2010 - 2023)",
+    "Nissan Navara (2005 - 2023)",
+    "Nissan Qashqai (2013 - 2023)",
+    "Nissan X-Trail (2007 - 2021)",
+    "Nissan Patrol (1997 - 2014)",
+    "Infiniti FX (2006 - 2023)",
+    "Infiniti Q50 (2013 - 2023)",
+    "Mazda 3 (2009 - 2019)",
+    "Mazda 6 (2007 - 2023)",
+    "Renault Koleos I (2008 - 2016)",
+    "Renault Koleos II (2016 - 2023)"
+  ],
+  "price": 15,
+  "description": "Чорна пластикова розпірна кліпса з натискним штифтом. Розмір отвору 8 мм.",
+  "img": "clipsa383.jpg"
+},
+{
+  "id": "384",
+  "name": "Саморіз 18633",
+  "oem": "18633",
+  "brand": "Skoda",
+  "category": "Саморізи",
+  "compatibility": [
+    "Skoda Superb (2008 - 2013)"
+  ],
+  "price": 15,
+  "description": "Чорний автомобільний саморіз для кріплення захисту днища та кузовних деталей.",
+  "img": "clipsa384.jpg"
+},
+{
+  "id": "387",
+  "name": "Кліпса кріплення підкрилка 20801",
+  "oem": "20801",
+  "brand": "Tesla",
+  "category": "Кріплення бампера",
+  "compatibility": [
+    "Tesla Model Y"
+  ],
+  "price": 15,
+  "description": "Пластикова кліпса для кріплення підкрилків Tesla Model Y.",
+  "img": "clipsa387.jpg"
+}
 ]
