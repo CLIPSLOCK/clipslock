@@ -4348,7 +4348,7 @@
     "id": "247",
     "name": "Втулка з круглою шляпкою",
     "oem": "14205",
-    "brand": "Audi, Seat, Skoda, VW",
+    "brand": "Audi",
     "category": "Втулки та вставки",
     "compatibility": [
       "Audi Багато моделей",
@@ -4604,7 +4604,7 @@
     "id": "260",
     "name": "Пістон кріплення обшивки з натискним розпірним штирем",
     "oem": "11856",
-    "brand": "Chevrolet, Chrysler, Dodge, Ford, Jeep, Opel",
+    "brand": "Chevrolet",
     "category": "Кріплення обшивки та молдингів",
     "compatibility": [
       "Chevrolet Aveo",
@@ -4798,7 +4798,7 @@
     "id": "273",
     "name": "Кріплення розпірної дії з натискним розпірним штирем",
     "oem": "11907",
-    "brand": "BMW, Land Rover",
+    "brand": "BMW",
     "category": "Кріплення обшивки та молдингів",
     "compatibility": [
       "BMW — багато моделей",
