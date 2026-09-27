@@ -5965,33 +5965,6 @@
   "img": "clipsa382.jpg"
 },
 {
-  "id": "383",
-  "name": "Кліпса розпірна 11399 з натискним розпірним штифтом",
-  "oem": "11399",
-  "brand": "Nissan",
-  "category": "Кріплення розпірної дії",
-  "compatibility": [
-    "Nissan 370Z (2008 - 2020)",
-    "Nissan Altima (2007 - 2013)",
-    "Nissan Armada (2017 - 2023)",
-    "Nissan Juke (2010 - 2019)",
-    "Nissan Leaf (2010 - 2023)",
-    "Nissan Navara (2005 - 2023)",
-    "Nissan Qashqai (2013 - 2023)",
-    "Nissan X-Trail (2007 - 2021)",
-    "Nissan Patrol (1997 - 2014)",
-    "Infiniti FX (2006 - 2023)",
-    "Infiniti Q50 (2013 - 2023)",
-    "Mazda 3 (2009 - 2019)",
-    "Mazda 6 (2007 - 2023)",
-    "Renault Koleos I (2008 - 2016)",
-    "Renault Koleos II (2016 - 2023)"
-  ],
-  "price": 15,
-  "description": "Чорна пластикова розпірна кліпса з натискним штифтом. Розмір отвору 8 мм.",
-  "img": "clipsa383.jpg"
-},
-{
   "id": "384",
   "name": "Саморіз 18633",
   "oem": "18633",
