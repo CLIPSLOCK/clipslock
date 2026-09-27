@@ -2521,5 +2521,237 @@
 "price": 20,
 "description": "Срібляста металева закладна під саморіз без різьблення для багатоцільового кузовного кріплення.",
 "img": "clipsa166.jpg"
+},
+{
+"id": "167",
+"name": "Закладна під саморіз",
+"oem": "16184",
+"brand": "Ford",
+"category": "Фіксатори, закладні",
+"compatibility": [
+"Ford — багато моделей",
+"GM — багато моделей"
+],
+"price": 20,
+"description": "Чорна металева закладна під саморіз без різьблення для кузовного кріплення.",
+"img": "clipsa167.jpg"
+},
+{
+"id": "168",
+"name": "Фіксатор",
+"oem": "16554",
+"brand": "Renault",
+"category": "Фіксатори, закладні",
+"compatibility": [
+"Peugeot Bipper",
+"Renault Scenic IV",
+"Renault Megane IV",
+"Renault Trafic III"
+],
+"price": 35,
+"description": "Металевий фіксатор без різьблення для кузовного та багатоцільового кріплення.",
+"img": "clipsa168.jpg"
+},
+{
+"id": "169",
+"name": "Гвинт поворотний метал",
+"oem": "19988",
+"brand": "Audi",
+"category": "Гвинти та болти",
+"compatibility": [
+"Audi A4 B9",
+"Audi A5",
+"Audi Q5",
+"Audi Q7",
+"Volkswagen — багато моделей"
+],
+"price": 25,
+"description": "Чорний металевий поворотний гвинт для кріплення в моторному відсіку та кузові.",
+"img": "clipsa169.jpg"
+},
+{
+"id": "170",
+"name": "Закладна під різьбовий гвинт M6",
+"oem": "16461",
+"brand": "Jeep",
+"category": "Фіксатори, закладні",
+"compatibility": [
+"Chrysler Sebring (2000–2006)",
+"Chrysler Sebring (2007–2012)",
+"Chrysler Town & Country (1991–1995)",
+"Jeep Liberty (2001–2008)"
+],
+"price": 25,
+"description": "Срібляста металева закладна під різьбовий гвинт M6 для багатоцільового кузовного кріплення.",
+"img": "clipsa170.jpg"
+},
+{
+"id": "171",
+"name": "Закладна під різьбовий гвинт M6",
+"oem": "16462",
+"brand": "Універсальний",
+"category": "Фіксатори, закладні",
+"compatibility": [
+"Багато моделей"
+],
+"price": 20,
+"description": "Металева закладна під різьбовий гвинт M6 для кузовного кріплення.",
+"img": "clipsa171.jpg"
+},
+{
+"id": "172",
+"name": "Кріплення розпірної дії з натискним розпірним штирем",
+"oem": "11653",
+"brand": "BMW",
+"category": "Кріплення розпірної дії",
+"compatibility": [
+"BMW 3-series E30 (1983–1991)",
+"BMW 3-series E36 (1991–1999)",
+"BMW 3-series E46 (1998–2001)",
+"BMW 3-series E46 (2001–2005)",
+"BMW 3-series E90 (2005–2012)",
+"BMW 5-series E34 (1988–1996)",
+"BMW 5-series E39 (1995–2000)",
+"BMW 5-series E39 (2000–2004)",
+"BMW 5-series E60 (2004–2009)",
+"BMW 5-series F10 (2010–2012)",
+"BMW 7-series E38 (1995–2001)",
+"BMW 7-series E65 (2002–2008)",
+"BMW 7-series F01 (2008–2012)",
+"BMW X1 E84 (2009–2012)",
+"BMW X3 E83 (2003–2010)",
+"BMW X5 E53 (1999–2006)",
+"BMW X5 E70 (2006–2010)",
+"BMW Z1",
+"BMW Z3 E36 (1996–2003)",
+"BMW Z8 E52 (2000–2006)",
+"Citroen — багато моделей",
+"Mercedes-Benz C-Class W201 (1982–1992)",
+"Mercedes-Benz C-Class W202 (1997–2000)",
+"Mercedes-Benz C-Class W203 (2000–2007)",
+"Mercedes-Benz E-Class W123 (1976–1984)",
+"Mercedes-Benz E-Class W124 (1984–1996)",
+"Mercedes-Benz E-Class W210 (1995–2001)",
+"Mercedes-Benz S-Class W126 (1981–1992)",
+"Mercedes-Benz S-Class W140 (1990–1998)",
+"Mercedes-Benz S-Class W220 (1999–2005)",
+"Mercedes-Benz Sprinter (1995–2006)",
+"Mercedes-Benz Viano (2003–2012)",
+"Mercedes-Benz Vito",
+"Mitsubishi Space Star",
+"Peugeot — багато моделей",
+"Renault — багато моделей"
+],
+"price": 15,
+"description": "Темно-сіра пластикова кліпса з натискним розпірним штирем. Діаметр 8,5 мм.",
+"img": "clipsa172.jpg"
+},
+{
+"id": "173",
+"name": "Кріплення розпірної дії з натискним розпірним штирем",
+"oem": "11404",
+"brand": "Mitsubishi",
+"category": "Кріплення розпірної дії",
+"compatibility": [
+"Honda — багато моделей",
+"Mitsubishi Challenger",
+"Mitsubishi Colt",
+"Mitsubishi Delica",
+"Mitsubishi Dingo",
+"Mitsubishi Dion",
+"Mitsubishi FTO",
+"Mitsubishi Galant",
+"Mitsubishi Lancer",
+"Mitsubishi Legnum",
+"Mitsubishi Mirage",
+"Mitsubishi Pajero",
+"Mitsubishi RVR",
+"Mitsubishi Town Box"
+],
+"price": 15,
+"description": "Чорна пластикова кліпса з натискним розпірним штирем. Діаметр 9,5 мм.",
+"img": "clipsa173.jpg"
+},
+{
+"id": "174",
+"name": "Кліпса кріплення обшивки",
+"oem": "10078",
+"brand": "Chrysler",
+"category": "Кріплення обшивки",
+"compatibility": [
+"Jeep Grand Cherokee",
+"Chrysler — багато моделей",
+"Dodge — багато моделей"
+],
+"price": 20,
+"description": "Кліпса для кріплення обшивки та кузовних елементів.",
+"img": "clipsa174.jpg"
+},
+{
+"id": "175",
+"name": "Закладна під саморіз",
+"oem": "16153",
+"brand": "Audi",
+"category": "Фіксатори, закладні",
+"compatibility": [
+"Audi A4 B5",
+"Audi A6 C5",
+"Audi A6 C6",
+"Audi A8 D2",
+"Audi A4 B6",
+"BMW 7-series F01",
+"BMW X3 E83",
+"BMW X6 F16",
+"BMW 5-series E60",
+"BMW 6-series E63",
+"BMW 7-series E65",
+"BMW X5 F15",
+"BMW X3 G01",
+"BMW 5-series F10",
+"BMW 3-series E90",
+"Volkswagen LT"
+],
+"price": 15,
+"description": "Срібляста металева закладна під саморіз без різьблення для бампера, підкрилка, молдинга, обшивки та інших кузовних елементів.",
+"img": "clipsa175.jpg"
+},
+{
+"id": "176",
+"name": "Кріплення обшивки та молдингів, дві шляпки з круглою шляпкою",
+"oem": "15001",
+"brand": "Renault",
+"category": "Кріплення обшивки та молдингів",
+"compatibility": [
+"Land Rover Range Rover",
+"Nissan Kubistar (1997–2008)",
+"Nissan NV400 (2011–2018)",
+"Nissan Primastar (2000–2011)",
+"Opel Movano (2010–2018)",
+"Opel Vivaro (2000–2014)",
+"Renault Clio (1990–2015)",
+"Renault Megane (1995–2003)",
+"Renault Trafic (2000–2015)",
+"Renault Kangoo (1997–2007)",
+"Renault Master (2010–2018)",
+"Renault Megane (2003–2008)",
+"Renault Trafic (2000–2014)"
+],
+"price": 15,
+"description": "Біло-сіра пластикова кліпса з двома шляпками та круглою шляпкою. Діаметр 7,5 мм. Використовується для кріплення обшивки та кузовних елементів.",
+"img": "clipsa176.jpg"
+},
+{
+"id": "177",
+"name": "Гвинт під зіркоподібну викрутку, TORX",
+"oem": "19199",
+"brand": "Універсальний",
+"category": "Гвинти та болти",
+"compatibility": [
+"Багато марок",
+"Багато моделей"
+],
+"price": 15,
+"description": "Чорний металевий гвинт під зіркоподібну викрутку TORX. Різьба M6 для багатоцільового кузовного кріплення.",
+"img": "clipsa177.jpg"
 }
 ]
