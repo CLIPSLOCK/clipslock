@@ -25379,5 +25379,575 @@
     "price": 60,
     "description": "Чорний пластик.",
     "img": "clipsa1317.jpg"
+  },
+    {
+    "id": "1318",
+    "name": "Кріплення з натискним розпірним штирем 11382",
+    "oem": "11382",
+    "brand": "Toyota",
+    "category": "Кріплення розпірної дії",
+    "compatibility": [
+      "Toyota Avensis",
+      "Toyota Camry",
+      "Toyota Corolla",
+      "Toyota FJ Cruiser",
+      "Toyota Land Cruiser",
+      "Toyota Land Cruiser Prado",
+      "Toyota Previa",
+      "Toyota Tacoma",
+      "Subaru Forester",
+      "Subaru Impreza",
+      "Subaru Legacy",
+      "Subaru XV",
+      "Mazda CX-3",
+      "Mazda CX-5",
+      "Mazda CX-9",
+      "Lexus GX",
+      "Lexus LX",
+      "Mitsubishi ASX",
+      "Mitsubishi Grandis",
+      "Mitsubishi Багато моделей",
+      "Acura Багато моделей",
+      "Cadillac Багато моделей",
+      "Chevrolet Багато моделей",
+      "Honda Багато моделей"
+    ],
+    "price": 20,
+    "description": "Штир із шляпкою; сірий пластик.",
+    "img": "clipsa1318.jpg"
+  },
+  {
+    "id": "1319",
+    "name": "Кріплення з натискним розпірним штирем 11419",
+    "oem": "11419",
+    "brand": "Універсальний",
+    "category": "Кріплення розпірної дії",
+    "compatibility": [
+      "Acura Багато моделей",
+      "Honda Багато моделей",
+      "Mitsubishi Багато моделей",
+      "Nissan Багато моделей",
+      "Subaru Багато моделей",
+      "Toyota Багато моделей"
+    ],
+    "price": 20,
+    "description": "Штир із шляпкою; темно-сірий пластик.",
+    "img": "clipsa1319.jpg"
+  },
+  {
+    "id": "1320",
+    "name": "Кріплення з натискним розпірним штирем 11549",
+    "oem": "11549",
+    "brand": "Renault",
+    "category": "Кріплення розпірної дії",
+    "compatibility": [
+      "Renault Espace IV (2002 - 2006)",
+      "Renault Trafic"
+    ],
+    "price": 20,
+    "description": "Штир без шляпки; чорний пластик.",
+    "img": "clipsa1320.jpg"
+  },
+  {
+    "id": "1321",
+    "name": "Кріплення з натискним розпірним штирем 11941",
+    "oem": "11941",
+    "brand": "VW",
+    "category": "Кріплення розпірної дії",
+    "compatibility": [
+      "VW Golf I (1974 - 1983)",
+      "VW Jetta I (1979 - 1984)",
+      "VW LT",
+      "Mercedes-Benz Багато моделей"
+    ],
+    "price": 15,
+    "description": "Штир без шляпки; чорний пластик.",
+    "img": "clipsa1321.jpg"
+  },
+  {
+    "id": "1322",
+    "name": "Саморіз під ключ із фланцем 18902",
+    "oem": "18902",
+    "brand": "VW",
+    "category": "Саморізи",
+    "compatibility": [
+      "VW Bora",
+      "VW Caddy",
+      "VW Golf V",
+      "VW Golf VI",
+      "VW Jetta",
+      "VW Polo",
+      "VW Passat B6",
+      "VW Passat B7",
+      "VW Багато моделей",
+      "Skoda Fabia",
+      "Skoda Octavia",
+      "Skoda Roomster",
+      "Skoda Багато моделей",
+      "Audi A4 B9",
+      "Audi A5",
+      "Audi A6 C7",
+      "Audi A7",
+      "Audi Багато моделей",
+      "Seat Altea",
+      "Seat Cordoba",
+      "Seat Багато моделей"
+    ],
+    "price": 20,
+    "description": "Сріблястий метал.",
+    "img": "clipsa1322.jpg"
+  },
+  {
+    "id": "1323",
+    "name": "Гайка з фланцем 20247",
+    "oem": "20247",
+    "brand": "Універсальний",
+    "category": "Гайки, шайби, накрутки",
+    "compatibility": [
+      "Багато марок — багато моделей"
+    ],
+    "price": 15,
+    "description": "Жовтий метал.",
+    "img": "clipsa1323.jpg"
+  },
+  {
+    "id": "1324",
+    "name": "Тримач трубок і дротів 21232",
+    "oem": "21232",
+    "brand": "Універсальний",
+    "category": "Кріплення опори капота, шлангів та дротів",
+    "compatibility": [
+      "Lexus Багато моделей",
+      "Toyota Багато моделей"
+    ],
+    "price": 20,
+    "description": "Чорний пластик.",
+    "img": "clipsa1324.jpg"
+  },
+  {
+    "id": "1325",
+    "name": "Кліпса типу Ялинка 10027",
+    "oem": "10027",
+    "brand": "Ford",
+    "category": "Кріплення обшивки та молдингів",
+    "compatibility": [
+      "Ford Galaxy",
+      "Ford S-Max",
+      "Ford Edge",
+      "Ford Багато моделей",
+      "Chevrolet Volt",
+      "Dodge Ram",
+      "Dodge Багато моделей",
+      "Buick Багато моделей",
+      "Cadillac Багато моделей",
+      "Chrysler Багато моделей",
+      "Jeep Багато моделей",
+      "Lincoln Багато моделей",
+      "Opel Багато моделей"
+    ],
+    "price": 15,
+    "description": "Кругла шляпка; чорний пластик.",
+    "img": "clipsa1325.jpg"
+  },
+  {
+    "id": "1326",
+    "name": "Кліпса типу Ялинка 10042",
+    "oem": "10042",
+    "brand": "Ford",
+    "category": "Кріплення обшивки та молдингів",
+    "compatibility": [
+      "Ford E-150",
+      "Ford E-250",
+      "Ford E-350",
+      "Ford E-450",
+      "Ford Edge",
+      "Ford Explorer",
+      "Ford Багато моделей",
+      "Chrysler Багато моделей",
+      "Dodge Caliber",
+      "Opel Vivaro",
+      "GM Багато моделей"
+    ],
+    "price": 15,
+    "description": "Кругла шляпка; чорний пластик.",
+    "img": "clipsa1326.jpg"
+  },
+  {
+    "id": "1327",
+    "name": "Кліпса типу Ялинка 10654",
+    "oem": "10654",
+    "brand": "Nissan",
+    "category": "Кріплення обшивки та молдингів",
+    "compatibility": [
+      "Nissan Teana",
+      "Nissan Qashqai",
+      "Nissan Rogue Sport",
+      "Nissan Altima",
+      "Renault Trafic II",
+      "Renault Trafic",
+      "Infiniti G",
+      "Opel Vivaro"
+    ],
+    "price": 20,
+    "description": "Кругла шляпка; темно-сірий пластик.",
+    "img": "clipsa1327.jpg"
+  },
+  {
+    "id": "1328",
+    "name": "Заглушка без отвору 13101",
+    "oem": "13101",
+    "brand": "Універсальний",
+    "category": "Заглушки",
+    "compatibility": [
+      "VAZ-LADA Багато моделей"
+    ],
+    "price": 20,
+    "description": "Чорний пластик.",
+    "img": "clipsa1328.jpg"
+  },
+  {
+    "id": "1329",
+    "name": "Заглушка без отвору 13102",
+    "oem": "13102",
+    "brand": "Універсальний",
+    "category": "Заглушки",
+    "compatibility": [
+      "Багато марок — багато моделей"
+    ],
+    "price": 15,
+    "description": "Чорний пластик.",
+    "img": "clipsa1329.jpg"
+  },
+  {
+    "id": "1330",
+    "name": "Втулка з круглою шляпкою 14181",
+    "oem": "14181",
+    "brand": "Універсальний",
+    "category": "Втулки та вставки",
+    "compatibility": [
+      "Ford Багато моделей",
+      "Багато марок — багато моделей"
+    ],
+    "price": 15,
+    "description": "Без ущільнювальної прокладки; червоний пластик.",
+    "img": "clipsa1330.jpg"
+  },
+  {
+    "id": "1331",
+    "name": "Кліпса обшивки та молдингів 15050",
+    "oem": "15050",
+    "brand": "Opel",
+    "category": "Кріплення обшивки та молдингів",
+    "compatibility": [
+      "Opel Astra G",
+      "Opel Combo",
+      "Opel Corsa B",
+      "Opel Signum",
+      "Opel Tigra A",
+      "Opel Vectra B",
+      "Opel Vectra C",
+      "Opel Zafira A",
+      "Opel багато моделей",
+      "Citroen Багато моделей",
+      "Peugeot Багато моделей"
+    ],
+    "price": 20,
+    "description": "Дві прямокутні шляпки; чорно-білий пластик.",
+    "img": "clipsa1331.jpg"
+  },
+  {
+    "id": "1332",
+    "name": "Гайка з фланцем 20037",
+    "oem": "20037",
+    "brand": "BMW",
+    "category": "Гайки, шайби, накрутки",
+    "compatibility": [
+      "BMW 1-series E81",
+      "BMW 1-series E82",
+      "BMW 1-series E88",
+      "BMW 1-series F20",
+      "BMW 1-series F21",
+      "BMW 2-series F22",
+      "BMW 2-series F23",
+      "BMW 2-series F45",
+      "BMW 2-series F46",
+      "BMW 3-series F30",
+      "BMW багато моделей",
+      "Mini F54 Clubman",
+      "Mini F55 Hatchback",
+      "Mini F56 Hatchback",
+      "Mini F57 Cabrio",
+      "Mini F60 Countryman",
+      "Mini R60 Countryman",
+      "Mini R61 Paceman"
+    ],
+    "price": 20,
+    "description": "Чорний пластик.",
+    "img": "clipsa1332.jpg"
+  },
+  {
+    "id": "1333",
+    "name": "Відбійник 29001",
+    "oem": "29001",
+    "brand": "Fiat",
+    "category": "Відбійники та деталі з гуми",
+    "compatibility": [
+      "Fiat 500L",
+      "Fiat Grande Punto",
+      "Fiat Nuova 500",
+      "Fiat Nuova Panda",
+      "Fiat Panda",
+      "Lancia Lybra"
+    ],
+    "price": 50,
+    "description": "Чорна гума.",
+    "img": "clipsa1333.jpg"
+  },
+  {
+    "id": "1334",
+    "name": "Трубка термоусадкова 32107",
+    "oem": "32107",
+    "brand": "Універсальний",
+    "category": "Ізоляційні матеріали",
+    "compatibility": [
+      "Багато марок — багато моделей"
+    ],
+    "price": 105,
+    "description": "Чорний поліолефін.",
+    "img": "clipsa1334.jpg"
+  },
+  {
+    "id": "1335",
+    "name": "Трубка термоусадкова 32108",
+    "oem": "32108",
+    "brand": "Універсальний",
+    "category": "Ізоляційні матеріали",
+    "compatibility": [
+      "Багато марок — багато моделей"
+    ],
+    "price": 145,
+    "description": "Чорний поліолефін.",
+    "img": "clipsa1335.jpg"
+  },
+  {
+    "id": "1336",
+    "name": "Електричний роз’єм 4-контактний 40730",
+    "oem": "40730",
+    "brand": "Універсальний",
+    "category": "Електричні роз'єми",
+    "compatibility": [
+      "Hyundai Багато моделей",
+      "Kia Багато моделей",
+      "Mitsubishi Багато моделей"
+    ],
+    "price": 90,
+    "description": "Чорний пластик.",
+    "img": "clipsa1336.jpg"
+  },
+  {
+    "id": "1337",
+    "name": "Кліпса типу Ялинка 10015",
+    "oem": "10015",
+    "brand": "BMW",
+    "category": "Кріплення обшивки та молдингів",
+    "compatibility": [
+      "BMW 1-series E81",
+      "BMW 1-series E82",
+      "BMW 1-series E87",
+      "BMW 1-series E88",
+      "BMW 1-series F20",
+      "BMW 1-series F21",
+      "BMW 3-series E36",
+      "BMW 3-series E46",
+      "BMW 3-series E90",
+      "BMW 3-series E91",
+      "BMW багато моделей",
+      "Ford F-150",
+      "Ford Mustang"
+    ],
+    "price": 15,
+    "description": "Кругла шляпка; чорний пластик.",
+    "img": "clipsa1337.jpg"
+  },
+  {
+    "id": "1338",
+    "name": "Кріплення з натискним розпірним штирем 11660",
+    "oem": "11660",
+    "brand": "Audi",
+    "category": "Кріплення розпірної дії",
+    "compatibility": [
+      "Audi A4 B8",
+      "Audi A5",
+      "Audi A6 C7",
+      "Audi A7",
+      "Audi Q5",
+      "Audi A4 B6",
+      "Audi A4 B7",
+      "Audi A4 B9",
+      "Audi A6 C5",
+      "Audi A6 C6",
+      "Audi багато моделей",
+      "Skoda Karoq",
+      "Skoda Kodiaq",
+      "Skoda Octavia A7",
+      "Skoda Octavia A8",
+      "Skoda Rapid",
+      "VW Багато моделей"
+    ],
+    "price": 15,
+    "description": "Штир із шляпкою; чорний пластик.",
+    "img": "clipsa1338.jpg"
+  },
+  {
+    "id": "1339",
+    "name": "Кріплення з натискним розпірним штирем 11945",
+    "oem": "11945",
+    "brand": "BMW",
+    "category": "Кріплення розпірної дії",
+    "compatibility": [
+      "BMW 3-series E36",
+      "BMW 3-series E46",
+      "BMW 5-series E34",
+      "BMW X5 E53"
+    ],
+    "price": 15,
+    "description": "Штир без шляпки; чорний пластик.",
+    "img": "clipsa1339.jpg"
+  },
+  {
+    "id": "1340",
+    "name": "Фігурне кріплення 12605",
+    "oem": "12605",
+    "brand": "Audi",
+    "category": "Кріплення обшивки та молдингів",
+    "compatibility": [
+      "Audi 100 C4 (1990 - 1994)"
+    ],
+    "price": 20,
+    "description": "Прямокутна фігурна шляпка; білий пластик.",
+    "img": "clipsa1340.jpg"
+  },
+  {
+    "id": "1341",
+    "name": "Фігурне кріплення 12709",
+    "oem": "12709",
+    "brand": "BMW",
+    "category": "Кріплення обшивки та молдингів",
+    "compatibility": [
+      "BMW 3-series E90",
+      "BMW X1 E84",
+      "BMW X6 E71"
+    ],
+    "price": 20,
+    "description": "Кругла шляпка; чорний пластик.",
+    "img": "clipsa1341.jpg"
+  },
+  {
+    "id": "1342",
+    "name": "Заглушка без отвору 13135",
+    "oem": "13135",
+    "brand": "Універсальний",
+    "category": "Заглушки",
+    "compatibility": [
+      "Багато марок — багато моделей"
+    ],
+    "price": 15,
+    "description": "Чорний пластик.",
+    "img": "clipsa1342.jpg"
+  },
+  {
+    "id": "1343",
+    "name": "Втулка з круглою шляпкою 14332",
+    "oem": "14332",
+    "brand": "VW",
+    "category": "Втулки та вставки",
+    "compatibility": [
+      "VW Caddy",
+      "VW Eos",
+      "VW Golf V",
+      "VW Golf VI",
+      "VW Passat B6",
+      "VW Scirocco III",
+      "VW Tiguan",
+      "Audi A3",
+      "Audi A4 B7",
+      "Audi A4 B8",
+      "Audi A6 C6",
+      "Audi Q7",
+      "Audi TT",
+      "Seat Exeo",
+      "Seat Ibiza"
+    ],
+    "price": 15,
+    "description": "З ущільнювальною прокладкою; чорно-бежевий пластик.",
+    "img": "clipsa1343.jpg"
+  },
+  {
+    "id": "1344",
+    "name": "Кліпса обшивки та молдингів 15042",
+    "oem": "15042",
+    "brand": "BMW",
+    "category": "Кріплення обшивки та молдингів",
+    "compatibility": [
+      "BMW 3-series E36",
+      "BMW 3-series E46",
+      "BMW 5-series E34",
+      "BMW 5-series E39",
+      "BMW 7-series E38",
+      "BMW X5 E53",
+      "BMW Z8 E52",
+      "VW Bora",
+      "VW Golf III",
+      "VW Jetta",
+      "VW Passat",
+      "VW Touareg I",
+      "VW Vento",
+      "Audi A3",
+      "Audi TT",
+      "Fiat Multipla",
+      "Lancia Y",
+      "Porsche Cayenne"
+    ],
+    "price": 15,
+    "description": "Дві прямокутні шляпки; біло-блакитний пластик.",
+    "img": "clipsa1344.jpg"
+  },
+  {
+    "id": "1345",
+    "name": "Кліпса обшивки та молдингів 15243",
+    "oem": "15243",
+    "brand": "Ford",
+    "category": "Кріплення обшивки та молдингів",
+    "compatibility": [
+      "Ford Transit"
+    ],
+    "price": 20,
+    "description": "Дві прямокутні шляпки; білий пластик.",
+    "img": "clipsa1345.jpg"
+  },
+  {
+    "id": "1346",
+    "name": "Ролик склопідйомника 23211",
+    "oem": "23211",
+    "brand": "BMW",
+    "category": "Ролики",
+    "compatibility": [
+      "BMW 3-series E46",
+      "BMW 3-series E90",
+      "BMW 3-series E91",
+      "BMW X5 E53",
+      "Peugeot 307CC",
+      "Peugeot 607",
+      "Seat Cordoba",
+      "Seat Ibiza",
+      "Land Rover Freelander",
+      "Mercedes-Benz CLS-Class C219",
+      "Mercedes-Benz E-Class W210",
+      "Honda Accord",
+      "VW New Beetle Cabrio"
+    ],
+    "price": 100,
+    "description": "Для лівих дверей; білий пластик.",
+    "img": "clipsa1346.jpg"
   }
 ]
