@@ -27438,5 +27438,1494 @@
     "price": 15,
     "description": "Клема-вилка, срібляста; матеріал: метал.",
     "img": "clipsa1438.jpg"
+  },
+    {
+    "id": "1439",
+    "name": "Кліпса типу Ялинка 10685",
+    "oem": "10685",
+    "brand": "VW",
+    "category": "Кріплення обшивки та молдингів",
+    "compatibility": [
+      "VW Golf",
+      "VW Jetta",
+      "VW Passat B3",
+      "VW Vento"
+    ],
+    "price": 55,
+    "description": "Кліпса типу Ялинка. Колір: сірий. Матеріал: пластик.",
+    "img": "clipsa1439.jpg"
+  },
+  {
+    "id": "1440",
+    "name": "Кліпса типу Якір 10752",
+    "oem": "10752",
+    "brand": "Mercedes-Benz",
+    "category": "Кріплення обшивки та молдингів",
+    "compatibility": [
+      "Mercedes-Benz A-Class W176",
+      "Mercedes-Benz AMG GT C190",
+      "Mercedes-Benz AMG GT R190",
+      "Mercedes-Benz B-Class W246",
+      "Mercedes-Benz C-Class W203",
+      "Mercedes-Benz C-Class W204",
+      "Mercedes-Benz C-Class W205",
+      "Mercedes-Benz CL-Class C216",
+      "Mercedes-Benz CLA-Class C117",
+      "Mercedes-Benz CLA-Class X117",
+      "Mercedes-Benz CLC-Class CL203",
+      "Mercedes-Benz CLK-Class A209",
+      "Mercedes-Benz CLK-Class C209",
+      "Mercedes-Benz CLK-Class W209",
+      "Mercedes-Benz CLS-Class C218",
+      "Mercedes-Benz CLS-Class C219",
+      "Mercedes-Benz CLS-Class W218",
+      "Mercedes-Benz CLS-Class W219",
+      "Mercedes-Benz CLS-Class X218",
+      "Mercedes-Benz E-Class A207",
+      "Mercedes-Benz E-Class C207",
+      "Mercedes-Benz E-Class C238",
+      "Mercedes-Benz E-Class S211",
+      "Mercedes-Benz E-Class S212",
+      "Mercedes-Benz E-Class S213",
+      "Mercedes-Benz E-Class W207",
+      "Mercedes-Benz E-Class W211",
+      "Mercedes-Benz E-Class W212",
+      "Mercedes-Benz E-Class W213",
+      "Mercedes-Benz GL/GLS-Class X166",
+      "Mercedes-Benz GLA-Class X156",
+      "Mercedes-Benz GLC-Class C253",
+      "Mercedes-Benz GLC-Class X253",
+      "Mercedes-Benz GLE-Class C292",
+      "Mercedes-Benz GLK-Class X204",
+      "Mercedes-Benz ML-Class W166",
+      "Mercedes-Benz R-Class W251",
+      "Mercedes-Benz S-Class A217",
+      "Mercedes-Benz S-Class C217",
+      "Mercedes-Benz S-Class V220",
+      "Mercedes-Benz S-Class V221",
+      "Mercedes-Benz S-Class V222",
+      "Mercedes-Benz S-Class W220",
+      "Mercedes-Benz S-Class W221",
+      "Mercedes-Benz S-Class W222",
+      "Mercedes-Benz SL-Class R230",
+      "Mercedes-Benz SL-Class R231",
+      "Mercedes-Benz SLK-Class R171",
+      "Mercedes-Benz SLK-Class R172",
+      "Mercedes-Benz SLS AMG C197",
+      "Mercedes-Benz SLS AMG R197",
+      "Mercedes-Benz Smart",
+      "Mercedes-Benz Sprinter",
+      "Mercedes-Benz V-Class W447",
+      "Mercedes-Benz Viano W639",
+      "Mercedes-Benz Vito W639"
+    ],
+    "price": 15,
+    "description": "Кліпса типу Якір. Колір: чорний. Матеріал: пластик.",
+    "img": "clipsa1440.jpg"
+  },
+  {
+    "id": "1441",
+    "name": "Кліпса типу Якір з вузькою шляпкою 10808",
+    "oem": "10808",
+    "brand": "VW",
+    "category": "Кріплення обшивки та молдингів",
+    "compatibility": [
+      "VW LT",
+      "VW Multivan",
+      "VW Transporter"
+    ],
+    "price": 15,
+    "description": "Кліпса типу Якір з вузькою шляпкою. Колір: білий. Матеріал: пластик.",
+    "img": "clipsa1441.jpg"
+  },
+  {
+    "id": "1442",
+    "name": "Кріплення з гвинтовим розпірним штирем 11116",
+    "oem": "11116",
+    "brand": "Ford",
+    "category": "Кріплення розпірної дії",
+    "compatibility": [
+      "Ford Cougar",
+      "Ford Fiesta",
+      "Ford Focus I",
+      "Ford Fusion",
+      "Ford Puma"
+    ],
+    "price": 15,
+    "description": "Кріплення з гвинтовим розпірним штирем. Колір: чорний. Матеріал: пластик.",
+    "img": "clipsa1442.jpg"
+  },
+  {
+    "id": "1443",
+    "name": "Кріплення з натискним розпірним штирем 11336",
+    "oem": "11336",
+    "brand": "Mazda",
+    "category": "Кріплення розпірної дії",
+    "compatibility": [
+      "Mazda 121",
+      "Mazda 3",
+      "Mazda 323",
+      "Mazda 5",
+      "Mazda CX-9",
+      "Mazda E2000",
+      "Mazda E2200",
+      "Mazda MPV"
+    ],
+    "price": 15,
+    "description": "Кріплення з натискним розпірним штирем. Колір: темно-сірий. Матеріал: пластик.",
+    "img": "clipsa1443.jpg"
+  },
+  {
+    "id": "1444",
+    "name": "Кріплення з натискним розпірним штирем 11377",
+    "oem": "11377",
+    "brand": "Suzuki",
+    "category": "Кріплення розпірної дії",
+    "compatibility": [
+      "Suzuki Carry",
+      "Suzuki Grand Vitara",
+      "Suzuki Ignis",
+      "Suzuki Kizashi",
+      "Suzuki SX4",
+      "Suzuki Splash",
+      "Suzuki Swift",
+      "Suzuki Wagon R"
+    ],
+    "price": 15,
+    "description": "Кріплення з натискним розпірним штирем. Колір: чорний. Матеріал: пластик.",
+    "img": "clipsa1444.jpg"
+  },
+  {
+    "id": "1445",
+    "name": "Кріплення з натискним розпірним штирем 11400",
+    "oem": "11400",
+    "brand": "Honda",
+    "category": "Кріплення розпірної дії",
+    "compatibility": [
+      "Honda Accord",
+      "Honda CR-V",
+      "Honda Civic",
+      "Honda FR-V",
+      "Honda Odyssey"
+    ],
+    "price": 15,
+    "description": "Кріплення з натискним розпірним штирем. Колір: чорний. Матеріал: пластик.",
+    "img": "clipsa1445.jpg"
+  },
+  {
+    "id": "1446",
+    "name": "Кріплення з натискним розпірним штирем 11409",
+    "oem": "11409",
+    "brand": "Honda",
+    "category": "Кріплення розпірної дії",
+    "compatibility": [
+      "Honda багато моделей"
+    ],
+    "price": 20,
+    "description": "Кріплення з натискним розпірним штирем. Колір: чорний. Матеріал: пластик.",
+    "img": "clipsa1446.jpg"
+  },
+  {
+    "id": "1447",
+    "name": "Кріплення з натискним розпірним штирем 11466",
+    "oem": "11466",
+    "brand": "Універсальний",
+    "category": "Кріплення розпірної дії",
+    "compatibility": [
+      "Універсальний"
+    ],
+    "price": 15,
+    "description": "Кріплення з натискним розпірним штирем. Колір: чорний. Матеріал: пластик.",
+    "img": "clipsa1447.jpg"
+  },
+  {
+    "id": "1448",
+    "name": "Кліпса з круглою шляпкою 12801",
+    "oem": "12801",
+    "brand": "Універсальний",
+    "category": "Кріплення обшивки та молдингів",
+    "compatibility": [
+      "Універсальний"
+    ],
+    "price": 15,
+    "description": "Кліпса з круглою шляпкою. Колір: чорний. Матеріал: пластик.",
+    "img": "clipsa1448.jpg"
+  },
+  {
+    "id": "1449",
+    "name": "Кліпса V-подібна 12843",
+    "oem": "12843",
+    "brand": "VW",
+    "category": "Кріплення обшивки та молдингів",
+    "compatibility": [
+      "VW Caddy",
+      "VW Golf III",
+      "VW Passat B3",
+      "VW Passat B4",
+      "VW Passat B5",
+      "VW Polo II",
+      "VW Polo III",
+      "VW Sharan",
+      "VW Vento"
+    ],
+    "price": 20,
+    "description": "Кліпса V-подібна. Колір: чорний. Матеріал: пластик.",
+    "img": "clipsa1449.jpg"
+  },
+  {
+    "id": "1450",
+    "name": "Ковпачок для фаркопу 13000",
+    "oem": "13000",
+    "brand": "Універсальний",
+    "category": "Заглушки",
+    "compatibility": [
+      "Універсальний"
+    ],
+    "price": 35,
+    "description": "Ковпачок для фаркопу. Колір: чорний. Матеріал: пластик.",
+    "img": "clipsa1450.jpg"
+  },
+  {
+    "id": "1451",
+    "name": "Заглушка без отвору 13400",
+    "oem": "13400",
+    "brand": "Універсальний",
+    "category": "Заглушки",
+    "compatibility": [
+      "Універсальний"
+    ],
+    "price": 50,
+    "description": "Заглушка без отвору. Колір: чорний. Матеріал: гума.",
+    "img": "clipsa1451.jpg"
+  },
+  {
+    "id": "1452",
+    "name": "Заглушка в колісний диск 13808",
+    "oem": "13808",
+    "brand": "Toyota",
+    "category": "Ковпачки колісних дисків",
+    "compatibility": [
+      "Toyota багато моделей"
+    ],
+    "price": 100,
+    "description": "Заглушка в колісний диск. Колір: світло-сірий. Матеріал: пластик.",
+    "img": "clipsa1452.jpg"
+  },
+  {
+    "id": "1453",
+    "name": "Заглушка в колісний диск 13812",
+    "oem": "13812",
+    "brand": "Kia",
+    "category": "Ковпачки колісних дисків",
+    "compatibility": [
+      "Kia багато моделей"
+    ],
+    "price": 100,
+    "description": "Заглушка в колісний диск. Колір: світло-сірий. Матеріал: пластик.",
+    "img": "clipsa1453.jpg"
+  },
+  {
+    "id": "1454",
+    "name": "Заглушка в колісний диск 13825",
+    "oem": "13825",
+    "brand": "Toyota",
+    "category": "Ковпачки колісних дисків",
+    "compatibility": [
+      "Toyota багато моделей"
+    ],
+    "price": 100,
+    "description": "Заглушка в колісний диск. Колір: світло-сірий. Матеріал: пластик.",
+    "img": "clipsa1454.jpg"
+  },
+  {
+    "id": "1455",
+    "name": "Заглушка в колісний диск 13830",
+    "oem": "13830",
+    "brand": "Opel",
+    "category": "Ковпачки колісних дисків",
+    "compatibility": [
+      "Opel багато моделей"
+    ],
+    "price": 100,
+    "description": "Заглушка в колісний диск. Колір: світло-сірий. Матеріал: пластик.",
+    "img": "clipsa1455.jpg"
+  },
+  {
+    "id": "1456",
+    "name": "Втулка з круглою шляпкою 14308",
+    "oem": "14308",
+    "brand": "Ford",
+    "category": "Втулки та вставки",
+    "compatibility": [
+      "Ford Focus II"
+    ],
+    "price": 20,
+    "description": "Втулка з круглою шляпкою. Колір: білий. Матеріал: пластик.",
+    "img": "clipsa1456.jpg"
+  },
+  {
+    "id": "1457",
+    "name": "Втулка з круглою шляпкою 14344",
+    "oem": "14344",
+    "brand": "Ford",
+    "category": "Втулки та вставки",
+    "compatibility": [
+      "Ford C-Max",
+      "Ford Focus I"
+    ],
+    "price": 15,
+    "description": "Втулка з круглою шляпкою. Колір: білий. Матеріал: пластик.",
+    "img": "clipsa1457.jpg"
+  },
+  {
+    "id": "1458",
+    "name": "Втулка з квадратною шляпкою 14810",
+    "oem": "14810",
+    "brand": "Ford",
+    "category": "Втулки та вставки",
+    "compatibility": [
+      "Ford Fiesta",
+      "Ford Focus I",
+      "Ford Fusion",
+      "Ford Mondeo",
+      "Ford Transit"
+    ],
+    "price": 15,
+    "description": "Втулка з квадратною шляпкою. Колір: білий. Матеріал: пластик.",
+    "img": "clipsa1458.jpg"
+  },
+  {
+    "id": "1459",
+    "name": "Втулка з квадратною шляпкою 14901",
+    "oem": "14901",
+    "brand": "Hyundai",
+    "category": "Втулки та вставки",
+    "compatibility": [
+      "Hyundai Accent",
+      "Hyundai Genesis",
+      "Hyundai Santa Fe",
+      "Hyundai Tucson"
+    ],
+    "price": 20,
+    "description": "Втулка з квадратною шляпкою. Колір: білий. Матеріал: пластик.",
+    "img": "clipsa1459.jpg"
+  },
+  {
+    "id": "1460",
+    "name": "Втулка з квадратною шляпкою 14902",
+    "oem": "14902",
+    "brand": "Hyundai",
+    "category": "Втулки та вставки",
+    "compatibility": [
+      "Hyundai Accent",
+      "Hyundai Elantra",
+      "Hyundai Getz",
+      "Hyundai Matrix",
+      "Hyundai Santa Fe",
+      "Hyundai i10",
+      "Hyundai ix55"
+    ],
+    "price": 20,
+    "description": "Втулка з квадратною шляпкою. Колір: білий. Матеріал: пластик.",
+    "img": "clipsa1460.jpg"
+  },
+  {
+    "id": "1461",
+    "name": "Втулка з прямокутною шляпкою 14919",
+    "oem": "14919",
+    "brand": "Volvo",
+    "category": "Втулки та вставки",
+    "compatibility": [
+      "Volvo C30",
+      "Volvo C40",
+      "Volvo S80",
+      "Volvo V50",
+      "Volvo V70",
+      "Volvo XC60",
+      "Volvo XC70"
+    ],
+    "price": 20,
+    "description": "Втулка з прямокутною шляпкою. Колір: білий. Матеріал: пластик.",
+    "img": "clipsa1461.jpg"
+  },
+  {
+    "id": "1462",
+    "name": "Кліпса з фігурною шляпкою 15030",
+    "oem": "15030",
+    "brand": "Ford",
+    "category": "Кріплення обшивки та молдингів",
+    "compatibility": [
+      "Ford B-Max",
+      "Ford C-Max",
+      "Ford Cougar",
+      "Ford Courier",
+      "Ford Custom",
+      "Ford Econovan",
+      "Ford Ecosport",
+      "Ford Escort",
+      "Ford Fiesta",
+      "Ford Focus",
+      "Ford Fusion",
+      "Ford Galaxy",
+      "Ford Granada",
+      "Ford Ka",
+      "Ford Kuga",
+      "Ford Maverick",
+      "Ford Mondeo",
+      "Ford Orion",
+      "Ford Puma",
+      "Ford Ranger",
+      "Ford S-Max",
+      "Ford Scorpio",
+      "Ford Sierra",
+      "Ford Tourneo",
+      "Ford Transit"
+    ],
+    "price": 15,
+    "description": "Кліпса з фігурною шляпкою. Колір: чорний. Матеріал: пластик.",
+    "img": "clipsa1462.jpg"
+  },
+  {
+    "id": "1463",
+    "name": "Кліпса з кількома шляпками 15100",
+    "oem": "15100",
+    "brand": "Toyota",
+    "category": "Кріплення обшивки та молдингів",
+    "compatibility": [
+      "Toyota Camry V50",
+      "Toyota Camry V70",
+      "Toyota Highlander",
+      "Toyota Prius",
+      "Toyota RAV4",
+      "Toyota Avalon",
+      "Toyota Auris"
+    ],
+    "price": 15,
+    "description": "Кліпса з кількома шляпками. Колір: червоний. Матеріал: пластик.",
+    "img": "clipsa1463.jpg"
+  },
+  {
+    "id": "1464",
+    "name": "Кліпса з двома прямокутними шляпками 15228",
+    "oem": "15228",
+    "brand": "Daewoo",
+    "category": "Кріплення обшивки та молдингів",
+    "compatibility": [
+      "Daewoo Gentra",
+      "Daewoo Matiz",
+      "Daewoo Nubira"
+    ],
+    "price": 15,
+    "description": "Кліпса з двома прямокутними шляпками. Колір: білий. Матеріал: пластик.",
+    "img": "clipsa1464.jpg"
+  },
+  {
+    "id": "1465",
+    "name": "Кліпса з двома прямокутними шляпками 15240",
+    "oem": "15240",
+    "brand": "Nissan",
+    "category": "Кріплення обшивки та молдингів",
+    "compatibility": [
+      "Nissan Almera",
+      "Nissan Altima",
+      "Nissan Bluebird",
+      "Nissan Juke",
+      "Nissan Teana",
+      "Nissan Tiida"
+    ],
+    "price": 15,
+    "description": "Кліпса з двома прямокутними шляпками. Колір: білий. Матеріал: пластик.",
+    "img": "clipsa1465.jpg"
+  },
+  {
+    "id": "1466",
+    "name": "Кліпса з кількома круглими шляпками 15324",
+    "oem": "15324",
+    "brand": "Honda",
+    "category": "Кріплення обшивки та молдингів",
+    "compatibility": [
+      "Honda Accord",
+      "Honda Acty",
+      "Honda Ballade",
+      "Honda CR-V",
+      "Honda CR-X",
+      "Honda Civic",
+      "Honda Crosstour",
+      "Honda Element",
+      "Honda Fit",
+      "Honda HR-V",
+      "Honda Inspire",
+      "Honda Integra",
+      "Honda Jazz",
+      "Honda Legend",
+      "Honda Logo",
+      "Honda Odyssey",
+      "Honda Pilot",
+      "Honda Prelude",
+      "Honda Ridgeline",
+      "Honda S2000",
+      "Honda Shuttle",
+      "Honda Stream",
+      "Honda Vigor",
+      "Honda City",
+      "Honda MR-V",
+      "Honda FR-V",
+      "Honda Insight"
+    ],
+    "price": 15,
+    "description": "Кліпса з кількома круглими шляпками. Колір: білий. Матеріал: пластик.",
+    "img": "clipsa1466.jpg"
+  },
+  {
+    "id": "1467",
+    "name": "Кліпса з кількома прямокутними шляпками 15353",
+    "oem": "15353",
+    "brand": "BMW",
+    "category": "Кріплення обшивки та молдингів",
+    "compatibility": [
+      "BMW 3-series E21",
+      "BMW 3-series E30",
+      "BMW 3-series E36",
+      "BMW 5-series E39",
+      "BMW 7-series E23",
+      "BMW 7-series E32",
+      "BMW 7-series E38"
+    ],
+    "price": 20,
+    "description": "Кліпса з кількома прямокутними шляпками. Колір: білий. Матеріал: пластик.",
+    "img": "clipsa1467.jpg"
+  },
+  {
+    "id": "1468",
+    "name": "Кліпса з кількома шляпками 15445",
+    "oem": "15445",
+    "brand": "VW",
+    "category": "Кріплення обшивки та молдингів",
+    "compatibility": [
+      "VW Golf V",
+      "VW Golf VI",
+      "VW Jetta V"
+    ],
+    "price": 15,
+    "description": "Кліпса з кількома шляпками. Колір: чорний. Матеріал: пластик.",
+    "img": "clipsa1468.jpg"
+  },
+  {
+    "id": "1469",
+    "name": "Кліпса з кількома круглими шляпками 15474",
+    "oem": "15474",
+    "brand": "VW",
+    "category": "Кріплення обшивки та молдингів",
+    "compatibility": [
+      "VW Amarok",
+      "VW Bora",
+      "VW Jetta",
+      "VW Lupo",
+      "VW Sharan",
+      "VW Touran",
+      "VW Transporter"
+    ],
+    "price": 15,
+    "description": "Кліпса з кількома круглими шляпками. Колір: білий. Матеріал: пластик.",
+    "img": "clipsa1469.jpg"
+  },
+  {
+    "id": "1470",
+    "name": "Кліпса з фігурною шляпкою 15790",
+    "oem": "15790",
+    "brand": "Lexus",
+    "category": "Кріплення обшивки та молдингів",
+    "compatibility": [
+      "Lexus GX470"
+    ],
+    "price": 20,
+    "description": "Кліпса з фігурною шляпкою. Колір: сірий. Матеріал: пластик.",
+    "img": "clipsa1470.jpg"
+  },
+  {
+    "id": "1471",
+    "name": "Кліпса з фігурною шляпкою 15803",
+    "oem": "15803",
+    "brand": "Toyota",
+    "category": "Кріплення обшивки та молдингів",
+    "compatibility": [
+      "Toyota 4Runner",
+      "Toyota Corolla",
+      "Toyota Highlander",
+      "Toyota Hilux",
+      "Toyota Land Cruiser Prado",
+      "Toyota Land Cruiser Prado 120",
+      "Toyota RAV4",
+      "Toyota Sprinter",
+      "Toyota Starlet",
+      "Toyota Tacoma",
+      "Toyota Tundra"
+    ],
+    "price": 15,
+    "description": "Кліпса з фігурною шляпкою. Колір: світло-жовтий. Матеріал: пластик.",
+    "img": "clipsa1471.jpg"
+  },
+  {
+    "id": "1472",
+    "name": "Кліпса з фігурною шляпкою 15804",
+    "oem": "15804",
+    "brand": "Toyota",
+    "category": "Кріплення обшивки та молдингів",
+    "compatibility": [
+      "Toyota 4Runner",
+      "Toyota Fortuner",
+      "Toyota Highlander",
+      "Toyota Hilux",
+      "Toyota Land Cruiser Prado 120",
+      "Toyota RAV4",
+      "Toyota Tacoma",
+      "Toyota Sequoia",
+      "Toyota Tundra"
+    ],
+    "price": 20,
+    "description": "Кліпса з фігурною шляпкою. Колір: синій. Матеріал: пластик.",
+    "img": "clipsa1472.jpg"
+  },
+  {
+    "id": "1473",
+    "name": "Кліпса з фігурною шляпкою 15806",
+    "oem": "15806",
+    "brand": "Toyota",
+    "category": "Кріплення обшивки та молдингів",
+    "compatibility": [
+      "Toyota FJ Cruiser",
+      "Toyota RAV4"
+    ],
+    "price": 15,
+    "description": "Кліпса з фігурною шляпкою. Колір: жовтий. Матеріал: пластик.",
+    "img": "clipsa1473.jpg"
+  },
+  {
+    "id": "1474",
+    "name": "Кліпса з фігурною шляпкою 15807",
+    "oem": "15807",
+    "brand": "Toyota",
+    "category": "Кріплення обшивки та молдингів",
+    "compatibility": [
+      "Toyota Land Cruiser Prado (2002 - 2010)"
+    ],
+    "price": 20,
+    "description": "Кліпса з фігурною шляпкою. Колір: світло-жовтий. Матеріал: пластик.",
+    "img": "clipsa1474.jpg"
+  },
+  {
+    "id": "1475",
+    "name": "Кліпса з фігурною шляпкою 15808",
+    "oem": "15808",
+    "brand": "Toyota",
+    "category": "Кріплення обшивки та молдингів",
+    "compatibility": [
+      "Toyota Land Cruiser Prado (2002 - 2009)"
+    ],
+    "price": 20,
+    "description": "Кліпса з фігурною шляпкою. Колір: блакитний. Матеріал: пластик.",
+    "img": "clipsa1475.jpg"
+  },
+  {
+    "id": "1476",
+    "name": "Кліпса з фігурною шляпкою 15809",
+    "oem": "15809",
+    "brand": "Toyota",
+    "category": "Кріплення обшивки та молдингів",
+    "compatibility": [
+      "Toyota Land Cruiser Prado (2002 - 2009)"
+    ],
+    "price": 20,
+    "description": "Кліпса з фігурною шляпкою. Колір: світло-жовтий. Матеріал: пластик.",
+    "img": "clipsa1476.jpg"
+  },
+  {
+    "id": "1477",
+    "name": "Кліпса з фігурною шляпкою 15810",
+    "oem": "15810",
+    "brand": "Toyota",
+    "category": "Кріплення обшивки та молдингів",
+    "compatibility": [
+      "Toyota Land Cruiser Prado (2002 - 2009)"
+    ],
+    "price": 20,
+    "description": "Кліпса з фігурною шляпкою. Колір: чорний. Матеріал: пластик.",
+    "img": "clipsa1477.jpg"
+  },
+  {
+    "id": "1478",
+    "name": "Кліпса з кількома фігурними шляпками 15811",
+    "oem": "15811",
+    "brand": "Toyota",
+    "category": "Кріплення обшивки та молдингів",
+    "compatibility": [
+      "Toyota Land Cruiser Prado (2002 - 2009)"
+    ],
+    "price": 20,
+    "description": "Кліпса з кількома фігурними шляпками. Колір: сірий. Матеріал: пластик.",
+    "img": "clipsa1478.jpg"
+  },
+  {
+    "id": "1479",
+    "name": "Кліпса з фігурною шляпкою 15812",
+    "oem": "15812",
+    "brand": "Toyota",
+    "category": "Кріплення обшивки та молдингів",
+    "compatibility": [
+      "Toyota Land Cruiser Prado (2002 - 2009)"
+    ],
+    "price": 20,
+    "description": "Кліпса з фігурною шляпкою. Колір: бірюзовий. Матеріал: пластик.",
+    "img": "clipsa1479.jpg"
+  },
+  {
+    "id": "1480",
+    "name": "Кліпса з фігурною шляпкою 15813",
+    "oem": "15813",
+    "brand": "Toyota",
+    "category": "Кріплення обшивки та молдингів",
+    "compatibility": [
+      "Toyota Land Cruiser Prado (2002 - 2009)"
+    ],
+    "price": 20,
+    "description": "Кліпса з фігурною шляпкою. Колір: блакитний. Матеріал: пластик.",
+    "img": "clipsa1480.jpg"
+  },
+  {
+    "id": "1481",
+    "name": "Кліпса з фігурною шляпкою 15814",
+    "oem": "15814",
+    "brand": "Toyota",
+    "category": "Кріплення обшивки та молдингів",
+    "compatibility": [
+      "Toyota Land Cruiser Prado (2002 - 2009)"
+    ],
+    "price": 20,
+    "description": "Кліпса з фігурною шляпкою. Колір: світло-помаранчевий. Матеріал: пластик.",
+    "img": "clipsa1481.jpg"
+  },
+  {
+    "id": "1482",
+    "name": "Кліпса з кількома фігурними шляпками 15815",
+    "oem": "15815",
+    "brand": "Toyota",
+    "category": "Кріплення обшивки та молдингів",
+    "compatibility": [
+      "Toyota Land Cruiser Prado (2002 - 2009)"
+    ],
+    "price": 20,
+    "description": "Кліпса з кількома фігурними шляпками. Колір: бордовий. Матеріал: пластик.",
+    "img": "clipsa1482.jpg"
+  },
+  {
+    "id": "1483",
+    "name": "Кліпса з фігурною шляпкою 15816",
+    "oem": "15816",
+    "brand": "Toyota",
+    "category": "Кріплення обшивки та молдингів",
+    "compatibility": [
+      "Toyota Land Cruiser Prado (2002 - 2011)"
+    ],
+    "price": 20,
+    "description": "Кліпса з фігурною шляпкою. Колір: червоний. Матеріал: пластик.",
+    "img": "clipsa1483.jpg"
+  },
+  {
+    "id": "1484",
+    "name": "Кліпса з двома круглими шляпками 15822",
+    "oem": "15822",
+    "brand": "Mitsubishi",
+    "category": "Кріплення обшивки та молдингів",
+    "compatibility": [
+      "Mitsubishi Minicab",
+      "Mitsubishi Outlander",
+      "Mitsubishi Pajero",
+      "Mitsubishi Space Wagon",
+      "Mitsubishi Nativa",
+      "Mitsubishi Pajero Sport",
+      "Mitsubishi Colt",
+      "Mitsubishi Galant",
+      "Mitsubishi Montero",
+      "Mitsubishi Space Runner",
+      "Mitsubishi Chariot",
+      "Mitsubishi Grandis",
+      "Mitsubishi Endeavor",
+      "Mitsubishi Eclipse"
+    ],
+    "price": 15,
+    "description": "Кліпса з двома круглими шляпками. Колір: білий. Матеріал: пластик.",
+    "img": "clipsa1484.jpg"
+  },
+  {
+    "id": "1485",
+    "name": "Закладна під саморіз 16045",
+    "oem": "16045",
+    "brand": "Nissan",
+    "category": "Фіксатори, закладні",
+    "compatibility": [
+      "Nissan Caravan",
+      "Nissan Safari"
+    ],
+    "price": 15,
+    "description": "Закладна під саморіз. Колір: чорний. Матеріал: пластик.",
+    "img": "clipsa1485.jpg"
+  },
+  {
+    "id": "1486",
+    "name": "Закладна під різьбовий гвинт M5 16057",
+    "oem": "16057",
+    "brand": "Subaru",
+    "category": "Фіксатори, закладні",
+    "compatibility": [
+      "Subaru Impreza",
+      "Subaru Legacy",
+      "Subaru Tribeca"
+    ],
+    "price": 20,
+    "description": "Закладна під різьбовий гвинт M5. Колір: темно-сірий. Матеріал: пластик і метал.",
+    "img": "clipsa1486.jpg"
+  },
+  {
+    "id": "1487",
+    "name": "Закладна під саморіз 16161",
+    "oem": "16161",
+    "brand": "Універсальний",
+    "category": "Фіксатори, закладні",
+    "compatibility": [
+      "Універсальний"
+    ],
+    "price": 15,
+    "description": "Закладна під саморіз. Колір: жовтий. Матеріал: метал.",
+    "img": "clipsa1487.jpg"
+  },
+  {
+    "id": "1488",
+    "name": "Закладна під саморіз 16182",
+    "oem": "16182",
+    "brand": "Універсальний",
+    "category": "Фіксатори, закладні",
+    "compatibility": [
+      "Універсальний"
+    ],
+    "price": 15,
+    "description": "Закладна під саморіз. Колір: сріблястий. Матеріал: метал.",
+    "img": "clipsa1488.jpg"
+  },
+  {
+    "id": "1489",
+    "name": "Закладна під саморіз 16284",
+    "oem": "16284",
+    "brand": "Audi",
+    "category": "Фіксатори, закладні",
+    "compatibility": [
+      "Audi 100",
+      "Audi 80",
+      "Audi 80 Cabriolet"
+    ],
+    "price": 70,
+    "description": "Закладна під саморіз. Колір: сріблястий. Матеріал: метал.",
+    "img": "clipsa1489.jpg"
+  },
+  {
+    "id": "1490",
+    "name": "Закладна під різьбовий гвинт M5 16423",
+    "oem": "16423",
+    "brand": "Універсальний",
+    "category": "Фіксатори, закладні",
+    "compatibility": [
+      "Універсальний"
+    ],
+    "price": 20,
+    "description": "Закладна під різьбовий гвинт M5. Колір: сріблястий. Матеріал: метал.",
+    "img": "clipsa1490.jpg"
+  },
+  {
+    "id": "1491",
+    "name": "Закладна під різьбовий гвинт M6 16435",
+    "oem": "16435",
+    "brand": "Dodge",
+    "category": "Фіксатори, закладні",
+    "compatibility": [
+      "Dodge Challenger",
+      "Dodge Charger",
+      "Dodge Ram",
+      "Dodge Dart"
+    ],
+    "price": 20,
+    "description": "Закладна під різьбовий гвинт M6. Колір: сріблястий. Матеріал: метал.",
+    "img": "clipsa1491.jpg"
+  },
+  {
+    "id": "1492",
+    "name": "Фіксатор 16551",
+    "oem": "16551",
+    "brand": "VW",
+    "category": "Фіксатори, закладні",
+    "compatibility": [
+      "VW Arteon",
+      "VW Beetle",
+      "VW Caddy",
+      "VW Crafter",
+      "VW Golf VI",
+      "VW Golf VII",
+      "VW Jetta",
+      "VW LT",
+      "VW Passat B6",
+      "VW Passat B7",
+      "VW Passat B8",
+      "VW Polo",
+      "VW Scirocco",
+      "VW T-Cross",
+      "VW T-Roc",
+      "VW Tiguan",
+      "VW Touareg",
+      "VW Touran",
+      "VW Transporter"
+    ],
+    "price": 15,
+    "description": "Фіксатор. Колір: чорний. Матеріал: метал.",
+    "img": "clipsa1492.jpg"
+  },
+  {
+    "id": "1493",
+    "name": "Фіксатор V-подібний 16552",
+    "oem": "16552",
+    "brand": "Універсальний",
+    "category": "Фіксатори, закладні",
+    "compatibility": [
+      "Універсальний"
+    ],
+    "price": 15,
+    "description": "Фіксатор V-подібний. Колір: сріблястий. Матеріал: метал.",
+    "img": "clipsa1493.jpg"
+  },
+  {
+    "id": "1494",
+    "name": "Закладна під саморіз M4.2 16622",
+    "oem": "16622",
+    "brand": "Універсальний",
+    "category": "Фіксатори, закладні",
+    "compatibility": [
+      "Універсальний"
+    ],
+    "price": 15,
+    "description": "Закладна під саморіз M4.2. Колір: сріблястий. Матеріал: метал.",
+    "img": "clipsa1494.jpg"
+  },
+  {
+    "id": "1495",
+    "name": "Фіксатор V-подібний 16652",
+    "oem": "16652",
+    "brand": "Seat",
+    "category": "Фіксатори, закладні",
+    "compatibility": [
+      "Seat Ibiza",
+      "Seat Leon"
+    ],
+    "price": 20,
+    "description": "Фіксатор V-подібний. Колір: сріблястий. Матеріал: метал.",
+    "img": "clipsa1495.jpg"
+  },
+  {
+    "id": "1496",
+    "name": "Фіксатор V-подібний 16661",
+    "oem": "16661",
+    "brand": "Універсальний",
+    "category": "Фіксатори, закладні",
+    "compatibility": [
+      "Універсальний"
+    ],
+    "price": 15,
+    "description": "Фіксатор V-подібний. Колір: чорний. Матеріал: метал.",
+    "img": "clipsa1496.jpg"
+  },
+  {
+    "id": "1497",
+    "name": "Саморіз хрестовий з прес-шайбою 18032",
+    "oem": "18032",
+    "brand": "Універсальний",
+    "category": "Саморізи",
+    "compatibility": [
+      "Універсальний"
+    ],
+    "price": 15,
+    "description": "Саморіз хрестовий з прес-шайбою. Колір: чорний. Матеріал: метал.",
+    "img": "clipsa1497.jpg"
+  },
+  {
+    "id": "1498",
+    "name": "Саморіз TORX з прес-шайбою 18620",
+    "oem": "18620",
+    "brand": "Універсальний",
+    "category": "Саморізи",
+    "compatibility": [
+      "Універсальний"
+    ],
+    "price": 15,
+    "description": "Саморіз TORX з прес-шайбою. Колір: чорний. Матеріал: метал.",
+    "img": "clipsa1498.jpg"
+  },
+  {
+    "id": "1499",
+    "name": "Саморіз TORX з прес-шайбою 18621",
+    "oem": "18621",
+    "brand": "Універсальний",
+    "category": "Саморізи",
+    "compatibility": [
+      "Універсальний"
+    ],
+    "price": 15,
+    "description": "Саморіз TORX з прес-шайбою. Колір: чорний. Матеріал: метал.",
+    "img": "clipsa1499.jpg"
+  },
+  {
+    "id": "1500",
+    "name": "Гайка з фланцем 20263",
+    "oem": "20263",
+    "brand": "Універсальний",
+    "category": "Гайки, шайби, накрутки",
+    "compatibility": [
+      "Універсальний"
+    ],
+    "price": 30,
+    "description": "Гайка з фланцем. Колір: жовтий. Матеріал: метал.",
+    "img": "clipsa1500.jpg"
+  },
+  {
+    "id": "1501",
+    "name": "Гайка витяжна 20340",
+    "oem": "20340",
+    "brand": "Універсальний",
+    "category": "Гайки, шайби, накрутки",
+    "compatibility": [
+      "Універсальний"
+    ],
+    "price": 15,
+    "description": "Гайка витяжна. Колір: сріблястий. Матеріал: сталь.",
+    "img": "clipsa1501.jpg"
+  },
+  {
+    "id": "1502",
+    "name": "Гайка-вставка 20354",
+    "oem": "20354",
+    "brand": "Універсальний",
+    "category": "Гайки, шайби, накрутки",
+    "compatibility": [
+      "Універсальний"
+    ],
+    "price": 20,
+    "description": "Гайка-вставка. Колір: сріблястий. Матеріал: метал.",
+    "img": "clipsa1502.jpg"
+  },
+  {
+    "id": "1503",
+    "name": "Гайка-вставка 20359",
+    "oem": "20359",
+    "brand": "VW",
+    "category": "Гайки, шайби, накрутки",
+    "compatibility": [
+      "VW Arteon",
+      "VW Beetle",
+      "VW CC",
+      "VW Golf IV",
+      "VW Golf V",
+      "VW Golf VI",
+      "VW Golf VII",
+      "VW Jetta",
+      "VW Passat B5",
+      "VW Passat B6",
+      "VW Passat B7",
+      "VW Passat B8",
+      "VW Passat CC",
+      "VW Phaeton",
+      "VW Polo",
+      "VW Scirocco",
+      "VW Sharan",
+      "VW Tiguan",
+      "VW Touareg",
+      "VW Touran",
+      "VW Transporter T5",
+      "VW Transporter T6",
+      "VW Bora",
+      "VW Amarok",
+      "VW Caddy",
+      "VW LT",
+      "VW T-Roc",
+      "VW Crafter",
+      "VW Multivan"
+    ],
+    "price": 20,
+    "description": "Гайка-вставка. Колір: чорний. Матеріал: метал.",
+    "img": "clipsa1503.jpg"
+  },
+  {
+    "id": "1504",
+    "name": "Шайба 20563",
+    "oem": "20563",
+    "brand": "Універсальний",
+    "category": "Гайки, шайби, накрутки",
+    "compatibility": [
+      "Універсальний"
+    ],
+    "price": 15,
+    "description": "Шайба. Колір: сріблястий. Матеріал: алюміній.",
+    "img": "clipsa1504.jpg"
+  },
+  {
+    "id": "1505",
+    "name": "Тримач трубок і дротів 21206",
+    "oem": "21206",
+    "brand": "Toyota",
+    "category": "Кріплення опори капота, шлангів та дротів",
+    "compatibility": [
+      "Toyota багато моделей"
+    ],
+    "price": 20,
+    "description": "Тримач трубок і дротів. Колір: сірий. Матеріал: пластик.",
+    "img": "clipsa1505.jpg"
+  },
+  {
+    "id": "1506",
+    "name": "Фітинг омивача I-подібний 22011",
+    "oem": "22011",
+    "brand": "Універсальний",
+    "category": "Фітинг (з'єднувач трубок)",
+    "compatibility": [
+      "Універсальний"
+    ],
+    "price": 15,
+    "description": "Фітинг омивача I-подібний. Колір: чорний. Матеріал: пластик.",
+    "img": "clipsa1506.jpg"
+  },
+  {
+    "id": "1507",
+    "name": "Фітинг омивача I-подібний 22013",
+    "oem": "22013",
+    "brand": "Lancia",
+    "category": "Фітинг (з'єднувач трубок)",
+    "compatibility": [
+      "Lancia Dedra",
+      "Lancia Delta",
+      "Lancia Kappa",
+      "Lancia Prisma",
+      "Lancia Thesis",
+      "Lancia Y"
+    ],
+    "price": 25,
+    "description": "Фітинг омивача I-подібний. Колір: сірий. Матеріал: пластик.",
+    "img": "clipsa1507.jpg"
+  },
+  {
+    "id": "1508",
+    "name": "Фітинг омивача I-подібний 22020",
+    "oem": "22020",
+    "brand": "Універсальний",
+    "category": "Фітинг (з'єднувач трубок)",
+    "compatibility": [
+      "Універсальний"
+    ],
+    "price": 15,
+    "description": "Фітинг омивача I-подібний. Колір: чорний. Матеріал: пластик.",
+    "img": "clipsa1508.jpg"
+  },
+  {
+    "id": "1509",
+    "name": "Фітинг омивача I-подібний 22063",
+    "oem": "22063",
+    "brand": "Універсальний",
+    "category": "Фітинг (з'єднувач трубок)",
+    "compatibility": [
+      "Універсальний"
+    ],
+    "price": 55,
+    "description": "Фітинг омивача I-подібний. Колір: чорний. Матеріал: пластик.",
+    "img": "clipsa1509.jpg"
+  },
+  {
+    "id": "1510",
+    "name": "Фітинг омивача I-подібний 22077",
+    "oem": "22077",
+    "brand": "Універсальний",
+    "category": "Фітинг (з'єднувач трубок)",
+    "compatibility": [
+      "Універсальний"
+    ],
+    "price": 50,
+    "description": "Фітинг омивача I-подібний. Колір: чорний. Матеріал: пластик.",
+    "img": "clipsa1510.jpg"
+  },
+  {
+    "id": "1511",
+    "name": "Фітинг омивача I-подібний 22078",
+    "oem": "22078",
+    "brand": "Універсальний",
+    "category": "Фітинг (з'єднувач трубок)",
+    "compatibility": [
+      "Універсальний"
+    ],
+    "price": 65,
+    "description": "Фітинг омивача I-подібний. Колір: чорний. Матеріал: пластик.",
+    "img": "clipsa1511.jpg"
+  },
+  {
+    "id": "1512",
+    "name": "Фітинг омивача I-подібний 22090",
+    "oem": "22090",
+    "brand": "Універсальний",
+    "category": "Фітинг (з'єднувач трубок)",
+    "compatibility": [
+      "Універсальний"
+    ],
+    "price": 65,
+    "description": "Фітинг омивача I-подібний. Колір: чорний. Матеріал: пластик.",
+    "img": "clipsa1512.jpg"
+  },
+  {
+    "id": "1513",
+    "name": "Фітинг омивача Г-подібний 22150",
+    "oem": "22150",
+    "brand": "Універсальний",
+    "category": "Фітинг (з'єднувач трубок)",
+    "compatibility": [
+      "Універсальний"
+    ],
+    "price": 35,
+    "description": "Фітинг омивача Г-подібний. Колір: чорний. Матеріал: пластик.",
+    "img": "clipsa1513.jpg"
+  },
+  {
+    "id": "1514",
+    "name": "Фітинг омивача Г-подібний 22176",
+    "oem": "22176",
+    "brand": "Універсальний",
+    "category": "Фітинг (з'єднувач трубок)",
+    "compatibility": [
+      "Універсальний"
+    ],
+    "price": 65,
+    "description": "Фітинг омивача Г-подібний. Колір: чорний. Матеріал: пластик.",
+    "img": "clipsa1514.jpg"
+  },
+  {
+    "id": "1515",
+    "name": "Фітинг омивача Г-подібний 22196",
+    "oem": "22196",
+    "brand": "Універсальний",
+    "category": "Фітинг (з'єднувач трубок)",
+    "compatibility": [
+      "Універсальний"
+    ],
+    "price": 100,
+    "description": "Фітинг омивача Г-подібний. Колір: чорний. Матеріал: пластик.",
+    "img": "clipsa1515.jpg"
+  },
+  {
+    "id": "1516",
+    "name": "Фітинг омивача T-подібний 22315",
+    "oem": "22315",
+    "brand": "Універсальний",
+    "category": "Фітинг (з'єднувач трубок)",
+    "compatibility": [
+      "Універсальний"
+    ],
+    "price": 60,
+    "description": "Фітинг омивача T-подібний. Колір: чорний. Матеріал: пластик.",
+    "img": "clipsa1516.jpg"
+  },
+  {
+    "id": "1517",
+    "name": "Трос склопідйомника 24747",
+    "oem": "24747",
+    "brand": "VW",
+    "category": "Склопідйомники",
+    "compatibility": [
+      "VW Transporter T5 (2003 - 2009)"
+    ],
+    "price": 265,
+    "description": "Трос склопідйомника. Колір: чорний і сірий. Матеріал: метал. Для переднього лівого та переднього правого склопідйомника.",
+    "img": "clipsa1517.jpg"
+  },
+  {
+    "id": "1518",
+    "name": "Заклепка витяжна 25027",
+    "oem": "25027",
+    "brand": "Jeep",
+    "category": "Заклепки",
+    "compatibility": [
+      "Jeep Grand Cherokee (1999 - 2004)",
+      "Jeep Liberty (2001 - 2008)"
+    ],
+    "price": 15,
+    "description": "Заклепка витяжна. Колір: чорний. Матеріал: пластик.",
+    "img": "clipsa1518.jpg"
+  },
+  {
+    "id": "1519",
+    "name": "Стяжка кабельна 26111",
+    "oem": "26111",
+    "brand": "Універсальний",
+    "category": "Хомути, стяжки кабельні",
+    "compatibility": [
+      "Універсальний"
+    ],
+    "price": 170,
+    "description": "Стяжка кабельна. Колір: чорний. Матеріал: нейлон.",
+    "img": "clipsa1519.jpg"
+  },
+  {
+    "id": "1520",
+    "name": "Набір інструментів для зняття обшивки, 12 предметів 31030",
+    "oem": "31030",
+    "brand": "Універсальний",
+    "category": "Інструменти",
+    "compatibility": [
+      "Універсальний"
+    ],
+    "price": 375,
+    "description": "Набір інструментів для зняття обшивки, 12 предметів. Колір: жовтий. Матеріал: пластик.",
+    "img": "clipsa1520.jpg"
+  },
+  {
+    "id": "1521",
+    "name": "Гільза обтискна термоусадкова 0.5–1.0 мм² 32001",
+    "oem": "32001",
+    "brand": "Універсальний",
+    "category": "Ізоляційні матеріали",
+    "compatibility": [
+      "Універсальний"
+    ],
+    "price": 20,
+    "description": "Гільза обтискна термоусадкова 0.5–1.0 мм². Колір: червоний. Матеріал: поліолефін.",
+    "img": "clipsa1521.jpg"
+  },
+  {
+    "id": "1522",
+    "name": "Комплект ковпачків колісних дисків, 4 шт. 50010",
+    "oem": "50010",
+    "brand": "Toyota",
+    "category": "Ковпачки колісних дисків",
+    "compatibility": [
+      "Toyota багато моделей"
+    ],
+    "price": 195,
+    "description": "Комплект ковпачків колісних дисків, 4 шт.. Колір: чорний. Матеріал: пластик.",
+    "img": "clipsa1522.jpg"
+  },
+  {
+    "id": "1523",
+    "name": "Комплект ковпачків колісних дисків, 4 шт. 50011",
+    "oem": "50011",
+    "brand": "Toyota",
+    "category": "Ковпачки колісних дисків",
+    "compatibility": [
+      "Toyota багато моделей"
+    ],
+    "price": 195,
+    "description": "Комплект ковпачків колісних дисків, 4 шт.. Колір: сірий. Матеріал: пластик.",
+    "img": "clipsa1523.jpg"
+  },
+  {
+    "id": "1524",
+    "name": "Комплект ковпачків колісних дисків, 4 шт. 50020",
+    "oem": "50020",
+    "brand": "Audi",
+    "category": "Ковпачки колісних дисків",
+    "compatibility": [
+      "Audi багато моделей"
+    ],
+    "price": 260,
+    "description": "Комплект ковпачків колісних дисків, 4 шт.. Колір: чорний. Матеріал: пластик.",
+    "img": "clipsa1524.jpg"
+  },
+  {
+    "id": "1525",
+    "name": "Комплект ковпачків колісних дисків, 4 шт. 50031",
+    "oem": "50031",
+    "brand": "Seat",
+    "category": "Ковпачки колісних дисків",
+    "compatibility": [
+      "Seat багато моделей"
+    ],
+    "price": 195,
+    "description": "Комплект ковпачків колісних дисків, 4 шт.. Колір: чорний. Матеріал: пластик.",
+    "img": "clipsa1525.jpg"
+  },
+  {
+    "id": "1526",
+    "name": "Кліпса кріплення обшивки 50139",
+    "oem": "50139",
+    "brand": "Універсальний",
+    "category": "Кріплення обшивки та молдингів",
+    "compatibility": [
+      "Універсальний"
+    ],
+    "price": 15,
+    "description": "Кліпса кріплення обшивки. Заводський відповідник: 01553-01182.",
+    "img": "clipsa1526.jpg"
+  },
+  {
+    "id": "1527",
+    "name": "Втулка під саморіз 50338",
+    "oem": "50338",
+    "brand": "Універсальний",
+    "category": "Втулки та вставки",
+    "compatibility": [
+      "Універсальний"
+    ],
+    "price": 15,
+    "description": "Втулка під саморіз. Заводський відповідник: 01281-00171.",
+    "img": "clipsa1527.jpg"
+  },
+  {
+    "id": "1528",
+    "name": "Втулка під саморіз 50350",
+    "oem": "50350",
+    "brand": "Універсальний",
+    "category": "Втулки та вставки",
+    "compatibility": [
+      "Універсальний"
+    ],
+    "price": 15,
+    "description": "Втулка під саморіз. Заводський відповідник: 90189-06017; застосування для кріплення фари.",
+    "img": "clipsa1528.jpg"
+  },
+  {
+    "id": "1529",
+    "name": "Кліпса кріплення ущільнювача капота 50383",
+    "oem": "50383",
+    "brand": "Універсальний",
+    "category": "Кріплення кузова",
+    "compatibility": [
+      "Універсальний"
+    ],
+    "price": 15,
+    "description": "Кліпса кріплення ущільнювача капота. Заводський відповідник: 90467-08008.",
+    "img": "clipsa1529.jpg"
+  },
+  {
+    "id": "1530",
+    "name": "Кліпса кріплення ущільнювача дверей 50388",
+    "oem": "50388",
+    "brand": "Універсальний",
+    "category": "Кріплення обшивки та молдингів",
+    "compatibility": [
+      "Універсальний"
+    ],
+    "price": 15,
+    "description": "Кліпса кріплення ущільнювача дверей. Заводський відповідник: 90651-TP8-003.",
+    "img": "clipsa1530.jpg"
+  },
+  {
+    "id": "1531",
+    "name": "Кліпса кріплення ущільнювача дверей 50409",
+    "oem": "50409",
+    "brand": "Універсальний",
+    "category": "Кріплення обшивки та молдингів",
+    "compatibility": [
+      "Універсальний"
+    ],
+    "price": 15,
+    "description": "Кліпса кріплення ущільнювача дверей. Заводський відповідник: 91530-SH4-003.",
+    "img": "clipsa1531.jpg"
   }
 ]
