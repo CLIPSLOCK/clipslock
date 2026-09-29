@@ -59,7 +59,7 @@
 "name": "Втулка з круглою шляпкою",
 "oem": "14084",
 "brand": "Універсальний",
-"category": "Втулки, вставки",
+"category": "Втулки та вставки",
 "compatibility": ["Саморізи"],
 "price": 15,
 "description": "Втулка з круглою шляпкою",
@@ -279,7 +279,7 @@
 "name": "Втулка з круглою шляпкою",
 "oem": "14087",
 "brand": "Volkswagen",
-"category": "Втулки, вставки",
+"category": "Втулки та вставки",
 "compatibility": ["Audi A5 (2009 - 2018) RS5 (2010 - 2018), Seat Alhambra (2010 - 2018), Toledo (2013 - 2018), Skoda Kodiaq (2017 - 2018) Yeti (2010 - 2018), Rapid (2013 - 2018), VW Arteon (2017 - 2018) Beetle (1997 - 2018) CC (2012 - 2017) Crafter (2017 - 2018) Golf Passat (2005 - 2018) Santana (2006 - 2018) Scirocco (2008 - 2018) Sharan (2010 - 2017) Tiguan (2007 - 2011) Touareg (2010 - 2018)"],
 "price": 20,
 "description": "Кріплення розпірної дії",
@@ -730,7 +730,7 @@
 "name": "Втулка з овальною шляпкою",
 "oem": "14541",
 "brand": "Renault",
-"category": "Втулки, вставки",
+"category": "Втулки та вставки",
 "compatibility": ["Citroen C3 (2002-2009)", "Citroen C3 (2009-2017)", "Citroen C4 Picasso (2006-2013)", "Citroen C5 (2001-2007)", "Citroen C5 (2008-2017)", "Citroen C8 (2002-2012)", "Citroen Evasion", "Citroen Jumpy (2012-2017)", "Citroen Xantia (1993-1998)", "Citroen Xsara (1997-2000)", "Citroen Xsara (2000-2004)", "Citroen Xsara Picasso (1999-2012)", "Fiat — багато моделей", "Peugeot 206 (1998-2009)", "Peugeot 207 (2006-2012)", "Peugeot 607 (1999-2004)", "Peugeot 607 (2004-2010)", "Peugeot 806", "Peugeot 807", "Peugeot Expert I", "Peugeot Expert II", "Renault Clio II (1998-2008)", "Renault Espace IV (2002-2006)", "Renault Kangoo I (1998-2009)", "Renault Laguna II (2000-2007)", "Renault Logan", "Renault Master I (1980-1997)", "Renault Master II (1997-2010)", "Renault Megane I (1995-2003)", "Renault Megane II (2002-2009)", "Renault Megane Scenic (1996-1999)", "Renault Sandero (2007-2012)", "Renault Scenic II (2003-2009)", "Renault Trafic II (2001-2014)"],
 "price": 15,
 "description": "Пластикова втулка з овальною шляпкою без ущільнювальної прокладки. Універсальне кузовне кріплення.",
@@ -818,7 +818,7 @@
 "name": "Втулка / вставка",
 "oem": "12080",
 "brand": "Універсальний",
-"category": "Втулки, вставки",
+"category": "Втулки та вставки",
 "compatibility": ["Багато моделей"],
 "price": 20,
 "description": "Автомобільна втулка / вставка.",
@@ -2352,7 +2352,7 @@
 "name": "Втулка з круглою шляпкою",
 "oem": "14180",
 "brand": "Універсальний",
-"category": "Втулки, вставки",
+"category": "Втулки та вставки",
 "compatibility": [
 "Ford — багато моделей",
 "Багато марок",
@@ -4349,7 +4349,7 @@
     "name": "Втулка з круглою шляпкою",
     "oem": "14205",
     "brand": "Audi",
-    "category": "Втулки, вставки",
+    "category": "Втулки та вставки",
     "compatibility": [
       "Audi Багато моделей",
       "Seat Багато моделей",
@@ -4393,7 +4393,7 @@
     "name": "Втулка з круглою шляпкою",
     "oem": "14250",
     "brand": "Volkswagen",
-    "category": "Втулки, вставки",
+    "category": "Втулки та вставки",
     "compatibility": [
       "VW Golf III (1991 - 1997)",
       "VW New Beetle (1997 - 2010)",
@@ -4707,7 +4707,7 @@
     "name": "Втулка з круглою шляпкою без ущільнювальної прокладки",
     "oem": "14469",
     "brand": "BMW",
-    "category": "Втулки, вставки",
+    "category": "Втулки та вставки",
     "compatibility": [
       "BMW Багато моделей"
     ],
@@ -4992,7 +4992,7 @@
   "name": "Пластикова фігурна кліпса 12845",
   "oem": "12845",
   "brand": "Ford",
-  "category": "Втулки, вставки",
+  "category": "Втулки та вставки",
   "compatibility": [
     "Ford Focus (2008 - 2011)",
     "Ford Mondeo (2007 - 2014)",
@@ -5008,7 +5008,7 @@
   "name": "Кліпса 12346",
   "oem": "12346",
   "brand": "Nissan",
-  "category": "Втулки, вставки",
+  "category": "Втулки та вставки",
   "compatibility": [
     "Nissan — багато моделей"
   ],
@@ -5048,7 +5048,7 @@
   "name": "Втулка з прямокутною шляпкою 14977",
   "oem": "14977",
   "brand": "Ford",
-  "category": "Втулки, вставки",
+  "category": "Втулки та вставки",
   "compatibility": [
     "Ford — багато моделей"
   ],
@@ -5061,7 +5061,7 @@
   "name": "Втулка з прямокутною шляпкою 14978",
   "oem": "14978",
   "brand": "Ford",
-  "category": "Втулки, вставки",
+  "category": "Втулки та вставки",
   "compatibility": [
     "Ford — багато моделей"
   ],
@@ -5087,7 +5087,7 @@
   "name": "Втулка з круглою шляпкою 14355",
   "oem": "14355",
   "brand": "Land Rover",
-  "category": "Втулки, вставки",
+  "category": "Втулки та вставки",
   "compatibility": [
     "Land Rover Range Rover Sport",
     "Land Rover Range Rover Evoque",
@@ -5549,7 +5549,7 @@
   "name": "Втулка, вставка з квадратним капелюшком 14630",
   "oem": "14630",
   "brand": "Toyota",
-  "category": "Втулки, вставки",
+  "category": "Втулки та вставки",
   "compatibility": [
     "Toyota — багато моделей",
     "Mitsubishi — багато моделей"
@@ -6261,7 +6261,7 @@
     "name": "Втулка з круглою шляпкою 14011",
     "oem": "14011",
     "brand": "Універсальний",
-    "category": "Втулки, вставки",
+    "category": "Втулки та вставки",
     "compatibility": [
       "Багато марок — багато моделей"
     ],
@@ -6274,7 +6274,7 @@
     "name": "Втулка з круглою шляпкою 14168",
     "oem": "14168",
     "brand": "Lexus",
-    "category": "Втулки, вставки",
+    "category": "Втулки та вставки",
     "compatibility": [
       "Daihatsu — багато моделей",
       "Lexus — багато моделей",
@@ -6296,7 +6296,7 @@
     "name": "Втулка з круглою шляпкою 14356",
     "oem": "14356",
     "brand": "Seat",
-    "category": "Втулки, вставки",
+    "category": "Втулки та вставки",
     "compatibility": [
       "Seat — багато моделей"
     ],
