@@ -1266,3 +1266,16 @@ html, body {
     .header-delivery-indicator .header-delivery-label { text-align:center; font-size:10px; line-height:14px; }
     .header-delivery-indicator .header-delivery-track { height:2px; margin-top:3px; }
 }
+
+/* Product quantity shortcuts */
+#productModal .qty-control button { width:44px; height:44px; }
+#modalQtyInput { width:60px; height:44px; font:inherit; font-weight:600; color:var(--text-main); background:var(--bg-card); appearance:textfield; }
+#modalQtyInput::-webkit-inner-spin-button,#modalQtyInput::-webkit-outer-spin-button { appearance:none; margin:0; }
+.qty-quick-add { display:flex; align-items:center; gap:8px; margin:0 0 14px; }
+.qty-quick-add > span { color:var(--text-muted); font-size:12px; margin-right:auto; }
+.qty-quick-add button { min-width:48px; min-height:44px; padding:6px 10px; border:1px solid var(--border-color); border-radius:var(--radius-sm); background:var(--bg-card); color:var(--text-main); font:inherit; font-size:13px; font-weight:600; cursor:pointer; transition:background .18s,border-color .18s,transform .18s; }
+.qty-quick-add button:hover { background:var(--accent-mustard-light); border-color:var(--accent-mustard); }
+.qty-quick-add button:active { transform:scale(.95); }
+.qty-quick-add button:focus-visible,#productModal .qty-control button:focus-visible,#modalQtyInput:focus-visible { outline:2px solid var(--accent-mustard); outline-offset:-3px; }
+@media(max-width:360px) { .qty-quick-add { gap:5px; } .qty-quick-add button { min-width:44px; padding:6px 8px; } }
+@media(prefers-reduced-motion:reduce) { .qty-quick-add button { transition:none; } }
