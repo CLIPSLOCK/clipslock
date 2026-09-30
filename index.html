@@ -6,7 +6,7 @@
     <title>CLIPSLOCK | Автомобільні кліпси та кріплення</title>
     <link rel="icon" type="image/png" href="./favicon1.png">
     <meta name="description" content="Роздрібний інтернет-магазин автомобільних кліпс та кріплень. Пошук за OEM. Доставка Новою Поштою по Україні.">
-    <link rel="stylesheet" href="styles.css?v=compact-header-1">
+    <link rel="stylesheet" href="styles.css?v=quantity-shortcuts-1">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -220,10 +220,16 @@
                                 <span class="price-unit">грн / шт</span>
                             </div>
                             <div class="qty-control">
-                                <button id="modalQtyMinus">−</button>
-                                <input type="number" id="modalQtyInput" value="1" min="1">
-                                <button id="modalQtyPlus">+</button>
+                                <button id="modalQtyMinus" type="button" aria-label="Зменшити кількість на одну">−</button>
+                                <input type="number" id="modalQtyInput" value="1" min="1" step="1" inputmode="numeric" aria-label="Кількість товару">
+                                <button id="modalQtyPlus" type="button" aria-label="Збільшити кількість на одну">+</button>
                             </div>
+                        </div>
+                        <div class="qty-quick-add" role="group" aria-label="Швидко збільшити кількість">
+                            <span>Додати ще:</span>
+                            <button type="button" data-qty-add="10" aria-label="Додати 10 штук">+10</button>
+                            <button type="button" data-qty-add="50" aria-label="Додати 50 штук">+50</button>
+                            <button type="button" data-qty-add="100" aria-label="Додати 100 штук">+100</button>
                         </div>
                         <div class="modal-total-row">
                             <span>Сума:</span>
@@ -326,6 +332,7 @@
     <script src="delivery-indicator.js?v=2"></script>
     <script src="cart-animation.js?v=4"></script>
     <script src="modal-scroll.js"></script>
+    <script src="quantity-shortcuts.js?v=1"></script>
     <script src="nova-poshta-checkout.js?v=2"></script>
 </body>
 </html>
