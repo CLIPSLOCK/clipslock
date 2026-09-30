@@ -131,7 +131,7 @@
       selectedBranch = null; branch.value = ''; branch.disabled = false;
       branch.placeholder = 'Номер відділення або адреса поштомата';
       branch.setCustomValidity(''); status.textContent = '';
-      branch.focus();
+      setTimeout(() => { if (selectedCity === item && !manualMode) branch.focus(); }, 0);
   });
   city.addEventListener('input', () => {
     selectedCity = null; selectedBranch = null; branchPicker.cancel(); branch.value = '';
