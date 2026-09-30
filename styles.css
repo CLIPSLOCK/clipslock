@@ -1076,3 +1076,27 @@ html, body {
 .product-share-status a { color: var(--accent-mustard-hover); }
 .product-link-notice { padding: 12px; margin-bottom: 16px; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-sm); font-size: 14px; }
 @media (max-width: 600px) { .product-share-btn { width: 100%; } }
+
+/* Обране */
+.header-actions { display: flex; align-items: center; gap: 10px; }
+.favorites-btn[aria-pressed="true"] { color: var(--accent-mustard-hover); border-color: var(--accent-mustard); background: var(--accent-mustard-light); }
+.pc-image-wrap { position: relative; }
+.favorite-heart {
+    position: absolute; top: 8px; right: 8px; width: 44px; height: 44px;
+    display: flex; align-items: center; justify-content: center;
+    border: 1px solid var(--border-color); border-radius: 50%;
+    background: var(--bg-card); color: var(--text-muted); cursor: pointer;
+    box-shadow: var(--shadow-sm);
+}
+.favorite-heart svg, .modal-favorite-btn svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; }
+.favorite-heart:hover { color: var(--accent-mustard-hover); border-color: var(--accent-mustard); }
+.favorite-heart[aria-pressed="true"], .modal-favorite-btn[aria-pressed="true"] { color: var(--accent-mustard-hover); background: var(--accent-mustard-light); border-color: var(--accent-mustard); }
+.favorite-heart[aria-pressed="true"] svg, .modal-favorite-btn[aria-pressed="true"] svg { fill: currentColor; }
+.favorite-heart:focus-visible, .favorites-btn:focus-visible { outline: 2px solid var(--accent-mustard); outline-offset: 2px; }
+#catalog { scroll-margin-top: 80px; }
+@media (max-width: 600px) {
+    .header-actions { gap: 6px; }
+    .header-actions .cart-btn { padding: 8px; gap: 5px; min-height: 44px; font-family: inherit; font-size: 12px; }
+    .header-container { flex-wrap: wrap; height: auto; min-height: 64px; padding-top: 8px; padding-bottom: 8px; gap: 8px; }
+    .header-container .logo { font-size: 19px; }
+}
