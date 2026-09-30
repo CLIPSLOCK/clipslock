@@ -937,3 +937,16 @@ html, body {
     color: var(--accent-mustard);
     background: var(--accent-mustard-light);
 }
+
+
+/* Лічильник результатів та сортування каталогу */
+.catalog-toolbar { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:18px; }
+.results-count { margin:0; color:var(--text-muted); font-size:14px; }
+.catalog-sort { display:flex; align-items:center; gap:10px; }
+.catalog-sort label { font-size:13px; color:var(--text-muted); }
+.catalog-sort select { width:auto; min-width:190px; }
+@media (max-width:600px) {
+    .catalog-toolbar { align-items:stretch; }
+    .catalog-sort { width:100%; }
+    .catalog-sort select { flex:1; min-width:0; }
+}
