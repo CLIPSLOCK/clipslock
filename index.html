@@ -99,6 +99,18 @@
 
     <!-- ПРАВА КОЛОНКА: Товари + Пагінація -->
     <main class="catalog-content">
+        <div class="catalog-toolbar">
+            <p id="resultsCount" class="results-count" role="status" aria-live="polite">Завантажуємо товари…</p>
+            <div class="catalog-sort">
+                <label for="sortOrder">Сортування</label>
+                <select id="sortOrder">
+                    <option value="default">За замовчуванням</option>
+                    <option value="price-asc">Спочатку дешевші</option>
+                    <option value="price-desc">Спочатку дорожчі</option>
+                    <option value="newest">Спочатку нові</option>
+                </select>
+            </div>
+        </div>
         <!-- 1. Сітка товарів -->
         <div id="productsGrid" class="products-grid"></div>
 
