@@ -1014,3 +1014,48 @@ html, body {
 
 /* Неактивний фільтр моделі */
 #modelFilter:disabled { color: var(--text-muted); cursor: not-allowed; opacity: 0.7; }
+
+/* Сучасні випадаючі списки */
+.modern-select { position: relative; width: 100%; min-width: 0; }
+.modern-select-native { position: absolute; width: 1px !important; height: 1px !important; padding: 0 !important; opacity: 0; pointer-events: none; overflow: hidden; }
+.modern-select-trigger {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    width: 100%; min-height: 44px; padding: 11px 12px;
+    border: 1px solid var(--border-color); border-radius: var(--radius-sm);
+    background: var(--bg-body); color: var(--text-main);
+    font-family: inherit; font-size: 14px; line-height: 1.4; text-align: left;
+    cursor: pointer; transition: border-color .18s, box-shadow .18s;
+}
+.modern-select-trigger span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.modern-select-trigger::after { content: ''; width: 7px; height: 7px; border-right: 2px solid var(--text-muted); border-bottom: 2px solid var(--text-muted); transform: rotate(45deg); flex-shrink: 0; margin: -4px 3px 0 0; }
+.modern-select-trigger:hover:not(:disabled), .is-open .modern-select-trigger { border-color: var(--accent-mustard); }
+.modern-select-trigger:focus-visible, .modern-select-option:focus-visible { outline: 2px solid var(--accent-mustard); outline-offset: 2px; }
+.modern-select-trigger:disabled { color: var(--text-muted); cursor: not-allowed; opacity: .65; }
+.modern-select-panel {
+    position: absolute; top: calc(100% + 6px); left: 0; right: 0; z-index: 110;
+    padding: 8px; background: var(--bg-card); border: 1px solid var(--border-color);
+    border-radius: var(--radius-md); box-shadow: var(--shadow-md);
+}
+.modern-select-panel[hidden] { display: none; }
+.modern-select-search {
+    width: 100%; min-height: 42px; margin-bottom: 6px; padding: 10px 12px;
+    border: 1px solid var(--border-color); border-radius: var(--radius-sm);
+    background: var(--bg-body); color: var(--text-main); font-family: inherit; font-size: 14px;
+}
+.modern-select-search:focus { outline: none; border-color: var(--accent-mustard); }
+.modern-select-list { max-height: min(280px, 45vh); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; }
+.modern-select-option {
+    display: block; width: 100%; min-height: 42px; padding: 10px 12px;
+    border: 0; border-radius: 5px; background: transparent; color: var(--text-main);
+    font-family: inherit; font-size: 14px; line-height: 1.4; text-align: left; cursor: pointer;
+}
+.modern-select-option:hover, .modern-select-option:focus-visible { background: var(--bg-body); }
+.modern-select-option[aria-selected="true"] { background: var(--accent-mustard-light); color: var(--accent-mustard-hover); font-weight: 600; }
+.modern-select-empty { padding: 12px; color: var(--text-muted); font-size: 13px; }
+.catalog-sort .modern-select { width: 220px; }
+@media (max-width: 600px) {
+    .catalog-sort .modern-select { width: 100%; }
+    .modern-select-search { font-size: 16px; }
+    .modern-select-option { min-height: 44px; }
+}
+@media (prefers-reduced-motion: reduce) { .modern-select-trigger { transition: none; } }
