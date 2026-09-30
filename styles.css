@@ -1156,3 +1156,36 @@ html, body {
 .photo-search-hint { margin: 0; color: var(--text-muted); font-size: 11px; line-height: 1.6; }
 .photo-search-panel .btn-reset-filters { min-height: 44px; margin-top: 10px; }
 @media (max-width: 768px) { .photo-search-btn { width: 44px; height: 44px; right: 0; } .photo-search-panel { display: grid; grid-template-columns: 88px minmax(0, 1fr); gap: 8px 12px; } .photo-search-preview { height: 88px; grid-row: span 2; } .photo-search-status { margin: 0; } .photo-search-hint { grid-column: 2; } .photo-search-panel .btn-reset-filters { grid-column: 1 / -1; margin-top: 0; } }
+
+/* Порівняння та копіювання OEM */
+.card-compare { width:100%; min-height:38px; margin-top:8px; padding:8px; font-size:12px; background:transparent; color:var(--text-muted); }
+.card-compare[aria-pressed="true"], #modalCompareBtn[aria-pressed="true"] { color:var(--accent-mustard-hover); background:var(--accent-mustard-light); border-color:var(--accent-mustard); }
+.compare-header svg { width:18px; height:18px; flex-shrink:0; }
+.compare-dialog { width:min(1050px,calc(100vw - 24px)); max-height:88dvh; padding:24px; border:1px solid var(--border-color); border-radius:var(--radius-lg); background:var(--bg-card); color:var(--text-main); box-shadow:var(--shadow-md); }
+.compare-dialog::backdrop { background:rgba(15,18,22,.65); backdrop-filter:blur(3px); }
+.compare-heading { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.compare-heading h2 { margin:0; font-size:21px; }
+.compare-close { min-width:44px; min-height:44px; border:0; border-radius:6px; background:var(--bg-body); color:var(--text-muted); font-size:28px; cursor:pointer; }
+.compare-note { font-size:12px; color:var(--text-muted); line-height:1.6; margin:10px 0 18px; }
+.compare-scroll { overflow-x:auto; overscroll-behavior:contain; }
+.compare-table { width:100%; border-collapse:collapse; table-layout:fixed; font-size:13px; line-height:1.6; }
+.compare-table caption { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); }
+.compare-table th,.compare-table td { padding:14px; border-bottom:1px solid var(--border-color); border-right:1px solid var(--border-color); text-align:left; vertical-align:top; overflow-wrap:anywhere; }
+.compare-table th:last-child,.compare-table td:last-child { border-right:0; }
+.compare-table th:first-child { width:125px; color:var(--text-muted); font-weight:500; background:var(--bg-body); }
+.compare-table thead th { min-width:200px; }
+.compare-table img { width:100%; height:150px; object-fit:contain; display:block; margin:8px 0 12px; }
+.compare-product-link { border:0; padding:0; background:transparent; color:var(--text-main); font:inherit; font-weight:600; text-align:left; cursor:pointer; }
+.compare-product-link:hover { color:var(--accent-mustard-hover); }
+.compare-remove { display:block; margin-left:auto; padding:8px 10px; min-height:38px; border:1px solid var(--border-color); border-radius:6px; background:var(--bg-body); color:var(--text-muted); font:inherit; font-size:12px; cursor:pointer; }
+.compare-clear { margin-top:18px; }
+.compare-clear[hidden] { display:none; }
+.compare-empty { font-size:14px; padding:24px 0; color:var(--text-muted); }
+.compare-notice { position:fixed; bottom:24px; left:50%; transform:translateX(-50%); z-index:2000; width:max-content; max-width:calc(100vw - 32px); padding:12px 18px; border:1px solid var(--border-color); border-radius:var(--radius-sm); background:var(--bg-card); box-shadow:var(--shadow-md); font-size:13px; line-height:1.6; display:none; }
+.compare-notice.visible { display:block; }
+.oem-copy { display:inline-flex; flex-wrap:wrap; align-items:center; gap:4px 7px; max-width:100%; padding:3px 6px; border:0; border-radius:4px; background:var(--accent-mustard-light); color:var(--accent-mustard-hover); font:inherit; font-size:11px; font-weight:600; cursor:pointer; }
+.oem-copy:hover { text-decoration:underline; }
+.oem-copy-status { font-size:10px; font-weight:500; }
+.modal-oem-copy { margin-left:7px; padding:5px 7px; background:var(--bg-body); }
+.compare-dialog button:focus-visible,.oem-copy:focus-visible,.card-compare:focus-visible { outline:2px solid var(--accent-mustard); outline-offset:2px; }
+@media(max-width:600px) { .header-actions { flex-wrap:wrap; } .compare-dialog { padding:14px; } .compare-heading h2 { font-size:18px; } .compare-table { min-width:620px; } .compare-table th:first-child { width:95px; } .compare-table th,.compare-table td { padding:10px; } .compare-table img { height:120px; } .card-compare { min-height:44px; } .pc-meta .oem-copy { min-height:32px; } }
