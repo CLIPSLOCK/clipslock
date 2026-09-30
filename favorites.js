@@ -28,7 +28,7 @@
     function updateModal() {
         const saved = favoriteIds.has(modalProductId);
         modalButton.setAttribute('aria-pressed', String(saved));
-        modalButton.innerHTML = heart + '<span>' + (saved ? 'В обраному' : 'Додати в обране') + '</span>';
+        modalButton.innerHTML = heart + '<span>' + (saved ? 'В обраному' : 'Обране') + '</span>';
     }
     function toggleFavorite(id) {
         id = String(id);
