@@ -61,9 +61,12 @@
         reducedMotion.addEventListener('change',cancel,{once:true});
         setTimeout(() => reducedMotion.removeEventListener('change',cancel),duration+300);
     }
+    let clickedSource = null;
+    let clickedAt = 0;
+    document.addEventListener('click', event => { const button = event.target.closest?.('.card-add-btn, #modalAddToCart'); if (button) { clickedSource = button; clickedAt = performance.now(); } }, true);
     const originalAdd = window.addToCart;
     window.addToCart = function(event,id,qty) {
-        const source = event?.target?.closest?.('button') || document.activeElement?.closest?.('.card-add-btn, #modalAddToCart');
+        const source = event?.target?.closest?.('button') || (performance.now() - clickedAt < 500 ? clickedSource : null) || document.activeElement?.closest?.('.card-add-btn, #modalAddToCart');
         const before = Number(document.getElementById('cartBadge').textContent);
         const result = originalAdd.apply(this,arguments);
         const after = Number(document.getElementById('cartBadge').textContent);
