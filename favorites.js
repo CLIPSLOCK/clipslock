@@ -8,6 +8,11 @@
     } catch { favoriteIds = new Set(); }
     let favoritesOnly = false;
     let modalProductId = null;
+    let lastItems = [];
+    let lastPage = 1;
+    function refreshFavorites() {
+        renderProducts(lastItems, lastPage);
+    }
     const headerButton = document.getElementById('favoritesBtn');
     const badge = document.getElementById('favoritesBadge');
     const modalButton = document.getElementById('modalFavoriteBtn');
@@ -30,7 +35,7 @@
         if (favoriteIds.has(id)) favoriteIds.delete(id);
         else favoriteIds.add(id);
         persist();
-        filterProducts();
+        refreshFavorites();
         if (modalProductId) updateModal();
     }
     function decorateCards() {
@@ -51,8 +56,10 @@
     }
     const originalRender = renderProducts;
     renderProducts = function(items, page = 1) {
+        lastItems = [...items];
         const visible = favoritesOnly ? items.filter(p => favoriteIds.has(String(p.id))) : items;
-        originalRender(visible, page);
+        lastPage = Math.max(1, Math.min(page, Math.ceil(visible.length / itemsPerPage) || 1));
+        originalRender(visible, lastPage);
         decorateCards();
         updateHeader();
         if (favoritesOnly && visible.length === 0) {
@@ -80,7 +87,7 @@
             const ids = JSON.parse(event.newValue || '[]');
             favoriteIds = new Set(Array.isArray(ids) ? ids.map(String) : []);
         } catch { favoriteIds = new Set(); }
-        filterProducts();
+        refreshFavorites();
         if (modalProductId) updateModal();
     });
     updateHeader();
