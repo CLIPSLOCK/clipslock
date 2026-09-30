@@ -1295,3 +1295,34 @@ html, body {
 #productModal .modal-desc[hidden] { display:none; }
 #productModal .modal-desc { margin-bottom:14px; }
 @media(max-width:360px) { #productModal .product-share-btn { font-size:11px; gap:4px; padding:7px 2px; } #productModal .product-share-btn svg { width:15px; height:15px; } }
+
+/* Visual catalogue: original car diagrams and existing category groups. */
+.visual-catalog-btn { display:inline-flex; align-items:center; justify-content:center; gap:7px; min-height:44px; padding:8px 12px; border:1px solid var(--border-color); border-radius:var(--radius-sm); background:var(--bg-card); color:var(--text-main); font:inherit; font-size:12px; font-weight:600; cursor:pointer; }
+.visual-catalog-btn svg { width:20px; height:20px; flex-shrink:0; }
+.visual-catalog-btn:hover { border-color:var(--accent-mustard); color:var(--accent-mustard-hover); }
+.visual-catalog-btn:focus-visible,.vc-tile:focus-visible,.visual-zone-pill:focus-visible { outline:2px solid var(--accent-mustard); outline-offset:3px; }
+#visualCatalogEntry:empty { display:none; }
+#visualCatalogEntry { margin:0 0 16px; }
+#visualCatalogEntry .visual-catalog-btn { width:100%; justify-content:flex-start; }
+.visual-catalog-content { max-width:900px; padding:28px; overscroll-behavior:contain; }
+.vc-heading { padding-right:32px; margin-bottom:22px; }
+.vc-eyebrow { display:block; color:var(--accent-mustard-hover); font-size:10px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:8px; }
+.vc-heading h2 { font-size:25px; line-height:1.2; margin:0 0 9px; }
+.vc-heading p { color:var(--text-muted); font-size:13px; line-height:1.6; margin:0; max-width:590px; }
+.vc-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; }
+.vc-tile { display:flex; flex-direction:column; align-items:center; justify-content:flex-start; min-width:0; padding:12px 8px 16px; background:var(--bg-card); border:1px solid var(--border-color); border-radius:var(--radius-sm); color:var(--text-muted); font:inherit; cursor:pointer; text-align:center; transition:border-color .2s,background .2s,transform .2s; }
+.vc-tile:hover,.vc-tile[aria-pressed="true"] { background:var(--accent-mustard-light); border-color:var(--accent-mustard); }
+.vc-tile:hover { transform:translateY(-2px); }
+.vc-car { width:100%; height:100px; margin:0 0 8px; }
+.vc-region { fill:var(--bg-body); stroke:currentColor; stroke-width:1.5; }
+.vc-window { fill:var(--bg-card); stroke:currentColor; stroke-width:1.5; }
+.vc-wheel { fill:var(--bg-card); stroke:currentColor; stroke-width:2; }
+.vc-highlight { fill:var(--accent-mustard); fill-opacity:.55; stroke:var(--accent-mustard-hover); stroke-width:2; }
+.vc-car path.vc-highlight:last-of-type { fill:none; stroke-width:4; }
+.vc-zone-name { font-size:13px; font-weight:600; line-height:1.4; color:var(--text-main); }
+.vc-zone-hint { font-size:10px; line-height:1.5; margin-top:5px; color:var(--text-muted); }
+.visual-zone-pill { display:inline-flex; align-items:center; gap:8px; min-height:36px; margin:0 0 12px; padding:6px 10px; border:1px solid var(--accent-mustard); border-radius:var(--radius-sm); background:var(--accent-mustard-light); color:var(--accent-mustard-hover); font:inherit; font-size:12px; cursor:pointer; }
+.visual-zone-pill[hidden] { display:none; }
+.visual-zone-pill b { font-size:18px; font-weight:400; }
+@media(max-width:650px) { .visual-catalog-content { padding:22px 16px 18px; } .vc-heading { margin-bottom:16px; } .vc-heading h2 { font-size:22px; } .vc-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:9px; } .vc-car { height:85px; } .vc-tile { padding:8px 5px 12px; } .vc-zone-name { font-size:12px; } .vc-zone-hint { font-size:10px; } }
+@media(prefers-reduced-motion:reduce) { .vc-tile { transition:none; } .vc-tile:hover { transform:none; } }
