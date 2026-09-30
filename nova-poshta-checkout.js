@@ -93,8 +93,10 @@
     };
     input.addEventListener('input', () => { cancel(); timer = setTimeout(search, 300); });
     input.addEventListener('focus', search);
-    input.addEventListener('blur', cancel);
+    input.addEventListener('blur', () => { clearTimeout(timer); controller?.abort(); serial++; input.removeAttribute('aria-busy'); });
+    document.addEventListener('click', event => { if (!wrap.contains(event.target)) cancel(); });
     input.addEventListener('keydown', event => {
+      if (event.key === 'Tab') cancel();
       if (event.key === 'Escape') { event.stopPropagation(); cancel(); }
       if (list.hidden) return;
       if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
