@@ -62,6 +62,18 @@
                 ? 'Схожі за фото. Перевірте форму та розміри перед замовленням.'
                 : 'Немає доступних фото для порівняння. Спробуйте пошук за OEM.';
             filterProducts();
+            // Reveal matches directly below the sticky header instead of the page hero.
+            requestAnimationFrame(() => {
+                const target = document.querySelector('#productsGrid .product-card') || document.getElementById('productsGrid');
+                if (!target) return;
+                const header = document.querySelector('.header');
+                const offset = header ? header.getBoundingClientRect().height : 0;
+                const top = Math.max(0, window.scrollY + target.getBoundingClientRect().top - offset - 12);
+                window.scrollTo({
+                    top,
+                    behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'
+                });
+            });
         });
         worker.addEventListener('error', () => {
             setBusy(false);
