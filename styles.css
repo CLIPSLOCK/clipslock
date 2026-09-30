@@ -1227,7 +1227,7 @@ html, body {
 @media(prefers-reduced-motion:reduce) { .compare-differences input,.compare-differences input::before { transition:none; } }
 
 /* Контур кліпси летить до кошика */
-.cart-flying-clip { position:fixed; z-index:2200; width:38px; height:44px; display:grid; place-items:center; color:var(--accent-mustard); pointer-events:none; border-radius:10px; background:rgba(255,255,255,.92); box-shadow:0 3px 12px rgba(0,0,0,.09); will-change:transform,opacity; }
+.cart-flying-clip { position:fixed; z-index:2200; width:38px; height:44px; display:grid; place-items:center; color:var(--accent-mustard); pointer-events:none; border-radius:10px; background:transparent; box-shadow:none; will-change:transform,opacity; }
 .cart-flying-clip svg { width:30px; height:36px; }
 .cart-flight-dot { position:fixed; z-index:2199; width:4px; height:4px; border-radius:50%; background:var(--accent-mustard); pointer-events:none; will-change:transform,opacity; }
 @media(prefers-reduced-motion:reduce) { .cart-flying-clip,.cart-flight-dot { display:none; } }
