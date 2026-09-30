@@ -114,9 +114,13 @@
   city.maxLength = 80;
   branch.placeholder = 'Спершу виберіть населений пункт';
   branch.disabled = true;
-  const branchPicker = autocomplete(branch, (q, signal) => selectedCity
-    ? request({ action: 'warehouses', city: selectedCity.ref, q }, signal)
-    : Promise.resolve({ items: [] }), item => { selectedBranch = item; status.textContent = ''; });
+  const branchPicker = autocomplete(branch, async (q, signal) => {
+    if (!selectedCity) return { items: [] };
+    const data = await request({ action: 'warehouses', city: selectedCity.ref, q }, signal);
+    const needle = q.toLocaleLowerCase('uk');
+    return { ...data, items: data.items.filter(item => !needle || item.label.toLocaleLowerCase('uk').includes(needle))
+      .sort((a, b) => Number(b.number === q) - Number(a.number === q)) };
+  }, item => { selectedBranch = item; status.textContent = ''; });
   branch.addEventListener('input', () => { selectedBranch = null; branch.setCustomValidity(''); });
   const cityPicker = autocomplete(city, (q, signal) => q.length >= 2
     ? request({ action: 'cities', q }, signal)
