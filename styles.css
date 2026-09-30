@@ -1189,3 +1189,20 @@ html, body {
 .modal-oem-copy { margin-left:7px; padding:5px 7px; background:var(--bg-body); }
 .compare-dialog button:focus-visible,.oem-copy:focus-visible,.card-compare:focus-visible { outline:2px solid var(--accent-mustard); outline-offset:2px; }
 @media(max-width:600px) { .header-actions { flex-wrap:wrap; } .compare-dialog { padding:14px; } .compare-heading h2 { font-size:18px; } .compare-table { min-width:620px; } .compare-table th:first-child { width:95px; } .compare-table th,.compare-table td { padding:10px; } .compare-table img { height:120px; } .card-compare { min-height:44px; } .pc-meta .oem-copy { min-height:32px; } }
+
+/* Відмінності та прогрес доставки */
+.compare-differences { display:inline-flex; align-items:center; gap:9px; min-height:44px; margin-bottom:12px; font-size:13px; cursor:pointer; }
+.compare-differences input { width:17px; height:17px; accent-color:var(--accent-mustard); }
+.compare-differences:has(input:disabled) { color:var(--text-muted); cursor:default; }
+.compare-differences-status { margin:0 0 14px; font-size:12px; color:var(--text-muted); }
+.compare-differences-status[hidden] { display:none; }
+.header-cart-delivery { width:220px; max-width:100%; display:flex; flex-direction:column; gap:5px; }
+.header-cart-delivery #cartBtn { align-self:flex-end; }
+.header-delivery-indicator { width:100%; }
+.header-delivery-label { display:block; text-align:right; font-size:10px; line-height:1.5; color:var(--text-muted); }
+.header-delivery-track { height:3px; margin-top:4px; border-radius:5px; background:var(--border-color); overflow:hidden; }
+.header-delivery-track span { display:block; height:100%; background:var(--accent-mustard); border-radius:5px; }
+.header-delivery-indicator.is-free .header-delivery-label { color:#39764b; }
+.header-delivery-indicator.is-free .header-delivery-track span { background:#39764b; }
+.header-container { height:auto; min-height:84px; padding-top:8px; padding-bottom:8px; }
+@media(max-width:600px) { .header-cart-delivery { width:190px; } .header-actions { justify-content:flex-end; gap:8px; } .header-delivery-label { font-size:10px; } }
