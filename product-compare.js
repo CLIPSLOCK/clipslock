@@ -14,7 +14,7 @@
     document.querySelector('.product-share').prepend(modalButton);
     const dialog = document.createElement('dialog');
     dialog.className = 'compare-dialog'; dialog.id = 'compareDialog';
-    dialog.innerHTML = '<div class="compare-heading"><h2 id="compareTitle">Порівняння товарів</h2><button type="button" class="compare-close" aria-label="Закрити порівняння">×</button></div><p class="compare-note">Виберіть до трьох товарів. На телефоні таблицю можна гортати вбік.</p><label class="compare-differences"><input id="compareDifferences" type="checkbox"> Лише відмінності</label><p class="compare-differences-status" role="status" hidden></p><div class="compare-scroll" tabindex="0" aria-label="Таблиця порівняння"></div><button type="button" class="product-share-btn compare-clear">Очистити порівняння</button>';
+    dialog.innerHTML = '<div class="compare-heading"><h2 id="compareTitle">Порівняння товарів</h2><button type="button" class="compare-close" aria-label="Закрити порівняння">×</button></div><p class="compare-note">Виберіть до трьох товарів. На телефоні таблицю можна гортати вбік.</p><label class="compare-differences"><input id="compareDifferences" type="checkbox" role="switch"> Лише відмінності</label><p class="compare-differences-status" role="status" hidden></p><div class="compare-scroll" tabindex="0" aria-label="Таблиця порівняння"></div><button type="button" class="product-share-btn compare-clear">Очистити порівняння</button>';
     dialog.setAttribute('aria-labelledby', 'compareTitle'); document.body.append(dialog);
     const notice = document.createElement('div'); notice.className = 'compare-notice'; notice.setAttribute('role', 'status'); document.body.append(notice);
     let noticeTimer;
