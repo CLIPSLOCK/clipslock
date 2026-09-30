@@ -35,7 +35,7 @@
         cachedProducts = products;
         modelsByBrand = new Map();
         productModels = new Map();
-        const brands = [...new Set(products.map(p => p.brand).concat(['Volkswagen', 'VW']))]
+        const brands = [...new Set(products.map(p => p.brand).concat(['Volkswagen', 'VW', 'Dacia', 'SsangYong', 'VAZ-LADA', 'Smart', 'Lancia', 'Daihatsu', 'Isuzu', 'SAAB', 'Saab', 'Rover']))]
             .filter(b => b && b !== 'Універсальний').sort((a, b) => b.length - a.length);
         const brandPattern = new RegExp('(^|[\\s,;])(' + brands.map(escapeRegex).join('|') + ')(?=\\s|[—–:])', 'gi');
         for (const product of products) {
