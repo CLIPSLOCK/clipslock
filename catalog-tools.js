@@ -1,11 +1,46 @@
 // Catalog sorting and result count; loaded after script.js.
 (() => {
     const originalRenderProducts = renderProducts;
+    const randomRanks = new Map();
+    let recommendationScores = null;
+    const normalizeRecommendation = value => String(value || '').trim().toLowerCase().replace(/^volkswagen$/, 'vw');
+    function prepareRecommendations() {
+        let viewedIds = [];
+        try {
+            const saved = JSON.parse(localStorage.getItem('clipslock_recently_viewed') || '[]');
+            if (Array.isArray(saved)) viewedIds = saved.map(String).slice(0, 8);
+        } catch {}
+        const brands = new Map();
+        const categories = new Map();
+        viewedIds.forEach((id, index) => {
+            const product = products.find(p => String(p.id) === id);
+            if (!product) return;
+            const weight = 8 - index;
+            const brand = normalizeRecommendation(product.brand);
+            const category = normalizeRecommendation(product.category);
+            if (brand && brand !== 'універсальний') brands.set(brand, (brands.get(brand) || 0) + weight);
+            if (category) categories.set(category, (categories.get(category) || 0) + weight);
+        });
+        recommendationScores = new Map(products.map(product => {
+            const id = String(product.id);
+            if (!randomRanks.has(id)) randomRanks.set(id, Math.random());
+            const score = 3 * (brands.get(normalizeRecommendation(product.brand)) || 0) +
+                2 * (categories.get(normalizeRecommendation(product.category)) || 0);
+            return [id, viewedIds.includes(id) ? -1 : score];
+        }));
+    }
     function sortedProducts(items, order) {
         const sorted = [...items];
         if (order === 'price-asc') sorted.sort((a, b) => Number(a.price) - Number(b.price));
         if (order === 'price-desc') sorted.sort((a, b) => Number(b.price) - Number(a.price));
         if (order === 'newest') sorted.sort((a, b) => Number(b.id) - Number(a.id));
+        if (order === 'recommended') {
+            if (!recommendationScores) prepareRecommendations();
+            sorted.sort((a, b) =>
+                (recommendationScores.get(String(b.id)) || 0) - (recommendationScores.get(String(a.id)) || 0) ||
+                (randomRanks.get(String(a.id)) || 0) - (randomRanks.get(String(b.id)) || 0) ||
+                String(a.id).localeCompare(String(b.id)));
+        }
         return sorted;
     }
     renderProducts = function(items, page = 1) {
@@ -15,7 +50,10 @@
         originalRenderProducts(sortedProducts(items, order), page);
     };
     document.addEventListener('DOMContentLoaded', () => {
-        document.getElementById('sortOrder').addEventListener('change', filterProducts);
+        document.getElementById('sortOrder').addEventListener('change', () => {
+            recommendationScores = null;
+            filterProducts();
+        });
     });
 })();
 
