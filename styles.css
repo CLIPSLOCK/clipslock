@@ -1284,3 +1284,14 @@ html, body {
 #cartItems .qty-control button { width:40px; min-height:44px; height:44px; }
 #cartItems .qty-control input::-webkit-inner-spin-button,#cartItems .qty-control input::-webkit-outer-spin-button { appearance:none; margin:0; }
 #cartItems .qty-control input:focus-visible { outline:2px solid var(--accent-mustard); outline-offset:-3px; }
+
+/* Calm product detail: purchase first, secondary actions in a quiet row. */
+#productModal .product-share { flex-wrap:wrap; gap:4px; margin:12px 0 0; }
+#productModal .product-share-btn { flex:1 1 0; width:auto; min-width:0; min-height:44px; padding:7px 5px; gap:5px; border-color:transparent; background:transparent; color:var(--text-muted); font-size:12px; font-weight:500; white-space:nowrap; }
+#productModal .product-share-btn:hover { color:var(--accent-mustard-hover); background:var(--accent-mustard-light); }
+#productModal .product-share-btn[aria-pressed="true"] { color:var(--accent-mustard-hover); background:var(--accent-mustard-light); border-color:transparent; }
+#productModal .product-share-status { flex-basis:100%; }
+#productModal .product-share-status:empty { display:none; }
+#productModal .modal-desc[hidden] { display:none; }
+#productModal .modal-desc { margin-bottom:14px; }
+@media(max-width:360px) { #productModal .product-share-btn { font-size:11px; gap:4px; padding:7px 2px; } #productModal .product-share-btn svg { width:15px; height:15px; } }
