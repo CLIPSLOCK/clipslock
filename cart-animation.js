@@ -19,12 +19,12 @@
         if (reducedMotion.matches || !source || active >= 3 || performance.now() - lastFlight < 120) return;
         const from = source.getBoundingClientRect();
         const to = cartButton.getBoundingClientRect();
-        if (!from.width || !to.width || to.bottom <= 0 || to.top >= innerHeight) return;
+        if (!from.width) return;
         lastFlight = performance.now();
         const startX = Math.max(24, Math.min(innerWidth - 24, from.left + from.width / 2));
         const startY = Math.max(24, Math.min(innerHeight - 24, from.top + from.height / 2));
-        const endX = to.left + to.width / 2;
-        const endY = to.top + to.height / 2;
+        const endX = to.width ? Math.max(20, Math.min(innerWidth - 20, to.left + to.width / 2)) : innerWidth - 32;
+        const endY = !to.width || to.bottom <= 0 ? -24 : to.top >= innerHeight ? innerHeight + 24 : to.top + to.height / 2;
         const dx = endX - startX;
         const dy = endY - startY;
         const lift = Math.min(75, Math.abs(dy) * .18 + 25);
@@ -62,12 +62,13 @@
         setTimeout(() => reducedMotion.removeEventListener('change',cancel),duration+300);
     }
     let clickedSource = null;
+    let clickedRect = null;
     let clickedAt = 0;
-    document.addEventListener('click', event => { const button = event.target.closest?.('.card-add-btn, #modalAddToCart'); if (button) { clickedSource = button; clickedAt = performance.now(); } }, true);
+    document.addEventListener('click', event => { const button = event.target.closest?.('.card-add-btn, #modalAddToCart'); if (button) { clickedSource = button; clickedRect = button.getBoundingClientRect(); clickedAt = performance.now(); } }, true);
     const originalAdd = window.addToCart;
     window.addToCart = function(event,id,qty) {
         const source = event?.target?.closest?.('button') || (performance.now() - clickedAt < 500 ? clickedSource : null) || document.activeElement?.closest?.('.card-add-btn, #modalAddToCart');
-        const sourceRect = source?.getBoundingClientRect();
+        const sourceRect = performance.now() - clickedAt < 500 && clickedRect ? clickedRect : source?.getBoundingClientRect();
         const before = Number(document.getElementById('cartBadge').textContent);
         const result = originalAdd.apply(this,arguments);
         const after = Number(document.getElementById('cartBadge').textContent);
