@@ -4,6 +4,7 @@
     try { const value = JSON.parse(localStorage.getItem(key) || '[]'); if (Array.isArray(value)) ids = [...new Set(value.map(String))].slice(0, 3); } catch {}
     let currentId = null;
     let returnFocus = null;
+    let differencesOnly = false;
     const icon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M8 4v16M16 4v16M5 7h6M13 17h6M5 20h6M13 4h6"/></svg>';
     const header = document.createElement('button');
     header.type = 'button'; header.className = 'cart-btn compare-header'; header.id = 'compareBtn';
@@ -13,7 +14,7 @@
     document.querySelector('.product-share').prepend(modalButton);
     const dialog = document.createElement('dialog');
     dialog.className = 'compare-dialog'; dialog.id = 'compareDialog';
-    dialog.innerHTML = '<div class="compare-heading"><h2 id="compareTitle">Порівняння товарів</h2><button type="button" class="compare-close" aria-label="Закрити порівняння">×</button></div><p class="compare-note">Виберіть до трьох товарів. На телефоні таблицю можна гортати вбік.</p><div class="compare-scroll" tabindex="0" aria-label="Таблиця порівняння"></div><button type="button" class="product-share-btn compare-clear">Очистити порівняння</button>';
+    dialog.innerHTML = '<div class="compare-heading"><h2 id="compareTitle">Порівняння товарів</h2><button type="button" class="compare-close" aria-label="Закрити порівняння">×</button></div><p class="compare-note">Виберіть до трьох товарів. На телефоні таблицю можна гортати вбік.</p><label class="compare-differences"><input id="compareDifferences" type="checkbox"> Лише відмінності</label><p class="compare-differences-status" role="status" hidden></p><div class="compare-scroll" tabindex="0" aria-label="Таблиця порівняння"></div><button type="button" class="product-share-btn compare-clear">Очистити порівняння</button>';
     dialog.setAttribute('aria-labelledby', 'compareTitle'); document.body.append(dialog);
     const notice = document.createElement('div'); notice.className = 'compare-notice'; notice.setAttribute('role', 'status'); document.body.append(notice);
     let noticeTimer;
@@ -43,6 +44,12 @@
     function draw() {
         const wrap = dialog.querySelector('.compare-scroll'); wrap.replaceChildren();
         const list = selected();
+        const control = dialog.querySelector('#compareDifferences');
+        control.disabled = list.length < 2;
+        control.checked = differencesOnly;
+        const differenceStatus = dialog.querySelector('.compare-differences-status');
+        differenceStatus.hidden = !differencesOnly;
+        differenceStatus.textContent = list.length < 2 ? 'Додайте ще один товар, щоб побачити відмінності.' : '';
         dialog.querySelector('.compare-clear').hidden = !list.length;
         if (!list.length) { const p = document.createElement('p'); p.className = 'compare-empty'; p.textContent = 'Натисніть «Порівняти» на потрібних товарах у каталозі.'; wrap.append(p); return; }
         const table = document.createElement('table'); table.className = 'compare-table';
@@ -57,9 +64,12 @@
         }); head.append(row); table.append(head);
         const body = document.createElement('tbody');
         const fields = [['OEM', p => p.oem], ['Ціна', p => p.price + ' грн / шт'], ['Марка', p => p.brand], ['Категорія', p => p.category], ['Сумісність', p => Array.isArray(p.compatibility) ? p.compatibility.join(', ') : p.compatibility], ['Опис', p => p.description]];
-        fields.forEach(([label, value]) => { const tr = document.createElement('tr'); cell(tr, label, 'th').scope = 'row'; list.forEach(p => { const td = cell(tr, value(p) || 'Не вказано'); if (label === 'OEM') { td.replaceChildren(copyButton(String(p.oem))); } }); body.append(tr); });
+        let hiddenRows = 0;
+        fields.forEach(([label, value]) => { const values = list.map(p => String(value(p) || 'Не вказано').trim().replace(/\s+/g, ' ')); if (differencesOnly && list.length >= 2 && values.every(value => value === values[0])) { hiddenRows++; return; } const tr = document.createElement('tr'); cell(tr, label, 'th').scope = 'row'; list.forEach(p => { const td = cell(tr, value(p) || 'Не вказано'); if (label === 'OEM') { td.replaceChildren(copyButton(String(p.oem))); } }); body.append(tr); });
         table.append(body); wrap.append(table);
+        if (differencesOnly && list.length >= 2) differenceStatus.textContent = hiddenRows ? 'Приховано однакових характеристик: ' + hiddenRows : 'Усі характеристики відрізняються.';
     }
+    dialog.querySelector('#compareDifferences').addEventListener('change', event => { differencesOnly = event.target.checked; draw(); });
     header.onclick = () => { returnFocus = document.activeElement; draw(); dialog.showModal(); dialog.querySelector('.compare-close').focus(); };
     dialog.querySelector('.compare-close').onclick = () => dialog.close();
     dialog.querySelector('.compare-clear').onclick = () => { ids = []; persist(); sync(); dialog.querySelector('.compare-close').focus(); };
