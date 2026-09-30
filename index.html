@@ -90,6 +90,7 @@
 
                 <div class="sidebar-block">
                     <h3>Фільтри</h3>
+                    <div id="visualCatalogEntry"><button id="visualCatalogBtn" class="visual-catalog-btn" type="button" aria-haspopup="dialog" aria-controls="visualCatalogModal" aria-expanded="false">Візуальний каталог</button></div>
                     <div class="filter-group">
                         <label for="brandFilter">Марка автомобіля</label>
                         <select id="brandFilter">
@@ -155,7 +156,8 @@
             </div>
         </div>
         <!-- 1. Сітка товарів -->
-        <div id="productsGrid" class="products-grid"></div>
+        <button type="button" id="visualZonePill" class="visual-zone-pill" aria-label="Скинути вибрану зону автомобіля" hidden><span></span><b aria-hidden="true">×</b></button>
+                    <div id="productsGrid" class="products-grid"></div>
 
         <!-- 2. Пагінація (ОБОВ'ЯЗКОВО ПІД СІТКОЮ, А НЕ ВСЕРЕДИНІ НЕЇ) -->
         <div id="pagination" class="pagination-container"></div>
@@ -319,6 +321,13 @@
         </div>
     </div>
 
+    <div id="visualCatalogModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="visualCatalogTitle" aria-describedby="visualCatalogDescription">
+        <div class="modal-content visual-catalog-content">
+            <button class="close-modal" type="button" aria-label="Закрити візуальний каталог">&times;</button>
+            <div class="vc-heading"><span class="vc-eyebrow">Візуальний каталог</span><h2 id="visualCatalogTitle">Де стоїть кліпса?</h2><p id="visualCatalogDescription">Виберіть зону автомобіля — покажемо відповідні кріплення. Марка й модель залишаться вибраними. Сумісність перевіряйте в картці товару.</p></div>
+            <div id="visualCatalogGrid" class="vc-grid"></div>
+        </div>
+    </div>
     <script src="script.js"></script>
     <script src="catalog-tools.js?v=recommended-1"></script>
     <script src="modern-selects.js"></script>
@@ -334,5 +343,6 @@
     <script src="quantity-shortcuts.js?v=2"></script>
     <script src="product-clarity.js?v=1"></script>
     <script src="nova-poshta-checkout.js?v=2"></script>
+    <script src="visual-catalog.js?v=1"></script>
 </body>
 </html>
