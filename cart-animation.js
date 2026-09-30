@@ -67,11 +67,12 @@
     const originalAdd = window.addToCart;
     window.addToCart = function(event,id,qty) {
         const source = event?.target?.closest?.('button') || (performance.now() - clickedAt < 500 ? clickedSource : null) || document.activeElement?.closest?.('.card-add-btn, #modalAddToCart');
+        const sourceRect = source?.getBoundingClientRect();
         const before = Number(document.getElementById('cartBadge').textContent);
         const result = originalAdd.apply(this,arguments);
         const after = Number(document.getElementById('cartBadge').textContent);
         if (after > before) {
-            try { fly(source); } catch {}
+            try { fly(sourceRect ? {getBoundingClientRect: () => sourceRect} : null); } catch {}
         }
         return result;
     };
