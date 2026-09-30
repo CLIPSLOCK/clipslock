@@ -1206,3 +1206,22 @@ html, body {
 .header-delivery-indicator.is-free .header-delivery-track span { background:#39764b; }
 .header-container { height:auto; min-height:84px; padding-top:8px; padding-bottom:8px; }
 @media(max-width:600px) { .header-cart-delivery { width:190px; } .header-actions { justify-content:flex-end; gap:8px; } .header-delivery-label { font-size:10px; } }
+
+/* Перемикач лише відмінностей */
+.compare-differences { gap:10px; user-select:none; font-weight:500; }
+.compare-differences input {
+    appearance:none; -webkit-appearance:none; position:relative; flex-shrink:0;
+    width:42px; height:24px; margin:0; border:1px solid var(--border-color);
+    border-radius:999px; background:#deded9; cursor:pointer;
+    transition:background-color .22s ease,border-color .22s ease,box-shadow .22s ease;
+}
+.compare-differences input::before {
+    content:''; position:absolute; left:3px; top:3px; width:16px; height:16px;
+    border-radius:50%; background:#fff; box-shadow:0 1px 3px rgba(0,0,0,.18);
+    transition:transform .22s cubic-bezier(.2,.8,.2,1);
+}
+.compare-differences input:checked { background:var(--accent-mustard); border-color:var(--accent-mustard); }
+.compare-differences input:checked::before { transform:translateX(18px); }
+.compare-differences input:focus-visible { outline:2px solid var(--accent-mustard); outline-offset:4px; }
+.compare-differences input:disabled { opacity:.45; cursor:default; }
+@media(prefers-reduced-motion:reduce) { .compare-differences input,.compare-differences input::before { transition:none; } }
