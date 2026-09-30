@@ -1231,3 +1231,8 @@ html, body {
 .cart-flying-clip svg { width:30px; height:36px; }
 .cart-flight-dot { position:fixed; z-index:2199; width:4px; height:4px; border-radius:50%; background:var(--accent-mustard); pointer-events:none; will-change:transform,opacity; }
 @media(prefers-reduced-motion:reduce) { .cart-flying-clip,.cart-flight-dot { display:none; } }
+
+/* Clip horizontal overflow without creating a scroll container for sticky header. */
+@supports (overflow-x: clip) {
+    html, body { overflow-x: clip; }
+}
