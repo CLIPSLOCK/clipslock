@@ -90,5 +90,23 @@
         refreshFavorites();
         if (modalProductId) updateModal();
     });
+    document.querySelector('.logo').addEventListener('click', event => {
+        event.preventDefault();
+        favoritesOnly = false;
+        document.getElementById('searchInput').value = '';
+        ['brandFilter', 'modelFilter', 'categoryFilter'].forEach(id => {
+            document.getElementById(id).value = '';
+        });
+        document.getElementById('sortOrder').value = 'default';
+        ['brandFilter', 'modelFilter', 'categoryFilter', 'sortOrder'].forEach(id => {
+            document.getElementById(id).dispatchEvent(new Event('change', {bubbles: true}));
+        });
+        filterProducts();
+        const url = new URL(window.location.href);
+        url.searchParams.delete('product');
+        url.hash = '';
+        window.history.replaceState(null, '', url);
+        window.scrollTo({top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
+    });
     updateHeader();
 })();
