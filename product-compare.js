@@ -23,7 +23,7 @@
     function persist() { try { localStorage.setItem(key, JSON.stringify(ids)); } catch {} }
     function sync() {
         if (products.length) ids = ids.filter(id => products.some(p => String(p.id) === id));
-        header.innerHTML = icon + '<span>Порівняти</span><span class="badge">' + ids.length + '</span>';
+        header.innerHTML = icon + '<span class="header-action-label">Порівняти</span><span class="badge">' + ids.length + '</span>';
         document.querySelectorAll('[data-compare-id]').forEach(button => {
             const saved = ids.includes(button.dataset.compareId);
             button.setAttribute('aria-pressed', String(saved));
