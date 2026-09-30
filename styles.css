@@ -1279,3 +1279,8 @@ html, body {
 .qty-quick-add button:focus-visible,#productModal .qty-control button:focus-visible,#modalQtyInput:focus-visible { outline:2px solid var(--accent-mustard); outline-offset:-3px; }
 @media(max-width:360px) { .qty-quick-add { gap:5px; } .qty-quick-add button { min-width:44px; padding:6px 8px; } }
 @media(prefers-reduced-motion:reduce) { .qty-quick-add button { transition:none; } }
+
+#cartItems .qty-control input { width:64px; min-height:44px; height:44px; font:inherit; font-weight:600; color:var(--text-main); background:var(--bg-card); appearance:textfield; }
+#cartItems .qty-control button { width:40px; min-height:44px; height:44px; }
+#cartItems .qty-control input::-webkit-inner-spin-button,#cartItems .qty-control input::-webkit-outer-spin-button { appearance:none; margin:0; }
+#cartItems .qty-control input:focus-visible { outline:2px solid var(--accent-mustard); outline-offset:-3px; }
