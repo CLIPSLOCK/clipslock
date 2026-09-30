@@ -1,10 +1,10 @@
 [
 {
 "id": "001",
-"name": "Кліпса кріплення Підкрилки",
+"name": "Кріплення обшивки та молдингів",
 "oem": "11359",
-"brand": "Toyota",
-"category": "Кріплення підкрилки",
+"brand": "Lexus",
+"category": "Кріплення обшивки та молдингів",
 "compatibility": ["Toyota Yaris", "Toyota Corolla", "Lexus багато моделей"],
 "price": 20,
 "description": "Кріплення обшивки та молдингів",
@@ -36,7 +36,7 @@
 "id": "004",
 "name": "Кріплення обшивки, одна шляпка",
 "oem": "10140",
-"brand": "Volkswagen",
+"brand": "VW",
 "category": "Кріплення обшивки та молдингів",
 "compatibility": ["Audi багато моделей", "Seat багато моделей", "Skoda багато моделей", "VW Bora", "VW Passat B5", "VW Polo", "VW Transporter T4", "VW Vento"],
 "price": 20,
@@ -278,7 +278,7 @@
 "id": "028",
 "name": "Втулка з круглою шляпкою",
 "oem": "14087",
-"brand": "Volkswagen",
+"brand": "VW",
 "category": "Втулки та вставки",
 "compatibility": ["Audi A5 (2009 - 2018) RS5 (2010 - 2018), Seat Alhambra (2010 - 2018), Toledo (2013 - 2018), Skoda Kodiaq (2017 - 2018) Yeti (2010 - 2018), Rapid (2013 - 2018), VW Arteon (2017 - 2018) Beetle (1997 - 2018) CC (2012 - 2017) Crafter (2017 - 2018) Golf Passat (2005 - 2018) Santana (2006 - 2018) Scirocco (2008 - 2018) Sharan (2010 - 2017) Tiguan (2007 - 2011) Touareg (2010 - 2018)"],
 "price": 20,
@@ -564,7 +564,7 @@
 "id": "054",
 "name": "Гвинт із шайбою",
 "oem": "19808",
-"brand": "Volkswagen",
+"brand": "VW",
 "category": "Гвинти та болти",
 "compatibility": ["Volkswagen — багато моделей", "Audi — багато моделей", "SEAT — багато моделей", "Škoda — багато моделей"],
 "price": 20,
@@ -863,7 +863,7 @@
 "id": "081",
 "name": "Кріплення фари",
 "oem": "28030",
-"brand": "Volkswagen",
+"brand": "VW",
 "category": "Кріплення фари",
 "compatibility": [
 "Volkswagen Golf 4 (1997-2006)"
@@ -930,7 +930,7 @@
 "id": "086",
 "name": "Кріплення обшивки/молдингів",
 "oem": "16223",
-"brand": "Volkswagen",
+"brand": "VW",
 "category": "Кріплення обшивки та молдингів",
 "compatibility": [
 "Volkswagen Golf 7 (2012-...)",
@@ -1358,7 +1358,7 @@
 "id": "107",
 "name": "Поворотний пластиковий гвинт",
 "oem": "19088",
-"brand": "Volkswagen",
+"brand": "VW",
 "category": "Гвинти та болти",
 "compatibility": [
 "Volkswagen Transporter T4"
@@ -1793,7 +1793,7 @@
 "id": "132",
 "name": "Кріплення обшивки та молдингів, кілька шляпок з круглою шляпкою",
 "oem": "15681",
-"brand": "Volkswagen",
+"brand": "VW",
 "category": "Кріплення обшивки та молдингів",
 "compatibility": [
 "Audi — багато моделей",
@@ -2273,7 +2273,7 @@
 "id": "154",
 "name": "Кліпса кріплення",
 "oem": "14075",
-"brand": "Volkswagen",
+"brand": "VW",
 "category": "Кріплення обшивки та молдингів",
 "compatibility": [
 "BMW 5 Series E39",
@@ -2395,7 +2395,7 @@
 "id": "162",
 "name": "Кріплення обшивки та молдингів, кілька шляпок з круглою шляпкою",
 "oem": "15683",
-"brand": "Volkswagen",
+"brand": "VW",
 "category": "Кріплення обшивки та молдингів",
 "compatibility": [
 "Volkswagen Fox (2004–2012)",
@@ -3152,7 +3152,7 @@
 "id": "196",
 "name": "Гвинт під зіркоподібну викрутку, TORX",
 "oem": "19213",
-"brand": "Volkswagen",
+"brand": "VW",
 "category": "Гвинти та болти",
 "compatibility": [
 "Audi — Багато моделей",
@@ -3690,7 +3690,7 @@
 "id": "219",
 "name": "Кліпса кріплення обшивки типу Ялинка",
 "oem": "10043",
-"brand": "Volkswagen",
+"brand": "VW",
 "category": "Кріплення обшивки та молдингів",
 "compatibility": [
 "Audi A3 (2013 - 2018)",
@@ -3828,7 +3828,7 @@
 "id": "224",
 "name": "Поворотний пластиковий гвинт",
 "oem": "19080",
-"brand": "Volkswagen",
+"brand": "VW",
 "category": "Гвинти та болти",
 "compatibility": [
 "Seat Exeo (2009 - 2017)",
@@ -3870,7 +3870,7 @@
 "id": "226",
 "name": "Шестерня механізму склопідйомника",
 "oem": "23002",
-"brand": "Volkswagen",
+"brand": "VW",
 "category": "Ролики",
 "compatibility": [
 "Volkswagen Passat B5 (1996 - 2005)"
@@ -4392,7 +4392,7 @@
     "id": "250",
     "name": "Втулка з круглою шляпкою",
     "oem": "14250",
-    "brand": "Volkswagen",
+    "brand": "VW",
     "category": "Втулки та вставки",
     "compatibility": [
       "VW Golf III (1991 - 1997)",
@@ -5020,7 +5020,7 @@
   "id": "301",
   "name": "Заглушка без отвору 13159",
   "oem": "13159",
-  "brand": "Volkswagen",
+  "brand": "VW",
   "category": "Заглушки",
   "compatibility": [
     "Volkswagen Caddy",
@@ -5131,7 +5131,7 @@
   "id": "309",
   "name": "Закладна під саморіз 16189",
   "oem": "16189",
-  "brand": "Volkswagen",
+  "brand": "VW",
   "category": "Фіксатори, закладні",
   "compatibility": [
     "Volkswagen — багато моделей",
@@ -5360,7 +5360,7 @@
   "id": "327",
   "name": "Автомобільний електричний роз'єм 40221",
   "oem": "40221",
-  "brand": "Volkswagen",
+  "brand": "VW",
   "category": "Електричні роз'єми",
   "compatibility": [
     "Volkswagen — багато моделей",
@@ -5522,7 +5522,7 @@
   "id": "341",
   "name": "Фігурне складене кріплення 12900",
   "oem": "12900",
-  "brand": "Volkswagen",
+  "brand": "VW",
   "category": "Кріплення обшивки та молдингів",
   "compatibility": [
     "Volkswagen — багато моделей"
@@ -5605,7 +5605,7 @@
   "id": "352",
   "name": "Закладна під саморіз 16197",
   "oem": "16197",
-  "brand": "Volkswagen",
+  "brand": "VW",
   "category": "Фіксатори, закладні",
   "compatibility": [
     "Багато марок та моделей"
@@ -6445,7 +6445,7 @@
     "id": "408",
     "name": "Фіксатор V-подібний 16504",
     "oem": "16504",
-    "brand": "Volkswagen",
+    "brand": "VW",
     "category": "Фіксатори, закладні",
     "compatibility": [
       "Audi A1 (2010 - 2012)",
