@@ -1236,3 +1236,17 @@ html, body {
 @supports (overflow-x: clip) {
     html, body { overflow-x: clip; }
 }
+
+/* Nova Poshta checkout suggestions */
+.np-autocomplete { position:relative; min-width:0; }
+.np-options { margin-top:6px; max-height:210px; overflow-y:auto; overscroll-behavior:contain; border:1px solid var(--border-color); border-radius:var(--radius-sm); background:var(--bg-card); scrollbar-width:thin; }
+.np-options[hidden] { display:none; }
+.np-option { padding:11px 12px; min-height:44px; font-size:13px; line-height:1.5; cursor:pointer; overflow-wrap:anywhere; border-bottom:1px solid var(--border-color); }
+.np-option:last-child { border-bottom:0; }
+.np-option:hover,.np-option[aria-selected="true"] { background:var(--accent-mustard-light); color:var(--accent-mustard-hover); }
+.np-status { margin-top:7px; font-size:12px; line-height:1.5; color:var(--text-muted); }
+.np-status:empty { display:none; }
+.np-manual { margin-top:8px; min-height:36px; border:0; background:transparent; color:var(--text-muted); font:inherit; font-size:12px; text-decoration:underline; text-underline-offset:3px; cursor:pointer; }
+.np-manual:hover { color:var(--accent-mustard-hover); }
+.np-manual:focus-visible { outline:2px solid var(--accent-mustard); outline-offset:2px; }
+#orderBranch:disabled { opacity:.6; cursor:not-allowed; }
