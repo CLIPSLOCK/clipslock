@@ -1326,3 +1326,16 @@ html, body {
 .visual-zone-pill b { font-size:18px; font-weight:400; }
 @media(max-width:650px) { .visual-catalog-content { padding:22px 16px 18px; } .vc-heading { margin-bottom:16px; } .vc-heading h2 { font-size:22px; } .vc-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:9px; } .vc-car { height:85px; } .vc-tile { padding:8px 5px 12px; } .vc-zone-name { font-size:12px; } .vc-zone-hint { font-size:10px; } }
 @media(prefers-reduced-motion:reduce) { .vc-tile { transition:none; } .vc-tile:hover { transform:none; } }
+
+/* Explicit multi-brand fitment and optional universal products. */
+.universal-control[hidden] { display: none !important; }
+.filter-group .universal-control { display:flex; align-items:center; gap:9px; min-height:40px; margin:4px 0 0; font-size:12px; font-weight:400; color:var(--text-muted); cursor:pointer; }
+.universal-control input { position:absolute; opacity:0; width:1px; height:1px; }
+.universal-switch { width:30px; height:18px; flex:0 0 30px; border-radius:20px; background:var(--border-color); position:relative; transition:background .18s ease; }
+.universal-switch::after { content:""; position:absolute; width:14px; height:14px; top:2px; left:2px; border-radius:50%; background:#fff; box-shadow:0 1px 3px #0002; transition:transform .18s ease; }
+.universal-control input:checked + .universal-switch { background:var(--accent-mustard); }
+.universal-control input:checked + .universal-switch::after { transform:translateX(12px); }
+.universal-control input:focus-visible + .universal-switch { outline:2px solid var(--accent-mustard); outline-offset:3px; }
+.pc-brand { max-width:100%; white-space:normal; overflow-wrap:anywhere; }
+@media (max-width:600px) { .filter-group .universal-control { min-height:44px; } }
+@media (prefers-reduced-motion:reduce) { .universal-switch,.universal-switch::after { transition:none; } }
