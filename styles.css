@@ -1339,3 +1339,16 @@ html, body {
 .pc-brand { max-width:100%; white-space:normal; overflow-wrap:anywhere; }
 @media (max-width:600px) { .filter-group .universal-control { min-height:44px; } }
 @media (prefers-reduced-motion:reduce) { .universal-switch,.universal-switch::after { transition:none; } }
+
+/* Compact selected filters and helpful empty results. */
+.catalog-filter-chips[hidden] { display:none; }
+.catalog-filter-chips { display:flex; flex-wrap:wrap; gap:7px; margin:-8px 0 16px; }
+.catalog-filter-chip { display:inline-flex; align-items:center; gap:9px; max-width:100%; min-height:36px; padding:6px 10px; border:1px solid var(--border-color); border-radius:var(--radius-sm); background:var(--bg-card); color:var(--text-muted); font:inherit; font-size:12px; text-align:left; overflow-wrap:anywhere; cursor:pointer; }
+.catalog-filter-chip span { font-size:17px; flex-shrink:0; line-height:1; }
+.catalog-filter-chip:hover,.catalog-help-button:hover { color:var(--text-main); border-color:var(--accent-mustard); }
+.catalog-filter-chip:focus-visible,.catalog-help-button:focus-visible { outline:2px solid var(--accent-mustard); outline-offset:3px; }
+.catalog-empty-help { grid-column:1/-1; padding:0 16px 32px; text-align:center; }
+.catalog-empty-help p { margin:0 0 14px; color:var(--text-muted); font-size:14px; }
+.catalog-empty-actions { display:flex; justify-content:center; flex-wrap:wrap; gap:8px; }
+.catalog-help-button { min-height:40px; padding:9px 13px; border:1px solid var(--border-color); border-radius:var(--radius-sm); background:var(--bg-card); color:var(--text-main); font:inherit; font-size:13px; cursor:pointer; }
+@media(max-width:600px) { .catalog-filter-chip { min-height:44px; } .catalog-help-button { min-height:44px; } .catalog-filter-chips { margin:0 0 12px; gap:6px; } }
