@@ -86,6 +86,12 @@
         universalControl.hidden = !brand || brand === 'Універсальний';
         if (universalControl.hidden) universalToggle.checked = false;
     }
+    const originalPopulateFilters = populateFilters;
+    populateFilters = function() {
+        originalPopulateFilters();
+        cachedProducts = null;
+        refreshModels();
+    };
     filterProducts = function() {
         refreshModels();
         const query = normalize(searchInput.value), cleanQuery = query.replace(/[\s-]/g,'');
