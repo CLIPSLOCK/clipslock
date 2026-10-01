@@ -63,28 +63,36 @@
     const universalToggle = document.getElementById('includeUniversal');
     const universalControl = document.getElementById('universalControl');
     const {normalize,canonical,build} = window.ClipslockFitment;
+    window.ClipslockSelectedBrands = () => [...brandFilter.selectedOptions].map(option=>canonical(option.value)).filter(Boolean);
+    const selectedBrands = window.ClipslockSelectedBrands;
     let cachedProducts = null, index, previousBrand = '';
+    let previousUniversalSelection = false;
     function ensureIndex() {
         if (cachedProducts === products) return;
         cachedProducts = products;
         index = build(products);
-        const selected = canonical(brandFilter.value);
+        const selected = selectedBrands();
         brandFilter.replaceChildren(new Option('Усі марки',''));
         [...index.brands].sort((a,b)=>a.localeCompare(b,'uk')).forEach(brand=>brandFilter.add(new Option(brand,brand)));
-        brandFilter.value = selected;
+        [...brandFilter.options].forEach(option=>{option.selected = selected.length ? selected.includes(option.value) : !option.value;});
     }
     function refreshModels() {
         ensureIndex();
-        const brand = canonical(brandFilter.value);
-        const selected = brand !== previousBrand ? '' : modelFilter.value;
-        previousBrand = brand;
+        const brands = selectedBrands();
+        const brand = brands.length === 1 ? brands[0] : '';
+        const selectionKey = brands.join('|');
+        const selected = selectionKey !== previousBrand ? '' : modelFilter.value;
+        previousBrand = selectionKey;
         const options = [...(index.models.get(brand)?.entries() || [])].sort((a,b)=>a[1].localeCompare(b[1],'uk',{numeric:true}));
-        modelFilter.replaceChildren(new Option(!brand ? 'Спершу виберіть марку' : options.length ? 'Усі моделі' : 'Моделі не зазначені',''));
+        modelFilter.replaceChildren(new Option(brands.length > 1 ? 'Одна марка — для вибору моделі' : !brand ? 'Спершу виберіть марку' : options.length ? 'Усі моделі' : 'Моделі не зазначені',''));
         options.forEach(([key,label])=>modelFilter.add(new Option(label,key)));
         modelFilter.disabled = !brand || !options.length;
         modelFilter.value = selected;
-        universalControl.hidden = !brand || brand === 'Універсальний';
-        if (universalControl.hidden) universalToggle.checked = false;
+        const universalSelected = brands.includes('Універсальний');
+        universalControl.hidden = !brands.some(b=>b !== 'Універсальний');
+        if (universalSelected) universalToggle.checked = true;
+        else if (previousUniversalSelection || universalControl.hidden) universalToggle.checked = false;
+        previousUniversalSelection = universalSelected;
     }
     const originalPopulateFilters = populateFilters;
     populateFilters = function() {
@@ -95,16 +103,16 @@
     filterProducts = function() {
         refreshModels();
         const query = normalize(searchInput.value), cleanQuery = query.replace(/[\s-]/g,'');
-        const brand = canonical(brandFilter.value), model = modelFilter.value;
+        const brands = selectedBrands(), brand = brands.length === 1 ? brands[0] : '', model = modelFilter.value;
         const filtered = products.filter(product => {
             const fitment = index.fitments.get(product);
-            const universalExtra = Boolean(brand && brand !== 'Універсальний' && universalToggle.checked && fitment.universal);
+            const universalExtra = Boolean(brands.length && universalToggle.checked && fitment.universal);
             const searchMatch = normalize(product.name).includes(query) ||
                 normalize(product.oem).replace(/[\s-]/g,'').includes(cleanQuery) ||
                 [...fitment.brands].some(b=>normalize(b).includes(query)) ||
                 normalize(product.brand).includes(query) ||
                 (product.compatibility || []).some(c=>normalize(c).includes(query));
-            const brandMatch = !brand || (brand === 'Універсальний' ? fitment.universal : fitment.brands.has(brand)) || universalExtra;
+            const brandMatch = !brands.length || brands.some(b=>b === 'Універсальний' ? fitment.universal : fitment.brands.has(b)) || universalExtra;
             const modelMatch = !model || universalExtra || fitment.pairs.some(pair=>pair.brand === brand && pair.key === model);
             return searchMatch && brandMatch && modelMatch && (!categoryFilter.value || product.category === categoryFilter.value);
         });
@@ -141,7 +149,13 @@
     };
     document.addEventListener('DOMContentLoaded',()=> {
         modelFilter.addEventListener('change',filterProducts);
-        universalToggle.addEventListener('change',filterProducts);
+        universalToggle.addEventListener('change',()=>{
+            if (!universalToggle.checked) {
+                const option = [...brandFilter.options].find(option=>option.value === 'Універсальний');
+                if (option?.selected) {option.selected=false; brandFilter.dispatchEvent(new Event('change',{bubbles:true})); return;}
+            }
+            filterProducts();
+        });
         for (const element of [document.getElementById('resetFiltersBtn'),document.querySelector('.logo')]) {
             element?.addEventListener('click',()=>{ universalToggle.checked=false; },true);
         }
