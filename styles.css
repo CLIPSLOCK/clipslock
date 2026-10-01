@@ -1352,3 +1352,8 @@ html, body {
 .catalog-empty-actions { display:flex; justify-content:center; flex-wrap:wrap; gap:8px; }
 .catalog-help-button { min-height:40px; padding:9px 13px; border:1px solid var(--border-color); border-radius:var(--radius-sm); background:var(--bg-card); color:var(--text-main); font:inherit; font-size:13px; cursor:pointer; }
 @media(max-width:600px) { .catalog-filter-chip { min-height:44px; } .catalog-help-button { min-height:44px; } .catalog-filter-chips { margin:0 0 12px; gap:6px; } }
+
+/* Brand choices can be combined without replacing previous selections. */
+.modern-select-multi-option { display:flex; align-items:center; gap:9px; }
+.modern-select-multi-option::before { content:""; width:15px; height:15px; flex:0 0 15px; border:1px solid var(--border-color); border-radius:4px; background:var(--bg-card); }
+.modern-select-multi-option[aria-selected="true"]::before { content:"✓"; display:inline-flex; justify-content:center; align-items:center; color:#fff; border-color:var(--accent-mustard); background:var(--accent-mustard); font-size:12px; }
