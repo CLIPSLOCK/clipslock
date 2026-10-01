@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
     for (const id of ['brandFilter', 'modelFilter', 'categoryFilter', 'sortOrder']) {
         const select = document.getElementById(id);
         if (!select) continue;
+        const multi = id === 'brandFilter';
+        if (multi) select.multiple = true;
         const label = document.querySelector('label[for="' + id + '"]');
         const wrapper = document.createElement('div');
         wrapper.className = 'modern-select';
@@ -40,6 +42,13 @@ document.addEventListener('DOMContentLoaded', () => {
         list.id = id + '-list';
         list.setAttribute('role', 'listbox');
         list.setAttribute('aria-label', label?.textContent || 'Варіанти');
+        if (multi) {
+            list.setAttribute('aria-multiselectable','true');
+            const hint = document.createElement('p');
+            hint.className = 'modern-select-empty';
+            hint.textContent = 'Можна вибрати кілька марок';
+            panel.append(hint);
+        }
         panel.append(list);
         wrapper.append(trigger, panel);
         function close() {
@@ -48,7 +57,8 @@ document.addEventListener('DOMContentLoaded', () => {
             wrapper.classList.remove('is-open');
         }
         function sync() {
-            caption.textContent = select.selectedOptions[0]?.textContent || '';
+            const chosen = [...select.selectedOptions].filter(option=>option.value);
+            caption.textContent = multi ? (chosen.length ? chosen.slice(0,2).map(option=>option.textContent).join(' · ') + (chosen.length > 2 ? ' · +' + (chosen.length-2) : '') : 'Усі марки') : select.selectedOptions[0]?.textContent || '';
             trigger.disabled = select.disabled;
             if (select.disabled) close();
             if (!panel.hidden) draw();
@@ -62,15 +72,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 item.type = 'button';
                 item.className = 'modern-select-option';
                 item.textContent = option.textContent;
+                if (multi && option.value) item.classList.add('modern-select-multi-option');
                 item.setAttribute('role', 'option');
-                item.setAttribute('aria-selected', String(option.value === select.value));
+                item.setAttribute('aria-selected', String(multi ? (option.value ? option.selected : ![...select.selectedOptions].some(o=>o.value)) : option.value === select.value));
                 item.disabled = option.disabled;
                 item.addEventListener('click', () => {
-                    select.value = option.value;
-                    close();
+                    if (multi && option.value) {
+                        const checked = !option.selected;
+                        select.options[0].selected = false;
+                        option.selected = checked;
+                        if (![...select.selectedOptions].some(o=>o.value)) select.options[0].selected = true;
+                    } else {
+                        select.value = option.value;
+                        close();
+                    }
                     select.dispatchEvent(new Event('change', {bubbles: true}));
                     sync();
-                    trigger.focus();
+                    if (multi && option.value) {
+                        const match = [...list.querySelectorAll('button')].find(button=>button.textContent === option.textContent);
+                        match?.focus();
+                    } else trigger.focus();
                 });
                 list.append(item);
             }
