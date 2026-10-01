@@ -6,6 +6,8 @@
         if (/^(vw|volkswagen)$/i.test(text)) return 'VW';
         if (/^(skoda|škoda)$/i.test(text)) return 'Skoda';
         if (/^saab$/i.test(text)) return 'Saab';
+        if (/^kia$/i.test(text)) return 'Kia';
+        if (/^seat$/i.test(text)) return 'Seat';
         return text;
     };
     function build(items) {
