@@ -21,6 +21,7 @@
         const state = {version:1,page:specialCatalog() ? 1 : currentPage,scroll:window.scrollY};
         controls.forEach(id => {state[id] = byId(id).value;});
         if (state.sortOrder === 'photo') state.sortOrder = 'default';
+        state.brands = window.ClipslockSelectedBrands();
         state.universal = byId('includeUniversal').checked;
         try { localStorage.setItem(key,JSON.stringify(state)); } catch {}
     }
@@ -39,7 +40,17 @@
     }
     function refreshConveniences() {
         chips.replaceChildren();
-        for (const id of ['searchInput','brandFilter','modelFilter','categoryFilter']) {
+        for (const brand of window.ClipslockSelectedBrands()) {
+            const button = action(brand,()=> {
+                const option = [...byId('brandFilter').options].find(option=>option.value === brand);
+                if (option) option.selected=false;
+                if (!window.ClipslockSelectedBrands().length) byId('brandFilter').value='';
+                byId('brandFilter').dispatchEvent(new Event('change',{bubbles:true}));
+            },'catalog-filter-chip');
+            button.setAttribute('aria-label','Прибрати фільтр: ' + brand);
+            const cross = document.createElement('span'); cross.textContent='×'; cross.setAttribute('aria-hidden','true'); button.append(cross); chips.append(button);
+        }
+        for (const id of ['searchInput','modelFilter','categoryFilter']) {
             const control = byId(id);
             if (!control.value.trim()) continue;
             const label = id === 'searchInput' ? 'Пошук: ' + control.value.trim() : control.selectedOptions[0]?.textContent;
@@ -52,7 +63,7 @@
             button.append(cross);
             chips.append(button);
         }
-        if (byId('includeUniversal').checked && !byId('universalControl').hidden) {
+        if (byId('includeUniversal').checked && !byId('universalControl').hidden && !window.ClipslockSelectedBrands().includes('Універсальний')) {
             chips.append(action('Універсальні ×',()=> {
                 byId('includeUniversal').checked=false;
                 byId('includeUniversal').dispatchEvent(new Event('change',{bubbles:true}));
@@ -71,7 +82,7 @@
         if (byId('modelFilter').value) actions.append(action('Усі моделі',()=>clearControl('modelFilter'),'catalog-help-button'));
         if (byId('categoryFilter').value) actions.append(action('Усі категорії',()=>clearControl('categoryFilter'),'catalog-help-button'));
         if (byId('searchInput').value.trim()) actions.append(action('Прибрати пошуковий запит',()=>clearControl('searchInput'),'catalog-help-button'));
-        if (byId('brandFilter').value && byId('brandFilter').value !== 'Універсальний' && !byId('includeUniversal').checked) {
+        if (window.ClipslockSelectedBrands().some(b=>b !== 'Універсальний') && !byId('includeUniversal').checked) {
             actions.append(action('Додати універсальні',()=>{
                 byId('includeUniversal').checked=true;
                 byId('includeUniversal').dispatchEvent(new Event('change',{bubbles:true}));
@@ -102,6 +113,11 @@
                 const control = byId(id);
                 const value = typeof saved[id] === 'string' ? saved[id] : '';
                 control.value = id === 'searchInput' || Array.from(control.options).some(option=>option.value === value) ? value : (id === 'sortOrder' ? 'default' : '');
+            }
+            if (Array.isArray(saved.brands)) {
+                const wanted = saved.brands.filter(value=>typeof value === 'string');
+                [...byId('brandFilter').options].forEach(option=>{option.selected = Boolean(option.value && wanted.includes(option.value));});
+                if (!window.ClipslockSelectedBrands().length) byId('brandFilter').value='';
             }
             // Brand change builds the model options before restoring a model.
             byId('brandFilter').dispatchEvent(new Event('change',{bubbles:true}));
