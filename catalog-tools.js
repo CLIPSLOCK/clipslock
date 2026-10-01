@@ -60,90 +60,85 @@
 // Моделі беруться лише з явно зазначеної сумісності товарів.
 (() => {
     const modelFilter = document.getElementById('modelFilter');
-    const normalize = value => String(value || '').trim().replace(/\s+/g, ' ').toLowerCase();
-    const canonicalBrand = value => /^(vw|volkswagen)$/i.test(value.trim()) ? 'VW' : value.trim();
-    const escapeRegex = value => value.replace(/[.*+?^$\{\}()|[\]\\]/g, '\\$&');
-    let cachedProducts = null;
-    let modelsByBrand = new Map();
-    let productModels = new Map();
-    let previousBrand = '';
-
-    function rebuildModelIndex() {
+    const universalToggle = document.getElementById('includeUniversal');
+    const universalControl = document.getElementById('universalControl');
+    const {normalize,canonical,build} = window.ClipslockFitment;
+    let cachedProducts = null, index, previousBrand = '';
+    function ensureIndex() {
         if (cachedProducts === products) return;
         cachedProducts = products;
-        modelsByBrand = new Map();
-        productModels = new Map();
-        const brands = [...new Set(products.map(p => p.brand).concat(['Volkswagen', 'VW', 'Dacia', 'SsangYong', 'VAZ-LADA', 'Smart', 'Lancia', 'Daihatsu', 'Isuzu', 'SAAB', 'Saab', 'Rover']))]
-            .filter(b => b && b !== 'Універсальний').sort((a, b) => b.length - a.length);
-        const brandPattern = new RegExp('(^|[\\s,;])(' + brands.map(escapeRegex).join('|') + ')(?=\\s|[—–:])', 'gi');
-        for (const product of products) {
-            const pairs = [];
-            for (const entry of product.compatibility || []) {
-                const text = String(entry).trim();
-                const matches = [...text.matchAll(brandPattern)];
-                const sections = matches.length ? matches.map((m, i) => ({
-                    brand: canonicalBrand(m[2]),
-                    text: text.slice(m.index + m[0].length, matches[i + 1]?.index ?? text.length)
-                })) : [{brand: canonicalBrand(product.brand), text}];
-                for (const section of sections) {
-                    const parts = section.text.replace(/\([^)]*\)/g, ';').split(/[,;]/);
-                    for (let model of parts) {
-                        model = model.replace(/^[\s—–:-]+|[\s—–:-]+$/g, '').replace(/\s+/g, ' ').trim();
-                        if (!model || /багато|універс|many|всі моделі/i.test(model) ||
-                            model.length > 40 || model.split(' ').length > 4 ||
-                            section.brand === 'Універсальний') continue;
-                        const key = normalize(model);
-                        if (!modelsByBrand.has(section.brand)) modelsByBrand.set(section.brand, new Map());
-                        modelsByBrand.get(section.brand).set(key, model);
-                        pairs.push({brand: section.brand, key});
-                    }
-                }
-            }
-            productModels.set(product, pairs);
-        }
+        index = build(products);
+        const selected = canonical(brandFilter.value);
+        brandFilter.replaceChildren(new Option('Усі марки',''));
+        [...index.brands].sort((a,b)=>a.localeCompare(b,'uk')).forEach(brand=>brandFilter.add(new Option(brand,brand)));
+        brandFilter.value = selected;
     }
     function refreshModels() {
-        rebuildModelIndex();
-        const brand = canonicalBrand(brandFilter.value);
-        const changed = brand !== previousBrand;
-        const selected = changed ? '' : modelFilter.value;
+        ensureIndex();
+        const brand = canonical(brandFilter.value);
+        const selected = brand !== previousBrand ? '' : modelFilter.value;
         previousBrand = brand;
-        const options = [...(modelsByBrand.get(brand)?.entries() || [])]
-            .sort((a, b) => a[1].localeCompare(b[1], 'uk', {numeric: true}));
-        modelFilter.replaceChildren(new Option(
-            !brand ? 'Спершу виберіть марку' : options.length ? 'Усі моделі' : 'Моделі не зазначені', ''
-        ));
-        for (const [key, label] of options) modelFilter.add(new Option(label, key));
-        modelFilter.disabled = !brand || options.length === 0;
+        const options = [...(index.models.get(brand)?.entries() || [])].sort((a,b)=>a[1].localeCompare(b[1],'uk',{numeric:true}));
+        modelFilter.replaceChildren(new Option(!brand ? 'Спершу виберіть марку' : options.length ? 'Усі моделі' : 'Моделі не зазначені',''));
+        options.forEach(([key,label])=>modelFilter.add(new Option(label,key)));
+        modelFilter.disabled = !brand || !options.length;
         modelFilter.value = selected;
+        universalControl.hidden = !brand || brand === 'Універсальний';
+        if (universalControl.hidden) universalToggle.checked = false;
     }
     filterProducts = function() {
         refreshModels();
-        const query = normalize(searchInput.value);
-        const cleanQuery = query.replace(/[\s-]/g, '');
-        const brand = canonicalBrand(brandFilter.value);
-        const model = modelFilter.value;
-        const filtered = products.filter(p => {
-            const pairs = productModels.get(p) || [];
-            const compatibility = (p.compatibility || []).map(normalize);
-            const searchMatch = normalize(p.name).includes(query) ||
-                normalize(p.oem).replace(/[\s-]/g, '').includes(cleanQuery) ||
-                normalize(p.brand).includes(query) || compatibility.some(c => c.includes(query));
-            const aliases = brand === 'VW' ? ['vw', 'volkswagen'] : [normalize(brand)];
-            const brandMatch = !brand || canonicalBrand(p.brand) === brand ||
-                compatibility.some(c => aliases.some(a => c.startsWith(a + ' '))) ||
-                pairs.some(pair => pair.brand === brand);
-            const modelMatch = !model || pairs.some(pair => pair.brand === brand && pair.key === model);
-            return searchMatch && brandMatch && modelMatch &&
-                (!categoryFilter.value || p.category === categoryFilter.value);
+        const query = normalize(searchInput.value), cleanQuery = query.replace(/[\s-]/g,'');
+        const brand = canonical(brandFilter.value), model = modelFilter.value;
+        const filtered = products.filter(product => {
+            const fitment = index.fitments.get(product);
+            const universalExtra = Boolean(brand && brand !== 'Універсальний' && universalToggle.checked && fitment.universal);
+            const searchMatch = normalize(product.name).includes(query) ||
+                normalize(product.oem).replace(/[\s-]/g,'').includes(cleanQuery) ||
+                [...fitment.brands].some(b=>normalize(b).includes(query)) ||
+                normalize(product.brand).includes(query) ||
+                (product.compatibility || []).some(c=>normalize(c).includes(query));
+            const brandMatch = !brand || (brand === 'Універсальний' ? fitment.universal : fitment.brands.has(brand)) || universalExtra;
+            const modelMatch = !model || universalExtra || fitment.pairs.some(pair=>pair.brand === brand && pair.key === model);
+            return searchMatch && brandMatch && modelMatch && (!categoryFilter.value || product.category === categoryFilter.value);
         });
-        renderProducts(filtered, 1);
+        renderProducts(filtered,1);
     };
-    document.addEventListener('DOMContentLoaded', () => {
-        modelFilter.addEventListener('change', filterProducts);
-        document.getElementById('resetFiltersBtn').addEventListener('click', () => {
-            modelFilter.value = '';
-            filterProducts();
+    const originalRender = renderProducts;
+    renderProducts = function(items,page) {
+        ensureIndex();
+        const result = originalRender(items,page);
+        document.querySelectorAll('.product-card').forEach(card => {
+            const id = card.querySelector('.card-qty-control')?.dataset.id;
+            const product = products.find(p=>String(p.id) === String(id));
+            const label = card.querySelector('.pc-brand');
+            if (!product || !label) return;
+            const fitment = index.fitments.get(product);
+            const brands = [...fitment.brands];
+            const selected = canonical(brandFilter.value);
+            brands.sort((a,b)=>(a === selected ? -1 : b === selected ? 1 : a === canonical(product.brand) ? -1 : b === canonical(product.brand) ? 1 : a.localeCompare(b)));
+            label.textContent = fitment.universal && !brands.length ? 'Універсальний' : brands.slice(0,2).join(' · ') + (brands.length > 2 ? ' · +' + (brands.length-2) : '');
+            label.title = brands.join(' · ') || 'Універсальний — підбір за розмірами';
         });
+        return result;
+    };
+    const originalModal = window.openProductModal;
+    window.openProductModal = function(...args) {
+        const result = originalModal.apply(this,args);
+        const product = products.find(p=>String(p.id) === String(args[0]));
+        if (product) {
+            ensureIndex();
+            const label = document.getElementById('modalBrand');
+            if (label) label.textContent = [...index.fitments.get(product).brands].join(' · ') || 'Універсальний';
+        }
+        return result;
+    };
+    document.addEventListener('DOMContentLoaded',()=> {
+        modelFilter.addEventListener('change',filterProducts);
+        universalToggle.addEventListener('change',filterProducts);
+        for (const element of [document.getElementById('resetFiltersBtn'),document.querySelector('.logo')]) {
+            element?.addEventListener('click',()=>{ universalToggle.checked=false; },true);
+        }
+        document.getElementById('resetFiltersBtn').addEventListener('click',()=>{modelFilter.value='';filterProducts();});
     });
 })();
