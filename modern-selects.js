@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             if (event.key === 'Tab') close();
         });
-        document.addEventListener('click', event => { if (!wrapper.contains(event.target)) close(); });
+        document.addEventListener('click', event => { if (!event.composedPath().includes(wrapper)) close(); });
         select.addEventListener('change', sync);
         new MutationObserver(sync).observe(select, {childList: true, subtree: true, attributes: true});
         document.getElementById('resetFiltersBtn').addEventListener('click', () => { close(); sync(); });
