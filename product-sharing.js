@@ -4,12 +4,58 @@
     const status = document.getElementById('shareProductStatus');
     let sharedProduct = null;
     const originalOpen = window.openProductModal;
+    const productModal = document.getElementById('productModal');
+    let syncingHistory = false;
+    function productUrl(id) {
+        const url = new URL(window.location.href);
+        url.searchParams.set('product', id);
+        url.hash = '';
+        return url;
+    }
+    function clearProductUrl() {
+        const url = new URL(window.location.href);
+        if (!url.searchParams.has('product')) return;
+        if (history.state?.clipslockProduct) {
+            history.back();
+        } else {
+            url.searchParams.delete('product');
+            history.replaceState(history.state, '', url);
+        }
+        sharedProduct = null;
+    }
     window.openProductModal = function(id) {
         originalOpen(id);
         sharedProduct = products.find(p => String(p.id) === String(id)) || null;
         button.disabled = !sharedProduct;
         status.textContent = '';
+        if (sharedProduct && !syncingHistory &&
+            new URL(window.location.href).searchParams.get('product') !== String(id)) {
+            if (new URL(window.location.href).searchParams.has('product')) {
+                history.replaceState(history.state, '', productUrl(id));
+            } else {
+                history.pushState({ ...(history.state || {}), clipslockProduct: true }, '', productUrl(id));
+            }
+        }
     };
+    window.addEventListener('popstate', () => {
+        const id = new URL(window.location.href).searchParams.get('product');
+        if (id && products.some(p => String(p.id) === id)) {
+            syncingHistory = true;
+            window.openProductModal(id);
+            syncingHistory = false;
+        } else {
+            productModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+            sharedProduct = null;
+        }
+    });
+    document.addEventListener('click', event => {
+        if (event.target.closest('.close-modal')?.closest('.modal') === productModal ||
+            event.target === productModal ||
+            event.target.closest('#modalAddToCart')) {
+            clearProductUrl();
+        }
+    });
     async function copyLink(url) {
         try {
             if (!navigator.clipboard?.writeText) throw new Error('Clipboard unavailable');
