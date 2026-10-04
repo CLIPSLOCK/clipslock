@@ -87,8 +87,8 @@
         return new Promise(resolve => {
             const dialog = document.createElement('dialog');
             dialog.style.cssText = 'width:min(420px,90vw);max-height:90vh;overflow:auto;border:0;border-radius:16px;padding:20px;background:white;color:#222';
-            dialog.innerHTML = '<h2 style="margin-top:0">Виділіть кліпсу</h2><p>Обріжте руку та зайвий фон. Залиште всю деталь у кадрі.</p><canvas style="width:100%;background:#eee" width="320" height="320"></canvas><div class="crop-controls"></div><div style="display:flex;gap:10px;margin-top:16px"><button type="button" data-search>Шукати</button><button type="button" data-cancel>Скасувати</button></div>';
-            const bounds = {left:0, right:100, top:0, bottom:100};
+            dialog.innerHTML = '<h2 style="margin-top:0">Виділіть кліпсу</h2><p>Тягніть кути рамки, щоб обрізати фон. Тягніть усередині рамки, щоб пересунути її.</p><canvas style="display:block;width:100%;height:auto;touch-action:none;background:#eee" width="320" height="320"></canvas><div class="crop-controls"></div><div style="display:flex;gap:10px;margin-top:16px"><button type="button" data-search>Шукати</button><button type="button" data-cancel>Скасувати</button></div>';
+            const bounds = {left:5, right:95, top:5, bottom:95};
             const canvas = dialog.querySelector('canvas');
             const ctx = canvas.getContext('2d');
             const scale = 320 / Math.max(image.naturalWidth, image.naturalHeight);
@@ -105,23 +105,67 @@
                 ctx.fillRect(x,t,l-x,h);
                 ctx.fillRect(l+w,t,x+width-l-w,h);
                 ctx.strokeStyle='#ff6500';ctx.lineWidth=2;ctx.strokeRect(l,t,w,h);
+                ctx.fillStyle='#ff6500';
+                for (const [hx,hy] of [[l,t],[l+w,t],[l,t+h],[l+w,t+h]]) {
+                    ctx.fillRect(hx-7,hy-7,14,14);
+                }
             }
-            for (const [key,label] of [['left','Лівий край'],['right','Правий край'],['top','Верхній край'],['bottom','Нижній край']]) {
-                const row=document.createElement('label');
-                row.style.cssText='display:block;margin-top:10px';
-                row.textContent=label;
-                const slider=document.createElement('input');
-                slider.type='range';slider.min='0';slider.max='100';slider.value=String(bounds[key]);
-                slider.style.cssText='display:block;width:100%;min-height:32px';
-                slider.addEventListener('input',()=>{
-                    const value=Number(slider.value);
-                    bounds[key]=key==='left'?Math.min(value,bounds.right-5):
-                        key==='right'?Math.max(value,bounds.left+5):
-                        key==='top'?Math.min(value,bounds.bottom-5):Math.max(value,bounds.top+5);
-                    slider.value=String(bounds[key]);draw();
-                });
-                row.append(slider);dialog.querySelector('.crop-controls').append(row);
+            let drag=null;
+            const clamp=(value,min,max)=>Math.max(min,Math.min(max,value));
+            function point(event) {
+                const rect=canvas.getBoundingClientRect();
+                return {
+                    x:(event.clientX-rect.left)*320/rect.width,
+                    y:(event.clientY-rect.top)*320/rect.height
+                };
             }
+            canvas.addEventListener('pointerdown',event=>{
+                if(drag)return;
+                const p=point(event);
+                const l=x+width*bounds.left/100, r=x+width*bounds.right/100;
+                const t=y+height*bounds.top/100, b=y+height*bounds.bottom/100;
+                // Hit targets are at least 28 CSS pixels from each corner.
+                const hit=28*320/canvas.getBoundingClientRect().width;
+                const corners=[['lt',l,t],['rt',r,t],['lb',l,b],['rb',r,b]];
+                const corner=corners.find(([,cx,cy])=>Math.abs(p.x-cx)<=hit&&Math.abs(p.y-cy)<=hit);
+                const mode=corner?corner[0]:(p.x>=l&&p.x<=r&&p.y>=t&&p.y<=b?'move':null);
+                if(!mode)return;
+                event.preventDefault();
+                drag={id:event.pointerId,mode,start:p,bounds:{...bounds}};
+                canvas.setPointerCapture(event.pointerId);
+            });
+            canvas.addEventListener('pointermove',event=>{
+                if(!drag||drag.id!==event.pointerId)return;
+                event.preventDefault();
+                const p=point(event), original=drag.bounds;
+                const dx=(p.x-drag.start.x)/width*100, dy=(p.y-drag.start.y)/height*100;
+                if(drag.mode==='move') {
+                    const mx=clamp(dx,-original.left,100-original.right);
+                    const my=clamp(dy,-original.top,100-original.bottom);
+                    bounds.left=original.left+mx;bounds.right=original.right+mx;
+                    bounds.top=original.top+my;bounds.bottom=original.bottom+my;
+                } else {
+                    if(drag.mode.includes('l'))bounds.left=clamp(original.left+dx,0,original.right-5);
+                    if(drag.mode.includes('r'))bounds.right=clamp(original.right+dx,original.left+5,100);
+                    if(drag.mode.includes('t'))bounds.top=clamp(original.top+dy,0,original.bottom-5);
+                    if(drag.mode.includes('b'))bounds.bottom=clamp(original.bottom+dy,original.top+5,100);
+                }
+                draw();
+            });
+            function stopDrag(event) {
+                if(drag?.id===event.pointerId)drag=null;
+            }
+            canvas.addEventListener('pointerup',stopDrag);
+            canvas.addEventListener('pointercancel',stopDrag);
+            canvas.addEventListener('lostpointercapture',stopDrag);
+            const controls=dialog.querySelector('.crop-controls');
+            const reset=document.createElement('button');
+            reset.type='button';reset.textContent='Усе фото';
+            reset.onclick=()=>{Object.assign(bounds,{left:0,right:100,top:0,bottom:100});draw();};
+            controls.append(reset);
+            dialog.querySelectorAll('button').forEach(button=>{
+                button.style.cssText='min-height:44px;padding:10px 16px;border:1px solid #ddd;border-radius:8px;background:#f4f4f4;color:#222;font-size:16px;cursor:pointer';
+            });
             let finished=false;
             function finish(result) {
                 if(finished)return;finished=true;dialog.close();dialog.remove();resolve(result);
