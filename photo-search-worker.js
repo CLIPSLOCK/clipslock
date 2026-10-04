@@ -61,24 +61,38 @@ async function initialize(id) {
 }
 let jobs = Promise.resolve();
 async function search(event) {
-    const {id, pixels} = event.data;
+    const {id, variants} = event.data;
     try {
         if (!ready) ready = initialize(id).catch(error => { ready = null; throw error; });
         const {ort, session, index, vectors, norms} = await ready;
         notify(id, 'Шукаємо схожі кліпси у нашому каталозі…');
-        const input = new ort.Tensor('float32', pixels, [1, 3, 224, 224]);
-        const output = await session.run({pixel_values: input});
-        const embedding = output.last_hidden_state.data.subarray(0, 384);
-        let norm = 0;
-        for (const value of embedding) norm += value * value;
-        norm = Math.sqrt(norm) || 1;
-        const matches = index.ids.map((productId, row) => {
-            let dot = 0;
-            for (let col = 0; col < 384; col++) dot += embedding[col] * vectors[row * 384 + col];
-            return {id: productId, img: index.photos[row], score: dot / (norm * norms[row])};
-        }).sort((a, b) => b.score - a.score);
-        input.dispose();
-        Object.values(output).forEach(tensor => tensor.dispose());
+        if (!Array.isArray(variants) || variants.length !== 4) throw new Error('Invalid photo variants');
+        const scores = new Float32Array(index.ids.length).fill(-Infinity);
+        for (let variant = 0; variant < variants.length; variant++) {
+            const pixels = variants[variant];
+            if (!(pixels instanceof Float32Array) || pixels.length !== 3*224*224) throw new Error('Invalid pixels');
+            notify(id, `Порівнюємо поворот ${variant+1} із ${variants.length}…`);
+            const input = new ort.Tensor('float32', pixels, [1, 3, 224, 224]);
+            let output;
+            try {
+                output = await session.run({pixel_values: input});
+                const embedding = output.last_hidden_state.data.subarray(0, 384);
+                let norm = 0;
+                for (const value of embedding) norm += value * value;
+                norm = Math.sqrt(norm) || 1;
+                for (let row = 0; row < index.ids.length; row++) {
+                    let dot = 0;
+                    for (let col = 0; col < 384; col++) dot += embedding[col] * vectors[row * 384 + col];
+                    scores[row] = Math.max(scores[row], dot / (norm * norms[row]));
+                }
+            } finally {
+                input.dispose();
+                if (output) Object.values(output).forEach(tensor => tensor.dispose());
+            }
+        }
+        const matches = index.ids.map((productId,row) => ({
+            id: productId, img: index.photos[row], score: scores[row]
+        })).sort((a,b) => b.score-a.score);
         self.postMessage({id, type: 'results', matches});
     } catch (error) {
         self.postMessage({id, type: 'error', message: String(error.message || error)});
