@@ -34,7 +34,7 @@
     }
     function ensureWorker() {
         if (worker) return worker;
-        worker = new Worker(new URL('photo-search-worker.js', document.baseURI), {type: 'module'});
+        worker = new Worker(new URL('photo-search-worker.js?v=refine1', document.baseURI), {type: 'module'});
         worker.addEventListener('message', event => {
             const data = event.data;
             if (data.id !== requestId) return;
@@ -59,7 +59,7 @@
             sort.value = 'photo';
             sort.dispatchEvent(new Event('change', {bubbles: true}));
             status.textContent = valid.length
-                ? 'Схожі за фото. Перевірте форму та розміри перед замовленням.'
+                ? (data.refined ? 'Схожі на вибрану кліпсу. Перевірте форму та розміри.' : 'Знайшли близький варіант? Натисніть «Знайти схожі на цю». Перевірте розміри.')
                 : 'Немає доступних фото для порівняння. Спробуйте пошук за OEM.';
             filterProducts();
             // Reveal matches directly below the sticky header instead of the page hero.
@@ -247,5 +247,25 @@
             items = matches.map(item => allowed.get(String(item.id))).filter(Boolean);
         }
         originalRender(items, page);
+        if (matches) {
+            document.querySelectorAll('#productsGrid .product-card').forEach(card => {
+                const productId = card.querySelector('.card-qty-control')?.dataset.id;
+                if (!productId) return;
+                const refineButton = document.createElement('button');
+                refineButton.type = 'button';
+                refineButton.className = 'btn btn-full';
+                refineButton.textContent = 'Знайти схожі на цю';
+                refineButton.style.cssText = 'min-height:44px;margin-top:10px;border:1px solid var(--border-color, #ddd)';
+                refineButton.addEventListener('click', event => {
+                    event.stopPropagation();
+                    if (running) return;
+                    const id = ++requestId;
+                    setBusy(true);
+                    status.textContent = 'Шукаємо схожі на вибрану кліпсу…';
+                    ensureWorker().postMessage({type:'refine', id, seedId:productId});
+                });
+                card.append(refineButton);
+            });
+        }
     };
 })();
