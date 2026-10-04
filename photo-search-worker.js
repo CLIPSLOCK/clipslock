@@ -67,12 +67,13 @@ async function search(event) {
         if (!ready) ready = initialize(id).catch(error => { ready = null; throw error; });
         const {ort, session, index, vectors, norms} = await ready;
         notify(id, 'Шукаємо схожі кліпси у нашому каталозі…');
-        if (!Array.isArray(variants) || variants.length !== 4) throw new Error('Invalid photo variants');
-        const scores = new Float32Array(index.ids.length).fill(-Infinity);
+        if (!Array.isArray(variants) || ![4, 8, 12].includes(variants.length)) throw new Error('Invalid photo variants');
+        const photoCount = variants.length / 4;
+        const photoScores = Array.from({length: photoCount}, () => new Float32Array(index.ids.length).fill(-Infinity));
         for (let variant = 0; variant < variants.length; variant++) {
             const pixels = variants[variant];
             if (!(pixels instanceof Float32Array) || pixels.length !== 3*224*224) throw new Error('Invalid pixels');
-            notify(id, `Порівнюємо поворот ${variant+1} із ${variants.length}…`);
+            notify(id, `Фото ${Math.floor(variant/4)+1} із ${photoCount}: поворот ${variant%4+1} із 4…`);
             const input = new ort.Tensor('float32', pixels, [1, 3, 224, 224]);
             let output;
             try {
@@ -84,12 +85,19 @@ async function search(event) {
                 for (let row = 0; row < index.ids.length; row++) {
                     let dot = 0;
                     for (let col = 0; col < 384; col++) dot += embedding[col] * vectors[row * 384 + col];
-                    scores[row] = Math.max(scores[row], dot / (norm * norms[row]));
+                    photoScores[Math.floor(variant/4)][row] = Math.max(photoScores[Math.floor(variant/4)][row], dot / (norm * norms[row]));
                 }
             } finally {
                 input.dispose();
                 if (output) Object.values(output).forEach(tensor => tensor.dispose());
             }
+        }
+        const scores = new Float32Array(index.ids.length);
+        for (let row = 0; row < scores.length; row++) {
+            let sum = 0, best = -Infinity;
+            for (const photo of photoScores) { sum += photo[row]; best = Math.max(best, photo[row]); }
+            // Combine support from all views while retaining the strongest view.
+            scores[row] = .5 * best + .5 * sum / photoCount;
         }
         previousSearch = {scores};
         const matches = index.ids.map((productId,row) => ({
