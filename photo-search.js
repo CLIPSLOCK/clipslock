@@ -6,6 +6,10 @@
     const preview = document.getElementById('photoSearchPreview');
     const status = document.getElementById('photoSearchStatus');
     const sort = document.getElementById('sortOrder');
+    input.multiple = true;
+    input.accept = 'image/jpeg,image/png,image/webp';
+    // Let mobile users select existing photos rather than forcing one camera shot.
+    input.removeAttribute('capture');
     let worker = null;
     let requestId = 0;
     let previewUrl = null;
@@ -34,7 +38,7 @@
     }
     function ensureWorker() {
         if (worker) return worker;
-        worker = new Worker(new URL('photo-search-worker.js?v=refine1', document.baseURI), {type: 'module'});
+        worker = new Worker(new URL('photo-search-worker.js?v=multiphoto1', document.baseURI), {type: 'module'});
         worker.addEventListener('message', event => {
             const data = event.data;
             if (data.id !== requestId) return;
@@ -83,11 +87,12 @@
         });
         return worker;
     }
-    function chooseCrop(image) {
+    function chooseCrop(image, number = 1, total = 1) {
         return new Promise(resolve => {
             const dialog = document.createElement('dialog');
             dialog.style.cssText = 'width:min(420px,90vw);max-height:90vh;overflow:auto;border:0;border-radius:16px;padding:20px;background:white;color:#222';
             dialog.innerHTML = '<h2 style="margin-top:0">Виділіть кліпсу</h2><p>Тягніть кути рамки, щоб обрізати фон. Тягніть усередині рамки, щоб пересунути її.</p><canvas style="display:block;width:100%;height:auto;touch-action:none;background:#eee" width="320" height="320"></canvas><div class="crop-controls"></div><div style="display:flex;gap:10px;margin-top:16px"><button type="button" data-search>Шукати</button><button type="button" data-cancel>Скасувати</button></div>';
+            dialog.querySelector('h2').textContent = total > 1 ? `Фото ${number} із ${total}: виділіть кліпсу` : 'Виділіть кліпсу';
             const bounds = {left:5, right:95, top:5, bottom:95};
             const canvas = dialog.querySelector('canvas');
             const ctx = canvas.getContext('2d');
@@ -203,26 +208,31 @@
     }
     button.addEventListener('click', () => { if (!running) input.click(); });
     input.addEventListener('change', async () => {
-        const file = input.files?.[0];
-        if (!file) return;
+        const files = Array.from(input.files || []);
+        if (!files.length) return;
         clearPhoto(false);
         panel.hidden = false;
-        if (!file.type.startsWith('image/')) { status.textContent = 'Оберіть фотографію у форматі JPG, PNG або WebP.'; return; }
-        if (file.size > 10 * 1024 * 1024) { status.textContent = 'Фото завелике. Оберіть зображення до 10 МБ.'; return; }
+        if (files.length > 3) { status.textContent = 'Оберіть від 1 до 3 фото однієї кліпси.'; return; }
+        if (files.some(file => !file.type.startsWith('image/'))) { status.textContent = 'Оберіть фотографії у форматі JPG, PNG або WebP.'; return; }
+        if (files.some(file => file.size > 10 * 1024 * 1024)) { status.textContent = 'Кожне фото має бути до 10 МБ.'; return; }
         const id = ++requestId;
-        previewUrl = URL.createObjectURL(file);
-        preview.src = previewUrl;
-        status.textContent = 'Готуємо пошук. Перший запуск може тривати довше…';
+        status.textContent = 'Готуємо фото для пошуку…';
         setBusy(true);
         try {
-            await preview.decode();
-            if (id !== requestId) return;
             if (!products.length) throw new Error('Catalog not loaded');
-            const crop = await chooseCrop(preview);
-            if (id !== requestId) return;
-            if (!crop) { clearPhoto(); return; }
-            status.textContent = 'Порівнюємо форму кліпси в кількох поворотах…';
-            const variants = [0, Math.PI/2, Math.PI, 3*Math.PI/2].map(angle => toPixels(preview, crop, angle));
+            const variants = [];
+            for (let number = 0; number < files.length; number++) {
+                if (previewUrl) URL.revokeObjectURL(previewUrl);
+                previewUrl = URL.createObjectURL(files[number]);
+                preview.src = previewUrl;
+                await preview.decode();
+                if (id !== requestId) return;
+                const crop = await chooseCrop(preview, number + 1, files.length);
+                if (id !== requestId) return;
+                if (!crop) { clearPhoto(); return; }
+                variants.push(...[0, Math.PI/2, Math.PI, 3*Math.PI/2].map(angle => toPixels(preview, crop, angle)));
+            }
+            status.textContent = `Порівнюємо ${files.length} фото. Перший запуск може тривати довше…`;
             ensureWorker().postMessage({id, variants}, variants.map(pixels => pixels.buffer));
         } catch (error) {
             if (id !== requestId) return;
