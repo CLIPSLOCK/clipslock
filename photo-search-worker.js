@@ -60,6 +60,7 @@ async function initialize(id) {
     return {ort, session, index, vectors, norms};
 }
 let jobs = Promise.resolve();
+let previousSearch = null;
 async function search(event) {
     const {id, variants} = event.data;
     try {
@@ -90,6 +91,7 @@ async function search(event) {
                 if (output) Object.values(output).forEach(tensor => tensor.dispose());
             }
         }
+        previousSearch = {scores};
         const matches = index.ids.map((productId,row) => ({
             id: productId, img: index.photos[row], score: scores[row]
         })).sort((a,b) => b.score-a.score);
@@ -98,4 +100,26 @@ async function search(event) {
         self.postMessage({id, type: 'error', message: String(error.message || error)});
     }
 }
-self.addEventListener('message', event => { jobs = jobs.then(() => search(event)); });
+async function refine(event) {
+    const {id, seedId} = event.data;
+    try {
+        if (!ready || !previousSearch) throw new Error('Search required');
+        const {index, vectors, norms} = await ready;
+        const seed = index.ids.findIndex(value => String(value) === String(seedId));
+        if (seed < 0) throw new Error('Product not indexed');
+        const matches = index.ids.map((productId, row) => {
+            let dot = 0;
+            for (let col = 0; col < 384; col++) dot += vectors[seed*384+col]*vectors[row*384+col];
+            // The selected catalog image is the primary reference; retain a small
+            // contribution from the original photo rather than guessing its identity.
+            const score = .85 * dot/(norms[seed]*norms[row]) + .15 * previousSearch.scores[row];
+            return {id:productId, img:index.photos[row], score};
+        }).sort((a,b)=>b.score-a.score);
+        self.postMessage({id, type:'results', matches, refined:true});
+    } catch(error) {
+        self.postMessage({id, type:'error', message:String(error.message || error)});
+    }
+}
+self.addEventListener('message', event => {
+    jobs = jobs.then(() => event.data.type === 'refine' ? refine(event) : search(event));
+});
