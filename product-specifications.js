@@ -69,10 +69,6 @@ async function renderProductSpecifications(product) {
             image.onerror = () => image.remove();
             details.append(image);
         }
-        const link = document.createElement('a');
-        link.textContent = 'Джерело та позначення: MAK';
-        link.href = specs.source; link.target = '_blank'; link.rel = 'noopener noreferrer';
-        details.append(link);
         section.append(details);
         section.hidden = false;
     } catch (error) { console.warn('Product specifications:', error); }
