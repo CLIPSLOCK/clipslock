@@ -30,6 +30,13 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchProducts();
     updateCartBadge();
     setupEventListeners();
+
+    // Пряме відкриття за посиланням з #checkout / #thanks
+    if (location.hash === '#checkout' && cart.length > 0) {
+        showCheckoutModal();
+    } else if (location.hash === '#checkout' || location.hash === '#thanks') {
+        history.replaceState(null, '', location.pathname + location.search);
+    }
 });
 
 // Завантаження товарів
@@ -233,6 +240,35 @@ function filterProducts() {
     renderProducts(filtered, 1);
 }
 
+// ===== Оформлення замовлення: керування модалкою та адресою (#checkout / #thanks) =====
+
+function showCheckoutModal() {
+    document.getElementById('cartModal').style.display = 'none';
+    document.getElementById('checkoutModal').style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+
+function hideCheckoutModal() {
+    document.getElementById('checkoutModal').style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+// Закрити модалку й прибрати #checkout / #thanks з адреси
+function closeModalEl(modal) {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+
+    if (modal.id === 'checkoutModal' && location.hash === '#checkout') {
+        if (history.state && history.state.checkout) {
+            history.back(); // ми самі додали цей запис в історію
+        } else {
+            history.replaceState(null, '', location.pathname + location.search);
+        }
+    } else if (modal.id === 'successModal' && location.hash === '#thanks') {
+        history.replaceState(null, '', location.pathname + location.search);
+    }
+}
+
 // Слухачі подій
 function setupEventListeners() {
     searchInput.addEventListener('input', filterProducts);
@@ -249,17 +285,20 @@ function setupEventListeners() {
 
     // Модалки - закриття
     document.querySelectorAll('.close-modal').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.target.closest('.modal').style.display = 'none';
-            document.body.style.overflow = 'auto';
-        });
+        btn.addEventListener('click', (e) => closeModalEl(e.target.closest('.modal')));
     });
 
     // Клік поза модалкою
     window.addEventListener('click', (e) => {
-        if (e.target.classList.contains('modal')) {
-            e.target.style.display = 'none';
-            document.body.style.overflow = 'auto';
+        if (e.target.classList.contains('modal')) closeModalEl(e.target);
+    });
+
+    // Кнопка "Назад" / "Вперед" у браузері
+    window.addEventListener('popstate', () => {
+        if (location.hash === '#checkout' && cart.length > 0) {
+            showCheckoutModal();
+        } else {
+            hideCheckoutModal();
         }
     });
 
@@ -285,8 +324,8 @@ function setupEventListeners() {
     // Форма замовлення
     document.getElementById('checkoutBtn').addEventListener('click', () => {
         if (cart.length > 0) {
-            document.getElementById('cartModal').style.display = 'none';
-            document.getElementById('checkoutModal').style.display = 'flex';
+            showCheckoutModal();
+            history.pushState({ checkout: true }, '', '#checkout');
         }
     });
 
@@ -375,8 +414,6 @@ window.addToCart = function (event, id, qty) {
     if (event) event.stopPropagation();
 
     // Завжди зберігаємо id як рядок — незалежно від того, звідки прийшов виклик
-    // (кнопка в картці завжди передає рядок, а модалка передає id таким, як він
-    // записаний у products.json — це і викликало неспівпадіння типів)
     id = String(id);
 
     const existing = cart.find(item => String(item.id) === id);
@@ -506,9 +543,6 @@ function handleCheckout(e) {
     let hasMissingProduct = false;
 
     const orderItems = cart.map(cartItem => {
-        // Порівнюємо id як рядки — і головне, перевіряємо, чи товар взагалі знайшовся,
-        // перш ніж читати з нього .price. Саме відсутність цієї перевірки й спричиняла
-        // краш "Cannot read properties of undefined".
         const product = products.find(p => String(p.id) === String(cartItem.id));
         if (!product) {
             hasMissingProduct = true;
@@ -560,7 +594,8 @@ function handleCheckout(e) {
 
 // Функція відправки замовлення в Telegram
 async function sendOrder(order) {
-    // ⚠️ Встав сюди СВІЙ НОВИЙ токен після того, як відкличеш старий у BotFather
+    // ⚠️ Старий токен був у публічному репозиторії — його треба відкликати в @BotFather (/revoke).
+    // Новий токен краще не тримати в цьому файлі (див. проксі через Cloudflare Worker).
     const BOT_TOKEN = '8717638807:AAESob1XqKvNJV3TE315QyMeh79Grh9vFCo';
     const CHAT_ID = '979529637';
 
@@ -608,6 +643,7 @@ async function sendOrder(order) {
             renderCart();
 
             document.getElementById('checkoutModal').style.display = 'none';
+            history.replaceState(null, '', '#thanks'); // #checkout → #thanks
             document.getElementById('successOrderId').textContent = `№ ${order.orderId}`;
             document.getElementById('successModal').style.display = 'flex';
         } else {
