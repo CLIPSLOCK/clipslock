@@ -637,6 +637,18 @@ async function sendOrder(order) {
         });
 
         if (response.ok) {
+            // Count a lead only after the order was successfully delivered.
+            // Analytics errors must never interrupt the order confirmation.
+            try {
+                if (typeof window.gtag === 'function') {
+                    window.gtag('event', 'conversion', {
+                        send_to: 'AW-18510908734/eO1zCIiWla8dEL6a2PpE',
+                        transaction_id: order.orderId
+                    });
+                }
+            } catch (trackingError) {
+                console.warn('Google Ads conversion could not be queued.');
+            }
             document.getElementById('checkoutForm').reset();
             cart = [];
             saveCart();
